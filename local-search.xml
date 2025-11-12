@@ -5,6 +5,19 @@
   
   <entry>
     <title></title>
+    <link href="/2025/11/12/GitHub%20%E5%85%A5%E9%97%A8/"/>
+    <url>/2025/11/12/GitHub%20%E5%85%A5%E9%97%A8/</url>
+    
+    <content type="html"><![CDATA[<h1 id="GitHub-入门"><a href="#GitHub-入门" class="headerlink" title="GitHub 入门"></a>GitHub 入门</h1><h2 id="创建一个仓库"><a href="#创建一个仓库" class="headerlink" title="创建一个仓库"></a>创建一个仓库</h2><p>在GitHub中创建仓库的简单步骤<br>登录GitHub账户：首先确保你已经登录到你的GitHub账户</p><p>进入仓库创建页面：</p><p>点击右上角的”+”号图标<br>选择”New repository”（新建仓库）<br>填写仓库信息：</p><p>Repository name：为你的仓库起一个名称<br>Description：添加简短的描述（可选）<br>Public&#x2F;Private：选择仓库的可见性（公开或私有）<br>Initialize this repository with：可以选择添加README文件、.gitignore模板和许可证<br>创建仓库：点击”Create repository”按钮完成创建</p><p>创建完成后，你就可以开始向仓库中添加文件、提交代码，或者邀请其他人协作开发了。</p><h2 id="什么是仓库（Repository）？"><a href="#什么是仓库（Repository）？" class="headerlink" title="什么是仓库（Repository）？"></a>什么是仓库（Repository）？</h2><p>仓库（Repository，简称Repo）是GitHub中最核心的概念，可以理解为：</p><p><strong>一个用于存储和管理项目文件的特殊文件夹</strong></p><h3 id="仓库的主要特点："><a href="#仓库的主要特点：" class="headerlink" title="仓库的主要特点："></a>仓库的主要特点：</h3><ol><li><p><strong>版本控制</strong>：仓库会记录文件的每一次修改历史，可以随时查看和恢复到之前的版本</p></li><li><p><strong>协作开发</strong>：多人可以同时在一个仓库中工作，GitHub会自动管理不同人的修改</p></li><li><p><strong>文件管理</strong>：仓库中可以包含代码文件、文档、图片等各种项目相关文件</p></li><li><p><strong>分支管理</strong>：可以创建不同的分支来并行开发新功能，而不会影响主分支</p></li></ol><h3 id="仓库的常见用途："><a href="#仓库的常见用途：" class="headerlink" title="仓库的常见用途："></a>仓库的常见用途：</h3><ul><li><strong>个人项目</strong>：存储个人开发的软件、网站等</li><li><strong>团队协作</strong>：团队共同开发的项目</li><li><strong>开源项目</strong>：公开分享代码供他人学习和使用</li><li><strong>文档管理</strong>：存储技术文档、教程等</li></ul><h3 id="仓库的基本结构："><a href="#仓库的基本结构：" class="headerlink" title="仓库的基本结构："></a>仓库的基本结构：</h3><p>一个典型的GitHub仓库通常包含：</p><ul><li><code>README.md</code>：项目说明文档</li><li>源代码文件</li><li>配置文件</li><li>许可证文件</li><li>其他项目资源</li></ul><p>简单来说，仓库就像是项目的”家”，所有与项目相关的内容都存放在这里，并且GitHub会帮你管理所有的修改历史。</p><h2 id="如何在GitHub中创建仓库？"><a href="#如何在GitHub中创建仓库？" class="headerlink" title="如何在GitHub中创建仓库？"></a>如何在GitHub中创建仓库？</h2><ol><li><p><strong>登录GitHub账户</strong>：首先确保你已经登录到你的GitHub账户</p></li><li><p><strong>进入仓库创建页面</strong>：</p><ul><li>点击右上角的”+”号图标</li><li>选择”New repository”（新建仓库）</li></ul></li><li><p><strong>填写仓库信息</strong>：</p><ul><li><strong>Repository name</strong>：为你的仓库起一个名称</li><li><strong>Description</strong>：添加简短的描述（可选）</li><li><strong>Public&#x2F;Private</strong>：选择仓库的可见性（公开或私有）</li><li><strong>Initialize this repository with</strong>：可以选择添加README文件、.gitignore模板和许可证</li></ul></li><li><p><strong>创建仓库</strong>：点击”Create repository”按钮完成创建</p></li></ol><p>创建完成后，你就可以开始向仓库中添加文件、提交代码，或者邀请其他人协作开发了。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
     <link href="/2025/11/12/Docker%20Compose%20%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     <url>/2025/11/12/Docker%20Compose%20%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
     
@@ -19,25 +32,6 @@
       <tag>Docker</tag>
       
       <tag>Docker-Compose</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>欢迎来到DukaWorks</title>
-    <link href="/2025/09/06/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0DukaWorks/"/>
-    <url>/2025/09/06/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0DukaWorks/</url>
-    
-    <content type="html"><![CDATA[<p><strong>这是我的第一篇文章</strong></p><p>参考资料<br><a href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a><br><a href="https://www.fomal.cc/posts/e593433d.html">https://www.fomal.cc/posts/e593433d.html</a><br><a href="https://docs.anheyu.com/">https://docs.anheyu.com/</a></p><p>致谢项目<br><a href="https://github.com/hexojs/hexo">https://github.com/hexojs/hexo</a></p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>Welcome</tag>
       
     </tags>
     
@@ -71,6 +65,25 @@
       <tag>Github</tag>
       
       <tag>Models</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>欢迎来到DukaWorks</title>
+    <link href="/2025/09/06/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0DukaWorks/"/>
+    <url>/2025/09/06/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0DukaWorks/</url>
+    
+    <content type="html"><![CDATA[<p><strong>这是我的第一篇文章</strong></p><p>参考资料<br><a href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a><br><a href="https://www.fomal.cc/posts/e593433d.html">https://www.fomal.cc/posts/e593433d.html</a><br><a href="https://docs.anheyu.com/">https://docs.anheyu.com/</a></p><p>致谢项目<br><a href="https://github.com/hexojs/hexo">https://github.com/hexojs/hexo</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Welcome</tag>
       
     </tags>
     
