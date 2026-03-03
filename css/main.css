@@ -261,7 +261,7 @@ body {
   box-sizing: border-box;
   color: var(--text-color);
   font-family: Consolas, monospace, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  font-size: 1em;
+  font-size: 0.9em;
   line-height: 2;
   min-height: 100%;
   position: relative;
@@ -1420,7 +1420,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #f2b8ff;
+    background: #ff4fb1;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
