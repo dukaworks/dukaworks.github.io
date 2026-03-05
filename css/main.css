@@ -260,7 +260,7 @@ body {
   background: var(--body-bg-color);
   box-sizing: border-box;
   color: var(--text-color);
-  font-family: Consolas, monospace, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Microsoft YaHei, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 0.9em;
   line-height: 2;
   min-height: 100%;
@@ -273,7 +273,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Consolas, monospace, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Microsoft YaHei, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 30px 0 15px;
@@ -1278,7 +1278,7 @@ pre code {
   color: var(--brand-hover-color);
 }
 .site-title {
-  font-family: Consolas, monospace, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Microsoft YaHei, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 1.375em;
   font-weight: normal;
   line-height: 1.5;
@@ -1420,7 +1420,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #ec3c38;
+    background: #253c37;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2038,7 +2038,7 @@ pre code {
   width: 4px;
 }
 .post-body {
-  font-family: Consolas, monospace, Consolas, monospace, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Microsoft YaHei, Microsoft YaHei, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   overflow-wrap: break-word;
 }
 @media (min-width: 1200px) {
@@ -2227,7 +2227,7 @@ pre code {
 }
 .posts-expand .post-meta-container {
   color: #999;
-  font-family: Consolas, monospace, Consolas, monospace, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Microsoft YaHei, Microsoft YaHei, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 0.75em;
   margin-top: 3px;
 }
@@ -3103,4 +3103,22 @@ header.header {
 .giscus {
   max-width: unset;
   box-sizing: border-box;
+}
+.sidebar {
+  font-size: 1.1em !important;
+}
+.sidebar-nav .nav-item a,
+.sidebar-nav li a,
+.menu-item a,
+.sidebar .menu-item {
+  font-size: 1.1em !important;
+}
+.site-title {
+  font-size: 1.3em !important;
+}
+.site-subtitle {
+  font-size: 1em !important;
+}
+.sidebar a {
+  font-size: 1.1em !important;
 }
