@@ -11,7 +11,26 @@
   <rights>All rights reserved 2026, Duka</rights>
   <subtitle>AI 网络 技术 随笔 热点</subtitle>
   <title>Duka的技术博客</title>
-  <updated>2026-03-04T17:13:31.293Z</updated>
+  <updated>2026-03-05T08:19:32.736Z</updated>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="学习探索" scheme="http://blog.dukaworks.io/categories/%E5%AD%A6%E4%B9%A0%E6%8E%A2%E7%B4%A2/"/>
+    <category term="NAS" scheme="http://blog.dukaworks.io/tags/NAS/"/>
+    <category term="Nginx" scheme="http://blog.dukaworks.io/tags/Nginx/"/>
+    <category term="Proxy" scheme="http://blog.dukaworks.io/tags/Proxy/"/>
+    <category term="Manager" scheme="http://blog.dukaworks.io/tags/Manager/"/>
+    <category term="教程" scheme="http://blog.dukaworks.io/tags/%E6%95%99%E7%A8%8B/"/>
+    <id>http://blog.dukaworks.io/2026/03/05/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B/</id>
+    <link href="http://blog.dukaworks.io/2026/03/05/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B/"/>
+    <published>2026-03-05T08:16:41.000Z</published>
+    <summary>
+      <![CDATA[<p>在国内玩 NAS，想把一堆内网服务优雅地收口到一个域名下，既要省事、又要安全，反向代理就是那把顺手的瑞士军刀。很多朋友习惯用 Lucky，确实轻巧好用；但如果你一些特殊需求，需要Nginx 之类来解决，那么<strong>Nginx Proxy]]>
+    </summary>
+    <title>NAS平台 Nginx Proxy Manager 保姆级教程</title>
+    <updated>2026-03-05T08:19:32.736Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Duka</name>
@@ -309,20 +328,5 @@
     </summary>
     <title>多模态AI应用</title>
     <updated>2026-03-03T20:08:33.583Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Duka</name>
-    </author>
-    <category term="学习笔记" scheme="http://blog.dukaworks.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <category term="结构应用" scheme="http://blog.dukaworks.io/tags/%E7%BB%93%E6%9E%84%E5%BA%94%E7%94%A8/"/>
-    <id>http://blog.dukaworks.io/2026/03/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E6%88%98-26/</id>
-    <link href="http://blog.dukaworks.io/2026/03/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E6%88%98-26/"/>
-    <published>2026-03-04T11:08:00.000Z</published>
-    <summary>
-      <![CDATA[<p>结构应用是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍结构应用的核心要点和实践经验。</p>]]>
-    </summary>
-    <title>数据结构实战</title>
-    <updated>2026-03-03T20:08:33.586Z</updated>
   </entry>
 </feed>
