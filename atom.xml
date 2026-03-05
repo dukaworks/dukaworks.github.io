@@ -11,7 +11,7 @@
   <rights>All rights reserved 2026, Duka</rights>
   <subtitle>AI 网络 技术 随笔 热点</subtitle>
   <title>Duka的技术博客</title>
-  <updated>2026-03-05T08:19:32.736Z</updated>
+  <updated>2026-03-05T08:23:01.935Z</updated>
   <entry>
     <author>
       <name>Duka</name>
@@ -26,10 +26,14 @@
     <link href="http://blog.dukaworks.io/2026/03/05/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B/"/>
     <published>2026-03-05T08:16:41.000Z</published>
     <summary>
-      <![CDATA[<p>在国内玩 NAS，想把一堆内网服务优雅地收口到一个域名下，既要省事、又要安全，反向代理就是那把顺手的瑞士军刀。很多朋友习惯用 Lucky，确实轻巧好用；但如果你一些特殊需求，需要Nginx 之类来解决，那么<strong>Nginx Proxy]]>
+      <![CDATA[<p>在国内玩 NAS，想把一堆内网服务优雅地收口到一个域名下，既要省事、又要安全，反向代理就是那把顺手的瑞士军刀。很多朋友习惯用 Lucky，确实轻巧好用；但如果你一些特殊需求，需要Nginx 之类来解决，那么<strong>Nginx Proxy Manager</strong>会是一个靠谱的选择。（后文简称NPM）</p>
+<p>写这篇文章并不是要「二选一」地替换 Lucky，而是提供另一条同样通畅的方法：你同样会得到一个内网安全、外网可达、证书自动化的标准化入口，把 <a href="https://zhida.zhihu.com/search?content_id=262944954&content_type=Article&match_order=1&q=Jellyfin&zhida_source=entity">Jellyfin</a>、<a href="https://zhida.zhihu.com/search?content_id=262944954&content_type=Article&match_order=1&q=Photoprism&zhida_source=entity">Photoprism</a>、<a href="https://zhida.zhihu.com/search?content_id=262944954&content_type=Article&match_order=1&q=Home+Assistant&zhida_source=entity">Home Assistant</a>、私有博客等各类服务从杂乱的端口中打捞出来，整齐地挂到你的域名之下。</p>
+<blockquote>
+<p>以我的个人习惯来说，国内NAS一般使用Lucky，海外VPS则会选择NPM。<br>之前写过NPM分享，但只是针对VPS，因此补充NAS篇。也因为要分享的下一个项目会用到NPM，方便下篇以及后续引用吧～<br>鉴于国内网络环境，本文默认大家已经做好了DDNS。在”独立域名 + 自己托管 DNS（阿里云&#x2F;腾讯云&#x2F;Cloudflare）+ 跑在 NAS 上”的场景里，<a href="https://zhida.zhihu.com/search?content_id=262944954&content_type=Article&match_order=1&q=ddns-go&zhida_source=entity">ddns-go</a> 是目前最省心、最通用的开源DDNS方案，教程也挺多了吧？不过如果有需要，我会再补一篇相关的使用流程。</p>
+</blockquote>]]>
     </summary>
     <title>NAS平台 Nginx Proxy Manager 保姆级教程</title>
-    <updated>2026-03-05T08:19:32.736Z</updated>
+    <updated>2026-03-05T08:23:01.935Z</updated>
   </entry>
   <entry>
     <author>
