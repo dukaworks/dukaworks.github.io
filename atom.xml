@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <author>
+    <name>Duka</name>
+  </author>
+  <generator uri="https://hexo.io/">Hexo</generator>
+  <icon>http://blog.dukaworks.io/icon.png</icon>
+  <id>http://blog.dukaworks.io/</id>
+  <link href="http://blog.dukaworks.io/" rel="alternate"/>
+  <link href="http://blog.dukaworks.io/atom.xml" rel="self"/>
+  <rights>All rights reserved 2026, Duka</rights>
+  <subtitle>AI 网络 技术 随笔 热点</subtitle>
+  <title>Duka的技术博客</title>
+  <updated>2026-03-04T17:13:31.293Z</updated>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="学习探索" scheme="http://blog.dukaworks.io/categories/%E5%AD%A6%E4%B9%A0%E6%8E%A2%E7%B4%A2/"/>
+    <category term="命令" scheme="http://blog.dukaworks.io/tags/%E5%91%BD%E4%BB%A4/"/>
+    <category term="docker" scheme="http://blog.dukaworks.io/tags/docker/"/>
+    <category term="操作" scheme="http://blog.dukaworks.io/tags/%E6%93%8D%E4%BD%9C/"/>
+    <category term="大全" scheme="http://blog.dukaworks.io/tags/%E5%A4%A7%E5%85%A8/"/>
+    <category term="linux" scheme="http://blog.dukaworks.io/tags/linux/"/>
+    <category term="windows" scheme="http://blog.dukaworks.io/tags/windows/"/>
+    <id>http://blog.dukaworks.io/2026/03/05/%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</id>
+    <link href="http://blog.dukaworks.io/2026/03/05/%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/"/>
+    <published>2026-03-04T17:05:16.000Z</published>
+    <summary>
+      <![CDATA[<p>当然。作为一名资深的软件工程师，Docker 是我们工具箱中不可或缺的核心组件。它彻底改变了我们构建、分发和运行应用的方式。</p>
+<p>下面我为你整理了一份详尽的 Docker 命令行操作大全。同样地，我将按照<strong>实际工作流和使用场景</strong>来组织，并附上高级工程师的<strong>实践建议和注意事项</strong>，确保这份大全不仅全面，而且实用。</p>]]>
+    </summary>
+    <title>Docker 操作命令大全</title>
+    <updated>2026-03-04T17:13:31.293Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="工具使用" scheme="http://blog.dukaworks.io/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
+    <category term="Markdown" scheme="http://blog.dukaworks.io/tags/Markdown/"/>
+    <category term="HTML" scheme="http://blog.dukaworks.io/tags/HTML/"/>
+    <category term="格式" scheme="http://blog.dukaworks.io/tags/%E6%A0%BC%E5%BC%8F/"/>
+    <id>http://blog.dukaworks.io/2026/03/04/HTML%E6%A0%BC%E5%BC%8F%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</id>
+    <link href="http://blog.dukaworks.io/2026/03/04/HTML%E6%A0%BC%E5%BC%8F%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
+    <published>2026-03-04T15:59:59.000Z</published>
+    <summary>
+      <![CDATA[<p>这篇文章用于测试各种 HTML 格式代码片段的效果。</p>]]>
+    </summary>
+    <title>HTML格式测试文章</title>
+    <updated>2026-03-04T07:22:40.636Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="协作模式" scheme="http://blog.dukaworks.io/categories/%E5%8D%8F%E4%BD%9C%E6%A8%A1%E5%BC%8F/"/>
+    <category term="Scrum" scheme="http://blog.dukaworks.io/tags/Scrum/"/>
+    <id>http://blog.dukaworks.io/2026/03/04/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5-32/</id>
+    <link href="http://blog.dukaworks.io/2026/03/04/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5-32/"/>
+    <published>2026-03-04T15:51:00.000Z</published>
+    <summary>
+      <![CDATA[<p>Scrum是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍Scrum的核心要点和实践经验。</p>]]>
+    </summary>
+    <title>敏捷开发实践</title>
+    <updated>2026-03-03T20:08:33.587Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="学习笔记" scheme="http://blog.dukaworks.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="Debug" scheme="http://blog.dukaworks.io/tags/Debug/"/>
+    <category term="Hexo" scheme="http://blog.dukaworks.io/tags/Hexo/"/>
+    <category term="GitHub Pages" scheme="http://blog.dukaworks.io/tags/GitHub-Pages/"/>
+    <category term="Node.js" scheme="http://blog.dukaworks.io/tags/Node-js/"/>
+    <category term="AI协作" scheme="http://blog.dukaworks.io/tags/AI%E5%8D%8F%E4%BD%9C/"/>
+    <id>http://blog.dukaworks.io/2026/03/04/duka-openclaw-fix-bugs/</id>
+    <link href="http://blog.dukaworks.io/2026/03/04/duka-openclaw-fix-bugs/"/>
+    <published>2026-03-04T15:49:59.000Z</published>
+    <summary>
+      <![CDATA[<p>这是一个值得纪念的夜晚。一篇简单的博客，一次看似常规的部署，却引发了一场长达数小时、跨越”人机”两界的深度排查。</p>
+<p>我们遇到了一个堪称”灵异”的 BUG。</p>]]>
+    </summary>
+    <title>首次联手修复&quot;灵异&quot;BUG全记录</title>
+    <updated>2026-03-04T06:14:26.098Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="工具使用" scheme="http://blog.dukaworks.io/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
+    <category term="版本控制" scheme="http://blog.dukaworks.io/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
+    <id>http://blog.dukaworks.io/2026/03/04/git%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95-40/</id>
+    <link href="http://blog.dukaworks.io/2026/03/04/git%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95-40/"/>
+    <published>2026-03-04T15:14:00.000Z</published>
+    <summary>
+      <![CDATA[<p>版本控制是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍版本控制的核心要点和实践经验。</p>]]>
+    </summary>
+    <title>Git高级用法</title>
+    <updated>2026-03-03T20:08:33.588Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="Web开发" scheme="http://blog.dukaworks.io/categories/Web%E5%BC%80%E5%8F%91/"/>
+    <category term="性能提升" scheme="http://blog.dukaworks.io/tags/%E6%80%A7%E8%83%BD%E6%8F%90%E5%8D%87/"/>
+    <id>http://blog.dukaworks.io/2026/03/04/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-13/</id>
+    <link href="http://blog.dukaworks.io/2026/03/04/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-13/"/>
+    <published>2026-03-04T14:51:00.000Z</published>
+    <summary>
+      <![CDATA[<p>性能提升是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍性能提升的核心要点和实践经验。</p>]]>
+    </summary>
+    <title>前端性能优化</title>
+    <updated>2026-03-03T20:08:33.584Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="协作模式" scheme="http://blog.dukaworks.io/categories/%E5%8D%8F%E4%BD%9C%E6%A8%A1%E5%BC%8F/"/>
+    <category term="知识沉淀" scheme="http://blog.dukaworks.io/tags/%E7%9F%A5%E8%AF%86%E6%B2%89%E6%B7%80/"/>
+    <id>http://blog.dukaworks.io/2026/03/04/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E4%BD%93%E7%B3%BB-36/</id>
+    <link href="http://blog.dukaworks.io/2026/03/04/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E4%BD%93%E7%B3%BB-36/"/>
+    <published>2026-03-04T13:49:00.000Z</published>
+    <summary>
+      <![CDATA[<p>知识沉淀是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍知识沉淀的核心要点和实践经验。</p>]]>
+    </summary>
+    <title>知识管理体系</title>
+    <updated>2026-03-03T20:08:33.587Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="学习笔记" scheme="http://blog.dukaworks.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="性能调优" scheme="http://blog.dukaworks.io/tags/%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/"/>
+    <id>http://blog.dukaworks.io/2026/03/04/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96-30/</id>
+    <link href="http://blog.dukaworks.io/2026/03/04/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96-30/"/>
+    <published>2026-03-04T13:45:00.000Z</published>
+    <summary>
+      <![CDATA[<p>性能调优是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍性能调优的核心要点和实践经验。</p>]]>
+    </summary>
+    <title>数据库优化</title>
+    <updated>2026-03-03T20:08:33.586Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="AI智能体" scheme="http://blog.dukaworks.io/categories/AI%E6%99%BA%E8%83%BD%E4%BD%93/"/>
+    <category term="神经网络" scheme="http://blog.dukaworks.io/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+    <id>http://blog.dukaworks.io/2026/03/04/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-00/</id>
+    <link href="http://blog.dukaworks.io/2026/03/04/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-00/"/>
+    <published>2026-03-04T13:28:00.000Z</published>
+    <summary>
+      <![CDATA[<p>神经网络是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍神经网络的核心要点和实践经验。</p>]]>
+    </summary>
+    <title>深度学习基础</title>
+    <updated>2026-03-03T20:08:33.582Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="协作模式" scheme="http://blog.dukaworks.io/categories/%E5%8D%8F%E4%BD%9C%E6%A8%A1%E5%BC%8F/"/>
+    <category term="规范统一" scheme="http://blog.dukaworks.io/tags/%E8%A7%84%E8%8C%83%E7%BB%9F%E4%B8%80/"/>
+    <id>http://blog.dukaworks.io/2026/03/04/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83%E5%88%B6%E5%AE%9A-34/</id>
+    <link href="http://blog.dukaworks.io/2026/03/04/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83%E5%88%B6%E5%AE%9A-34/"/>
+    <published>2026-03-04T13:13:00.000Z</published>
+    <summary>
+      <![CDATA[<p>规范统一是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍规范统一的核心要点和实践经验。</p>]]>
+    </summary>
+    <title>代码规范制定</title>
+    <updated>2026-03-03T20:08:33.587Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="网络架构" scheme="http://blog.dukaworks.io/categories/%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84/"/>
+    <category term="Service Mesh" scheme="http://blog.dukaworks.io/tags/Service-Mesh/"/>
+    <id>http://blog.dukaworks.io/2026/03/04/%E6%9C%8D%E5%8A%A1%E7%BD%91%E6%A0%BC%E6%8A%80%E6%9C%AF-19/</id>
+    <link href="http://blog.dukaworks.io/2026/03/04/%E6%9C%8D%E5%8A%A1%E7%BD%91%E6%A0%BC%E6%8A%80%E6%9C%AF-19/"/>
+    <published>2026-03-04T12:46:00.000Z</published>
+    <summary>
+      <![CDATA[<p>Service Mesh是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍Service Mesh的核心要点和实践经验。</p>]]>
+    </summary>
+    <title>服务网格技术</title>
+    <updated>2026-03-03T20:08:33.585Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="学习笔记" scheme="http://blog.dukaworks.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="问题求解" scheme="http://blog.dukaworks.io/tags/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A3/"/>
+    <id>http://blog.dukaworks.io/2026/03/04/%E7%AE%97%E6%B3%95%E6%80%9D%E7%BB%B4%E8%AE%AD%E7%BB%83-25/</id>
+    <link href="http://blog.dukaworks.io/2026/03/04/%E7%AE%97%E6%B3%95%E6%80%9D%E7%BB%B4%E8%AE%AD%E7%BB%83-25/"/>
+    <published>2026-03-04T12:43:00.000Z</published>
+    <summary>
+      <![CDATA[<p>问题求解是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍问题求解的核心要点和实践经验。</p>]]>
+    </summary>
+    <title>算法思维训练</title>
+    <updated>2026-03-03T20:08:33.586Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="Web开发" scheme="http://blog.dukaworks.io/categories/Web%E5%BC%80%E5%8F%91/"/>
+    <category term="视觉效果" scheme="http://blog.dukaworks.io/tags/%E8%A7%86%E8%A7%89%E6%95%88%E6%9E%9C/"/>
+    <id>http://blog.dukaworks.io/2026/03/04/css%E5%8A%A8%E7%94%BB%E6%8A%80%E5%B7%A7-14/</id>
+    <link href="http://blog.dukaworks.io/2026/03/04/css%E5%8A%A8%E7%94%BB%E6%8A%80%E5%B7%A7-14/"/>
+    <published>2026-03-04T12:20:00.000Z</published>
+    <summary>
+      <![CDATA[<p>视觉效果是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍视觉效果的核心要点和实践经验。</p>]]>
+    </summary>
+    <title>CSS动画技巧</title>
+    <updated>2026-03-03T20:08:33.584Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="AI智能体" scheme="http://blog.dukaworks.io/categories/AI%E6%99%BA%E8%83%BD%E4%BD%93/"/>
+    <category term="检索增强生成" scheme="http://blog.dukaworks.io/tags/%E6%A3%80%E7%B4%A2%E5%A2%9E%E5%BC%BA%E7%94%9F%E6%88%90/"/>
+    <id>http://blog.dukaworks.io/2026/03/04/rag%E6%8A%80%E6%9C%AF%E8%BF%9B%E9%98%B6-05/</id>
+    <link href="http://blog.dukaworks.io/2026/03/04/rag%E6%8A%80%E6%9C%AF%E8%BF%9B%E9%98%B6-05/"/>
+    <published>2026-03-04T11:58:00.000Z</published>
+    <summary>
+      <![CDATA[<p>检索增强生成是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍检索增强生成的核心要点和实践经验。</p>]]>
+    </summary>
+    <title>RAG技术进阶</title>
+    <updated>2026-03-03T20:08:33.583Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="学习笔记" scheme="http://blog.dukaworks.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="问题求解" scheme="http://blog.dukaworks.io/tags/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A3/"/>
+    <id>http://blog.dukaworks.io/2026/03/04/%E7%AE%97%E6%B3%95%E6%80%9D%E7%BB%B4%E8%AE%AD%E7%BB%83-24/</id>
+    <link href="http://blog.dukaworks.io/2026/03/04/%E7%AE%97%E6%B3%95%E6%80%9D%E7%BB%B4%E8%AE%AD%E7%BB%83-24/"/>
+    <published>2026-03-04T11:56:00.000Z</published>
+    <summary>
+      <![CDATA[<p>问题求解是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍问题求解的核心要点和实践经验。</p>]]>
+    </summary>
+    <title>算法思维训练</title>
+    <updated>2026-03-03T20:08:33.585Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="网络架构" scheme="http://blog.dukaworks.io/categories/%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84/"/>
+    <category term="Docker网络" scheme="http://blog.dukaworks.io/tags/Docker%E7%BD%91%E7%BB%9C/"/>
+    <id>http://blog.dukaworks.io/2026/03/04/%E5%AE%B9%E5%99%A8%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86-17/</id>
+    <link href="http://blog.dukaworks.io/2026/03/04/%E5%AE%B9%E5%99%A8%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86-17/"/>
+    <published>2026-03-04T11:50:00.000Z</published>
+    <summary>
+      <![CDATA[<p>Docker网络是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍Docker网络的核心要点和实践经验。</p>]]>
+    </summary>
+    <title>容器网络原理</title>
+    <updated>2026-03-03T20:08:33.584Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="学习笔记" scheme="http://blog.dukaworks.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="系统调用" scheme="http://blog.dukaworks.io/tags/%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8/"/>
+    <id>http://blog.dukaworks.io/2026/03/04/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B-29/</id>
+    <link href="http://blog.dukaworks.io/2026/03/04/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B-29/"/>
+    <published>2026-03-04T11:35:00.000Z</published>
+    <summary>
+      <![CDATA[<p>系统调用是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍系统调用的核心要点和实践经验。</p>]]>
+    </summary>
+    <title>Linux系统编程</title>
+    <updated>2026-03-03T20:08:33.586Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="协作模式" scheme="http://blog.dukaworks.io/categories/%E5%8D%8F%E4%BD%9C%E6%A8%A1%E5%BC%8F/"/>
+    <category term="知识沉淀" scheme="http://blog.dukaworks.io/tags/%E7%9F%A5%E8%AF%86%E6%B2%89%E6%B7%80/"/>
+    <id>http://blog.dukaworks.io/2026/03/04/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E4%BD%93%E7%B3%BB-37/</id>
+    <link href="http://blog.dukaworks.io/2026/03/04/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E4%BD%93%E7%B3%BB-37/"/>
+    <published>2026-03-04T11:33:00.000Z</published>
+    <summary>
+      <![CDATA[<p>知识沉淀是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍知识沉淀的核心要点和实践经验。</p>]]>
+    </summary>
+    <title>知识管理体系</title>
+    <updated>2026-03-03T20:08:33.587Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="AI智能体" scheme="http://blog.dukaworks.io/categories/AI%E6%99%BA%E8%83%BD%E4%BD%93/"/>
+    <category term="跨模态理解" scheme="http://blog.dukaworks.io/tags/%E8%B7%A8%E6%A8%A1%E6%80%81%E7%90%86%E8%A7%A3/"/>
+    <id>http://blog.dukaworks.io/2026/03/04/%E5%A4%9A%E6%A8%A1%E6%80%81ai%E5%BA%94%E7%94%A8-06/</id>
+    <link href="http://blog.dukaworks.io/2026/03/04/%E5%A4%9A%E6%A8%A1%E6%80%81ai%E5%BA%94%E7%94%A8-06/"/>
+    <published>2026-03-04T11:32:00.000Z</published>
+    <summary>
+      <![CDATA[<p>跨模态理解是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍跨模态理解的核心要点和实践经验。</p>]]>
+    </summary>
+    <title>多模态AI应用</title>
+    <updated>2026-03-03T20:08:33.583Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="学习笔记" scheme="http://blog.dukaworks.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="结构应用" scheme="http://blog.dukaworks.io/tags/%E7%BB%93%E6%9E%84%E5%BA%94%E7%94%A8/"/>
+    <id>http://blog.dukaworks.io/2026/03/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E6%88%98-26/</id>
+    <link href="http://blog.dukaworks.io/2026/03/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E6%88%98-26/"/>
+    <published>2026-03-04T11:08:00.000Z</published>
+    <summary>
+      <![CDATA[<p>结构应用是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍结构应用的核心要点和实践经验。</p>]]>
+    </summary>
+    <title>数据结构实战</title>
+    <updated>2026-03-03T20:08:33.586Z</updated>
+  </entry>
+</feed>
