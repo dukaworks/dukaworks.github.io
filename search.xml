@@ -86,6 +86,26 @@
       </tags>
   </entry>
   <entry>
+    <title>ChatGPT 入门指南</title>
+    <url>/2026/03/04/ai-chatgpt-intro/</url>
+    <content><![CDATA[<p>ChatGPT 是目前最流行的对话式 AI 助手之一。本文将介绍 ChatGPT 的基本概念和使用方法。</p>
+<span id="more"></span>
+
+<p>ChatGPT 基于大型语言模型（LLM）构建，能够理解和生成自然语言。它的核心优势在于能够进行流畅的多轮对话，理解上下文，并根据用户需求提供相关答案。</p>
+<p>使用 ChatGPT 时，需要注意提示词（Prompt）的撰写技巧。一个好的提示词应该清晰、具体，并提供足够的上下文信息。例如，”请帮我写一个 Python 脚本” 就不如 “请帮我写一个 Python 脚本，用于批量重命名文件夹中的图片文件” 来得有效。</p>
+<p>ChatGPT 在编程、写作、学习等领域都有广泛应用。对于开发者来说，它可以帮助生成代码片段、解释复杂概念、调试代码错误。对于写作者，它可以提供灵感、润色文本、生成大纲。</p>
+<p>随着技术的发展，ChatGPT 的能力也在不断提升。未来，我们可能会看到更多专业化的版本，如医疗、法律等领域的专用模型。</p>
+]]></content>
+      <categories>
+        <category>AI智能体</category>
+      </categories>
+      <tags>
+        <tag>ChatGPT</tag>
+        <tag>LLM</tag>
+        <tag>入门</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML格式测试文章</title>
     <url>/2026/03/04/HTML%E6%A0%BC%E5%BC%8F%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<p>这篇文章用于测试各种 HTML 格式代码片段的效果。</p>
@@ -232,23 +252,25 @@ module.exports = {
       </tags>
   </entry>
   <entry>
-    <title>ChatGPT 入门指南</title>
-    <url>/2026/03/04/ai-chatgpt-intro/</url>
-    <content><![CDATA[<p>ChatGPT 是目前最流行的对话式 AI 助手之一。本文将介绍 ChatGPT 的基本概念和使用方法。</p>
+    <title>模型微调入门</title>
+    <url>/2026/03/04/ai-fine-tuning/</url>
+    <content><![CDATA[<p>模型微调（Fine-tuning）是在预训练模型基础上，使用特定领域的数据进一步训练，使模型适应特定任务的技术。</p>
 <span id="more"></span>
 
-<p>ChatGPT 基于大型语言模型（LLM）构建，能够理解和生成自然语言。它的核心优势在于能够进行流畅的多轮对话，理解上下文，并根据用户需求提供相关答案。</p>
-<p>使用 ChatGPT 时，需要注意提示词（Prompt）的撰写技巧。一个好的提示词应该清晰、具体，并提供足够的上下文信息。例如，”请帮我写一个 Python 脚本” 就不如 “请帮我写一个 Python 脚本，用于批量重命名文件夹中的图片文件” 来得有效。</p>
-<p>ChatGPT 在编程、写作、学习等领域都有广泛应用。对于开发者来说，它可以帮助生成代码片段、解释复杂概念、调试代码错误。对于写作者，它可以提供灵感、润色文本、生成大纲。</p>
-<p>随着技术的发展，ChatGPT 的能力也在不断提升。未来，我们可能会看到更多专业化的版本，如医疗、法律等领域的专用模型。</p>
+<p>微调的优势在于、模型会学习特定领域的知识和风格，输出更符合实际需求；相比从零训练，所需数据量和计算资源更少；可以保留预训练模型的通用能力。</p>
+<p>常见的微调方法包括、全参数微调、LoRA（Low-Rank Adaptation）、Prefix Tuning、Prompt Tuning。LoRA 只训练少量参数，效果接近全参数微调，计算成本低，是目前最受欢迎的方法。</p>
+<p>微调前需要准备高质量的数据集。数据应该包含输入输出对，格式统一，数量充足。对于对话模型，需要多轮对话数据；对于分类模型，需要标注数据。</p>
+<p>Hugging Face 的 PEFT、Transformers 库提供了便捷的微调接口。选择合适的预训练模型（如 Llama、Mistral），配置训练参数，开始训练。</p>
+<p>微调后需要评估模型效果。可以使用测试集评估，也可以人工抽检。如果效果不理想，可能需要调整数据质量、增加训练轮数、调整学习率等。</p>
+<p>微调是定制 AI 模型的有效途径。随着工具的成熟，越来越多的开发者能够创建自己的专属模型。</p>
 ]]></content>
       <categories>
         <category>AI智能体</category>
       </categories>
       <tags>
-        <tag>ChatGPT</tag>
-        <tag>LLM</tag>
-        <tag>入门</tag>
+        <tag>微调</tag>
+        <tag>训练</tag>
+        <tag>模型</tag>
       </tags>
   </entry>
   <entry>
@@ -276,57 +298,6 @@ module.exports = {
       </tags>
   </entry>
   <entry>
-    <title>OpenAI API 使用指南</title>
-    <url>/2026/03/04/ai-openai-api/</url>
-    <content><![CDATA[<p>OpenAI API 提供了强大的 GPT 模型能力，开发者可以将其集成到自己的应用中。本文介绍基本的 API 使用方法。</p>
-<span id="more"></span>
-
-<p>首先注册 OpenAI 账号，获取 API Key。安装官方 Python SDK、<code>pip install openai</code>。</p>
-<p>调用 API、</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> openai <span class="keyword">import</span> OpenAI</span><br><span class="line">client = OpenAI(api_key=<span class="string">&quot;your-key&quot;</span>)</span><br><span class="line"></span><br><span class="line">response = client.chat.completions.create(</span><br><span class="line">    model=<span class="string">&quot;gpt-4&quot;</span>、</span><br><span class="line">    messages=[&#123;<span class="string">&quot;role&quot;</span>: <span class="string">&quot;user&quot;</span>、 <span class="string">&quot;content&quot;</span>: <span class="string">&quot;Hello&quot;</span>&#125;]</span><br><span class="line">)</span><br><span class="line"><span class="built_in">print</span>(response.choices[<span class="number">0</span>].message.content)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>API 参数包括、model（模型选择），messages（对话历史），temperature（随机性），max_tokens（最大长度），top_p，frequency_penalty，presence_penalty。</p>
-<p>流式输出可以减少等待时间。设置 <code>stream=True</code>，迭代读取响应、</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> chunk <span class="keyword">in</span> response:</span><br><span class="line">    <span class="keyword">if</span> chunk.choices[<span class="number">0</span>].delta.content:</span><br><span class="line">        <span class="built_in">print</span>(chunk.choices[<span class="number">0</span>].delta.content、 end=<span class="string">&quot;&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>函数调用让模型能够调用外部工具。定义函数参数格式，模型会返回函数名和参数，开发者执行函数后返回结果给模型。</p>
-<p>多模态 API 支持图片输入。GPT-4 Vision 可以理解和描述图片内容，适用于图像分析、视觉问答等场景。</p>
-<p>使用 API 时要注意成本控制。设置 max_tokens 限制长度，监控 API 调用次数，使用缓存减少重复请求。</p>
-<p>API 有速率限制（Rate Limit），避免频繁调用。使用重试逻辑处理临时错误，合理安排请求频率。</p>
-<p>OpenAI API 能力强大，但也要合理使用。不要过度依赖，要结合应用场景，提供更好的用户体验。</p>
-]]></content>
-      <categories>
-        <category>AI智能体</category>
-      </categories>
-      <tags>
-        <tag>开发</tag>
-        <tag>OpenAI</tag>
-        <tag>API</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>模型微调入门</title>
-    <url>/2026/03/04/ai-fine-tuning/</url>
-    <content><![CDATA[<p>模型微调（Fine-tuning）是在预训练模型基础上，使用特定领域的数据进一步训练，使模型适应特定任务的技术。</p>
-<span id="more"></span>
-
-<p>微调的优势在于、模型会学习特定领域的知识和风格，输出更符合实际需求；相比从零训练，所需数据量和计算资源更少；可以保留预训练模型的通用能力。</p>
-<p>常见的微调方法包括、全参数微调、LoRA（Low-Rank Adaptation）、Prefix Tuning、Prompt Tuning。LoRA 只训练少量参数，效果接近全参数微调，计算成本低，是目前最受欢迎的方法。</p>
-<p>微调前需要准备高质量的数据集。数据应该包含输入输出对，格式统一，数量充足。对于对话模型，需要多轮对话数据；对于分类模型，需要标注数据。</p>
-<p>Hugging Face 的 PEFT、Transformers 库提供了便捷的微调接口。选择合适的预训练模型（如 Llama、Mistral），配置训练参数，开始训练。</p>
-<p>微调后需要评估模型效果。可以使用测试集评估，也可以人工抽检。如果效果不理想，可能需要调整数据质量、增加训练轮数、调整学习率等。</p>
-<p>微调是定制 AI 模型的有效途径。随着工具的成熟，越来越多的开发者能够创建自己的专属模型。</p>
-]]></content>
-      <categories>
-        <category>AI智能体</category>
-      </categories>
-      <tags>
-        <tag>微调</tag>
-        <tag>训练</tag>
-        <tag>模型</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>多模态 AI 介绍</title>
     <url>/2026/03/04/ai-multimodal/</url>
     <content><![CDATA[<p>多模态 AI 能够处理和理解多种模态的数据，如文本、图像、音频、视频。相比单一模态，多模态能提供更丰富、更准确的理解。</p>
@@ -350,24 +321,63 @@ module.exports = {
       </tags>
   </entry>
   <entry>
-    <title>RAG 技术简介</title>
-    <url>/2026/03/04/ai-rag-intro/</url>
-    <content><![CDATA[<p>RAG（Retrieval-Augmented Generation，检索增强生成）是一种结合信息检索和生成式 AI 的技术。它通过从知识库中检索相关信息，再结合大语言模型生成答案，提高了回答的准确性和可靠性。</p>
+    <title>OpenAI API 使用指南</title>
+    <url>/2026/03/04/ai-openai-api/</url>
+    <content><![CDATA[<p>OpenAI API 提供了强大的 GPT 模型能力，开发者可以将其集成到自己的应用中。本文介绍基本的 API 使用方法。</p>
 <span id="more"></span>
 
-<p>RAG 的工作流程包括、文档切分、向量化、存储向量、检索相似文档、生成回答。文档通常按段落或句子切分成小块，然后通过嵌入模型转换为向量，存储在向量数据库中。</p>
-<p>当用户提问时，将问题向量化，在向量数据库中检索最相关的文档片段，将这些片段和问题一起输入大语言模型，生成基于事实的答案。</p>
-<p>RAG 的优势在于、可以减少模型幻觉，答案有据可查；能够利用领域知识，无需微调模型；支持知识更新，只需更新文档库。</p>
-<p>实现 RAG 需要选择合适的嵌入模型和向量数据库。OpenAI 的 text-embedding-ada-002、Hugging Face 的各种模型是常用选择。Pinecone、Chroma、Milvus 等向量数据库提供了向量存储和检索功能。</p>
-<p>RAG 在智能客服、知识问答、文档问答等领域有广泛应用。随着技术发展，RAG 系统的构建会越来越简单。</p>
+<p>首先注册 OpenAI 账号，获取 API Key。安装官方 Python SDK、<code>pip install openai</code>。</p>
+<p>调用 API、</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> openai <span class="token keyword">import</span> OpenAI
+client <span class="token operator">=</span> OpenAI<span class="token punctuation">(</span>api_key<span class="token operator">=</span><span class="token string">"your-key"</span><span class="token punctuation">)</span>
+
+response <span class="token operator">=</span> client<span class="token punctuation">.</span>chat<span class="token punctuation">.</span>completions<span class="token punctuation">.</span>create<span class="token punctuation">(</span>
+    model<span class="token operator">=</span><span class="token string">"gpt-4"</span>、
+    messages<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">&#123;</span><span class="token string">"role"</span><span class="token punctuation">:</span> <span class="token string">"user"</span>、 <span class="token string">"content"</span><span class="token punctuation">:</span> <span class="token string">"Hello"</span><span class="token punctuation">&#125;</span><span class="token punctuation">]</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>choices<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>message<span class="token punctuation">.</span>content<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>API 参数包括、model（模型选择），messages（对话历史），temperature（随机性），max_tokens（最大长度），top_p，frequency_penalty，presence_penalty。</p>
+<p>流式输出可以减少等待时间。设置 <code>stream=True</code>，迭代读取响应、</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> chunk <span class="token keyword">in</span> response<span class="token punctuation">:</span>
+    <span class="token keyword">if</span> chunk<span class="token punctuation">.</span>choices<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>delta<span class="token punctuation">.</span>content<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>chunk<span class="token punctuation">.</span>choices<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>delta<span class="token punctuation">.</span>content、 end<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>函数调用让模型能够调用外部工具。定义函数参数格式，模型会返回函数名和参数，开发者执行函数后返回结果给模型。</p>
+<p>多模态 API 支持图片输入。GPT-4 Vision 可以理解和描述图片内容，适用于图像分析、视觉问答等场景。</p>
+<p>使用 API 时要注意成本控制。设置 max_tokens 限制长度，监控 API 调用次数，使用缓存减少重复请求。</p>
+<p>API 有速率限制（Rate Limit），避免频繁调用。使用重试逻辑处理临时错误，合理安排请求频率。</p>
+<p>OpenAI API 能力强大，但也要合理使用。不要过度依赖，要结合应用场景，提供更好的用户体验。</p>
 ]]></content>
       <categories>
         <category>AI智能体</category>
       </categories>
       <tags>
-        <tag>RAG</tag>
-        <tag>检索增强</tag>
-        <tag>问答</tag>
+        <tag>开发</tag>
+        <tag>OpenAI</tag>
+        <tag>API</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>提示词工程实践</title>
+    <url>/2026/03/04/ai-prompt-engineering/</url>
+    <content><![CDATA[<p>提示词工程（Prompt Engineering）是与 AI 模型有效沟通的关键技能。掌握这项技能可以显著提升 AI 输出的质量和准确性。</p>
+<span id="more"></span>
+
+<p>一个好的提示词通常包含以下几个要素、角色设定、任务描述、输出格式、限制条件。例如，”你是一位经验丰富的 Python 开发者。请帮我解释什么是装饰器，并提供三个实际应用场景。回答时使用简单易懂的语言，避免过于学术化的表述。”</p>
+<p>在构建复杂提示词时，可以采用”思维链”（Chain of Thought）方法。这种方法引导 AI 逐步思考，分解问题，从而得出更准确的结果。例如，在解决数学问题时，可以让 AI 先分析问题，再列出解题步骤，最后给出答案。</p>
+<p>提示词的迭代优化也是一个重要过程。初次尝试的提示词可能不够理想，需要根据 AI 的反馈和输出结果不断调整。这需要耐心和实践。</p>
+<p>随着 AI 技术的发展，提示词工程也在不断演进。未来可能会有更多自动化工具帮助我们构建和管理提示词库，提高工作效率。</p>
+]]></content>
+      <categories>
+        <category>AI智能体</category>
+      </categories>
+      <tags>
+        <tag>提示词</tag>
+        <tag>Prompt</tag>
+        <tag>最佳实践</tag>
       </tags>
   </entry>
   <entry>
@@ -392,28 +402,29 @@ module.exports = {
       </tags>
   </entry>
   <entry>
-    <title>提示词工程实践</title>
-    <url>/2026/03/04/ai-prompt-engineering/</url>
-    <content><![CDATA[<p>提示词工程（Prompt Engineering）是与 AI 模型有效沟通的关键技能。掌握这项技能可以显著提升 AI 输出的质量和准确性。</p>
+    <title>RAG 技术简介</title>
+    <url>/2026/03/04/ai-rag-intro/</url>
+    <content><![CDATA[<p>RAG（Retrieval-Augmented Generation，检索增强生成）是一种结合信息检索和生成式 AI 的技术。它通过从知识库中检索相关信息，再结合大语言模型生成答案，提高了回答的准确性和可靠性。</p>
 <span id="more"></span>
 
-<p>一个好的提示词通常包含以下几个要素、角色设定、任务描述、输出格式、限制条件。例如，”你是一位经验丰富的 Python 开发者。请帮我解释什么是装饰器，并提供三个实际应用场景。回答时使用简单易懂的语言，避免过于学术化的表述。”</p>
-<p>在构建复杂提示词时，可以采用”思维链”（Chain of Thought）方法。这种方法引导 AI 逐步思考，分解问题，从而得出更准确的结果。例如，在解决数学问题时，可以让 AI 先分析问题，再列出解题步骤，最后给出答案。</p>
-<p>提示词的迭代优化也是一个重要过程。初次尝试的提示词可能不够理想，需要根据 AI 的反馈和输出结果不断调整。这需要耐心和实践。</p>
-<p>随着 AI 技术的发展，提示词工程也在不断演进。未来可能会有更多自动化工具帮助我们构建和管理提示词库，提高工作效率。</p>
+<p>RAG 的工作流程包括、文档切分、向量化、存储向量、检索相似文档、生成回答。文档通常按段落或句子切分成小块，然后通过嵌入模型转换为向量，存储在向量数据库中。</p>
+<p>当用户提问时，将问题向量化，在向量数据库中检索最相关的文档片段，将这些片段和问题一起输入大语言模型，生成基于事实的答案。</p>
+<p>RAG 的优势在于、可以减少模型幻觉，答案有据可查；能够利用领域知识，无需微调模型；支持知识更新，只需更新文档库。</p>
+<p>实现 RAG 需要选择合适的嵌入模型和向量数据库。OpenAI 的 text-embedding-ada-002、Hugging Face 的各种模型是常用选择。Pinecone、Chroma、Milvus 等向量数据库提供了向量存储和检索功能。</p>
+<p>RAG 在智能客服、知识问答、文档问答等领域有广泛应用。随着技术发展，RAG 系统的构建会越来越简单。</p>
 ]]></content>
       <categories>
         <category>AI智能体</category>
       </categories>
       <tags>
-        <tag>提示词</tag>
-        <tag>Prompt</tag>
-        <tag>最佳实践</tag>
+        <tag>RAG</tag>
+        <tag>检索增强</tag>
+        <tag>问答</tag>
       </tags>
   </entry>
   <entry>
     <title>CSS动画技巧</title>
-    <url>/2026/03/04/css%E5%8A%A8%E7%94%BB%E6%8A%80%E5%B7%A7-15/</url>
+    <url>/2026/03/04/css%E5%8A%A8%E7%94%BB%E6%8A%80%E5%B7%A7-14/</url>
     <content><![CDATA[<p>视觉效果是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍视觉效果的核心要点和实践经验。</p>
 <span id="more"></span>
 
@@ -485,8 +496,29 @@ module.exports = {
       </tags>
   </entry>
   <entry>
+    <title>Node.js 异步编程</title>
+    <url>/2026/03/04/dev-nodejs-async/</url>
+    <content><![CDATA[<p>Node.js 是基于事件驱动、非阻塞 I&#x2F;O 模型的运行时环境。理解异步编程是掌握 Node.js 的关键。</p>
+<span id="more"></span>
+
+<p>Node.js 的异步编程经历了 callback、Promise、async&#x2F;await 三个阶段。Callback 是最原始的方式，但容易陷入回调地狱。Promise 解决了回调地狱问题，提供了链式调用。async&#x2F;await 是 Promise 的语法糖，让异步代码看起来像同步代码一样。</p>
+<p>事件循环（Event Loop）是 Node.js 异步编程的核心。它负责协调代码执行、事件处理、回调队列等工作。理解事件循环对于编写高效的异步代码至关重要。</p>
+<p>常见的问题包括、未处理的 Promise 拒绝、内存泄漏、竞态条件。使用 try-catch 捕获错误，使用 process.on(‘unhandledRejection’) 处理未处理的拒绝。</p>
+<p>在实际开发中，需要合理选择同步和异步 API。虽然异步是 Node.js 的特点，但某些场景下同步 API 更简单直接，例如读取配置文件。</p>
+<p>掌握异步编程不仅能写出高效的 Node.js 代码，还能提升整体的 JavaScript 水平。多练习，多阅读优秀的开源代码，是提升的最佳途径。</p>
+]]></content>
+      <categories>
+        <category>Web开发</category>
+      </categories>
+      <tags>
+        <tag>Node.js</tag>
+        <tag>异步</tag>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSS动画技巧</title>
-    <url>/2026/03/04/css%E5%8A%A8%E7%94%BB%E6%8A%80%E5%B7%A7-14/</url>
+    <url>/2026/03/04/css%E5%8A%A8%E7%94%BB%E6%8A%80%E5%B7%A7-15/</url>
     <content><![CDATA[<p>视觉效果是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍视觉效果的核心要点和实践经验。</p>
 <span id="more"></span>
 
@@ -508,27 +540,6 @@ module.exports = {
       </categories>
       <tags>
         <tag>视觉效果</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Node.js 异步编程</title>
-    <url>/2026/03/04/dev-nodejs-async/</url>
-    <content><![CDATA[<p>Node.js 是基于事件驱动、非阻塞 I&#x2F;O 模型的运行时环境。理解异步编程是掌握 Node.js 的关键。</p>
-<span id="more"></span>
-
-<p>Node.js 的异步编程经历了 callback、Promise、async&#x2F;await 三个阶段。Callback 是最原始的方式，但容易陷入回调地狱。Promise 解决了回调地狱问题，提供了链式调用。async&#x2F;await 是 Promise 的语法糖，让异步代码看起来像同步代码一样。</p>
-<p>事件循环（Event Loop）是 Node.js 异步编程的核心。它负责协调代码执行、事件处理、回调队列等工作。理解事件循环对于编写高效的异步代码至关重要。</p>
-<p>常见的问题包括、未处理的 Promise 拒绝、内存泄漏、竞态条件。使用 try-catch 捕获错误，使用 process.on(‘unhandledRejection’) 处理未处理的拒绝。</p>
-<p>在实际开发中，需要合理选择同步和异步 API。虽然异步是 Node.js 的特点，但某些场景下同步 API 更简单直接，例如读取配置文件。</p>
-<p>掌握异步编程不仅能写出高效的 Node.js 代码，还能提升整体的 JavaScript 水平。多练习，多阅读优秀的开源代码，是提升的最佳途径。</p>
-]]></content>
-      <categories>
-        <category>Web开发</category>
-      </categories>
-      <tags>
-        <tag>Node.js</tag>
-        <tag>异步</tag>
-        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -573,30 +584,6 @@ module.exports = {
         <tag>API</tag>
         <tag>REST</tag>
         <tag>设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>软件测试基础</title>
-    <url>/2026/03/04/dev-testing-basics/</url>
-    <content><![CDATA[<p>软件测试是保证软件质量的重要手段。良好的测试能发现 bug，防止回归，提高代码信心。</p>
-<span id="more"></span>
-
-<p>测试类型、单元测试、集成测试、系统测试、端到端测试。单元测试测试最小单元（函数、类），集成测试测试组件间交互，系统测试测试完整系统，端到端测试模拟用户场景。</p>
-<p>测试金字塔、大量单元测试（70-80%），适量集成测试（15-20%），少量端到端测试（5-10%）。单元测试快速、稳定、定位准确，应该是测试的主体。</p>
-<p>测试框架、JavaScript 用 Jest、Mocha，Python 用 pytest，Java 用 JUnit。选择合适的框架，遵循最佳实践。</p>
-<p>测试原则、FIRST（Fast 快速、Independent 独立、Repeatable 可重复、Self-Validating 自验证、Timely 及时）。每个测试应该只验证一个方面，避免测试相互依赖。</p>
-<p>测试替身、Dummy 空对象，Stub 预设返回，Mock 模拟行为，Fake 简化实现。合理使用测试替身，隔离外部依赖，保证测试稳定。</p>
-<p>测试覆盖率、语句覆盖、分支覆盖、路径覆盖。追求高覆盖率，但不要迷信覆盖率。测试质量和数量同样重要。</p>
-<p>TDD（测试驱动开发）、先写测试，再写代码。红（失败测试）→绿（通过测试）→重构。TDD 能提高代码质量，降低 bug 数量，但需要时间适应。</p>
-<p>测试不是负担，而是投资。写测试的时间会在后期调试和维护中收回。养成测试习惯，代码质量会显著提升。</p>
-]]></content>
-      <categories>
-        <category>Web开发</category>
-      </categories>
-      <tags>
-        <tag>开发</tag>
-        <tag>测试</tag>
-        <tag>质量保证</tag>
       </tags>
   </entry>
   <entry>
@@ -645,6 +632,32 @@ module.exports = {
         <tag>前端</tag>
         <tag>Vue3</tag>
         <tag>Composition API</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker容器化</title>
+    <url>/2026/03/04/docker%E5%AE%B9%E5%99%A8%E5%8C%96-42/</url>
+    <content><![CDATA[<p>环境隔离是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍环境隔离的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h2><p>Dockerfile是环境隔离的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用Dockerfile时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践Dockerfile，我们可以掌握环境隔离的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="镜像优化"><a href="#镜像优化" class="headerlink" title="镜像优化"></a>镜像优化</h2><p>镜像优化是环境隔离的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用镜像优化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践镜像优化，我们可以掌握环境隔离的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="多阶段构建"><a href="#多阶段构建" class="headerlink" title="多阶段构建"></a>多阶段构建</h2><p>多阶段构建是环境隔离的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用多阶段构建时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践多阶段构建，我们可以掌握环境隔离的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="容器编排"><a href="#容器编排" class="headerlink" title="容器编排"></a>容器编排</h2><p>容器编排是环境隔离的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用容器编排时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握容器编排和相关知识，将帮助我们构建更加完善的环境隔离体系。</p>
+]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+      <tags>
+        <tag>环境隔离</tag>
       </tags>
   </entry>
   <entry>
@@ -697,29 +710,48 @@ module.exports = {
       </tags>
   </entry>
   <entry>
-    <title>Git高级用法</title>
-    <url>/2026/03/04/git%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95-40/</url>
-    <content><![CDATA[<p>版本控制是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍版本控制的核心要点和实践经验。</p>
+    <title>软件测试基础</title>
+    <url>/2026/03/04/dev-testing-basics/</url>
+    <content><![CDATA[<p>软件测试是保证软件质量的重要手段。良好的测试能发现 bug，防止回归，提高代码信心。</p>
 <span id="more"></span>
 
-<h2 id="Rebase"><a href="#Rebase" class="headerlink" title="Rebase"></a>Rebase</h2><p>Rebase是版本控制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用Rebase时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践Rebase，我们可以掌握版本控制的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="Cherry-pick"><a href="#Cherry-pick" class="headerlink" title="Cherry-pick"></a>Cherry-pick</h2><p>Cherry-pick是版本控制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用Cherry-pick时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践Cherry-pick，我们可以掌握版本控制的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="交互式变基"><a href="#交互式变基" class="headerlink" title="交互式变基"></a>交互式变基</h2><p>交互式变基是版本控制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用交互式变基时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践交互式变基，我们可以掌握版本控制的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="子模块"><a href="#子模块" class="headerlink" title="子模块"></a>子模块</h2><p>子模块是版本控制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用子模块时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握子模块和相关知识，将帮助我们构建更加完善的版本控制体系。</p>
+<p>测试类型、单元测试、集成测试、系统测试、端到端测试。单元测试测试最小单元（函数、类），集成测试测试组件间交互，系统测试测试完整系统，端到端测试模拟用户场景。</p>
+<p>测试金字塔、大量单元测试（70-80%），适量集成测试（15-20%），少量端到端测试（5-10%）。单元测试快速、稳定、定位准确，应该是测试的主体。</p>
+<p>测试框架、JavaScript 用 Jest、Mocha，Python 用 pytest，Java 用 JUnit。选择合适的框架，遵循最佳实践。</p>
+<p>测试原则、FIRST（Fast 快速、Independent 独立、Repeatable 可重复、Self-Validating 自验证、Timely 及时）。每个测试应该只验证一个方面，避免测试相互依赖。</p>
+<p>测试替身、Dummy 空对象，Stub 预设返回，Mock 模拟行为，Fake 简化实现。合理使用测试替身，隔离外部依赖，保证测试稳定。</p>
+<p>测试覆盖率、语句覆盖、分支覆盖、路径覆盖。追求高覆盖率，但不要迷信覆盖率。测试质量和数量同样重要。</p>
+<p>TDD（测试驱动开发）、先写测试，再写代码。红（失败测试）→绿（通过测试）→重构。TDD 能提高代码质量，降低 bug 数量，但需要时间适应。</p>
+<p>测试不是负担，而是投资。写测试的时间会在后期调试和维护中收回。养成测试习惯，代码质量会显著提升。</p>
 ]]></content>
       <categories>
-        <category>工具使用</category>
+        <category>Web开发</category>
       </categories>
       <tags>
-        <tag>版本控制</tag>
+        <tag>开发</tag>
+        <tag>测试</tag>
+        <tag>质量保证</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端工程化实践</title>
+    <url>/2026/03/04/frontend-engineering-49/</url>
+    <content><![CDATA[<p>前端工程化是提升开发效率和质量的重要手段。通过系统化的工具和流程，我们可以构建更加健壮的前端应用。本文将介绍前端工程化的核心实践。</p>
+<span id="more"></span>
+
+<h2 id="模块化开发"><a href="#模块化开发" class="headerlink" title="模块化开发"></a>模块化开发</h2><p>模块化是前端工程化的基础。通过 ES Modules、Webpack 等工具，我们可以实现代码的模块化组织，提升代码的可维护性。</p>
+<p>在构建复杂应用时，合理划分模块边界非常重要。每个模块应该有清晰的职责和接口。</p>
+<h2 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h2><p>代码规范是团队协作的基础。通过 ESLint、Prettier 等工具，我们可以统一代码风格，减少沟通成本。</p>
+<p>建立代码审查流程，确保每一行代码都符合规范，这是保证代码质量的重要手段。</p>
+<h2 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h2><p>持续集成可以自动运行测试和构建，及时发现和解决问题。通过 GitHub Actions 等工具，我们可以实现自动化的 CI&#x2F;CD 流程。</p>
+<p>掌握前端工程化实践，将帮助我们构建更加高效、可靠的前端开发体系。</p>
+]]></content>
+      <categories>
+        <category>Web开发</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>工程化</tag>
       </tags>
   </entry>
   <entry>
@@ -793,34 +825,8 @@ module.exports = {
       </tags>
   </entry>
   <entry>
-    <title>Docker容器化</title>
-    <url>/2026/03/04/docker%E5%AE%B9%E5%99%A8%E5%8C%96-42/</url>
-    <content><![CDATA[<p>环境隔离是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍环境隔离的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h2><p>Dockerfile是环境隔离的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用Dockerfile时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践Dockerfile，我们可以掌握环境隔离的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="镜像优化"><a href="#镜像优化" class="headerlink" title="镜像优化"></a>镜像优化</h2><p>镜像优化是环境隔离的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用镜像优化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践镜像优化，我们可以掌握环境隔离的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="多阶段构建"><a href="#多阶段构建" class="headerlink" title="多阶段构建"></a>多阶段构建</h2><p>多阶段构建是环境隔离的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用多阶段构建时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践多阶段构建，我们可以掌握环境隔离的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="容器编排"><a href="#容器编排" class="headerlink" title="容器编排"></a>容器编排</h2><p>容器编排是环境隔离的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用容器编排时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握容器编排和相关知识，将帮助我们构建更加完善的环境隔离体系。</p>
-]]></content>
-      <categories>
-        <category>工具使用</category>
-      </categories>
-      <tags>
-        <tag>环境隔离</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git高级用法</title>
-    <url>/2026/03/04/git%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95-41/</url>
+    <url>/2026/03/04/git%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95-40/</url>
     <content><![CDATA[<p>版本控制是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍版本控制的核心要点和实践经验。</p>
 <span id="more"></span>
 
@@ -884,27 +890,6 @@ module.exports = {
         <tag>协作</tag>
         <tag>工具</tag>
         <tag>团队</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端工程化实践</title>
-    <url>/2026/03/04/frontend-engineering-49/</url>
-    <content><![CDATA[<p>前端工程化是提升开发效率和质量的重要手段。通过系统化的工具和流程，我们可以构建更加健壮的前端应用。本文将介绍前端工程化的核心实践。</p>
-<span id="more"></span>
-
-<h2 id="模块化开发"><a href="#模块化开发" class="headerlink" title="模块化开发"></a>模块化开发</h2><p>模块化是前端工程化的基础。通过 ES Modules、Webpack 等工具，我们可以实现代码的模块化组织，提升代码的可维护性。</p>
-<p>在构建复杂应用时，合理划分模块边界非常重要。每个模块应该有清晰的职责和接口。</p>
-<h2 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h2><p>代码规范是团队协作的基础。通过 ESLint、Prettier 等工具，我们可以统一代码风格，减少沟通成本。</p>
-<p>建立代码审查流程，确保每一行代码都符合规范，这是保证代码质量的重要手段。</p>
-<h2 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h2><p>持续集成可以自动运行测试和构建，及时发现和解决问题。通过 GitHub Actions 等工具，我们可以实现自动化的 CI&#x2F;CD 流程。</p>
-<p>掌握前端工程化实践，将帮助我们构建更加高效、可靠的前端开发体系。</p>
-]]></content>
-      <categories>
-        <category>Web开发</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>工程化</tag>
       </tags>
   </entry>
   <entry>
@@ -976,6 +961,32 @@ module.exports = {
         <tag>团队</tag>
         <tag>知识分享</tag>
         <tag>成长</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git高级用法</title>
+    <url>/2026/03/04/git%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95-41/</url>
+    <content><![CDATA[<p>版本控制是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍版本控制的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="Rebase"><a href="#Rebase" class="headerlink" title="Rebase"></a>Rebase</h2><p>Rebase是版本控制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用Rebase时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践Rebase，我们可以掌握版本控制的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="Cherry-pick"><a href="#Cherry-pick" class="headerlink" title="Cherry-pick"></a>Cherry-pick</h2><p>Cherry-pick是版本控制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用Cherry-pick时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践Cherry-pick，我们可以掌握版本控制的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="交互式变基"><a href="#交互式变基" class="headerlink" title="交互式变基"></a>交互式变基</h2><p>交互式变基是版本控制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用交互式变基时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践交互式变基，我们可以掌握版本控制的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="子模块"><a href="#子模块" class="headerlink" title="子模块"></a>子模块</h2><p>子模块是版本控制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用子模块时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握子模块和相关知识，将帮助我们构建更加完善的版本控制体系。</p>
+]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+      <tags>
+        <tag>版本控制</tag>
       </tags>
   </entry>
   <entry>
@@ -1066,6 +1077,28 @@ module.exports = {
       </tags>
   </entry>
   <entry>
+    <title>设计模式学习笔记</title>
+    <url>/2026/03/04/learn-design-patterns/</url>
+    <content><![CDATA[<p>设计模式是软件开发中常见问题的通用解决方案。学习设计模式能提高代码质量，促进团队成员间的沟通。</p>
+<span id="more"></span>
+
+<p>设计模式分为三类、创建型模式解决对象创建问题，包括单例、工厂、建造者等；结构型模式解决类和对象的组合问题，包括适配器、装饰器、代理等；行为型模式解决对象间的通信问题，包括观察者、策略、模板方法等。</p>
+<p>单例模式确保一个类只有一个实例，常用于配置管理、数据库连接等场景。工厂模式封装对象创建逻辑，便于扩展和管理。观察者模式实现事件监听和发布订阅，广泛应用于前端框架。</p>
+<p>学习设计模式要理解其解决的问题、实现方式、适用场景。不要生搬硬套，要根据实际需求选择合适的模式。过度使用设计模式会增加系统复杂度。</p>
+<p>设计模式不是银弹。优秀的代码首先应该简单清晰，然后再考虑是否应用模式。正如《设计模式》一书所说、”应该优先使用组合而不是继承”。</p>
+<p>除了经典的 23 种设计模式，还有很多其他模式，如依赖注入、仓储模式、CQRS 等。它们在现代开发中同样重要。</p>
+<p>掌握设计模式是架构师的基础能力。多阅读优秀源码，思考其中的设计思想，这是提升最快的方式。</p>
+]]></content>
+      <categories>
+        <category>学习探索</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+        <tag>架构</tag>
+        <tag>重构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Docker 容器技术入门</title>
     <url>/2026/03/04/learn-docker-basics/</url>
     <content><![CDATA[<p>Docker 是一种轻量级的容器化技术，它允许开发者将应用及其依赖打包成一个可移植的容器，在任何环境中运行。</p>
@@ -1087,25 +1120,23 @@ module.exports = {
       </tags>
   </entry>
   <entry>
-    <title>设计模式学习笔记</title>
-    <url>/2026/03/04/learn-design-patterns/</url>
-    <content><![CDATA[<p>设计模式是软件开发中常见问题的通用解决方案。学习设计模式能提高代码质量，促进团队成员间的沟通。</p>
+    <title>Git 工作流学习笔记</title>
+    <url>/2026/03/04/learn-git-workflow/</url>
+    <content><![CDATA[<p>Git 是现代软件开发中不可或缺的版本控制工具。学习 Git 工作流有助于提高团队协作效率和代码管理能力。</p>
 <span id="more"></span>
 
-<p>设计模式分为三类、创建型模式解决对象创建问题，包括单例、工厂、建造者等；结构型模式解决类和对象的组合问题，包括适配器、装饰器、代理等；行为型模式解决对象间的通信问题，包括观察者、策略、模板方法等。</p>
-<p>单例模式确保一个类只有一个实例，常用于配置管理、数据库连接等场景。工厂模式封装对象创建逻辑，便于扩展和管理。观察者模式实现事件监听和发布订阅，广泛应用于前端框架。</p>
-<p>学习设计模式要理解其解决的问题、实现方式、适用场景。不要生搬硬套，要根据实际需求选择合适的模式。过度使用设计模式会增加系统复杂度。</p>
-<p>设计模式不是银弹。优秀的代码首先应该简单清晰，然后再考虑是否应用模式。正如《设计模式》一书所说、”应该优先使用组合而不是继承”。</p>
-<p>除了经典的 23 种设计模式，还有很多其他模式，如依赖注入、仓储模式、CQRS 等。它们在现代开发中同样重要。</p>
-<p>掌握设计模式是架构师的基础能力。多阅读优秀源码，思考其中的设计思想，这是提升最快的方式。</p>
+<p>常见的 Git 工作流包括、集中式工作流、功能分支工作流、Git Flow 工作流、Forking 工作流。每种工作流都有其适用场景。</p>
+<p><strong>集中式工作流</strong>最简单，所有成员直接在主分支提交，适合小团队。<strong>功能分支工作流</strong>为每个功能创建独立分支，适合中小型项目。<strong>Git Flow</strong> 更加规范，定义了主分支、开发分支、功能分支、发布分支、修复分支，适合有固定发布周期的项目。<strong>Forking 工作流</strong>常用于开源项目，贡献者 Fork 仓库后提交 Pull Request。</p>
+<p>在实际使用中，选择合适的工作流很重要。同时，养成良好的提交习惯也很关键、提交信息要清晰明确，一次提交只做一件事，及时推送远程分支。</p>
+<p>对于初学者，建议从简单的功能分支工作流开始，逐步掌握更复杂的工作流。多练习，多总结，才能熟练运用。</p>
 ]]></content>
       <categories>
         <category>学习探索</category>
       </categories>
       <tags>
-        <tag>设计模式</tag>
-        <tag>架构</tag>
-        <tag>重构</tag>
+        <tag>版本控制</tag>
+        <tag>Git</tag>
+        <tag>工作流</tag>
       </tags>
   </entry>
   <entry>
@@ -1131,26 +1162,6 @@ module.exports = {
       </tags>
   </entry>
   <entry>
-    <title>Git 工作流学习笔记</title>
-    <url>/2026/03/04/learn-git-workflow/</url>
-    <content><![CDATA[<p>Git 是现代软件开发中不可或缺的版本控制工具。学习 Git 工作流有助于提高团队协作效率和代码管理能力。</p>
-<span id="more"></span>
-
-<p>常见的 Git 工作流包括、集中式工作流、功能分支工作流、Git Flow 工作流、Forking 工作流。每种工作流都有其适用场景。</p>
-<p><strong>集中式工作流</strong>最简单，所有成员直接在主分支提交，适合小团队。<strong>功能分支工作流</strong>为每个功能创建独立分支，适合中小型项目。<strong>Git Flow</strong> 更加规范，定义了主分支、开发分支、功能分支、发布分支、修复分支，适合有固定发布周期的项目。<strong>Forking 工作流</strong>常用于开源项目，贡献者 Fork 仓库后提交 Pull Request。</p>
-<p>在实际使用中，选择合适的工作流很重要。同时，养成良好的提交习惯也很关键、提交信息要清晰明确，一次提交只做一件事，及时推送远程分支。</p>
-<p>对于初学者，建议从简单的功能分支工作流开始，逐步掌握更复杂的工作流。多练习，多总结，才能熟练运用。</p>
-]]></content>
-      <categories>
-        <category>学习探索</category>
-      </categories>
-      <tags>
-        <tag>版本控制</tag>
-        <tag>Git</tag>
-        <tag>工作流</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>GraphQL 入门指南</title>
     <url>/2026/03/04/learn-graphql/</url>
     <content><![CDATA[<p>GraphQL 是 Facebook 开发的数据查询语言，它允许客户端精确指定需要的数据，避免了 REST API 的过度获取或不足获取问题。</p>
@@ -1170,6 +1181,27 @@ module.exports = {
         <tag>API</tag>
         <tag>GraphQL</tag>
         <tag>后端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Kubernetes 基础概念</title>
+    <url>/2026/03/04/learn-k8s-basics/</url>
+    <content><![CDATA[<p>Kubernetes（简称 K8s）是目前最流行的容器编排平台。它能够自动化部署、扩展和管理容器化应用。</p>
+<span id="more"></span>
+
+<p>Kubernetes 的核心概念包括、Pod、Service、Deployment、Namespace、ConfigMap、Secret 等。Pod 是最小的可部署单元，通常包含一个或多个容器。Service 提供稳定的网络访问接口。Deployment 管理 Pod 的副本和更新策略。</p>
+<p>学习 Kubernetes 需要理解它的架构、Master 节点负责管理集群，包括 API Server、Scheduler、Controller Manager 等组件。Worker 节点运行应用容器，包括 Kubelet、Kube-proxy 等组件。</p>
+<p>Kubernetes 提供了丰富的功能、自动扩缩容、滚动更新、故障自愈、服务发现、负载均衡等。这些功能大大简化了分布式系统的运维工作。</p>
+<p>对于初学者，建议先在本地使用 Minikube 或 Kind 搭建单节点集群，学习基本的资源定义和管理命令。然后逐步了解更复杂的功能，如 Helm 包管理、服务网格等。</p>
+<p>Kubernetes 的生态系统非常庞大，学习曲线较陡峭。但一旦掌握，将极大提升你的技术能力和职业竞争力。</p>
+]]></content>
+      <categories>
+        <category>学习探索</category>
+      </categories>
+      <tags>
+        <tag>Kubernetes</tag>
+        <tag>K8s</tag>
+        <tag>容器编排</tag>
       </tags>
   </entry>
   <entry>
@@ -1199,27 +1231,6 @@ module.exports = {
       </tags>
   </entry>
   <entry>
-    <title>Kubernetes 基础概念</title>
-    <url>/2026/03/04/learn-k8s-basics/</url>
-    <content><![CDATA[<p>Kubernetes（简称 K8s）是目前最流行的容器编排平台。它能够自动化部署、扩展和管理容器化应用。</p>
-<span id="more"></span>
-
-<p>Kubernetes 的核心概念包括、Pod、Service、Deployment、Namespace、ConfigMap、Secret 等。Pod 是最小的可部署单元，通常包含一个或多个容器。Service 提供稳定的网络访问接口。Deployment 管理 Pod 的副本和更新策略。</p>
-<p>学习 Kubernetes 需要理解它的架构、Master 节点负责管理集群，包括 API Server、Scheduler、Controller Manager 等组件。Worker 节点运行应用容器，包括 Kubelet、Kube-proxy 等组件。</p>
-<p>Kubernetes 提供了丰富的功能、自动扩缩容、滚动更新、故障自愈、服务发现、负载均衡等。这些功能大大简化了分布式系统的运维工作。</p>
-<p>对于初学者，建议先在本地使用 Minikube 或 Kind 搭建单节点集群，学习基本的资源定义和管理命令。然后逐步了解更复杂的功能，如 Helm 包管理、服务网格等。</p>
-<p>Kubernetes 的生态系统非常庞大，学习曲线较陡峭。但一旦掌握，将极大提升你的技术能力和职业竞争力。</p>
-]]></content>
-      <categories>
-        <category>学习探索</category>
-      </categories>
-      <tags>
-        <tag>Kubernetes</tag>
-        <tag>K8s</tag>
-        <tag>容器编排</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Rust 语言入门</title>
     <url>/2026/03/04/learn-rust-basics/</url>
     <content><![CDATA[<p>Rust 是一门系统级编程语言，注重安全性、并发性和性能。它由 Mozilla 开发，被广泛应用于嵌入式、WebAssembly、命令行工具等领域。</p>
@@ -1243,29 +1254,28 @@ module.exports = {
       </tags>
   </entry>
   <entry>
-    <title>Linux系统编程</title>
-    <url>/2026/03/04/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B-28/</url>
-    <content><![CDATA[<p>系统调用是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍系统调用的核心要点和实践经验。</p>
+    <title>系统设计面试准备</title>
+    <url>/2026/03/04/learn-system-design/</url>
+    <content><![CDATA[<p>系统设计面试是技术面试的重要组成部分，考察候选人的架构思维和工程能力。准备充分才能应对自如。</p>
 <span id="more"></span>
 
-<h2 id="文件I-O"><a href="#文件I-O" class="headerlink" title="文件I&#x2F;O"></a>文件I&#x2F;O</h2><p>文件I&#x2F;O是系统调用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用文件I&#x2F;O时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践文件I&#x2F;O，我们可以掌握系统调用的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h2><p>进程管理是系统调用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用进程管理时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践进程管理，我们可以掌握系统调用的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="线程同步"><a href="#线程同步" class="headerlink" title="线程同步"></a>线程同步</h2><p>线程同步是系统调用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用线程同步时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践线程同步，我们可以掌握系统调用的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="信号处理"><a href="#信号处理" class="headerlink" title="信号处理"></a>信号处理</h2><p>信号处理是系统调用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用信号处理时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握信号处理和相关知识，将帮助我们构建更加完善的系统调用体系。</p>
+<p>系统设计流程、明确需求 → 估算规模 → 选择架构 → 设计组件 → 细化设计 → 分析瓶颈 → 优化方案。每一步都要说明理由，展示思考过程。</p>
+<p>明确需求、功能需求（用户画像、核心功能），非功能需求（可用性、扩展性、性能、安全）。向面试官澄清模糊点，如用户量、数据量、并发量。</p>
+<p>估算规模、用户数、日活、QPS、数据存储量。例如、1000 万用户，10 万日活，100 QPS，每人每天 10 条记录，每天 100 万条，一年 3.65 亿条。</p>
+<p>架构选择、单体 vs 微服务，SQL vs NoSQL，同步 vs 异步。根据需求选择合适的架构，说明理由。</p>
+<p>组件设计、负载均衡、API Gateway、缓存、数据库、消息队列、CDN、监控。每个组件的作用和选择依据。</p>
+<p>细化设计、数据库 Schema 设计，缓存策略，消息队列使用，分库分表，读写分离。考虑一致性、可用性、分区容错性（CAP 定理）。</p>
+<p>分析瓶颈、性能瓶颈、单点故障、扩展性限制。针对瓶颈提出优化方案、缓存、异步、分片、负载均衡。</p>
+<p>常见系统设计问题、设计 URL 缩短器、设计聊天系统、设计新闻 Feed、设计文件存储、设计排行榜。提前练习这些经典问题。</p>
+<p>系统设计没有标准答案，面试官更关注思考过程。保持沟通，不断提问，逐步深入，展示你的架构能力。</p>
 ]]></content>
       <categories>
-        <category>学习笔记</category>
+        <category>学习探索</category>
       </categories>
       <tags>
-        <tag>系统调用</tag>
+        <tag>架构</tag>
+        <tag>面试</tag>
+        <tag>系统设计</tag>
       </tags>
   </entry>
   <entry>
@@ -1295,28 +1305,29 @@ module.exports = {
       </tags>
   </entry>
   <entry>
-    <title>系统设计面试准备</title>
-    <url>/2026/03/04/learn-system-design/</url>
-    <content><![CDATA[<p>系统设计面试是技术面试的重要组成部分，考察候选人的架构思维和工程能力。准备充分才能应对自如。</p>
+    <title>Linux系统编程</title>
+    <url>/2026/03/04/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B-28/</url>
+    <content><![CDATA[<p>系统调用是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍系统调用的核心要点和实践经验。</p>
 <span id="more"></span>
 
-<p>系统设计流程、明确需求 → 估算规模 → 选择架构 → 设计组件 → 细化设计 → 分析瓶颈 → 优化方案。每一步都要说明理由，展示思考过程。</p>
-<p>明确需求、功能需求（用户画像、核心功能），非功能需求（可用性、扩展性、性能、安全）。向面试官澄清模糊点，如用户量、数据量、并发量。</p>
-<p>估算规模、用户数、日活、QPS、数据存储量。例如、1000 万用户，10 万日活，100 QPS，每人每天 10 条记录，每天 100 万条，一年 3.65 亿条。</p>
-<p>架构选择、单体 vs 微服务，SQL vs NoSQL，同步 vs 异步。根据需求选择合适的架构，说明理由。</p>
-<p>组件设计、负载均衡、API Gateway、缓存、数据库、消息队列、CDN、监控。每个组件的作用和选择依据。</p>
-<p>细化设计、数据库 Schema 设计，缓存策略，消息队列使用，分库分表，读写分离。考虑一致性、可用性、分区容错性（CAP 定理）。</p>
-<p>分析瓶颈、性能瓶颈、单点故障、扩展性限制。针对瓶颈提出优化方案、缓存、异步、分片、负载均衡。</p>
-<p>常见系统设计问题、设计 URL 缩短器、设计聊天系统、设计新闻 Feed、设计文件存储、设计排行榜。提前练习这些经典问题。</p>
-<p>系统设计没有标准答案，面试官更关注思考过程。保持沟通，不断提问，逐步深入，展示你的架构能力。</p>
+<h2 id="文件I-O"><a href="#文件I-O" class="headerlink" title="文件I&#x2F;O"></a>文件I&#x2F;O</h2><p>文件I&#x2F;O是系统调用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用文件I&#x2F;O时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践文件I&#x2F;O，我们可以掌握系统调用的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h2><p>进程管理是系统调用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用进程管理时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践进程管理，我们可以掌握系统调用的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="线程同步"><a href="#线程同步" class="headerlink" title="线程同步"></a>线程同步</h2><p>线程同步是系统调用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用线程同步时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践线程同步，我们可以掌握系统调用的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="信号处理"><a href="#信号处理" class="headerlink" title="信号处理"></a>信号处理</h2><p>信号处理是系统调用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用信号处理时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握信号处理和相关知识，将帮助我们构建更加完善的系统调用体系。</p>
 ]]></content>
       <categories>
-        <category>学习探索</category>
+        <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>架构</tag>
-        <tag>面试</tag>
-        <tag>系统设计</tag>
+        <tag>系统调用</tag>
       </tags>
   </entry>
   <entry>
@@ -1554,20 +1565,6 @@ module.exports = {
       </tags>
   </entry>
   <entry>
-    <title>AI智能体：占位文章</title>
-    <url>/2026/03/04/placeholder-ai-agent/</url>
-    <content><![CDATA[<p>这是关于“AI智能体”分类的占位文章。</p>
-<p>未来，这里将记录关于 AI Agent 的学习笔记、项目实践与深度思考。</p>
-]]></content>
-      <categories>
-        <category>AI智能体</category>
-      </categories>
-      <tags>
-        <tag>测试</tag>
-        <tag>占位</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>WebSocket 实时通信</title>
     <url>/2026/03/04/network-websocket/</url>
     <content><![CDATA[<p>WebSocket 是一种在单个 TCP 连接上进行全双工通信的协议。它允许服务器主动向客户端推送消息，非常适合实时应用。</p>
@@ -1605,6 +1602,20 @@ module.exports = {
       </tags>
   </entry>
   <entry>
+    <title>AI智能体：占位文章</title>
+    <url>/2026/03/04/placeholder-ai-agent/</url>
+    <content><![CDATA[<p>这是关于“AI智能体”分类的占位文章。</p>
+<p>未来，这里将记录关于 AI Agent 的学习笔记、项目实践与深度思考。</p>
+]]></content>
+      <categories>
+        <category>AI智能体</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>占位</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>学习探索：占位文章</title>
     <url>/2026/03/04/placeholder-learning-exploration/</url>
     <content><![CDATA[<p>这是关于“学习探索”分类的占位文章。</p>
@@ -1633,20 +1644,6 @@ module.exports = {
       </tags>
   </entry>
   <entry>
-    <title>实用工具：占位文章</title>
-    <url>/2026/03/04/placeholder-useful-tools/</url>
-    <content><![CDATA[<p>这是关于“实用工具”分类的占位文章。</p>
-<p>这里会推荐和评测各种能提升生产力的软件、工具和 CLI。</p>
-]]></content>
-      <categories>
-        <category>实用工具</category>
-      </categories>
-      <tags>
-        <tag>测试</tag>
-        <tag>占位</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Web开发：占位文章</title>
     <url>/2026/03/04/placeholder-web-development/</url>
     <content><![CDATA[<p>这是关于“Web开发”分类的占位文章。</p>
@@ -1654,6 +1651,20 @@ module.exports = {
 ]]></content>
       <categories>
         <category>Web开发</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>占位</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>实用工具：占位文章</title>
+    <url>/2026/03/04/placeholder-useful-tools/</url>
+    <content><![CDATA[<p>这是关于“实用工具”分类的占位文章。</p>
+<p>这里会推荐和评测各种能提升生产力的软件、工具和 CLI。</p>
+]]></content>
+      <categories>
+        <category>实用工具</category>
       </categories>
       <tags>
         <tag>测试</tag>
@@ -1717,7 +1728,15 @@ module.exports = {
 <span id="more"></span>
 
 <p>Compose 文件（docker-compose.yml）定义服务、网络、卷。基本结构、</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.8&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">web:</span></span><br><span class="line">    <span class="attr">build:</span> <span class="string">.</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;5000:5000&quot;</span></span><br><span class="line">  <span class="attr">redis:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">redis</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3.8'</span>
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">web</span><span class="token punctuation">:</span>
+    <span class="token key atrule">build</span><span class="token punctuation">:</span> .
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">"5000:5000"</span>
+  <span class="token key atrule">redis</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> redis
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>常用命令、<code>docker-compose up</code> 启动服务，<code>-d</code> 后台运行，<code>--build</code> 强制重新构建。<code>docker-compose down</code> 停止并删除容器、网络。<code>docker-compose logs</code> 查看日志，<code>-f</code> 实时跟踪。</p>
 <p>服务定义、image 指定镜像，build 指定构建上下文，ports 暴露端口，volumes 挂载卷，environment 设置环境变量，depends_on 定义依赖关系。</p>
@@ -1735,32 +1754,6 @@ module.exports = {
         <tag>Docker</tag>
         <tag>Compose</tag>
         <tag>编排</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>RAG技术进阶</title>
-    <url>/2026/03/04/rag%E6%8A%80%E6%9C%AF%E8%BF%9B%E9%98%B6-05/</url>
-    <content><![CDATA[<p>检索增强生成是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍检索增强生成的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="向量数据库"><a href="#向量数据库" class="headerlink" title="向量数据库"></a>向量数据库</h2><p>向量数据库是检索增强生成的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用向量数据库时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践向量数据库，我们可以掌握检索增强生成的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="相似度计算"><a href="#相似度计算" class="headerlink" title="相似度计算"></a>相似度计算</h2><p>相似度计算是检索增强生成的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用相似度计算时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践相似度计算，我们可以掌握检索增强生成的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="上下文窗口"><a href="#上下文窗口" class="headerlink" title="上下文窗口"></a>上下文窗口</h2><p>上下文窗口是检索增强生成的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用上下文窗口时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践上下文窗口，我们可以掌握检索增强生成的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="嵌入模型"><a href="#嵌入模型" class="headerlink" title="嵌入模型"></a>嵌入模型</h2><p>嵌入模型是检索增强生成的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用嵌入模型时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握嵌入模型和相关知识，将帮助我们构建更加完善的检索增强生成体系。</p>
-]]></content>
-      <categories>
-        <category>AI智能体</category>
-      </categories>
-      <tags>
-        <tag>检索增强生成</tag>
       </tags>
   </entry>
   <entry>
@@ -1844,6 +1837,29 @@ module.exports = {
       </tags>
   </entry>
   <entry>
+    <title>Postman 使用指南</title>
+    <url>/2026/03/04/tools-postman/</url>
+    <content><![CDATA[<p>Postman 是 API 开发和测试的必备工具。它提供了直观的界面，简化了 API 调用和调试过程。</p>
+<span id="more"></span>
+
+<p>发送请求是 Postman 的基本功能。选择 HTTP 方法（GET、POST、PUT、DELETE 等），输入 URL，添加请求头、请求体，点击发送即可看到响应结果。响应内容包括状态码、响应头、响应体等。</p>
+<p>环境变量让测试更灵活。可以为不同的环境（开发、测试、生产）设置不同的变量值，如基础 URL、认证信息等。使用 <code>&#123;&#123;variable_name&#125;&#125;</code> 语法引用变量。</p>
+<p>集合（Collection）可以组织相关的请求。可以给集合添加变量、前置脚本、测试脚本，实现自动化测试。可以导出分享给团队成员，确保测试标准统一。</p>
+<p>测试脚本可以验证响应结果。Postman 提供了丰富的断言函数、<code>pm.test()</code> 定义测试，<code>pm.expect()</code> 断言值，<code>pm.response.to.have.status()</code> 检查状态码。可以检查数据格式、业务逻辑等。</p>
+<p>Newman 是 Postman 的命令行工具，可以将集合集成到 CI&#x2F;CD 流程中，实现自动化测试。这对于保证 API 质量和持续集成非常有用。</p>
+<p>Postman 还提供了 Mock Server 功能，可以根据接口定义生成模拟数据，方便前后端并行开发。</p>
+<p>掌握 Postman 不仅能提高 API 开发效率，还能提升测试质量和团队协作水平。</p>
+]]></content>
+      <categories>
+        <category>实用工具</category>
+      </categories>
+      <tags>
+        <tag>API</tag>
+        <tag>测试</tag>
+        <tag>Postman</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>SSH 远程连接</title>
     <url>/2026/03/04/tools-ssh/</url>
     <content><![CDATA[<p>SSH（Secure Shell）是远程登录 Linux 服务器的标准协议，提供加密的通信通道，安全可靠。</p>
@@ -1915,29 +1931,6 @@ module.exports = {
       </tags>
   </entry>
   <entry>
-    <title>Postman 使用指南</title>
-    <url>/2026/03/04/tools-postman/</url>
-    <content><![CDATA[<p>Postman 是 API 开发和测试的必备工具。它提供了直观的界面，简化了 API 调用和调试过程。</p>
-<span id="more"></span>
-
-<p>发送请求是 Postman 的基本功能。选择 HTTP 方法（GET、POST、PUT、DELETE 等），输入 URL，添加请求头、请求体，点击发送即可看到响应结果。响应内容包括状态码、响应头、响应体等。</p>
-<p>环境变量让测试更灵活。可以为不同的环境（开发、测试、生产）设置不同的变量值，如基础 URL、认证信息等。使用 <code>&#123;&#123;variable_name&#125;&#125;</code> 语法引用变量。</p>
-<p>集合（Collection）可以组织相关的请求。可以给集合添加变量、前置脚本、测试脚本，实现自动化测试。可以导出分享给团队成员，确保测试标准统一。</p>
-<p>测试脚本可以验证响应结果。Postman 提供了丰富的断言函数、<code>pm.test()</code> 定义测试，<code>pm.expect()</code> 断言值，<code>pm.response.to.have.status()</code> 检查状态码。可以检查数据格式、业务逻辑等。</p>
-<p>Newman 是 Postman 的命令行工具，可以将集合集成到 CI&#x2F;CD 流程中，实现自动化测试。这对于保证 API 质量和持续集成非常有用。</p>
-<p>Postman 还提供了 Mock Server 功能，可以根据接口定义生成模拟数据，方便前后端并行开发。</p>
-<p>掌握 Postman 不仅能提高 API 开发效率，还能提升测试质量和团队协作水平。</p>
-]]></content>
-      <categories>
-        <category>实用工具</category>
-      </categories>
-      <tags>
-        <tag>API</tag>
-        <tag>测试</tag>
-        <tag>Postman</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Transformer架构</title>
     <url>/2026/03/04/transformer%E6%9E%B6%E6%9E%84-02/</url>
     <content><![CDATA[<p>注意力机制是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍注意力机制的核心要点和实践经验。</p>
@@ -1987,6 +1980,32 @@ module.exports = {
       </categories>
       <tags>
         <tag>注意力机制</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RAG技术进阶</title>
+    <url>/2026/03/04/rag%E6%8A%80%E6%9C%AF%E8%BF%9B%E9%98%B6-05/</url>
+    <content><![CDATA[<p>检索增强生成是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍检索增强生成的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="向量数据库"><a href="#向量数据库" class="headerlink" title="向量数据库"></a>向量数据库</h2><p>向量数据库是检索增强生成的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用向量数据库时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践向量数据库，我们可以掌握检索增强生成的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="相似度计算"><a href="#相似度计算" class="headerlink" title="相似度计算"></a>相似度计算</h2><p>相似度计算是检索增强生成的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用相似度计算时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践相似度计算，我们可以掌握检索增强生成的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="上下文窗口"><a href="#上下文窗口" class="headerlink" title="上下文窗口"></a>上下文窗口</h2><p>上下文窗口是检索增强生成的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用上下文窗口时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践上下文窗口，我们可以掌握检索增强生成的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="嵌入模型"><a href="#嵌入模型" class="headerlink" title="嵌入模型"></a>嵌入模型</h2><p>嵌入模型是检索增强生成的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用嵌入模型时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握嵌入模型和相关知识，将帮助我们构建更加完善的检索增强生成体系。</p>
+]]></content>
+      <categories>
+        <category>AI智能体</category>
+      </categories>
+      <tags>
+        <tag>检索增强生成</tag>
       </tags>
   </entry>
   <entry>
@@ -2043,6 +2062,32 @@ module.exports = {
   </entry>
   <entry>
     <title>VSCode技巧</title>
+    <url>/2026/03/04/vscode%E6%8A%80%E5%B7%A7-45/</url>
+    <content><![CDATA[<p>开发效率是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍开发效率的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>快捷键是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用快捷键时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践快捷键，我们可以掌握开发效率的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="插件推荐"><a href="#插件推荐" class="headerlink" title="插件推荐"></a>插件推荐</h2><p>插件推荐是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用插件推荐时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践插件推荐，我们可以掌握开发效率的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="调试配置"><a href="#调试配置" class="headerlink" title="调试配置"></a>调试配置</h2><p>调试配置是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用调试配置时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践调试配置，我们可以掌握开发效率的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="远程开发"><a href="#远程开发" class="headerlink" title="远程开发"></a>远程开发</h2><p>远程开发是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用远程开发时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握远程开发和相关知识，将帮助我们构建更加完善的开发效率体系。</p>
+]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+      <tags>
+        <tag>开发效率</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VSCode技巧</title>
     <url>/2026/03/04/vscode%E6%8A%80%E5%B7%A7-44/</url>
     <content><![CDATA[<p>开发效率是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍开发效率的核心要点和实践经验。</p>
 <span id="more"></span>
@@ -2094,32 +2139,6 @@ module.exports = {
       </tags>
   </entry>
   <entry>
-    <title>代码规范制定</title>
-    <url>/2026/03/04/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83%E5%88%B6%E5%AE%9A-34/</url>
-    <content><![CDATA[<p>规范统一是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍规范统一的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h2><p>命名规则是规范统一的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用命名规则时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践命名规则，我们可以掌握规范统一的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="注释规范"><a href="#注释规范" class="headerlink" title="注释规范"></a>注释规范</h2><p>注释规范是规范统一的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用注释规范时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践注释规范，我们可以掌握规范统一的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="格式化"><a href="#格式化" class="headerlink" title="格式化"></a>格式化</h2><p>格式化是规范统一的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用格式化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践格式化，我们可以掌握规范统一的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="代码审查"><a href="#代码审查" class="headerlink" title="代码审查"></a>代码审查</h2><p>代码审查是规范统一的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用代码审查时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握代码审查和相关知识，将帮助我们构建更加完善的规范统一体系。</p>
-]]></content>
-      <categories>
-        <category>协作模式</category>
-      </categories>
-      <tags>
-        <tag>规范统一</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vue3响应式原理</title>
     <url>/2026/03/04/vue3%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86-09/</url>
     <content><![CDATA[<p>响应式系统是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍响应式系统的核心要点和实践经验。</p>
@@ -2143,6 +2162,32 @@ module.exports = {
       </categories>
       <tags>
         <tag>响应式系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>代码规范制定</title>
+    <url>/2026/03/04/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83%E5%88%B6%E5%AE%9A-34/</url>
+    <content><![CDATA[<p>规范统一是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍规范统一的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h2><p>命名规则是规范统一的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用命名规则时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践命名规则，我们可以掌握规范统一的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="注释规范"><a href="#注释规范" class="headerlink" title="注释规范"></a>注释规范</h2><p>注释规范是规范统一的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用注释规范时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践注释规范，我们可以掌握规范统一的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="格式化"><a href="#格式化" class="headerlink" title="格式化"></a>格式化</h2><p>格式化是规范统一的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用格式化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践格式化，我们可以掌握规范统一的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="代码审查"><a href="#代码审查" class="headerlink" title="代码审查"></a>代码审查</h2><p>代码审查是规范统一的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用代码审查时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握代码审查和相关知识，将帮助我们构建更加完善的规范统一体系。</p>
+]]></content>
+      <categories>
+        <category>协作模式</category>
+      </categories>
+      <tags>
+        <tag>规范统一</tag>
       </tags>
   </entry>
   <entry>
@@ -2198,29 +2243,55 @@ module.exports = {
       </tags>
   </entry>
   <entry>
-    <title>VSCode技巧</title>
-    <url>/2026/03/04/vscode%E6%8A%80%E5%B7%A7-45/</url>
-    <content><![CDATA[<p>开发效率是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍开发效率的核心要点和实践经验。</p>
+    <title>分布式事务</title>
+    <url>/2026/03/04/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1-23/</url>
+    <content><![CDATA[<p>一致性方案是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍一致性方案的核心要点和实践经验。</p>
 <span id="more"></span>
 
-<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>快捷键是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用快捷键时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践快捷键，我们可以掌握开发效率的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="插件推荐"><a href="#插件推荐" class="headerlink" title="插件推荐"></a>插件推荐</h2><p>插件推荐是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用插件推荐时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践插件推荐，我们可以掌握开发效率的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="调试配置"><a href="#调试配置" class="headerlink" title="调试配置"></a>调试配置</h2><p>调试配置是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用调试配置时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践调试配置，我们可以掌握开发效率的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="远程开发"><a href="#远程开发" class="headerlink" title="远程开发"></a>远程开发</h2><p>远程开发是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用远程开发时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握远程开发和相关知识，将帮助我们构建更加完善的开发效率体系。</p>
+<h2 id="两阶段提交"><a href="#两阶段提交" class="headerlink" title="两阶段提交"></a>两阶段提交</h2><p>两阶段提交是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用两阶段提交时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践两阶段提交，我们可以掌握一致性方案的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="TCC"><a href="#TCC" class="headerlink" title="TCC"></a>TCC</h2><p>TCC是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用TCC时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践TCC，我们可以掌握一致性方案的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="Saga"><a href="#Saga" class="headerlink" title="Saga"></a>Saga</h2><p>Saga是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用Saga时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践Saga，我们可以掌握一致性方案的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="本地消息表"><a href="#本地消息表" class="headerlink" title="本地消息表"></a>本地消息表</h2><p>本地消息表是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用本地消息表时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握本地消息表和相关知识，将帮助我们构建更加完善的一致性方案体系。</p>
 ]]></content>
       <categories>
-        <category>工具使用</category>
+        <category>网络架构</category>
       </categories>
       <tags>
-        <tag>开发效率</tag>
+        <tag>一致性方案</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端性能优化</title>
+    <url>/2026/03/04/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-12/</url>
+    <content><![CDATA[<p>性能提升是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍性能提升的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="代码分割"><a href="#代码分割" class="headerlink" title="代码分割"></a>代码分割</h2><p>代码分割是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用代码分割时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践代码分割，我们可以掌握性能提升的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="懒加载"><a href="#懒加载" class="headerlink" title="懒加载"></a>懒加载</h2><p>懒加载是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用懒加载时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践懒加载，我们可以掌握性能提升的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="缓存策略"><a href="#缓存策略" class="headerlink" title="缓存策略"></a>缓存策略</h2><p>缓存策略是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用缓存策略时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践缓存策略，我们可以掌握性能提升的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="资源压缩"><a href="#资源压缩" class="headerlink" title="资源压缩"></a>资源压缩</h2><p>资源压缩是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用资源压缩时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握资源压缩和相关知识，将帮助我们构建更加完善的性能提升体系。</p>
+]]></content>
+      <categories>
+        <category>Web开发</category>
+      </categories>
+      <tags>
+        <tag>性能提升</tag>
       </tags>
   </entry>
   <entry>
@@ -2250,34 +2321,34 @@ module.exports = {
       </tags>
   </entry>
   <entry>
-    <title>分布式事务</title>
-    <url>/2026/03/04/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1-23/</url>
-    <content><![CDATA[<p>一致性方案是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍一致性方案的核心要点和实践经验。</p>
+    <title>团队沟通技巧</title>
+    <url>/2026/03/04/%E5%9B%A2%E9%98%9F%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7-38/</url>
+    <content><![CDATA[<p>高效协作是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍高效协作的核心要点和实践经验。</p>
 <span id="more"></span>
 
-<h2 id="两阶段提交"><a href="#两阶段提交" class="headerlink" title="两阶段提交"></a>两阶段提交</h2><p>两阶段提交是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用两阶段提交时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践两阶段提交，我们可以掌握一致性方案的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="TCC"><a href="#TCC" class="headerlink" title="TCC"></a>TCC</h2><p>TCC是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用TCC时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践TCC，我们可以掌握一致性方案的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="Saga"><a href="#Saga" class="headerlink" title="Saga"></a>Saga</h2><p>Saga是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用Saga时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践Saga，我们可以掌握一致性方案的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="本地消息表"><a href="#本地消息表" class="headerlink" title="本地消息表"></a>本地消息表</h2><p>本地消息表是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用本地消息表时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握本地消息表和相关知识，将帮助我们构建更加完善的一致性方案体系。</p>
+<h2 id="会议管理"><a href="#会议管理" class="headerlink" title="会议管理"></a>会议管理</h2><p>会议管理是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用会议管理时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践会议管理，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="异步沟通"><a href="#异步沟通" class="headerlink" title="异步沟通"></a>异步沟通</h2><p>异步沟通是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用异步沟通时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践异步沟通，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="冲突解决"><a href="#冲突解决" class="headerlink" title="冲突解决"></a>冲突解决</h2><p>冲突解决是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用冲突解决时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践冲突解决，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="目标对齐"><a href="#目标对齐" class="headerlink" title="目标对齐"></a>目标对齐</h2><p>目标对齐是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用目标对齐时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握目标对齐和相关知识，将帮助我们构建更加完善的高效协作体系。</p>
 ]]></content>
       <categories>
-        <category>网络架构</category>
+        <category>协作模式</category>
       </categories>
       <tags>
-        <tag>一致性方案</tag>
+        <tag>高效协作</tag>
       </tags>
   </entry>
   <entry>
     <title>团队沟通技巧</title>
-    <url>/2026/03/04/%E5%9B%A2%E9%98%9F%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7-38/</url>
+    <url>/2026/03/04/%E5%9B%A2%E9%98%9F%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7-39/</url>
     <content><![CDATA[<p>高效协作是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍高效协作的核心要点和实践经验。</p>
 <span id="more"></span>
 
@@ -2328,55 +2399,29 @@ module.exports = {
       </tags>
   </entry>
   <entry>
-    <title>团队沟通技巧</title>
-    <url>/2026/03/04/%E5%9B%A2%E9%98%9F%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7-39/</url>
-    <content><![CDATA[<p>高效协作是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍高效协作的核心要点和实践经验。</p>
+    <title>多模态AI应用</title>
+    <url>/2026/03/04/%E5%A4%9A%E6%A8%A1%E6%80%81ai%E5%BA%94%E7%94%A8-07/</url>
+    <content><![CDATA[<p>跨模态理解是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍跨模态理解的核心要点和实践经验。</p>
 <span id="more"></span>
 
-<h2 id="会议管理"><a href="#会议管理" class="headerlink" title="会议管理"></a>会议管理</h2><p>会议管理是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用会议管理时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践会议管理，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="异步沟通"><a href="#异步沟通" class="headerlink" title="异步沟通"></a>异步沟通</h2><p>异步沟通是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用异步沟通时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践异步沟通，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="冲突解决"><a href="#冲突解决" class="headerlink" title="冲突解决"></a>冲突解决</h2><p>冲突解决是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用冲突解决时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践冲突解决，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="目标对齐"><a href="#目标对齐" class="headerlink" title="目标对齐"></a>目标对齐</h2><p>目标对齐是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用目标对齐时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握目标对齐和相关知识，将帮助我们构建更加完善的高效协作体系。</p>
+<h2 id="图像识别"><a href="#图像识别" class="headerlink" title="图像识别"></a>图像识别</h2><p>图像识别是跨模态理解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用图像识别时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践图像识别，我们可以掌握跨模态理解的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="语音合成"><a href="#语音合成" class="headerlink" title="语音合成"></a>语音合成</h2><p>语音合成是跨模态理解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用语音合成时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践语音合成，我们可以掌握跨模态理解的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="视频理解"><a href="#视频理解" class="headerlink" title="视频理解"></a>视频理解</h2><p>视频理解是跨模态理解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用视频理解时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践视频理解，我们可以掌握跨模态理解的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="多模态融合"><a href="#多模态融合" class="headerlink" title="多模态融合"></a>多模态融合</h2><p>多模态融合是跨模态理解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用多模态融合时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握多模态融合和相关知识，将帮助我们构建更加完善的跨模态理解体系。</p>
 ]]></content>
       <categories>
-        <category>协作模式</category>
+        <category>AI智能体</category>
       </categories>
       <tags>
-        <tag>高效协作</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端性能优化</title>
-    <url>/2026/03/04/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-12/</url>
-    <content><![CDATA[<p>性能提升是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍性能提升的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="代码分割"><a href="#代码分割" class="headerlink" title="代码分割"></a>代码分割</h2><p>代码分割是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用代码分割时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践代码分割，我们可以掌握性能提升的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="懒加载"><a href="#懒加载" class="headerlink" title="懒加载"></a>懒加载</h2><p>懒加载是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用懒加载时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践懒加载，我们可以掌握性能提升的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="缓存策略"><a href="#缓存策略" class="headerlink" title="缓存策略"></a>缓存策略</h2><p>缓存策略是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用缓存策略时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践缓存策略，我们可以掌握性能提升的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="资源压缩"><a href="#资源压缩" class="headerlink" title="资源压缩"></a>资源压缩</h2><p>资源压缩是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用资源压缩时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握资源压缩和相关知识，将帮助我们构建更加完善的性能提升体系。</p>
-]]></content>
-      <categories>
-        <category>Web开发</category>
-      </categories>
-      <tags>
-        <tag>性能提升</tag>
+        <tag>跨模态理解</tag>
       </tags>
   </entry>
   <entry>
@@ -2444,36 +2489,220 @@ module.exports = {
 <li><strong>容器 (Container):</strong> 镜像的运行实例。它拥有自己独立的文件系统、网络和进程空间。可以把它理解为软件的“运行程序”或“对象实例”。</li>
 </ul>
 <h4 id="一、-镜像管理-Image-Management"><a href="#一、-镜像管理-Image-Management" class="headerlink" title="一、 镜像管理 (Image Management)"></a>一、 镜像管理 (Image Management)</h4><p><em>一切从镜像开始。</em></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 从 Docker Hub 或其他镜像仓库拉取一个镜像</span></span><br><span class="line"><span class="comment"># 格式: docker pull &lt;repository&gt;:&lt;tag&gt;</span></span><br><span class="line">docker pull nginx:latest</span><br><span class="line">docker pull ubuntu:20.04</span><br><span class="line"></span><br><span class="line"><span class="comment"># 列出本地已有的所有镜像</span></span><br><span class="line">docker images</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">docker image <span class="built_in">ls</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除一个或多个本地镜像</span></span><br><span class="line"><span class="comment"># 可以使用镜像名:标签 或 镜像ID</span></span><br><span class="line">docker rmi nginx:latest</span><br><span class="line">docker rmi &lt;image_id_1&gt; &lt;image_id_2&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 强制删除一个镜像 (即使有容器正在使用它)</span></span><br><span class="line">docker rmi -f &lt;image_id&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 为镜像打上新的标签 (常用于推送前)</span></span><br><span class="line"><span class="comment"># 格式: docker tag &lt;source_image&gt;:&lt;tag&gt; &lt;target_image&gt;:&lt;tag&gt;</span></span><br><span class="line">docker tag nginx:latest my-registry.com/my-app/nginx:1.0</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录到 Docker 镜像仓库</span></span><br><span class="line">docker login &lt;registry_url&gt;  <span class="comment"># 默认为 Docker Hub</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将本地镜像推送到远程仓库 (必须先登录和打好标签)</span></span><br><span class="line">docker push my-registry.com/my-app/nginx:1.0</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看镜像的构建历史 (有助于理解镜像的分层结构)</span></span><br><span class="line">docker <span class="built_in">history</span> &lt;image_id&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 从 Docker Hub 或其他镜像仓库拉取一个镜像</span>
+<span class="token comment"># 格式: docker pull &lt;repository>:&lt;tag></span>
+<span class="token function">docker</span> pull nginx:latest
+<span class="token function">docker</span> pull ubuntu:20.04
+
+<span class="token comment"># 列出本地已有的所有镜像</span>
+<span class="token function">docker</span> images
+<span class="token comment"># 或者</span>
+<span class="token function">docker</span> image <span class="token function">ls</span>
+
+<span class="token comment"># 删除一个或多个本地镜像</span>
+<span class="token comment"># 可以使用镜像名:标签 或 镜像ID</span>
+<span class="token function">docker</span> rmi nginx:latest
+<span class="token function">docker</span> rmi <span class="token operator">&lt;</span>image_id_<span class="token operator"><span class="token file-descriptor important">1</span>></span> <span class="token operator">&lt;</span>image_id_<span class="token operator"><span class="token file-descriptor important">2</span>></span>
+
+<span class="token comment"># 强制删除一个镜像 (即使有容器正在使用它)</span>
+<span class="token function">docker</span> rmi <span class="token parameter variable">-f</span> <span class="token operator">&lt;</span>image_id<span class="token operator">></span>
+
+<span class="token comment"># 为镜像打上新的标签 (常用于推送前)</span>
+<span class="token comment"># 格式: docker tag &lt;source_image>:&lt;tag> &lt;target_image>:&lt;tag></span>
+<span class="token function">docker</span> tag nginx:latest my-registry.com/my-app/nginx:1.0
+
+<span class="token comment"># 登录到 Docker 镜像仓库</span>
+<span class="token function">docker</span> login <span class="token operator">&lt;</span>registry_url<span class="token operator">></span>  <span class="token comment"># 默认为 Docker Hub</span>
+
+<span class="token comment"># 将本地镜像推送到远程仓库 (必须先登录和打好标签)</span>
+<span class="token function">docker</span> push my-registry.com/my-app/nginx:1.0
+
+<span class="token comment"># 查看镜像的构建历史 (有助于理解镜像的分层结构)</span>
+<span class="token function">docker</span> <span class="token function">history</span> <span class="token operator">&lt;</span>image_id<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>✨ 资深工程师建议：</strong> 始终为你的镜像指定明确的 <code>tag</code>（如 <code>ubuntu:20.04</code>），避免使用隐式的 <code>:latest</code>。这能保证你的构建是可复现的，防止因上游镜像更新导致意外的 break。</p>
 <h4 id="二、-容器生命周期管理-Container-Lifecycle-Management"><a href="#二、-容器生命周期管理-Container-Lifecycle-Management" class="headerlink" title="二、 容器生命周期管理 (Container Lifecycle Management)"></a>二、 容器生命周期管理 (Container Lifecycle Management)</h4><p><em>这是 Docker 最核心、最常用的部分。</em></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1. 创建并运行一个容器</span></span><br><span class="line"><span class="comment"># 格式: docker run [OPTIONS] IMAGE [COMMAND] [ARG...]</span></span><br><span class="line"><span class="comment"># -d: 后台运行 (detached mode)</span></span><br><span class="line"><span class="comment"># -p: 端口映射 (格式: &lt;host_port&gt;:&lt;container_port&gt;)</span></span><br><span class="line"><span class="comment"># --name: 给容器指定一个名字</span></span><br><span class="line"><span class="comment"># --rm: 容器停止后自动删除</span></span><br><span class="line">docker run -d -p 8080:80 --name my-nginx-container nginx</span><br><span class="line"></span><br><span class="line"><span class="comment"># 列出当前正在运行的容器</span></span><br><span class="line">docker ps</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">docker container <span class="built_in">ls</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 列出所有容器 (包括已停止的)</span></span><br><span class="line">docker ps -a</span><br><span class="line"></span><br><span class="line"><span class="comment"># 停止一个正在运行的容器</span></span><br><span class="line">docker stop &lt;container_id_or_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动一个已经停止的容器</span></span><br><span class="line">docker start &lt;container_id_or_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启一个容器</span></span><br><span class="line">docker restart &lt;container_id_or_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除一个或多个已停止的容器</span></span><br><span class="line">docker <span class="built_in">rm</span> &lt;container_id_1&gt; &lt;container_id_2&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 强制删除一个正在运行的容器 (不推荐，应先 stop)</span></span><br><span class="line">docker <span class="built_in">rm</span> -f &lt;container_id&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 暂停容器中的所有进程</span></span><br><span class="line">docker pause &lt;container_id&gt;</span><br><span class="line"><span class="comment"># 恢复容器中的所有进程</span></span><br><span class="line">docker unpause &lt;container_id&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 创建并运行一个容器</span>
+<span class="token comment"># 格式: docker run [OPTIONS] IMAGE [COMMAND] [ARG...]</span>
+<span class="token comment"># -d: 后台运行 (detached mode)</span>
+<span class="token comment"># -p: 端口映射 (格式: &lt;host_port>:&lt;container_port>)</span>
+<span class="token comment"># --name: 给容器指定一个名字</span>
+<span class="token comment"># --rm: 容器停止后自动删除</span>
+<span class="token function">docker</span> run <span class="token parameter variable">-d</span> <span class="token parameter variable">-p</span> <span class="token number">8080</span>:80 <span class="token parameter variable">--name</span> my-nginx-container nginx
+
+<span class="token comment"># 列出当前正在运行的容器</span>
+<span class="token function">docker</span> <span class="token function">ps</span>
+<span class="token comment"># 或者</span>
+<span class="token function">docker</span> container <span class="token function">ls</span>
+
+<span class="token comment"># 列出所有容器 (包括已停止的)</span>
+<span class="token function">docker</span> <span class="token function">ps</span> <span class="token parameter variable">-a</span>
+
+<span class="token comment"># 停止一个正在运行的容器</span>
+<span class="token function">docker</span> stop <span class="token operator">&lt;</span>container_id_or_name<span class="token operator">></span>
+
+<span class="token comment"># 启动一个已经停止的容器</span>
+<span class="token function">docker</span> start <span class="token operator">&lt;</span>container_id_or_name<span class="token operator">></span>
+
+<span class="token comment"># 重启一个容器</span>
+<span class="token function">docker</span> restart <span class="token operator">&lt;</span>container_id_or_name<span class="token operator">></span>
+
+<span class="token comment"># 删除一个或多个已停止的容器</span>
+<span class="token function">docker</span> <span class="token function">rm</span> <span class="token operator">&lt;</span>container_id_<span class="token operator"><span class="token file-descriptor important">1</span>></span> <span class="token operator">&lt;</span>container_id_<span class="token operator"><span class="token file-descriptor important">2</span>></span>
+
+<span class="token comment"># 强制删除一个正在运行的容器 (不推荐，应先 stop)</span>
+<span class="token function">docker</span> <span class="token function">rm</span> <span class="token parameter variable">-f</span> <span class="token operator">&lt;</span>container_id<span class="token operator">></span>
+
+<span class="token comment"># 暂停容器中的所有进程</span>
+<span class="token function">docker</span> pause <span class="token operator">&lt;</span>container_id<span class="token operator">></span>
+<span class="token comment"># 恢复容器中的所有进程</span>
+<span class="token function">docker</span> unpause <span class="token operator">&lt;</span>container_id<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="三、-与容器交互-Interacting-with-Containers"><a href="#三、-与容器交互-Interacting-with-Containers" class="headerlink" title="三、 与容器交互 (Interacting with Containers)"></a>三、 与容器交互 (Interacting with Containers)</h4><p><em>容器运行起来后，你需要查看它的状态和内部情况。</em></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看容器的日志输出</span></span><br><span class="line">docker logs &lt;container_id_or_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 实时跟踪容器的日志输出 (类似 tail -f)</span></span><br><span class="line">docker logs -f &lt;container_id_or_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在一个正在运行的容器中执行一个命令</span></span><br><span class="line"><span class="comment"># 这是进入容器内部进行调试的常用方法</span></span><br><span class="line"><span class="comment"># -i: 交互模式 (interactive)</span></span><br><span class="line"><span class="comment"># -t: 分配一个伪终端 (tty)</span></span><br><span class="line">docker <span class="built_in">exec</span> -it &lt;container_id_or_name&gt; /bin/bash</span><br><span class="line"><span class="comment"># 注意: 对于 alpine 等极简镜像，可能没有 bash，应使用 sh</span></span><br><span class="line"><span class="comment"># docker exec -it &lt;container_id_or_name&gt; /bin/sh</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看容器的详细信息 (包括 IP 地址、挂载点等)</span></span><br><span class="line">docker inspect &lt;container_id_or_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看容器内运行的进程</span></span><br><span class="line">docker top &lt;container_id_or_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从主机复制文件到容器</span></span><br><span class="line">docker <span class="built_in">cp</span> ./local-file.txt &lt;container_id&gt;:/path/in/container/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从容器复制文件到主机</span></span><br><span class="line">docker <span class="built_in">cp</span> &lt;container_id&gt;:/path/in/container/remote-file.txt ./</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看容器的日志输出</span>
+<span class="token function">docker</span> logs <span class="token operator">&lt;</span>container_id_or_name<span class="token operator">></span>
+
+<span class="token comment"># 实时跟踪容器的日志输出 (类似 tail -f)</span>
+<span class="token function">docker</span> logs <span class="token parameter variable">-f</span> <span class="token operator">&lt;</span>container_id_or_name<span class="token operator">></span>
+
+<span class="token comment"># 在一个正在运行的容器中执行一个命令</span>
+<span class="token comment"># 这是进入容器内部进行调试的常用方法</span>
+<span class="token comment"># -i: 交互模式 (interactive)</span>
+<span class="token comment"># -t: 分配一个伪终端 (tty)</span>
+<span class="token function">docker</span> <span class="token builtin class-name">exec</span> <span class="token parameter variable">-it</span> <span class="token operator">&lt;</span>container_id_or_name<span class="token operator">></span> /bin/bash
+<span class="token comment"># 注意: 对于 alpine 等极简镜像，可能没有 bash，应使用 sh</span>
+<span class="token comment"># docker exec -it &lt;container_id_or_name> /bin/sh</span>
+
+<span class="token comment"># 查看容器的详细信息 (包括 IP 地址、挂载点等)</span>
+<span class="token function">docker</span> inspect <span class="token operator">&lt;</span>container_id_or_name<span class="token operator">></span>
+
+<span class="token comment"># 查看容器内运行的进程</span>
+<span class="token function">docker</span> <span class="token function">top</span> <span class="token operator">&lt;</span>container_id_or_name<span class="token operator">></span>
+
+<span class="token comment"># 从主机复制文件到容器</span>
+<span class="token function">docker</span> <span class="token function">cp</span> ./local-file.txt <span class="token operator">&lt;</span>container_id<span class="token operator">></span>:/path/in/container/
+
+<span class="token comment"># 从容器复制文件到主机</span>
+<span class="token function">docker</span> <span class="token function">cp</span> <span class="token operator">&lt;</span>container_id<span class="token operator">></span>:/path/in/container/remote-file.txt ./<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>✨ 资深工程师建议：</strong> 优先使用 <code>docker logs</code> 进行调试。尽量避免频繁 <code>docker exec</code> 进入容器修改内容，这违背了容器“不可变基础设施”的理念。需要修改时，应更新镜像并重新创建容器。</p>
 <h4 id="四、-构建镜像-Building-Images-with-Dockerfile"><a href="#四、-构建镜像-Building-Images-with-Dockerfile" class="headerlink" title="四、 构建镜像 (Building Images with Dockerfile)"></a>四、 构建镜像 (Building Images with Dockerfile)</h4><p><em>将你的应用打包成标准化的镜像。</em></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在包含 Dockerfile 的目录下构建镜像</span></span><br><span class="line"><span class="comment"># -t: 指定镜像的名称和标签 (tag)</span></span><br><span class="line"><span class="comment"># . : 代表 Dockerfile 的上下文路径 (context path) 为当前目录</span></span><br><span class="line">docker build -t my-app:1.0 .</span><br><span class="line"></span><br><span class="line"><span class="comment"># 构建时指定 Dockerfile 文件名</span></span><br><span class="line">docker build -t my-app:1.0 -f MyDockerfile .</span><br><span class="line"></span><br><span class="line"><span class="comment"># 构建时不使用缓存 (用于确保最新)</span></span><br><span class="line">docker build --no-cache -t my-app:1.0 .</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 在包含 Dockerfile 的目录下构建镜像</span>
+<span class="token comment"># -t: 指定镜像的名称和标签 (tag)</span>
+<span class="token comment"># . : 代表 Dockerfile 的上下文路径 (context path) 为当前目录</span>
+<span class="token function">docker</span> build <span class="token parameter variable">-t</span> my-app:1.0 <span class="token builtin class-name">.</span>
+
+<span class="token comment"># 构建时指定 Dockerfile 文件名</span>
+<span class="token function">docker</span> build <span class="token parameter variable">-t</span> my-app:1.0 <span class="token parameter variable">-f</span> MyDockerfile <span class="token builtin class-name">.</span>
+
+<span class="token comment"># 构建时不使用缓存 (用于确保最新)</span>
+<span class="token function">docker</span> build --no-cache <span class="token parameter variable">-t</span> my-app:1.0 <span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>一个简单的 <code>Dockerfile</code> 示例：</p>
-<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 使用一个基础镜像</span></span><br><span class="line"><span class="keyword">FROM</span> python:<span class="number">3.9</span>-slim</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置工作目录</span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /app</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制依赖文件并安装</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> requirements.txt .</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> pip install --no-cache-dir -r requirements.txt</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制应用代码</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> . .</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 暴露端口</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">5000</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 容器启动时执行的命令</span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;python&quot;</span>, <span class="string">&quot;app.py&quot;</span>]</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-docker" data-language="docker"><code class="language-docker"><span class="token comment"># 使用一个基础镜像</span>
+<span class="token instruction"><span class="token keyword">FROM</span> python:3.9-slim</span>
+
+<span class="token comment"># 设置工作目录</span>
+<span class="token instruction"><span class="token keyword">WORKDIR</span> /app</span>
+
+<span class="token comment"># 复制依赖文件并安装</span>
+<span class="token instruction"><span class="token keyword">COPY</span> requirements.txt .</span>
+<span class="token instruction"><span class="token keyword">RUN</span> pip install --no-cache-dir -r requirements.txt</span>
+
+<span class="token comment"># 复制应用代码</span>
+<span class="token instruction"><span class="token keyword">COPY</span> . .</span>
+
+<span class="token comment"># 暴露端口</span>
+<span class="token instruction"><span class="token keyword">EXPOSE</span> 5000</span>
+
+<span class="token comment"># 容器启动时执行的命令</span>
+<span class="token instruction"><span class="token keyword">CMD</span> [<span class="token string">"python"</span>, <span class="token string">"app.py"</span>]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="五、-数据管理-Data-Management-with-Volumes"><a href="#五、-数据管理-Data-Management-with-Volumes" class="headerlink" title="五、 数据管理 (Data Management with Volumes)"></a>五、 数据管理 (Data Management with Volumes)</h4><p><em>让数据在容器之外持久化，或者在多个容器间共享。</em></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建一个 Docker 管理的卷 (volume)</span></span><br><span class="line">docker volume create my-data-volume</span><br><span class="line"></span><br><span class="line"><span class="comment"># 列出所有卷</span></span><br><span class="line">docker volume <span class="built_in">ls</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看卷的详细信息</span></span><br><span class="line">docker volume inspect my-data-volume</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除一个卷</span></span><br><span class="line">docker volume <span class="built_in">rm</span> my-data-volume</span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行容器时挂载一个命名的卷</span></span><br><span class="line"><span class="comment"># -v &lt;volume_name&gt;:&lt;path_in_container&gt;</span></span><br><span class="line">docker run -d -v my-data-volume:/var/lib/mysql mysql</span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行容器时挂载一个主机目录 (bind mount)</span></span><br><span class="line"><span class="comment"># -v &lt;host_path&gt;:&lt;container_path&gt;</span></span><br><span class="line">docker run -d -v /path/on/host:/app/data my-app:1.0</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 创建一个 Docker 管理的卷 (volume)</span>
+<span class="token function">docker</span> volume create my-data-volume
+
+<span class="token comment"># 列出所有卷</span>
+<span class="token function">docker</span> volume <span class="token function">ls</span>
+
+<span class="token comment"># 查看卷的详细信息</span>
+<span class="token function">docker</span> volume inspect my-data-volume
+
+<span class="token comment"># 删除一个卷</span>
+<span class="token function">docker</span> volume <span class="token function">rm</span> my-data-volume
+
+<span class="token comment"># 运行容器时挂载一个命名的卷</span>
+<span class="token comment"># -v &lt;volume_name>:&lt;path_in_container></span>
+<span class="token function">docker</span> run <span class="token parameter variable">-d</span> <span class="token parameter variable">-v</span> my-data-volume:/var/lib/mysql mysql
+
+<span class="token comment"># 运行容器时挂载一个主机目录 (bind mount)</span>
+<span class="token comment"># -v &lt;host_path>:&lt;container_path></span>
+<span class="token function">docker</span> run <span class="token parameter variable">-d</span> <span class="token parameter variable">-v</span> /path/on/host:/app/data my-app:1.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>✨ 资深工程师建议：</strong> 优先使用命名的卷 (<code>-v my-data-volume:/data</code>) 而不是绑定挂载主机目录 (<code>-v /host/path:/data</code>)。前者由 Docker 管理，更具可移植性，且性能通常更好。</p>
 <h4 id="六、-网络管理-Network-Management"><a href="#六、-网络管理-Network-Management" class="headerlink" title="六、 网络管理 (Network Management)"></a>六、 网络管理 (Network Management)</h4><p><em>让容器之间、容器与外界之间能够通信。</em></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建一个自定义的桥接网络</span></span><br><span class="line"><span class="comment"># 自定义网络内的容器可以通过容器名相互访问</span></span><br><span class="line">docker network create my-app-network</span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行容器并将其连接到自定义网络</span></span><br><span class="line">docker run -d --name db --network my-app-network mysql</span><br><span class="line">docker run -d --name api --network my-app-network -p 8000:8000 my-api</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在 api 容器内部，可以直接通过 `ping db` 来访问数据库容器</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 列出所有网络</span></span><br><span class="line">docker network <span class="built_in">ls</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看网络的详细信息</span></span><br><span class="line">docker network inspect my-app-network</span><br><span class="line"></span><br><span class="line"><span class="comment"># 断开/连接容器与网络的连接</span></span><br><span class="line">docker network disconnect my-app-network db</span><br><span class="line">docker network connect my-app-network db</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 创建一个自定义的桥接网络</span>
+<span class="token comment"># 自定义网络内的容器可以通过容器名相互访问</span>
+<span class="token function">docker</span> network create my-app-network
+
+<span class="token comment"># 运行容器并将其连接到自定义网络</span>
+<span class="token function">docker</span> run <span class="token parameter variable">-d</span> <span class="token parameter variable">--name</span> db <span class="token parameter variable">--network</span> my-app-network mysql
+<span class="token function">docker</span> run <span class="token parameter variable">-d</span> <span class="token parameter variable">--name</span> api <span class="token parameter variable">--network</span> my-app-network <span class="token parameter variable">-p</span> <span class="token number">8000</span>:8000 my-api
+
+<span class="token comment"># 在 api 容器内部，可以直接通过 `ping db` 来访问数据库容器</span>
+
+<span class="token comment"># 列出所有网络</span>
+<span class="token function">docker</span> network <span class="token function">ls</span>
+
+<span class="token comment"># 查看网络的详细信息</span>
+<span class="token function">docker</span> network inspect my-app-network
+
+<span class="token comment"># 断开/连接容器与网络的连接</span>
+<span class="token function">docker</span> network disconnect my-app-network db
+<span class="token function">docker</span> network connect my-app-network db<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="七、-系统清理-System-Cleanup"><a href="#七、-系统清理-System-Cleanup" class="headerlink" title="七、 系统清理 (System &amp; Cleanup)"></a>七、 系统清理 (System &amp; Cleanup)</h4><p><em>Docker 使用时间长了会产生很多无用的镜像、容器和卷，需要定期清理。</em></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 一键清理！删除所有已停止的容器、未被任何容器使用的网络、悬空的镜像 (dangling images) 和构建缓存</span></span><br><span class="line">docker system prune</span><br><span class="line"></span><br><span class="line"><span class="comment"># 更彻底的清理：在上面命令的基础上，还会删除所有未被至少一个容器使用的镜像</span></span><br><span class="line">docker system prune -a</span><br><span class="line"></span><br><span class="line"><span class="comment"># 单独删除所有已停止的容器</span></span><br><span class="line">docker container prune</span><br><span class="line"><span class="comment"># 快捷命令: docker rm $(docker ps -aq)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 单独删除所有悬空的镜像 (没有标签的镜像层)</span></span><br><span class="line">docker image prune</span><br><span class="line"><span class="comment"># 快捷命令: docker rmi $(docker images -f &quot;dangling=true&quot; -q)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 单独删除所有未被使用的卷</span></span><br><span class="line">docker volume prune</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 一键清理！删除所有已停止的容器、未被任何容器使用的网络、悬空的镜像 (dangling images) 和构建缓存</span>
+<span class="token function">docker</span> system prune
+
+<span class="token comment"># 更彻底的清理：在上面命令的基础上，还会删除所有未被至少一个容器使用的镜像</span>
+<span class="token function">docker</span> system prune <span class="token parameter variable">-a</span>
+
+<span class="token comment"># 单独删除所有已停止的容器</span>
+<span class="token function">docker</span> container prune
+<span class="token comment"># 快捷命令: docker rm $(docker ps -aq)</span>
+
+<span class="token comment"># 单独删除所有悬空的镜像 (没有标签的镜像层)</span>
+<span class="token function">docker</span> image prune
+<span class="token comment"># 快捷命令: docker rmi $(docker images -f "dangling=true" -q)</span>
+
+<span class="token comment"># 单独删除所有未被使用的卷</span>
+<span class="token function">docker</span> volume prune<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>⚠️ 重要警告：</strong> <code>prune</code> 命令非常方便，但也可能删除你不想删除的东西。在生产环境执行前请务必确认。</p>
 <hr>
 <h3 id="下一步：Docker-Compose"><a href="#下一步：Docker-Compose" class="headerlink" title="下一步：Docker Compose"></a>下一步：Docker Compose</h3><p>当你的应用包含多个容器时（例如一个 Web 服务 + 一个数据库 + 一个缓存），手动管理 <code>docker run</code> 命令会变得非常繁琐。这时就应该使用 <code>Docker Compose</code>。</p>
 <p><code>Docker Compose</code> 允许你使用一个 <code>docker-compose.yml</code> 文件来定义和运行一个多容器的 Docker 应用。</p>
 <p>一个简单的 <code>docker-compose.yml</code> 文件示例：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.8&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">web:</span></span><br><span class="line">    <span class="attr">build:</span> <span class="string">.</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;8000:5000&quot;</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">.:/code</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">redis</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">redis:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">&quot;redis:alpine&quot;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3.8'</span>
+
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">web</span><span class="token punctuation">:</span>
+    <span class="token key atrule">build</span><span class="token punctuation">:</span> .
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">"8000:5000"</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> .<span class="token punctuation">:</span>/code
+    <span class="token key atrule">depends_on</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> redis
+
+  <span class="token key atrule">redis</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> <span class="token string">"redis:alpine"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>常用命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在后台启动并构建所有服务</span></span><br><span class="line">docker-compose up -d --build</span><br><span class="line"></span><br><span class="line"><span class="comment"># 停止并删除所有服务相关的容器、网络</span></span><br><span class="line">docker-compose down</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看所有服务的日志</span></span><br><span class="line">docker-compose logs -f</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 在后台启动并构建所有服务</span>
+<span class="token function">docker-compose</span> up <span class="token parameter variable">-d</span> <span class="token parameter variable">--build</span>
+
+<span class="token comment"># 停止并删除所有服务相关的容器、网络</span>
+<span class="token function">docker-compose</span> down
+
+<span class="token comment"># 查看所有服务的日志</span>
+<span class="token function">docker-compose</span> logs <span class="token parameter variable">-f</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>这份大全覆盖了 Docker 日常开发和运维中的绝大多数场景。精通这些命令，你就能高效地驾驭容器化技术。祝你在容器化的世界里游刃有余！</p>
 ]]></content>
@@ -2487,6 +2716,32 @@ module.exports = {
         <tag>大全</tag>
         <tag>linux</tag>
         <tag>windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>敏捷开发实践</title>
+    <url>/2026/03/04/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5-32/</url>
+    <content><![CDATA[<p>Scrum是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍Scrum的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="Sprint"><a href="#Sprint" class="headerlink" title="Sprint"></a>Sprint</h2><p>Sprint是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用Sprint时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践Sprint，我们可以掌握Scrum的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="站立会议"><a href="#站立会议" class="headerlink" title="站立会议"></a>站立会议</h2><p>站立会议是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用站立会议时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践站立会议，我们可以掌握Scrum的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="回顾会议"><a href="#回顾会议" class="headerlink" title="回顾会议"></a>回顾会议</h2><p>回顾会议是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用回顾会议时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践回顾会议，我们可以掌握Scrum的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="用户故事"><a href="#用户故事" class="headerlink" title="用户故事"></a>用户故事</h2><p>用户故事是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用用户故事时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握用户故事和相关知识，将帮助我们构建更加完善的Scrum体系。</p>
+]]></content>
+      <categories>
+        <category>协作模式</category>
+      </categories>
+      <tags>
+        <tag>Scrum</tag>
       </tags>
   </entry>
   <entry>
@@ -2517,7 +2772,7 @@ module.exports = {
   </entry>
   <entry>
     <title>数据库优化</title>
-    <url>/2026/03/04/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96-30/</url>
+    <url>/2026/03/04/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96-31/</url>
     <content><![CDATA[<p>性能调优是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍性能调优的核心要点和实践经验。</p>
 <span id="more"></span>
 
@@ -2543,7 +2798,7 @@ module.exports = {
   </entry>
   <entry>
     <title>数据库优化</title>
-    <url>/2026/03/04/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96-31/</url>
+    <url>/2026/03/04/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96-30/</url>
     <content><![CDATA[<p>性能调优是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍性能调优的核心要点和实践经验。</p>
 <span id="more"></span>
 
@@ -2565,6 +2820,32 @@ module.exports = {
       </categories>
       <tags>
         <tag>性能调优</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构实战</title>
+    <url>/2026/03/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E6%88%98-26/</url>
+    <content><![CDATA[<p>结构应用是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍结构应用的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h2><p>哈希表是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用哈希表时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践哈希表，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><p>二叉树是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用二叉树时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践二叉树，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h2><p>图论是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用图论时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践图论，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>堆排序是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用堆排序时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握堆排序和相关知识，将帮助我们构建更加完善的结构应用体系。</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>结构应用</tag>
       </tags>
   </entry>
   <entry>
@@ -2594,29 +2875,29 @@ module.exports = {
       </tags>
   </entry>
   <entry>
-    <title>多模态AI应用</title>
-    <url>/2026/03/04/%E5%A4%9A%E6%A8%A1%E6%80%81ai%E5%BA%94%E7%94%A8-07/</url>
-    <content><![CDATA[<p>跨模态理解是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍跨模态理解的核心要点和实践经验。</p>
+    <title>服务网格技术</title>
+    <url>/2026/03/04/%E6%9C%8D%E5%8A%A1%E7%BD%91%E6%A0%BC%E6%8A%80%E6%9C%AF-19/</url>
+    <content><![CDATA[<p>Service Mesh是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍Service Mesh的核心要点和实践经验。</p>
 <span id="more"></span>
 
-<h2 id="图像识别"><a href="#图像识别" class="headerlink" title="图像识别"></a>图像识别</h2><p>图像识别是跨模态理解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用图像识别时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践图像识别，我们可以掌握跨模态理解的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="语音合成"><a href="#语音合成" class="headerlink" title="语音合成"></a>语音合成</h2><p>语音合成是跨模态理解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用语音合成时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践语音合成，我们可以掌握跨模态理解的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="视频理解"><a href="#视频理解" class="headerlink" title="视频理解"></a>视频理解</h2><p>视频理解是跨模态理解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用视频理解时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践视频理解，我们可以掌握跨模态理解的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="多模态融合"><a href="#多模态融合" class="headerlink" title="多模态融合"></a>多模态融合</h2><p>多模态融合是跨模态理解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用多模态融合时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握多模态融合和相关知识，将帮助我们构建更加完善的跨模态理解体系。</p>
+<h2 id="流量管理"><a href="#流量管理" class="headerlink" title="流量管理"></a>流量管理</h2><p>流量管理是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用流量管理时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践流量管理，我们可以掌握Service Mesh的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="服务发现"><a href="#服务发现" class="headerlink" title="服务发现"></a>服务发现</h2><p>服务发现是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用服务发现时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践服务发现，我们可以掌握Service Mesh的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="安全认证"><a href="#安全认证" class="headerlink" title="安全认证"></a>安全认证</h2><p>安全认证是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用安全认证时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践安全认证，我们可以掌握Service Mesh的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="可观测性"><a href="#可观测性" class="headerlink" title="可观测性"></a>可观测性</h2><p>可观测性是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用可观测性时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握可观测性和相关知识，将帮助我们构建更加完善的Service Mesh体系。</p>
 ]]></content>
       <categories>
-        <category>AI智能体</category>
+        <category>网络架构</category>
       </categories>
       <tags>
-        <tag>跨模态理解</tag>
+        <tag>Service Mesh</tag>
       </tags>
   </entry>
   <entry>
@@ -2751,32 +3032,6 @@ module.exports = {
   </entry>
   <entry>
     <title>知识管理体系</title>
-    <url>/2026/03/04/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E4%BD%93%E7%B3%BB-36/</url>
-    <content><![CDATA[<p>知识沉淀是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍知识沉淀的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="文档化"><a href="#文档化" class="headerlink" title="文档化"></a>文档化</h2><p>文档化是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用文档化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践文档化，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="技术分享"><a href="#技术分享" class="headerlink" title="技术分享"></a>技术分享</h2><p>技术分享是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用技术分享时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践技术分享，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="经验复盘"><a href="#经验复盘" class="headerlink" title="经验复盘"></a>经验复盘</h2><p>经验复盘是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用经验复盘时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践经验复盘，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="新人培养"><a href="#新人培养" class="headerlink" title="新人培养"></a>新人培养</h2><p>新人培养是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用新人培养时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握新人培养和相关知识，将帮助我们构建更加完善的知识沉淀体系。</p>
-]]></content>
-      <categories>
-        <category>协作模式</category>
-      </categories>
-      <tags>
-        <tag>知识沉淀</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>知识管理体系</title>
     <url>/2026/03/04/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E4%BD%93%E7%B3%BB-37/</url>
     <content><![CDATA[<p>知识沉淀是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍知识沉淀的核心要点和实践经验。</p>
 <span id="more"></span>
@@ -2828,6 +3083,32 @@ module.exports = {
       </tags>
   </entry>
   <entry>
+    <title>知识管理体系</title>
+    <url>/2026/03/04/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E4%BD%93%E7%B3%BB-36/</url>
+    <content><![CDATA[<p>知识沉淀是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍知识沉淀的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="文档化"><a href="#文档化" class="headerlink" title="文档化"></a>文档化</h2><p>文档化是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用文档化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践文档化，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="技术分享"><a href="#技术分享" class="headerlink" title="技术分享"></a>技术分享</h2><p>技术分享是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用技术分享时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践技术分享，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="经验复盘"><a href="#经验复盘" class="headerlink" title="经验复盘"></a>经验复盘</h2><p>经验复盘是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用经验复盘时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践经验复盘，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="新人培养"><a href="#新人培养" class="headerlink" title="新人培养"></a>新人培养</h2><p>新人培养是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用新人培养时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握新人培养和相关知识，将帮助我们构建更加完善的知识沉淀体系。</p>
+]]></content>
+      <categories>
+        <category>协作模式</category>
+      </categories>
+      <tags>
+        <tag>知识沉淀</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>算法思维训练</title>
     <url>/2026/03/04/%E7%AE%97%E6%B3%95%E6%80%9D%E7%BB%B4%E8%AE%AD%E7%BB%83-25/</url>
     <content><![CDATA[<p>问题求解是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍问题求解的核心要点和实践经验。</p>
@@ -2851,84 +3132,6 @@ module.exports = {
       </categories>
       <tags>
         <tag>问题求解</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>敏捷开发实践</title>
-    <url>/2026/03/04/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5-32/</url>
-    <content><![CDATA[<p>Scrum是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍Scrum的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="Sprint"><a href="#Sprint" class="headerlink" title="Sprint"></a>Sprint</h2><p>Sprint是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用Sprint时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践Sprint，我们可以掌握Scrum的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="站立会议"><a href="#站立会议" class="headerlink" title="站立会议"></a>站立会议</h2><p>站立会议是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用站立会议时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践站立会议，我们可以掌握Scrum的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="回顾会议"><a href="#回顾会议" class="headerlink" title="回顾会议"></a>回顾会议</h2><p>回顾会议是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用回顾会议时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践回顾会议，我们可以掌握Scrum的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="用户故事"><a href="#用户故事" class="headerlink" title="用户故事"></a>用户故事</h2><p>用户故事是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用用户故事时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握用户故事和相关知识，将帮助我们构建更加完善的Scrum体系。</p>
-]]></content>
-      <categories>
-        <category>协作模式</category>
-      </categories>
-      <tags>
-        <tag>Scrum</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>服务网格技术</title>
-    <url>/2026/03/04/%E6%9C%8D%E5%8A%A1%E7%BD%91%E6%A0%BC%E6%8A%80%E6%9C%AF-19/</url>
-    <content><![CDATA[<p>Service Mesh是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍Service Mesh的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="流量管理"><a href="#流量管理" class="headerlink" title="流量管理"></a>流量管理</h2><p>流量管理是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用流量管理时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践流量管理，我们可以掌握Service Mesh的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="服务发现"><a href="#服务发现" class="headerlink" title="服务发现"></a>服务发现</h2><p>服务发现是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用服务发现时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践服务发现，我们可以掌握Service Mesh的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="安全认证"><a href="#安全认证" class="headerlink" title="安全认证"></a>安全认证</h2><p>安全认证是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用安全认证时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践安全认证，我们可以掌握Service Mesh的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="可观测性"><a href="#可观测性" class="headerlink" title="可观测性"></a>可观测性</h2><p>可观测性是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用可观测性时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握可观测性和相关知识，将帮助我们构建更加完善的Service Mesh体系。</p>
-]]></content>
-      <categories>
-        <category>网络架构</category>
-      </categories>
-      <tags>
-        <tag>Service Mesh</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构实战</title>
-    <url>/2026/03/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E6%88%98-26/</url>
-    <content><![CDATA[<p>结构应用是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍结构应用的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h2><p>哈希表是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用哈希表时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践哈希表，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><p>二叉树是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用二叉树时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践二叉树，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h2><p>图论是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用图论时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践图论，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>堆排序是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用堆排序时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握堆排序和相关知识，将帮助我们构建更加完善的结构应用体系。</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>结构应用</tag>
       </tags>
   </entry>
 </search>
