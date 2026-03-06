@@ -11,7 +11,7 @@
   <rights>All rights reserved 2026, Duka</rights>
   <subtitle>AI 网络 技术 随笔 热点</subtitle>
   <title>Duka的技术博客</title>
-  <updated>2026-03-06T02:31:58.009Z</updated>
+  <updated>2026-03-06T03:01:29.537Z</updated>
   <entry>
     <author>
       <name>Duka</name>
@@ -28,11 +28,12 @@
     <link href="http://blog.dukaworks.io/2026/03/06/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F-Frp%E7%9A%84Docker%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/"/>
     <published>2026-03-06T02:29:00.000Z</published>
     <summary>
-      <![CDATA[<h1 id="Frp-内网穿透的不二选择"><a href="#Frp-内网穿透的不二选择" class="headerlink" title="Frp - 内网穿透的不二选择"></a>Frp - 内网穿透的不二选择</h1><hr>
-<h2 id="什么是Frp？"><a]]>
+      <![CDATA[<h2 id="什么是Frp？"><a href="#什么是Frp？" class="headerlink" title="什么是Frp？"></a>什么是Frp？</h2><p>Frp 是一个专注于内网穿透的高性能的反向代理应用，支持 TCP、UDP、HTTP、HTTPS 等多种协议，且支持 P2P 通信。可以将内网服务以安全、便捷的方式通过具有公网 IP 节点的中转暴露到公网。</p>
+<p>frp 是一个完全开源的项目，托管在<a href="https://github.com/">Github</a>上。<br>这里的项目地址是dukaworks的Fork地址：<a href="https://github.com/dukaworks/frp-proxy">https://github.com/dukaworks/frp-proxy</a></p>
+<h2 id="什么是Docker？"><a href="#什么是Docker？" class="headerlink" title="什么是Docker？"></a>什么是Docker？</h2><p><a href="https://www.docker.com/">Docker</a> 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。</p>]]>
     </summary>
-    <title>内网穿透-Frp的Docker部署方式</title>
-    <updated>2026-03-06T02:31:58.009Z</updated>
+    <title>内网穿透：Frp-内网穿透的不二选择（Docker部署方式）</title>
+    <updated>2026-03-06T03:01:29.537Z</updated>
   </entry>
   <entry>
     <author>
