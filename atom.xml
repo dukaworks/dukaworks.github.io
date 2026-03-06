@@ -11,7 +11,29 @@
   <rights>All rights reserved 2026, Duka</rights>
   <subtitle>AI 网络 技术 随笔 热点</subtitle>
   <title>Duka的技术博客</title>
-  <updated>2026-03-06T00:28:04.182Z</updated>
+  <updated>2026-03-06T02:31:58.009Z</updated>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="内网穿透" scheme="http://blog.dukaworks.io/categories/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+    <category term="学习探索" scheme="http://blog.dukaworks.io/categories/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/%E5%AD%A6%E4%B9%A0%E6%8E%A2%E7%B4%A2/"/>
+    <category term="内网穿透" scheme="http://blog.dukaworks.io/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+    <category term="frp" scheme="http://blog.dukaworks.io/tags/frp/"/>
+    <category term="docker" scheme="http://blog.dukaworks.io/tags/docker/"/>
+    <category term="VPS" scheme="http://blog.dukaworks.io/tags/VPS/"/>
+    <category term="nginx" scheme="http://blog.dukaworks.io/tags/nginx/"/>
+    <category term="nginx-proxy" scheme="http://blog.dukaworks.io/tags/nginx-proxy/"/>
+    <id>http://blog.dukaworks.io/2026/03/06/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F-Frp%E7%9A%84Docker%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/</id>
+    <link href="http://blog.dukaworks.io/2026/03/06/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F-Frp%E7%9A%84Docker%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/"/>
+    <published>2026-03-06T02:29:00.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="Frp-内网穿透的不二选择"><a href="#Frp-内网穿透的不二选择" class="headerlink" title="Frp - 内网穿透的不二选择"></a>Frp - 内网穿透的不二选择</h1><hr>
+<h2 id="什么是Frp？"><a]]>
+    </summary>
+    <title>内网穿透-Frp的Docker部署方式</title>
+    <updated>2026-03-06T02:31:58.009Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Duka</name>
@@ -324,20 +346,5 @@
     </summary>
     <title>Linux系统编程</title>
     <updated>2026-03-03T20:08:33.586Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Duka</name>
-    </author>
-    <category term="协作模式" scheme="http://blog.dukaworks.io/categories/%E5%8D%8F%E4%BD%9C%E6%A8%A1%E5%BC%8F/"/>
-    <category term="知识沉淀" scheme="http://blog.dukaworks.io/tags/%E7%9F%A5%E8%AF%86%E6%B2%89%E6%B7%80/"/>
-    <id>http://blog.dukaworks.io/2026/03/04/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E4%BD%93%E7%B3%BB-37/</id>
-    <link href="http://blog.dukaworks.io/2026/03/04/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E4%BD%93%E7%B3%BB-37/"/>
-    <published>2026-03-04T11:33:00.000Z</published>
-    <summary>
-      <![CDATA[<p>知识沉淀是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍知识沉淀的核心要点和实践经验。</p>]]>
-    </summary>
-    <title>知识管理体系</title>
-    <updated>2026-03-03T20:08:33.587Z</updated>
   </entry>
 </feed>
