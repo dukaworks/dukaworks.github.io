@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.dukaworks.io/2026/03/05/openclaw-evolution-record/</loc>
+    
+    <lastmod>2026-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.dukaworks.io/2026/03/06/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F-Frp%E7%9A%84Docker%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/</loc>
     
     <lastmod>2026-03-06</lastmod>
@@ -155,7 +164,7 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/tools-ssh/</loc>
+    <loc>http://blog.dukaworks.io/2026/03/04/tools-vim/</loc>
     
     <lastmod>2026-03-03</lastmod>
     
@@ -164,7 +173,7 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/tools-vim/</loc>
+    <loc>http://blog.dukaworks.io/2026/03/04/tools-ssh/</loc>
     
     <lastmod>2026-03-03</lastmod>
     
@@ -191,7 +200,7 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/tools-git-commands/</loc>
+    <loc>http://blog.dukaworks.io/2026/03/04/tools-curl/</loc>
     
     <lastmod>2026-03-03</lastmod>
     
@@ -209,25 +218,16 @@
   </url>
   
   <url>
+    <loc>http://blog.dukaworks.io/2026/03/04/tools-git-commands/</loc>
+    
+    <lastmod>2026-03-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.dukaworks.io/2026/03/04/tools-postman/</loc>
-    
-    <lastmod>2026-03-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/tools-curl/</loc>
-    
-    <lastmod>2026-03-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/network-microservices/</loc>
     
     <lastmod>2026-03-03</lastmod>
     
@@ -246,6 +246,15 @@
   
   <url>
     <loc>http://blog.dukaworks.io/2026/03/04/network-tcp-ip/</loc>
+    
+    <lastmod>2026-03-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/2026/03/04/network-microservices/</loc>
     
     <lastmod>2026-03-03</lastmod>
     
@@ -317,7 +326,7 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/learn-rust-basics/</loc>
+    <loc>http://blog.dukaworks.io/2026/03/04/learn-system-design/</loc>
     
     <lastmod>2026-03-03</lastmod>
     
@@ -326,7 +335,7 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/learn-system-design/</loc>
+    <loc>http://blog.dukaworks.io/2026/03/04/learn-rust-basics/</loc>
     
     <lastmod>2026-03-03</lastmod>
     
@@ -353,7 +362,7 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/learn-graphql/</loc>
+    <loc>http://blog.dukaworks.io/2026/03/04/learn-k8s-basics/</loc>
     
     <lastmod>2026-03-03</lastmod>
     
@@ -362,7 +371,7 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/learn-k8s-basics/</loc>
+    <loc>http://blog.dukaworks.io/2026/03/04/learn-graphql/</loc>
     
     <lastmod>2026-03-03</lastmod>
     
@@ -407,6 +416,15 @@
   </url>
   
   <url>
+    <loc>http://blog.dukaworks.io/2026/03/04/joint-code-review/</loc>
+    
+    <lastmod>2026-03-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.dukaworks.io/2026/03/04/joint-collaboration-tools/</loc>
     
     <lastmod>2026-03-03</lastmod>
@@ -417,15 +435,6 @@
   
   <url>
     <loc>http://blog.dukaworks.io/2026/03/04/joint-decision-making/</loc>
-    
-    <lastmod>2026-03-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/joint-code-review/</loc>
     
     <lastmod>2026-03-03</lastmod>
     
@@ -488,15 +497,6 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/dev-restful-api/</loc>
-    
-    <lastmod>2026-03-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.dukaworks.io/2026/03/04/dev-nodejs-async/</loc>
     
     <lastmod>2026-03-03</lastmod>
@@ -507,6 +507,15 @@
   
   <url>
     <loc>http://blog.dukaworks.io/2026/03/04/dev-react-hooks/</loc>
+    
+    <lastmod>2026-03-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/2026/03/04/dev-restful-api/</loc>
     
     <lastmod>2026-03-03</lastmod>
     
@@ -560,15 +569,6 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/ai-langchain/</loc>
-    
-    <lastmod>2026-03-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.dukaworks.io/2026/03/04/ai-chatgpt-intro/</loc>
     
     <lastmod>2026-03-03</lastmod>
@@ -578,7 +578,7 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/ai-multimodal/</loc>
+    <loc>http://blog.dukaworks.io/2026/03/04/ai-fine-tuning/</loc>
     
     <lastmod>2026-03-03</lastmod>
     
@@ -587,7 +587,16 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/ai-fine-tuning/</loc>
+    <loc>http://blog.dukaworks.io/2026/03/04/ai-langchain/</loc>
+    
+    <lastmod>2026-03-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/2026/03/04/ai-multimodal/</loc>
     
     <lastmod>2026-03-03</lastmod>
     
@@ -659,7 +668,7 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/git%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95-40/</loc>
+    <loc>http://blog.dukaworks.io/2026/03/04/git%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95-41/</loc>
     
     <lastmod>2026-03-03</lastmod>
     
@@ -668,7 +677,7 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/git%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95-41/</loc>
+    <loc>http://blog.dukaworks.io/2026/03/04/git%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95-40/</loc>
     
     <lastmod>2026-03-03</lastmod>
     
@@ -695,7 +704,7 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/%E5%9B%A2%E9%98%9F%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7-38/</loc>
+    <loc>http://blog.dukaworks.io/2026/03/04/%E5%9B%A2%E9%98%9F%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7-39/</loc>
     
     <lastmod>2026-03-03</lastmod>
     
@@ -704,7 +713,7 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/%E5%9B%A2%E9%98%9F%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7-39/</loc>
+    <loc>http://blog.dukaworks.io/2026/03/04/%E5%9B%A2%E9%98%9F%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7-38/</loc>
     
     <lastmod>2026-03-03</lastmod>
     
@@ -785,7 +794,7 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96-30/</loc>
+    <loc>http://blog.dukaworks.io/2026/03/04/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96-31/</loc>
     
     <lastmod>2026-03-03</lastmod>
     
@@ -794,7 +803,7 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96-31/</loc>
+    <loc>http://blog.dukaworks.io/2026/03/04/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96-30/</loc>
     
     <lastmod>2026-03-03</lastmod>
     
@@ -848,7 +857,7 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/%E6%9C%8D%E5%8A%A1%E7%BD%91%E6%A0%BC%E6%8A%80%E6%9C%AF-19/</loc>
+    <loc>http://blog.dukaworks.io/2026/03/04/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E9%80%89%E5%9E%8B-20/</loc>
     
     <lastmod>2026-03-03</lastmod>
     
@@ -857,7 +866,7 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E9%80%89%E5%9E%8B-20/</loc>
+    <loc>http://blog.dukaworks.io/2026/03/04/%E6%9C%8D%E5%8A%A1%E7%BD%91%E6%A0%BC%E6%8A%80%E6%9C%AF-19/</loc>
     
     <lastmod>2026-03-03</lastmod>
     
@@ -974,6 +983,15 @@
   </url>
   
   <url>
+    <loc>http://blog.dukaworks.io/2026/03/04/transformer%E6%9E%B6%E6%9E%84-02/</loc>
+    
+    <lastmod>2026-03-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.dukaworks.io/2026/03/04/transformer%E6%9E%B6%E6%9E%84-03/</loc>
     
     <lastmod>2026-03-03</lastmod>
@@ -984,15 +1002,6 @@
   
   <url>
     <loc>http://blog.dukaworks.io/2026/03/04/typescript%E9%AB%98%E7%BA%A7%E7%B1%BB%E5%9E%8B-10/</loc>
-    
-    <lastmod>2026-03-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/2026/03/04/transformer%E6%9E%B6%E6%9E%84-02/</loc>
     
     <lastmod>2026-03-03</lastmod>
     
@@ -1108,27 +1117,6 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/tags/Markdown/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/HTML/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/%E6%A0%BC%E5%BC%8F/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.dukaworks.io/tags/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -1150,21 +1138,21 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/tags/LangChain/</loc>
+    <loc>http://blog.dukaworks.io/tags/Markdown/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/tags/%E6%A1%86%E6%9E%B6/</loc>
+    <loc>http://blog.dukaworks.io/tags/HTML/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/tags/%E5%BC%80%E5%8F%91/</loc>
+    <loc>http://blog.dukaworks.io/tags/%E6%A0%BC%E5%BC%8F/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1192,14 +1180,42 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/tags/OpenAI/</loc>
+    <loc>http://blog.dukaworks.io/tags/%E5%BE%AE%E8%B0%83/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/tags/API/</loc>
+    <loc>http://blog.dukaworks.io/tags/%E8%AE%AD%E7%BB%83/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/%E6%A8%A1%E5%9E%8B/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/LangChain/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/%E6%A1%86%E6%9E%B6/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1227,6 +1243,20 @@
   </url>
   
   <url>
+    <loc>http://blog.dukaworks.io/tags/OpenAI/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/API/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.dukaworks.io/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -1242,41 +1272,6 @@
   
   <url>
     <loc>http://blog.dukaworks.io/tags/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/Kubernetes/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/%E5%BE%AE%E8%B0%83/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/%E8%AE%AD%E7%BB%83/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/%E6%A8%A1%E5%9E%8B/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1304,6 +1299,20 @@
   </url>
   
   <url>
+    <loc>http://blog.dukaworks.io/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/Kubernetes/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.dukaworks.io/tags/%E8%A7%86%E8%A7%89%E6%95%88%E6%9E%9C/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -1318,7 +1327,7 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/tags/Flexbox/</loc>
+    <loc>http://blog.dukaworks.io/tags/Grid/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1332,21 +1341,7 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/tags/Grid/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/REST/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/%E8%AE%BE%E8%AE%A1/</loc>
+    <loc>http://blog.dukaworks.io/tags/Flexbox/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1388,6 +1383,34 @@
   </url>
   
   <url>
+    <loc>http://blog.dukaworks.io/tags/REST/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/%E8%AE%BE%E8%AE%A1/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.dukaworks.io/tags/TypeScript/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -1410,20 +1433,6 @@
   
   <url>
     <loc>http://blog.dukaworks.io/tags/Composition-API/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1493,6 +1502,27 @@
   </url>
   
   <url>
+    <loc>http://blog.dukaworks.io/tags/%E4%BB%A3%E7%A0%81%E5%AE%A1%E6%9F%A5/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/%E8%B4%A8%E9%87%8F/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/%E5%AE%9E%E8%B7%B5/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.dukaworks.io/tags/%E5%8D%8F%E4%BD%9C/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -1528,21 +1558,14 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/tags/%E4%BB%A3%E7%A0%81%E5%AE%A1%E6%9F%A5/</loc>
+    <loc>http://blog.dukaworks.io/tags/%E6%9C%AA%E6%9D%A5/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/tags/%E8%B4%A8%E9%87%8F/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/%E5%AE%9E%E8%B7%B5/</loc>
+    <loc>http://blog.dukaworks.io/tags/%E5%B1%95%E6%9C%9B/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1557,20 +1580,6 @@
   
   <url>
     <loc>http://blog.dukaworks.io/tags/%E6%88%90%E9%95%BF/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/%E6%9C%AA%E6%9D%A5/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/%E5%B1%95%E6%9C%9B/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1675,20 +1684,6 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/tags/GraphQL/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/%E5%90%8E%E7%AB%AF/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.dukaworks.io/tags/K8s/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -1697,6 +1692,20 @@
   
   <url>
     <loc>http://blog.dukaworks.io/tags/%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/GraphQL/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/%E5%90%8E%E7%AB%AF/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1724,6 +1733,13 @@
   </url>
   
   <url>
+    <loc>http://blog.dukaworks.io/tags/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.dukaworks.io/tags/Rust/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -1739,13 +1755,6 @@
   
   <url>
     <loc>http://blog.dukaworks.io/tags/%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1850,13 +1859,6 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/tags/%E5%88%86%E5%B8%83%E5%BC%8F/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.dukaworks.io/tags/%E4%BB%A3%E7%90%86/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -1885,6 +1887,13 @@
   </url>
   
   <url>
+    <loc>http://blog.dukaworks.io/tags/%E5%88%86%E5%B8%83%E5%BC%8F/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.dukaworks.io/tags/WebSocket/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -1900,6 +1909,55 @@
   
   <url>
     <loc>http://blog.dukaworks.io/tags/%E9%80%9A%E4%BF%A1/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/OpenClaw/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/AI%E5%8A%A9%E6%89%8B/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/%E6%8A%80%E8%83%BD/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/%E6%90%9C%E7%B4%A2%E5%A2%9E%E5%BC%BA/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/%E8%87%AA%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/Tavily/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/Multi-Search-Engine/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1934,41 +1992,6 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/tags/%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/%E6%95%88%E7%8E%87/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/%E5%86%99%E4%BD%9C/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/%E6%8A%80%E5%B7%A7/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/Postman/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.dukaworks.io/tags/Curl/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -1990,21 +2013,28 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/tags/SSH/</loc>
+    <loc>http://blog.dukaworks.io/tags/%E5%86%99%E4%BD%9C/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/tags/%E8%BF%9C%E7%A8%8B/</loc>
+    <loc>http://blog.dukaworks.io/tags/%E6%8A%80%E5%B7%A7/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/tags/Linux/</loc>
+    <loc>http://blog.dukaworks.io/tags/%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/%E6%95%88%E7%8E%87/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2026,6 +2056,34 @@
   
   <url>
     <loc>http://blog.dukaworks.io/tags/%E7%BB%88%E7%AB%AF/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/Postman/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/SSH/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/%E8%BF%9C%E7%A8%8B/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/Linux/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2068,6 +2126,41 @@
   
   <url>
     <loc>http://blog.dukaworks.io/tags/%E8%A7%84%E8%8C%83%E7%BB%9F%E4%B8%80/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/NAS/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/Nginx/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/Proxy/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/Manager/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2117,41 +2210,6 @@
   
   <url>
     <loc>http://blog.dukaworks.io/tags/nginx-proxy/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/NAS/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/Nginx/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/Proxy/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/Manager/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2228,34 +2286,6 @@
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/tags/%E6%93%8D%E4%BD%9C/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/%E5%A4%A7%E5%85%A8/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/linux/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.dukaworks.io/tags/windows/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.dukaworks.io/tags/%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -2298,6 +2328,34 @@
   </url>
   
   <url>
+    <loc>http://blog.dukaworks.io/tags/%E6%93%8D%E4%BD%9C/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/%E5%A4%A7%E5%85%A8/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/linux/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/tags/windows/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.dukaworks.io/tags/%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A3/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -2307,14 +2365,14 @@
 
   
   <url>
-    <loc>http://blog.dukaworks.io/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/</loc>
+    <loc>http://blog.dukaworks.io/categories/AI%E6%99%BA%E8%83%BD%E4%BD%93/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.dukaworks.io/categories/AI%E6%99%BA%E8%83%BD%E4%BD%93/</loc>
+    <loc>http://blog.dukaworks.io/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2350,6 +2408,13 @@
   
   <url>
     <loc>http://blog.dukaworks.io/categories/%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.dukaworks.io/categories/AI%E6%99%BA%E8%83%BD%E4%BD%93/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

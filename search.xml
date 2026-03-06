@@ -66,6 +66,26 @@
       </tags>
   </entry>
   <entry>
+    <title>AI 智能体架构设计</title>
+    <url>/2026/03/04/ai-agent-architecture/</url>
+    <content><![CDATA[<p>AI 智能体（Agent）是当前 AI 领域的热门话题。一个完整的智能体系统通常包含感知、决策、执行三个核心模块。</p>
+<span id="more"></span>
+
+<p>感知模块负责从环境中获取信息，包括文本、图像、音频等多种数据源。决策模块基于感知到的信息，结合预训练的知识和推理能力，制定行动计划。执行模块则将计划付诸行动，与外部系统或用户交互。</p>
+<p>在多智能体系统中，多个智能体可以协作完成复杂任务。每个智能体可能专注于特定的领域或技能，通过通信和协调实现整体目标。这种架构类似于人类社会的分工协作模式。</p>
+<p>设计 AI 智能体时，需要考虑可扩展性、可靠性、安全性等问题。如何处理不确定性、如何避免循环推理、如何保证输出的一致性，都是需要解决的挑战。</p>
+<p>未来，AI 智能体有望在自动化办公、智能客服、个人助理等领域发挥重要作用。随着技术成熟，我们可能会看到更多商业化的智能体产品出现。</p>
+]]></content>
+      <categories>
+        <category>AI智能体</category>
+      </categories>
+      <tags>
+        <tag>架构设计</tag>
+        <tag>Agent</tag>
+        <tag>Multi-Agent</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML格式测试文章</title>
     <url>/2026/03/04/HTML%E6%A0%BC%E5%BC%8F%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<p>这篇文章用于测试各种 HTML 格式代码片段的效果。</p>
@@ -212,23 +232,45 @@ module.exports = {
       </tags>
   </entry>
   <entry>
-    <title>AI 智能体架构设计</title>
-    <url>/2026/03/04/ai-agent-architecture/</url>
-    <content><![CDATA[<p>AI 智能体（Agent）是当前 AI 领域的热门话题。一个完整的智能体系统通常包含感知、决策、执行三个核心模块。</p>
+    <title>ChatGPT 入门指南</title>
+    <url>/2026/03/04/ai-chatgpt-intro/</url>
+    <content><![CDATA[<p>ChatGPT 是目前最流行的对话式 AI 助手之一。本文将介绍 ChatGPT 的基本概念和使用方法。</p>
 <span id="more"></span>
 
-<p>感知模块负责从环境中获取信息，包括文本、图像、音频等多种数据源。决策模块基于感知到的信息，结合预训练的知识和推理能力，制定行动计划。执行模块则将计划付诸行动，与外部系统或用户交互。</p>
-<p>在多智能体系统中，多个智能体可以协作完成复杂任务。每个智能体可能专注于特定的领域或技能，通过通信和协调实现整体目标。这种架构类似于人类社会的分工协作模式。</p>
-<p>设计 AI 智能体时，需要考虑可扩展性、可靠性、安全性等问题。如何处理不确定性、如何避免循环推理、如何保证输出的一致性，都是需要解决的挑战。</p>
-<p>未来，AI 智能体有望在自动化办公、智能客服、个人助理等领域发挥重要作用。随着技术成熟，我们可能会看到更多商业化的智能体产品出现。</p>
+<p>ChatGPT 基于大型语言模型（LLM）构建，能够理解和生成自然语言。它的核心优势在于能够进行流畅的多轮对话，理解上下文，并根据用户需求提供相关答案。</p>
+<p>使用 ChatGPT 时，需要注意提示词（Prompt）的撰写技巧。一个好的提示词应该清晰、具体，并提供足够的上下文信息。例如，”请帮我写一个 Python 脚本” 就不如 “请帮我写一个 Python 脚本，用于批量重命名文件夹中的图片文件” 来得有效。</p>
+<p>ChatGPT 在编程、写作、学习等领域都有广泛应用。对于开发者来说，它可以帮助生成代码片段、解释复杂概念、调试代码错误。对于写作者，它可以提供灵感、润色文本、生成大纲。</p>
+<p>随着技术的发展，ChatGPT 的能力也在不断提升。未来，我们可能会看到更多专业化的版本，如医疗、法律等领域的专用模型。</p>
 ]]></content>
       <categories>
         <category>AI智能体</category>
       </categories>
       <tags>
-        <tag>架构设计</tag>
-        <tag>Agent</tag>
-        <tag>Multi-Agent</tag>
+        <tag>ChatGPT</tag>
+        <tag>LLM</tag>
+        <tag>入门</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>模型微调入门</title>
+    <url>/2026/03/04/ai-fine-tuning/</url>
+    <content><![CDATA[<p>模型微调（Fine-tuning）是在预训练模型基础上，使用特定领域的数据进一步训练，使模型适应特定任务的技术。</p>
+<span id="more"></span>
+
+<p>微调的优势在于、模型会学习特定领域的知识和风格，输出更符合实际需求；相比从零训练，所需数据量和计算资源更少；可以保留预训练模型的通用能力。</p>
+<p>常见的微调方法包括、全参数微调、LoRA（Low-Rank Adaptation）、Prefix Tuning、Prompt Tuning。LoRA 只训练少量参数，效果接近全参数微调，计算成本低，是目前最受欢迎的方法。</p>
+<p>微调前需要准备高质量的数据集。数据应该包含输入输出对，格式统一，数量充足。对于对话模型，需要多轮对话数据；对于分类模型，需要标注数据。</p>
+<p>Hugging Face 的 PEFT、Transformers 库提供了便捷的微调接口。选择合适的预训练模型（如 Llama、Mistral），配置训练参数，开始训练。</p>
+<p>微调后需要评估模型效果。可以使用测试集评估，也可以人工抽检。如果效果不理想，可能需要调整数据质量、增加训练轮数、调整学习率等。</p>
+<p>微调是定制 AI 模型的有效途径。随着工具的成熟，越来越多的开发者能够创建自己的专属模型。</p>
+]]></content>
+      <categories>
+        <category>AI智能体</category>
+      </categories>
+      <tags>
+        <tag>微调</tag>
+        <tag>训练</tag>
+        <tag>模型</tag>
       </tags>
   </entry>
   <entry>
@@ -256,23 +298,26 @@ module.exports = {
       </tags>
   </entry>
   <entry>
-    <title>ChatGPT 入门指南</title>
-    <url>/2026/03/04/ai-chatgpt-intro/</url>
-    <content><![CDATA[<p>ChatGPT 是目前最流行的对话式 AI 助手之一。本文将介绍 ChatGPT 的基本概念和使用方法。</p>
+    <title>多模态 AI 介绍</title>
+    <url>/2026/03/04/ai-multimodal/</url>
+    <content><![CDATA[<p>多模态 AI 能够处理和理解多种模态的数据，如文本、图像、音频、视频。相比单一模态，多模态能提供更丰富、更准确的理解。</p>
 <span id="more"></span>
 
-<p>ChatGPT 基于大型语言模型（LLM）构建，能够理解和生成自然语言。它的核心优势在于能够进行流畅的多轮对话，理解上下文，并根据用户需求提供相关答案。</p>
-<p>使用 ChatGPT 时，需要注意提示词（Prompt）的撰写技巧。一个好的提示词应该清晰、具体，并提供足够的上下文信息。例如，”请帮我写一个 Python 脚本” 就不如 “请帮我写一个 Python 脚本，用于批量重命名文件夹中的图片文件” 来得有效。</p>
-<p>ChatGPT 在编程、写作、学习等领域都有广泛应用。对于开发者来说，它可以帮助生成代码片段、解释复杂概念、调试代码错误。对于写作者，它可以提供灵感、润色文本、生成大纲。</p>
-<p>随着技术的发展，ChatGPT 的能力也在不断提升。未来，我们可能会看到更多专业化的版本，如医疗、法律等领域的专用模型。</p>
+<p>多模态的应用场景、图像描述（输入图像，生成描述），文本生成图像（如 DALL-E、Midjourney），视觉问答（图像+问题→答案），视频理解（动作识别、内容分析）。</p>
+<p>关键技术、CLIP（对比语言-图像预训练）学习文本和图像的联合表示。Vision Transformer（ViT）将图像分割成 patch，像处理 token 一样处理图像。跨模态注意力机制让模型关注不同模态的相关部分。</p>
+<p>GPT-4V 是最先进的多模态模型之一。它不仅能理解图像，还能根据图像回答问题、生成代码、提供创意。展示了多模态的强大能力。</p>
+<p>多模态训练需要大规模的图文对数据。如 LAION-400B 包含 40 亿图文对。数据质量和多样性对模型性能影响很大。</p>
+<p>挑战包括、数据标注成本高，计算资源需求大，模态对齐困难，评估指标不完善。需要持续的技术突破。</p>
+<p>未来方向、实时多模态交互（如视频通话），跨模态生成（文生视频），个性化和可控性，更高效的模型架构。</p>
+<p>多模态 AI 代表了 AI 发展的新方向。它让机器更接近人类的感知和理解能力，应用前景广阔。</p>
 ]]></content>
       <categories>
         <category>AI智能体</category>
       </categories>
       <tags>
-        <tag>ChatGPT</tag>
-        <tag>LLM</tag>
-        <tag>入门</tag>
+        <tag>多模态</tag>
+        <tag>视觉</tag>
+        <tag>AI</tag>
       </tags>
   </entry>
   <entry>
@@ -316,29 +361,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
-    <title>多模态 AI 介绍</title>
-    <url>/2026/03/04/ai-multimodal/</url>
-    <content><![CDATA[<p>多模态 AI 能够处理和理解多种模态的数据，如文本、图像、音频、视频。相比单一模态，多模态能提供更丰富、更准确的理解。</p>
-<span id="more"></span>
-
-<p>多模态的应用场景、图像描述（输入图像，生成描述），文本生成图像（如 DALL-E、Midjourney），视觉问答（图像+问题→答案），视频理解（动作识别、内容分析）。</p>
-<p>关键技术、CLIP（对比语言-图像预训练）学习文本和图像的联合表示。Vision Transformer（ViT）将图像分割成 patch，像处理 token 一样处理图像。跨模态注意力机制让模型关注不同模态的相关部分。</p>
-<p>GPT-4V 是最先进的多模态模型之一。它不仅能理解图像，还能根据图像回答问题、生成代码、提供创意。展示了多模态的强大能力。</p>
-<p>多模态训练需要大规模的图文对数据。如 LAION-400B 包含 40 亿图文对。数据质量和多样性对模型性能影响很大。</p>
-<p>挑战包括、数据标注成本高，计算资源需求大，模态对齐困难，评估指标不完善。需要持续的技术突破。</p>
-<p>未来方向、实时多模态交互（如视频通话），跨模态生成（文生视频），个性化和可控性，更高效的模型架构。</p>
-<p>多模态 AI 代表了 AI 发展的新方向。它让机器更接近人类的感知和理解能力，应用前景广阔。</p>
-]]></content>
-      <categories>
-        <category>AI智能体</category>
-      </categories>
-      <tags>
-        <tag>多模态</tag>
-        <tag>视觉</tag>
-        <tag>AI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>提示词工程实践</title>
     <url>/2026/03/04/ai-prompt-engineering/</url>
     <content><![CDATA[<p>提示词工程（Prompt Engineering）是与 AI 模型有效沟通的关键技能。掌握这项技能可以显著提升 AI 输出的质量和准确性。</p>
@@ -356,49 +378,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
         <tag>提示词</tag>
         <tag>Prompt</tag>
         <tag>最佳实践</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>云原生技术栈</title>
-    <url>/2026/03/04/cloud-native-stack-48/</url>
-    <content><![CDATA[<p>云原生技术栈是现代应用开发的核心框架。掌握这些技术可以帮助我们构建更加高效、可扩展的应用系统。本文将介绍云原生技术栈的关键组成部分。</p>
-<span id="more"></span>
-
-<h2 id="容器化技术"><a href="#容器化技术" class="headerlink" title="容器化技术"></a>容器化技术</h2><p>容器化是云原生的基石。Docker 提供了轻量级的虚拟化方案，让应用可以在任何环境中一致运行。通过容器，我们可以实现应用的快速部署和迁移。</p>
-<p>使用 Docker 时，要注意镜像的优化。多阶段构建可以减小镜像体积，提升部署效率。</p>
-<h2 id="容器编排"><a href="#容器编排" class="headerlink" title="容器编排"></a>容器编排</h2><p>Kubernetes 是容器编排的事实标准。它提供了自动扩缩容、服务发现、负载均衡等功能，大大简化了分布式系统的管理。</p>
-<p>通过学习和实践 Kubernetes，我们可以构建高可用的微服务架构，实现应用的弹性伸缩。</p>
-<h2 id="服务网格"><a href="#服务网格" class="headerlink" title="服务网格"></a>服务网格</h2><p>服务网格为微服务提供了统一的通信管理。Istio 等服务网格可以实现流量控制、安全认证、可观测性等功能，是云原生架构的重要组成部分。</p>
-<p>掌握服务网格技术，将帮助我们构建更加完善的云原生应用体系。</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>云原生</tag>
-        <tag>Kubernetes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>模型微调入门</title>
-    <url>/2026/03/04/ai-fine-tuning/</url>
-    <content><![CDATA[<p>模型微调（Fine-tuning）是在预训练模型基础上，使用特定领域的数据进一步训练，使模型适应特定任务的技术。</p>
-<span id="more"></span>
-
-<p>微调的优势在于、模型会学习特定领域的知识和风格，输出更符合实际需求；相比从零训练，所需数据量和计算资源更少；可以保留预训练模型的通用能力。</p>
-<p>常见的微调方法包括、全参数微调、LoRA（Low-Rank Adaptation）、Prefix Tuning、Prompt Tuning。LoRA 只训练少量参数，效果接近全参数微调，计算成本低，是目前最受欢迎的方法。</p>
-<p>微调前需要准备高质量的数据集。数据应该包含输入输出对，格式统一，数量充足。对于对话模型，需要多轮对话数据；对于分类模型，需要标注数据。</p>
-<p>Hugging Face 的 PEFT、Transformers 库提供了便捷的微调接口。选择合适的预训练模型（如 Llama、Mistral），配置训练参数，开始训练。</p>
-<p>微调后需要评估模型效果。可以使用测试集评估，也可以人工抽检。如果效果不理想，可能需要调整数据质量、增加训练轮数、调整学习率等。</p>
-<p>微调是定制 AI 模型的有效途径。随着工具的成熟，越来越多的开发者能够创建自己的专属模型。</p>
-]]></content>
-      <categories>
-        <category>AI智能体</category>
-      </categories>
-      <tags>
-        <tag>微调</tag>
-        <tag>训练</tag>
-        <tag>模型</tag>
       </tags>
   </entry>
   <entry>
@@ -420,6 +399,27 @@ response <span class="token operator">=</span> client<span class="token punctuat
         <tag>RAG</tag>
         <tag>检索增强</tag>
         <tag>问答</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>云原生技术栈</title>
+    <url>/2026/03/04/cloud-native-stack-48/</url>
+    <content><![CDATA[<p>云原生技术栈是现代应用开发的核心框架。掌握这些技术可以帮助我们构建更加高效、可扩展的应用系统。本文将介绍云原生技术栈的关键组成部分。</p>
+<span id="more"></span>
+
+<h2 id="容器化技术"><a href="#容器化技术" class="headerlink" title="容器化技术"></a>容器化技术</h2><p>容器化是云原生的基石。Docker 提供了轻量级的虚拟化方案，让应用可以在任何环境中一致运行。通过容器，我们可以实现应用的快速部署和迁移。</p>
+<p>使用 Docker 时，要注意镜像的优化。多阶段构建可以减小镜像体积，提升部署效率。</p>
+<h2 id="容器编排"><a href="#容器编排" class="headerlink" title="容器编排"></a>容器编排</h2><p>Kubernetes 是容器编排的事实标准。它提供了自动扩缩容、服务发现、负载均衡等功能，大大简化了分布式系统的管理。</p>
+<p>通过学习和实践 Kubernetes，我们可以构建高可用的微服务架构，实现应用的弹性伸缩。</p>
+<h2 id="服务网格"><a href="#服务网格" class="headerlink" title="服务网格"></a>服务网格</h2><p>服务网格为微服务提供了统一的通信管理。Istio 等服务网格可以实现流量控制、安全认证、可观测性等功能，是云原生架构的重要组成部分。</p>
+<p>掌握服务网格技术，将帮助我们构建更加完善的云原生应用体系。</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>云原生</tag>
+        <tag>Kubernetes</tag>
       </tags>
   </entry>
   <entry>
@@ -446,29 +446,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </categories>
       <tags>
         <tag>视觉效果</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Flexbox 布局完全指南</title>
-    <url>/2026/03/04/dev-css-flexbox/</url>
-    <content><![CDATA[<p>Flexbox（Flexible Box）是 CSS3 引入的布局模式，专门用于一维布局。它让复杂的布局变得简单直观。</p>
-<span id="more"></span>
-
-<p>Flexbox 的核心概念、容器和项目。设置 <code>display: flex</code> 的元素是容器，它的直接子元素是项目。容器有主轴和交叉轴，默认主轴是水平方向。</p>
-<p>容器属性、<code>flex-direction</code> 决定主轴方向（row、column），<code>justify-content</code> 决定主轴对齐（flex-start、center、space-between），<code>align-items</code> 决定交叉轴对齐，<code>flex-wrap</code> 决定是否换行。</p>
-<p>项目属性、<code>flex-grow</code> 决定放大比例，<code>flex-shrink</code> 决定缩小比例，<code>flex-basis</code> 决定初始大小。<code>order</code> 决定显示顺序，<code>align-self</code> 覆盖对齐方式。</p>
-<p>Flexbox 解决了很多经典布局问题、垂直居中只需要 <code>justify-content: center; align-items: center;</code>，等高列自动实现，响应式布局用 <code>flex-wrap</code> 配合百分比宽度。</p>
-<p>Flexbox 适合一维布局，如导航栏、卡片列表。二维布局应该使用 Grid。Grid 和 Flexbox 可以结合使用，发挥各自优势。</p>
-<p>Flexbox 的浏览器支持已经很完善，但在一些老旧浏览器中可能需要前缀。使用 Autoprefixer 工具可以自动添加兼容性前缀。</p>
-<p>掌握 Flexbox 是现代前端开发的必备技能。它简化了布局代码，提高了开发效率，值得深入学习。</p>
-]]></content>
-      <categories>
-        <category>Web开发</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>Flexbox</tag>
-        <tag>布局</tag>
       </tags>
   </entry>
   <entry>
@@ -517,30 +494,31 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </categories>
       <tags>
         <tag>CSS</tag>
-        <tag>布局</tag>
         <tag>Grid</tag>
+        <tag>布局</tag>
       </tags>
   </entry>
   <entry>
-    <title>RESTful API 设计最佳实践</title>
-    <url>/2026/03/04/dev-restful-api/</url>
-    <content><![CDATA[<p>RESTful API 是目前最流行的 Web API 设计风格。良好的 API 设计能够提高开发效率，降低维护成本。</p>
+    <title>Flexbox 布局完全指南</title>
+    <url>/2026/03/04/dev-css-flexbox/</url>
+    <content><![CDATA[<p>Flexbox（Flexible Box）是 CSS3 引入的布局模式，专门用于一维布局。它让复杂的布局变得简单直观。</p>
 <span id="more"></span>
 
-<p>REST 的核心原则包括、无状态、统一接口、可缓存、分层系统。URL 应该表示资源，HTTP 方法表示操作。GET 获取资源，POST 创建资源，PUT 更新资源，DELETE 删除资源。</p>
-<p>API 版本管理很重要。常见的版本控制方式有、URL 路径（&#x2F;api&#x2F;v1&#x2F;users）、查询参数（&#x2F;api&#x2F;users?version&#x3D;1）、请求头（Accept: application&#x2F;vnd.api.v1+json）。推荐使用 URL 路径方式，简单直观。</p>
-<p>命名应该使用复数形式，如 &#x2F;api&#x2F;users 而不是 &#x2F;api&#x2F;user。使用连字符（kebab-case）而不是驼峰（camelCase）或下划线（snake_case）。</p>
-<p>响应格式应该统一。成功响应通常包含数据和元数据，错误响应应该包含错误代码、错误信息、详细说明。使用适当的 HTTP 状态码、200 成功，201 已创建，400 客户端错误，404 未找到，500 服务器错误。</p>
-<p>分页、过滤、排序是常见需求。通过查询参数实现、&#x2F;api&#x2F;users?page&#x3D;1&amp;limit&#x3D;20&amp;sort&#x3D;name&amp;filter&#x3D;active。</p>
-<p>良好的 API 文档也很重要。使用 Swagger&#x2F;OpenAPI 等工具自动生成交互式文档，能够显著提升开发者体验。</p>
+<p>Flexbox 的核心概念、容器和项目。设置 <code>display: flex</code> 的元素是容器，它的直接子元素是项目。容器有主轴和交叉轴，默认主轴是水平方向。</p>
+<p>容器属性、<code>flex-direction</code> 决定主轴方向（row、column），<code>justify-content</code> 决定主轴对齐（flex-start、center、space-between），<code>align-items</code> 决定交叉轴对齐，<code>flex-wrap</code> 决定是否换行。</p>
+<p>项目属性、<code>flex-grow</code> 决定放大比例，<code>flex-shrink</code> 决定缩小比例，<code>flex-basis</code> 决定初始大小。<code>order</code> 决定显示顺序，<code>align-self</code> 覆盖对齐方式。</p>
+<p>Flexbox 解决了很多经典布局问题、垂直居中只需要 <code>justify-content: center; align-items: center;</code>，等高列自动实现，响应式布局用 <code>flex-wrap</code> 配合百分比宽度。</p>
+<p>Flexbox 适合一维布局，如导航栏、卡片列表。二维布局应该使用 Grid。Grid 和 Flexbox 可以结合使用，发挥各自优势。</p>
+<p>Flexbox 的浏览器支持已经很完善，但在一些老旧浏览器中可能需要前缀。使用 Autoprefixer 工具可以自动添加兼容性前缀。</p>
+<p>掌握 Flexbox 是现代前端开发的必备技能。它简化了布局代码，提高了开发效率，值得深入学习。</p>
 ]]></content>
       <categories>
         <category>Web开发</category>
       </categories>
       <tags>
-        <tag>API</tag>
-        <tag>REST</tag>
-        <tag>设计</tag>
+        <tag>CSS</tag>
+        <tag>布局</tag>
+        <tag>Flexbox</tag>
       </tags>
   </entry>
   <entry>
@@ -584,6 +562,52 @@ response <span class="token operator">=</span> client<span class="token punctuat
         <tag>React</tag>
         <tag>Hooks</tag>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RESTful API 设计最佳实践</title>
+    <url>/2026/03/04/dev-restful-api/</url>
+    <content><![CDATA[<p>RESTful API 是目前最流行的 Web API 设计风格。良好的 API 设计能够提高开发效率，降低维护成本。</p>
+<span id="more"></span>
+
+<p>REST 的核心原则包括、无状态、统一接口、可缓存、分层系统。URL 应该表示资源，HTTP 方法表示操作。GET 获取资源，POST 创建资源，PUT 更新资源，DELETE 删除资源。</p>
+<p>API 版本管理很重要。常见的版本控制方式有、URL 路径（&#x2F;api&#x2F;v1&#x2F;users）、查询参数（&#x2F;api&#x2F;users?version&#x3D;1）、请求头（Accept: application&#x2F;vnd.api.v1+json）。推荐使用 URL 路径方式，简单直观。</p>
+<p>命名应该使用复数形式，如 &#x2F;api&#x2F;users 而不是 &#x2F;api&#x2F;user。使用连字符（kebab-case）而不是驼峰（camelCase）或下划线（snake_case）。</p>
+<p>响应格式应该统一。成功响应通常包含数据和元数据，错误响应应该包含错误代码、错误信息、详细说明。使用适当的 HTTP 状态码、200 成功，201 已创建，400 客户端错误，404 未找到，500 服务器错误。</p>
+<p>分页、过滤、排序是常见需求。通过查询参数实现、&#x2F;api&#x2F;users?page&#x3D;1&amp;limit&#x3D;20&amp;sort&#x3D;name&amp;filter&#x3D;active。</p>
+<p>良好的 API 文档也很重要。使用 Swagger&#x2F;OpenAPI 等工具自动生成交互式文档，能够显著提升开发者体验。</p>
+]]></content>
+      <categories>
+        <category>Web开发</category>
+      </categories>
+      <tags>
+        <tag>API</tag>
+        <tag>REST</tag>
+        <tag>设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软件测试基础</title>
+    <url>/2026/03/04/dev-testing-basics/</url>
+    <content><![CDATA[<p>软件测试是保证软件质量的重要手段。良好的测试能发现 bug，防止回归，提高代码信心。</p>
+<span id="more"></span>
+
+<p>测试类型、单元测试、集成测试、系统测试、端到端测试。单元测试测试最小单元（函数、类），集成测试测试组件间交互，系统测试测试完整系统，端到端测试模拟用户场景。</p>
+<p>测试金字塔、大量单元测试（70-80%），适量集成测试（15-20%），少量端到端测试（5-10%）。单元测试快速、稳定、定位准确，应该是测试的主体。</p>
+<p>测试框架、JavaScript 用 Jest、Mocha，Python 用 pytest，Java 用 JUnit。选择合适的框架，遵循最佳实践。</p>
+<p>测试原则、FIRST（Fast 快速、Independent 独立、Repeatable 可重复、Self-Validating 自验证、Timely 及时）。每个测试应该只验证一个方面，避免测试相互依赖。</p>
+<p>测试替身、Dummy 空对象，Stub 预设返回，Mock 模拟行为，Fake 简化实现。合理使用测试替身，隔离外部依赖，保证测试稳定。</p>
+<p>测试覆盖率、语句覆盖、分支覆盖、路径覆盖。追求高覆盖率，但不要迷信覆盖率。测试质量和数量同样重要。</p>
+<p>TDD（测试驱动开发）、先写测试，再写代码。红（失败测试）→绿（通过测试）→重构。TDD 能提高代码质量，降低 bug 数量，但需要时间适应。</p>
+<p>测试不是负担，而是投资。写测试的时间会在后期调试和维护中收回。养成测试习惯，代码质量会显著提升。</p>
+]]></content>
+      <categories>
+        <category>Web开发</category>
+      </categories>
+      <tags>
+        <tag>开发</tag>
+        <tag>测试</tag>
+        <tag>质量保证</tag>
       </tags>
   </entry>
   <entry>
@@ -632,30 +656,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
         <tag>前端</tag>
         <tag>Vue3</tag>
         <tag>Composition API</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>软件测试基础</title>
-    <url>/2026/03/04/dev-testing-basics/</url>
-    <content><![CDATA[<p>软件测试是保证软件质量的重要手段。良好的测试能发现 bug，防止回归，提高代码信心。</p>
-<span id="more"></span>
-
-<p>测试类型、单元测试、集成测试、系统测试、端到端测试。单元测试测试最小单元（函数、类），集成测试测试组件间交互，系统测试测试完整系统，端到端测试模拟用户场景。</p>
-<p>测试金字塔、大量单元测试（70-80%），适量集成测试（15-20%），少量端到端测试（5-10%）。单元测试快速、稳定、定位准确，应该是测试的主体。</p>
-<p>测试框架、JavaScript 用 Jest、Mocha，Python 用 pytest，Java 用 JUnit。选择合适的框架，遵循最佳实践。</p>
-<p>测试原则、FIRST（Fast 快速、Independent 独立、Repeatable 可重复、Self-Validating 自验证、Timely 及时）。每个测试应该只验证一个方面，避免测试相互依赖。</p>
-<p>测试替身、Dummy 空对象，Stub 预设返回，Mock 模拟行为，Fake 简化实现。合理使用测试替身，隔离外部依赖，保证测试稳定。</p>
-<p>测试覆盖率、语句覆盖、分支覆盖、路径覆盖。追求高覆盖率，但不要迷信覆盖率。测试质量和数量同样重要。</p>
-<p>TDD（测试驱动开发）、先写测试，再写代码。红（失败测试）→绿（通过测试）→重构。TDD 能提高代码质量，降低 bug 数量，但需要时间适应。</p>
-<p>测试不是负担，而是投资。写测试的时间会在后期调试和维护中收回。养成测试习惯，代码质量会显著提升。</p>
-]]></content>
-      <categories>
-        <category>Web开发</category>
-      </categories>
-      <tags>
-        <tag>开发</tag>
-        <tag>测试</tag>
-        <tag>质量保证</tag>
       </tags>
   </entry>
   <entry>
@@ -734,53 +734,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
-    <title>前端工程化实践</title>
-    <url>/2026/03/04/frontend-engineering-49/</url>
-    <content><![CDATA[<p>前端工程化是提升开发效率和质量的重要手段。通过系统化的工具和流程，我们可以构建更加健壮的前端应用。本文将介绍前端工程化的核心实践。</p>
-<span id="more"></span>
-
-<h2 id="模块化开发"><a href="#模块化开发" class="headerlink" title="模块化开发"></a>模块化开发</h2><p>模块化是前端工程化的基础。通过 ES Modules、Webpack 等工具，我们可以实现代码的模块化组织，提升代码的可维护性。</p>
-<p>在构建复杂应用时，合理划分模块边界非常重要。每个模块应该有清晰的职责和接口。</p>
-<h2 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h2><p>代码规范是团队协作的基础。通过 ESLint、Prettier 等工具，我们可以统一代码风格，减少沟通成本。</p>
-<p>建立代码审查流程，确保每一行代码都符合规范，这是保证代码质量的重要手段。</p>
-<h2 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h2><p>持续集成可以自动运行测试和构建，及时发现和解决问题。通过 GitHub Actions 等工具，我们可以实现自动化的 CI&#x2F;CD 流程。</p>
-<p>掌握前端工程化实践，将帮助我们构建更加高效、可靠的前端开发体系。</p>
-]]></content>
-      <categories>
-        <category>Web开发</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>工程化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git高级用法</title>
-    <url>/2026/03/04/git%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95-40/</url>
-    <content><![CDATA[<p>版本控制是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍版本控制的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="Rebase"><a href="#Rebase" class="headerlink" title="Rebase"></a>Rebase</h2><p>Rebase是版本控制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用Rebase时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践Rebase，我们可以掌握版本控制的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="Cherry-pick"><a href="#Cherry-pick" class="headerlink" title="Cherry-pick"></a>Cherry-pick</h2><p>Cherry-pick是版本控制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用Cherry-pick时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践Cherry-pick，我们可以掌握版本控制的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="交互式变基"><a href="#交互式变基" class="headerlink" title="交互式变基"></a>交互式变基</h2><p>交互式变基是版本控制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用交互式变基时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践交互式变基，我们可以掌握版本控制的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="子模块"><a href="#子模块" class="headerlink" title="子模块"></a>子模块</h2><p>子模块是版本控制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用子模块时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握子模块和相关知识，将帮助我们构建更加完善的版本控制体系。</p>
-]]></content>
-      <categories>
-        <category>工具使用</category>
-      </categories>
-      <tags>
-        <tag>版本控制</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>首次联手修复&quot;灵异&quot;BUG全记录</title>
     <url>/2026/03/04/duka-openclaw-fix-bugs/</url>
     <content><![CDATA[<p>这是一个值得纪念的夜晚。一篇简单的博客，一次看似常规的部署，却引发了一场长达数小时、跨越”人机”两界的深度排查。</p>
@@ -851,6 +804,27 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
+    <title>前端工程化实践</title>
+    <url>/2026/03/04/frontend-engineering-49/</url>
+    <content><![CDATA[<p>前端工程化是提升开发效率和质量的重要手段。通过系统化的工具和流程，我们可以构建更加健壮的前端应用。本文将介绍前端工程化的核心实践。</p>
+<span id="more"></span>
+
+<h2 id="模块化开发"><a href="#模块化开发" class="headerlink" title="模块化开发"></a>模块化开发</h2><p>模块化是前端工程化的基础。通过 ES Modules、Webpack 等工具，我们可以实现代码的模块化组织，提升代码的可维护性。</p>
+<p>在构建复杂应用时，合理划分模块边界非常重要。每个模块应该有清晰的职责和接口。</p>
+<h2 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h2><p>代码规范是团队协作的基础。通过 ESLint、Prettier 等工具，我们可以统一代码风格，减少沟通成本。</p>
+<p>建立代码审查流程，确保每一行代码都符合规范，这是保证代码质量的重要手段。</p>
+<h2 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h2><p>持续集成可以自动运行测试和构建，及时发现和解决问题。通过 GitHub Actions 等工具，我们可以实现自动化的 CI&#x2F;CD 流程。</p>
+<p>掌握前端工程化实践，将帮助我们构建更加高效、可靠的前端开发体系。</p>
+]]></content>
+      <categories>
+        <category>Web开发</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>工程化</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git高级用法</title>
     <url>/2026/03/04/git%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95-41/</url>
     <content><![CDATA[<p>版本控制是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍版本控制的核心要点和实践经验。</p>
@@ -894,6 +868,54 @@ response <span class="token operator">=</span> client<span class="token punctuat
         <tag>博客</tag>
         <tag>合作</tag>
         <tag>规划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git高级用法</title>
+    <url>/2026/03/04/git%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95-40/</url>
+    <content><![CDATA[<p>版本控制是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍版本控制的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="Rebase"><a href="#Rebase" class="headerlink" title="Rebase"></a>Rebase</h2><p>Rebase是版本控制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用Rebase时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践Rebase，我们可以掌握版本控制的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="Cherry-pick"><a href="#Cherry-pick" class="headerlink" title="Cherry-pick"></a>Cherry-pick</h2><p>Cherry-pick是版本控制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用Cherry-pick时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践Cherry-pick，我们可以掌握版本控制的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="交互式变基"><a href="#交互式变基" class="headerlink" title="交互式变基"></a>交互式变基</h2><p>交互式变基是版本控制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用交互式变基时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践交互式变基，我们可以掌握版本控制的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="子模块"><a href="#子模块" class="headerlink" title="子模块"></a>子模块</h2><p>子模块是版本控制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用子模块时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握子模块和相关知识，将帮助我们构建更加完善的版本控制体系。</p>
+]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+      <tags>
+        <tag>版本控制</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>代码审查最佳实践</title>
+    <url>/2026/03/04/joint-code-review/</url>
+    <content><![CDATA[<p>代码审查（Code Review）是保证代码质量的重要手段。通过团队成员互相检查代码，可以发现潜在问题，分享知识，提升整体水平。</p>
+<span id="more"></span>
+
+<p>代码审查的时机应该在合并主分支之前。通过 Pull Request 或 Merge Request 的方式进行，审查者可以看到代码差异、讨论问题、提出修改建议。</p>
+<p>审查时要注意哪些方面？首先是功能性、代码是否实现了预期功能，边界情况是否处理。其次是代码质量、命名是否清晰，逻辑是否简洁，是否有重复代码。还要考虑性能、安全性、可维护性。</p>
+<p>提出建议时要保持尊重和建设性。使用”建议”、”考虑”等词语，避免使用”错误”、”失败”等负面词汇。说明理由，帮助对方理解。</p>
+<p>对于被审查者来说，要虚心接受建议，解释设计思路。有不同意见时，理性讨论，以代码质量为重。</p>
+<p>代码审查不仅是发现错误，更是知识共享的过程。通过审查，团队成员可以学习不同的编码风格、解决问题的思路，共同进步。</p>
+<p>随着团队成长，可以制定代码规范文档，明确编码标准。这能让审查更有依据，减少争议。使用自动化工具进行静态分析、格式检查，可以让审查更高效。</p>
+]]></content>
+      <categories>
+        <category>联创项目</category>
+      </categories>
+      <tags>
+        <tag>代码审查</tag>
+        <tag>质量</tag>
+        <tag>实践</tag>
       </tags>
   </entry>
   <entry>
@@ -943,53 +965,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
-    <title>代码审查最佳实践</title>
-    <url>/2026/03/04/joint-code-review/</url>
-    <content><![CDATA[<p>代码审查（Code Review）是保证代码质量的重要手段。通过团队成员互相检查代码，可以发现潜在问题，分享知识，提升整体水平。</p>
-<span id="more"></span>
-
-<p>代码审查的时机应该在合并主分支之前。通过 Pull Request 或 Merge Request 的方式进行，审查者可以看到代码差异、讨论问题、提出修改建议。</p>
-<p>审查时要注意哪些方面？首先是功能性、代码是否实现了预期功能，边界情况是否处理。其次是代码质量、命名是否清晰，逻辑是否简洁，是否有重复代码。还要考虑性能、安全性、可维护性。</p>
-<p>提出建议时要保持尊重和建设性。使用”建议”、”考虑”等词语，避免使用”错误”、”失败”等负面词汇。说明理由，帮助对方理解。</p>
-<p>对于被审查者来说，要虚心接受建议，解释设计思路。有不同意见时，理性讨论，以代码质量为重。</p>
-<p>代码审查不仅是发现错误，更是知识共享的过程。通过审查，团队成员可以学习不同的编码风格、解决问题的思路，共同进步。</p>
-<p>随着团队成长，可以制定代码规范文档，明确编码标准。这能让审查更有依据，减少争议。使用自动化工具进行静态分析、格式检查，可以让审查更高效。</p>
-]]></content>
-      <categories>
-        <category>联创项目</category>
-      </categories>
-      <tags>
-        <tag>代码审查</tag>
-        <tag>质量</tag>
-        <tag>实践</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>团队知识分享机制</title>
-    <url>/2026/03/04/joint-knowledge-sharing/</url>
-    <content><![CDATA[<p>知识分享是团队成长的重要途径。良好的分享机制能让知识流动，避免信息孤岛，提升整体能力。</p>
-<span id="more"></span>
-
-<p>分享形式、技术分享会、代码审查、文档编写、问答机制、结对编程。每种形式适合不同场景，灵活使用。</p>
-<p>定期技术分享、每周或每两周一次，每人轮流分享。主题可以是新技术、新工具、问题复盘、项目经验。分享后录制视频，归档供回顾。</p>
-<p>代码审查是最好的知识分享方式。审查者学习审查的代码，被审查者获得反馈。审查过程中讨论技术方案，共同提高。</p>
-<p>编写文档是知识沉淀的重要手段。README、设计文档、API 文档、最佳实践。文档要清晰、准确、及时更新。</p>
-<p>内部问答机制、建立内部论坛、知识库、问答群。鼓励提问和回答，将常见问题整理成 FAQ。新人可以快速找到答案。</p>
-<p>知识库管理、使用 Notion、Confluence、语雀等工具。分类整理，方便检索。定期清理过时内容，保持知识库质量。</p>
-<p>激励措施、分享会提供零食，优秀分享给予奖励，文档贡献计入绩效考核。营造乐于分享的文化氛围。</p>
-<p>知识共享不是负担，而是投资。分享者巩固知识，学习者获得成长，团队整体水平提升。形成正向循环，让分享成为习惯。</p>
-<p>个人成长和团队成长相辅相成。保持开放的心态，乐于分享，持续学习，共同进步。</p>
-]]></content>
-      <categories>
-        <category>联创项目</category>
-      </categories>
-      <tags>
-        <tag>团队</tag>
-        <tag>知识分享</tag>
-        <tag>成长</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>项目未来规划</title>
     <url>/2026/03/04/joint-project-future/</url>
     <content><![CDATA[<p>联合博客项目已经运行了一段时间，是时候规划一下未来的发展方向了。</p>
@@ -1032,6 +1007,31 @@ response <span class="token operator">=</span> client<span class="token punctuat
         <tag>规划</tag>
         <tag>未来</tag>
         <tag>展望</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>团队知识分享机制</title>
+    <url>/2026/03/04/joint-knowledge-sharing/</url>
+    <content><![CDATA[<p>知识分享是团队成长的重要途径。良好的分享机制能让知识流动，避免信息孤岛，提升整体能力。</p>
+<span id="more"></span>
+
+<p>分享形式、技术分享会、代码审查、文档编写、问答机制、结对编程。每种形式适合不同场景，灵活使用。</p>
+<p>定期技术分享、每周或每两周一次，每人轮流分享。主题可以是新技术、新工具、问题复盘、项目经验。分享后录制视频，归档供回顾。</p>
+<p>代码审查是最好的知识分享方式。审查者学习审查的代码，被审查者获得反馈。审查过程中讨论技术方案，共同提高。</p>
+<p>编写文档是知识沉淀的重要手段。README、设计文档、API 文档、最佳实践。文档要清晰、准确、及时更新。</p>
+<p>内部问答机制、建立内部论坛、知识库、问答群。鼓励提问和回答，将常见问题整理成 FAQ。新人可以快速找到答案。</p>
+<p>知识库管理、使用 Notion、Confluence、语雀等工具。分类整理，方便检索。定期清理过时内容，保持知识库质量。</p>
+<p>激励措施、分享会提供零食，优秀分享给予奖励，文档贡献计入绩效考核。营造乐于分享的文化氛围。</p>
+<p>知识共享不是负担，而是投资。分享者巩固知识，学习者获得成长，团队整体水平提升。形成正向循环，让分享成为习惯。</p>
+<p>个人成长和团队成长相辅相成。保持开放的心态，乐于分享，持续学习，共同进步。</p>
+]]></content>
+      <categories>
+        <category>联创项目</category>
+      </categories>
+      <tags>
+        <tag>团队</tag>
+        <tag>知识分享</tag>
+        <tag>成长</tag>
       </tags>
   </entry>
   <entry>
@@ -1162,6 +1162,27 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
+    <title>Kubernetes 基础概念</title>
+    <url>/2026/03/04/learn-k8s-basics/</url>
+    <content><![CDATA[<p>Kubernetes（简称 K8s）是目前最流行的容器编排平台。它能够自动化部署、扩展和管理容器化应用。</p>
+<span id="more"></span>
+
+<p>Kubernetes 的核心概念包括、Pod、Service、Deployment、Namespace、ConfigMap、Secret 等。Pod 是最小的可部署单元，通常包含一个或多个容器。Service 提供稳定的网络访问接口。Deployment 管理 Pod 的副本和更新策略。</p>
+<p>学习 Kubernetes 需要理解它的架构、Master 节点负责管理集群，包括 API Server、Scheduler、Controller Manager 等组件。Worker 节点运行应用容器，包括 Kubelet、Kube-proxy 等组件。</p>
+<p>Kubernetes 提供了丰富的功能、自动扩缩容、滚动更新、故障自愈、服务发现、负载均衡等。这些功能大大简化了分布式系统的运维工作。</p>
+<p>对于初学者，建议先在本地使用 Minikube 或 Kind 搭建单节点集群，学习基本的资源定义和管理命令。然后逐步了解更复杂的功能，如 Helm 包管理、服务网格等。</p>
+<p>Kubernetes 的生态系统非常庞大，学习曲线较陡峭。但一旦掌握，将极大提升你的技术能力和职业竞争力。</p>
+]]></content>
+      <categories>
+        <category>学习探索</category>
+      </categories>
+      <tags>
+        <tag>Kubernetes</tag>
+        <tag>K8s</tag>
+        <tag>容器编排</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GraphQL 入门指南</title>
     <url>/2026/03/04/learn-graphql/</url>
     <content><![CDATA[<p>GraphQL 是 Facebook 开发的数据查询语言，它允许客户端精确指定需要的数据，避免了 REST API 的过度获取或不足获取问题。</p>
@@ -1181,27 +1202,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
         <tag>API</tag>
         <tag>GraphQL</tag>
         <tag>后端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Kubernetes 基础概念</title>
-    <url>/2026/03/04/learn-k8s-basics/</url>
-    <content><![CDATA[<p>Kubernetes（简称 K8s）是目前最流行的容器编排平台。它能够自动化部署、扩展和管理容器化应用。</p>
-<span id="more"></span>
-
-<p>Kubernetes 的核心概念包括、Pod、Service、Deployment、Namespace、ConfigMap、Secret 等。Pod 是最小的可部署单元，通常包含一个或多个容器。Service 提供稳定的网络访问接口。Deployment 管理 Pod 的副本和更新策略。</p>
-<p>学习 Kubernetes 需要理解它的架构、Master 节点负责管理集群，包括 API Server、Scheduler、Controller Manager 等组件。Worker 节点运行应用容器，包括 Kubelet、Kube-proxy 等组件。</p>
-<p>Kubernetes 提供了丰富的功能、自动扩缩容、滚动更新、故障自愈、服务发现、负载均衡等。这些功能大大简化了分布式系统的运维工作。</p>
-<p>对于初学者，建议先在本地使用 Minikube 或 Kind 搭建单节点集群，学习基本的资源定义和管理命令。然后逐步了解更复杂的功能，如 Helm 包管理、服务网格等。</p>
-<p>Kubernetes 的生态系统非常庞大，学习曲线较陡峭。但一旦掌握，将极大提升你的技术能力和职业竞争力。</p>
-]]></content>
-      <categories>
-        <category>学习探索</category>
-      </categories>
-      <tags>
-        <tag>Kubernetes</tag>
-        <tag>K8s</tag>
-        <tag>容器编排</tag>
       </tags>
   </entry>
   <entry>
@@ -1231,29 +1231,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
-    <title>Rust 语言入门</title>
-    <url>/2026/03/04/learn-rust-basics/</url>
-    <content><![CDATA[<p>Rust 是一门系统级编程语言，注重安全性、并发性和性能。它由 Mozilla 开发，被广泛应用于嵌入式、WebAssembly、命令行工具等领域。</p>
-<span id="more"></span>
-
-<p>Rust 的核心特性、所有权系统确保内存安全，无需垃圾回收；编译时检查错误，避免运行时崩溃；零成本抽象，性能媲美 C++；丰富的类型系统，表达力强。</p>
-<p>所有权是 Rust 的核心概念。每个值都有一个所有者，所有者离开作用域时值被释放。这避免了内存泄漏和悬垂指针。借用规则确保引用始终有效、同一时间只能有一个可变引用或多个不可变引用。</p>
-<p>模式匹配是 Rust 的强大特性。<code>match</code> 表达式可以匹配多种模式，枚举、元组、范围都可以匹配。<code>if let</code> 和 <code>while let</code> 简化常见匹配场景。</p>
-<p>错误处理采用 Result 和 Option 类型，没有异常。Result 表示可能失败的操作，Option 表示可能为空的值。使用 <code>?</code> 运算符简化错误传播。</p>
-<p>Rust 的 Cargo 包管理器非常优秀。<code>cargo new</code> 创建项目，<code>cargo build</code> 编译，<code>cargo test</code> 运行测试，<code>cargo publish</code> 发布包。crates.io 是官方包仓库。</p>
-<p>学习曲线较陡，需要理解所有权、生命周期等概念。但一旦掌握，就能写出安全、高效的代码。对于追求性能和安全的项目，Rust 是绝佳选择。</p>
-<p>Rust 社区活跃，文档完善。从官方的 Rustlings 练习开始，逐步深入，是学习的好方法。</p>
-]]></content>
-      <categories>
-        <category>学习探索</category>
-      </categories>
-      <tags>
-        <tag>Rust</tag>
-        <tag>编程语言</tag>
-        <tag>系统</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>系统设计面试准备</title>
     <url>/2026/03/04/learn-system-design/</url>
     <content><![CDATA[<p>系统设计面试是技术面试的重要组成部分，考察候选人的架构思维和工程能力。准备充分才能应对自如。</p>
@@ -1276,6 +1253,29 @@ response <span class="token operator">=</span> client<span class="token punctuat
         <tag>面试</tag>
         <tag>架构</tag>
         <tag>系统设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Rust 语言入门</title>
+    <url>/2026/03/04/learn-rust-basics/</url>
+    <content><![CDATA[<p>Rust 是一门系统级编程语言，注重安全性、并发性和性能。它由 Mozilla 开发，被广泛应用于嵌入式、WebAssembly、命令行工具等领域。</p>
+<span id="more"></span>
+
+<p>Rust 的核心特性、所有权系统确保内存安全，无需垃圾回收；编译时检查错误，避免运行时崩溃；零成本抽象，性能媲美 C++；丰富的类型系统，表达力强。</p>
+<p>所有权是 Rust 的核心概念。每个值都有一个所有者，所有者离开作用域时值被释放。这避免了内存泄漏和悬垂指针。借用规则确保引用始终有效、同一时间只能有一个可变引用或多个不可变引用。</p>
+<p>模式匹配是 Rust 的强大特性。<code>match</code> 表达式可以匹配多种模式，枚举、元组、范围都可以匹配。<code>if let</code> 和 <code>while let</code> 简化常见匹配场景。</p>
+<p>错误处理采用 Result 和 Option 类型，没有异常。Result 表示可能失败的操作，Option 表示可能为空的值。使用 <code>?</code> 运算符简化错误传播。</p>
+<p>Rust 的 Cargo 包管理器非常优秀。<code>cargo new</code> 创建项目，<code>cargo build</code> 编译，<code>cargo test</code> 运行测试，<code>cargo publish</code> 发布包。crates.io 是官方包仓库。</p>
+<p>学习曲线较陡，需要理解所有权、生命周期等概念。但一旦掌握，就能写出安全、高效的代码。对于追求性能和安全的项目，Rust 是绝佳选择。</p>
+<p>Rust 社区活跃，文档完善。从官方的 Rustlings 练习开始，逐步深入，是学习的好方法。</p>
+]]></content>
+      <categories>
+        <category>学习探索</category>
+      </categories>
+      <tags>
+        <tag>Rust</tag>
+        <tag>编程语言</tag>
+        <tag>系统</tag>
       </tags>
   </entry>
   <entry>
@@ -1497,28 +1497,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
-    <title>微服务架构实践</title>
-    <url>/2026/03/04/network-microservices/</url>
-    <content><![CDATA[<p>微服务架构将单体应用拆分成多个小型服务，每个服务独立部署、独立扩展。这种架构提高了系统的灵活性和可维护性。</p>
-<span id="more"></span>
-
-<p>微服务的优势包括、技术栈灵活、独立部署、故障隔离、团队自治。但同时也带来了复杂性、服务发现、配置管理、数据一致性、监控运维等挑战。</p>
-<p>服务发现是微服务的核心问题。服务需要能够找到彼此的位置。Consul、Etcd、ZooKeeper 等工具提供了服务注册和发现功能。Kubernetes 的 Service 内置了服务发现机制。</p>
-<p>服务间通信方式主要有两种、同步调用（HTTP&#x2F;REST、gRPC）和异步消息（MQ、Kafka）。同步调用简单直接，但增加了耦合度。异步消息解耦了服务，但增加了系统复杂度。</p>
-<p>数据一致性在微服务中是难题。CAP 定理告诉我们，在分布式系统中，一致性、可用性、分区容错性不能同时满足。通常采用最终一致性模型，通过事件溯源、CQRS 等模式实现。</p>
-<p>服务网格是微服务架构的新趋势。Istio、Linkerd 等服务网格提供了统一的流量管理、安全、可观测性功能，减轻了业务代码的负担。</p>
-<p>微服务架构不是银弹。在应用前要评估业务特点、团队能力、基础设施水平。对于小团队或小型项目，单体架构可能是更好的选择。</p>
-]]></content>
-      <categories>
-        <category>网络架构</category>
-      </categories>
-      <tags>
-        <tag>架构</tag>
-        <tag>微服务</tag>
-        <tag>分布式</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>代理服务器原理</title>
     <url>/2026/03/04/network-proxy/</url>
     <content><![CDATA[<p>代理服务器（Proxy）是客户端和目标服务器之间的中间层，转发请求和响应，实现各种功能。</p>
@@ -1565,6 +1543,28 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
+    <title>微服务架构实践</title>
+    <url>/2026/03/04/network-microservices/</url>
+    <content><![CDATA[<p>微服务架构将单体应用拆分成多个小型服务，每个服务独立部署、独立扩展。这种架构提高了系统的灵活性和可维护性。</p>
+<span id="more"></span>
+
+<p>微服务的优势包括、技术栈灵活、独立部署、故障隔离、团队自治。但同时也带来了复杂性、服务发现、配置管理、数据一致性、监控运维等挑战。</p>
+<p>服务发现是微服务的核心问题。服务需要能够找到彼此的位置。Consul、Etcd、ZooKeeper 等工具提供了服务注册和发现功能。Kubernetes 的 Service 内置了服务发现机制。</p>
+<p>服务间通信方式主要有两种、同步调用（HTTP&#x2F;REST、gRPC）和异步消息（MQ、Kafka）。同步调用简单直接，但增加了耦合度。异步消息解耦了服务，但增加了系统复杂度。</p>
+<p>数据一致性在微服务中是难题。CAP 定理告诉我们，在分布式系统中，一致性、可用性、分区容错性不能同时满足。通常采用最终一致性模型，通过事件溯源、CQRS 等模式实现。</p>
+<p>服务网格是微服务架构的新趋势。Istio、Linkerd 等服务网格提供了统一的流量管理、安全、可观测性功能，减轻了业务代码的负担。</p>
+<p>微服务架构不是银弹。在应用前要评估业务特点、团队能力、基础设施水平。对于小团队或小型项目，单体架构可能是更好的选择。</p>
+]]></content>
+      <categories>
+        <category>网络架构</category>
+      </categories>
+      <tags>
+        <tag>架构</tag>
+        <tag>微服务</tag>
+        <tag>分布式</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>WebSocket 实时通信</title>
     <url>/2026/03/04/network-websocket/</url>
     <content><![CDATA[<p>WebSocket 是一种在单个 TCP 连接上进行全双工通信的协议。它允许服务器主动向客户端推送消息，非常适合实时应用。</p>
@@ -1585,6 +1585,93 @@ response <span class="token operator">=</span> client<span class="token punctuat
         <tag>WebSocket</tag>
         <tag>实时</tag>
         <tag>通信</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>教程：从零打造 OpenClaw 的极致搜索与自学习能力</title>
+    <url>/2026/03/05/openclaw-evolution-record/</url>
+    <content><![CDATA[<p>标准的 OpenClaw 助手在面对复杂的搜索任务和“围墙花园”内的信息时，常常会显得力不从心。本教程将指导你如何通过一系列“赛博义体”升级，为你的 AI 助手赋予超凡的能力。</p>
+<p>跟随本教程，你将学会如何为 OpenClaw 集成强大的搜索引擎、赋予它自学习能力，并为后续更高级的“平台渗透”和“深度研究”能力打下坚实的基础。</p>
+<span id="more"></span>
+
+<h2 id="准备工作-Prerequisites"><a href="#准备工作-Prerequisites" class="headerlink" title="准备工作 (Prerequisites)"></a>准备工作 (Prerequisites)</h2><p>在开始之前，请确保你已经拥有：</p>
+<ul>
+<li>一个正常运行的 OpenClaw 实例。</li>
+<li>终端（命令行）的访问权限。</li>
+<li><code>clawhub</code> 命令行工具已基本可用（即使有限制）。</li>
+<li>一个 <a href="https://tavily.com/">Tavily</a> 账户，并获取免费的 API 密钥。</li>
+</ul>
+<div style="background-color: #e3f2fd; border-left: 4px solid #222; padding: 15px; margin: 20px 0; border-radius: 4px;">
+  <strong>第一部分目标：奠定基础</strong><br>
+  本部分将专注于安装和配置核心的搜索与自学习技能，这些是后续所有高级功能的基础。
+</div>
+
+
+<h2 id="步骤一：升级核心搜索引擎"><a href="#步骤一：升级核心搜索引擎" class="headerlink" title="步骤一：升级核心搜索引擎"></a>步骤一：升级核心搜索引擎</h2><p>我们将安装两个强大的技能：专为 AI Agent 设计的 <code>Tavily</code>，以及集成了17个免费搜索引擎的 <code>Multi Search Engine</code>。</p>
+<h3 id="1-1-安装-Multi-Search-Engine-web-search-plus"><a href="#1-1-安装-Multi-Search-Engine-web-search-plus" class="headerlink" title="1.1 安装 Multi Search Engine (web-search-plus)"></a>1.1 安装 Multi Search Engine (<code>web-search-plus</code>)</h3><p><code>Multi Search Engine</code> 是一个强大的补充，它不需要API密钥，非常适合作为日常搜索和免费的备用方案。</p>
+<p>首先，通过 <code>clawhub</code> 找到它的准确名称并安装。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 搜索技能，确认其在 ClawHub 上的名称 (slug)</span>
+clawhub search <span class="token string">"multi search"</span>
+<span class="token comment"># 在返回结果中，可以找到名为 web-search-plus 的技能，评分较高</span>
+
+<span class="token comment"># 2. 使用 clawhub 安装该技能</span>
+clawhub <span class="token function">install</span> web-search-plus
+<span class="token comment"># 当看到 'OK. Installed ...' 的输出时，表示安装成功</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<div style="background-color: #fffbe6; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0; border-radius: 4px;">
+  <strong>💡 提示与常见问题</strong><br>
+  `clawhub` 命令可能会遇到请求速率限制 (Rate Limit Exceeded) 或一次只能安装一个包的问题。如果 `install` 失败，请稍等几分钟再试，或将多个安装命令分开执行。
+</div>
+
+
+<h3 id="1-2-配置-Tavily-远程MCP模式"><a href="#1-2-配置-Tavily-远程MCP模式" class="headerlink" title="1.2 配置 Tavily (远程MCP模式)"></a>1.2 配置 Tavily (远程MCP模式)</h3><p>对于 <code>Tavily</code>，我们采用一种更高级、更优雅的集成方式：<strong>远程MCP服务</strong>。这可以让你直接连接到 Tavily 官方维护的服务，无需在本地安装任何技能包。</p>
+<div style="background-color: #e8f5e9; border-left: 4px solid #4caf50; padding: 15px; margin: 20px 0; border-radius: 4px;">
+  <strong>⭐ 核心概念：MCP (Model Context Protocol)</strong><br>
+  MCP 是一种允许 OpenClaw 与外部工具服务进行标准化交互的协议。通过连接到远程 MCP 服务器，你可以即时获得该服务提供的所有能力，而无需关心其本地实现。
+</div>
+
+
+<p>要配置远程 MCP 服务，你需要编辑 <code>mcporter</code> 工具的配置文件。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 创建或编辑 mcporter 配置文件</span>
+<span class="token comment"># 该文件通常位于 workspace/config/mcporter.json</span>
+<span class="token comment"># 注意：其顶层键名必须是 "mcpServers"</span>
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span> <span class="token string">'EOF'<span class="token bash punctuation"> <span class="token operator">></span> config/mcporter.json</span>
+&#123;
+  "mcpServers": &#123;
+    "tavily_search": &#123;
+      "url": "https://mcp.tavily.com/mcp/?tavilyApiKey=YOUR_TAVILY_API_KEY"
+    &#125;
+  &#125;
+&#125;
+EOF</span>
+
+<span class="token comment"># 2. 使用 mcporter list 命令验证配置</span>
+mcporter list
+<span class="token comment"># 如果输出中包含 'tavily_search (5 tools, ...)' 和 '1 healthy'，则表示配置成功！</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>重要</strong>: 请将上面命令中的 <code>YOUR_TAVILY_API_KEY</code> 替换为你自己的 Tavily API 密钥。</p>
+<h2 id="步骤二：赋予AI自学习能力-find-skills"><a href="#步骤二：赋予AI自学习能力-find-skills" class="headerlink" title="步骤二：赋予AI自学习能力 (find-skills)"></a>步骤二：赋予AI自学习能力 (find-skills)</h2><p>安装 <code>find-skills</code> 技能，你的 OpenClaw 助手就能在遇到未知问题时，主动去 <code>ClawHub</code> 市场上寻找并推荐可能解决问题的新技能。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 搜索以确认技能名称</span>
+clawhub search find-skills
+<span class="token comment"># 在结果中选择评分最高的 'find-skills'</span>
+
+<span class="token comment"># 2. 安装技能</span>
+clawhub <span class="token function">install</span> find-skills<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>至此，第一阶段的基础设施已全部搭建完毕！你的 OpenClaw 现在拥有了强大的混合搜索引擎和自我进化的初步潜力。</p>
+]]></content>
+      <categories>
+        <category>AI智能体</category>
+        <category>技术教程</category>
+      </categories>
+      <tags>
+        <tag>OpenClaw</tag>
+        <tag>AI助手</tag>
+        <tag>技能</tag>
+        <tag>搜索增强</tag>
+        <tag>自学习</tag>
+        <tag>Tavily</tag>
+        <tag>Multi Search Engine</tag>
       </tags>
   </entry>
   <entry>
@@ -1698,6 +1785,32 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
+    <title>RAG技术进阶</title>
+    <url>/2026/03/04/rag%E6%8A%80%E6%9C%AF%E8%BF%9B%E9%98%B6-04/</url>
+    <content><![CDATA[<p>检索增强生成是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍检索增强生成的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="向量数据库"><a href="#向量数据库" class="headerlink" title="向量数据库"></a>向量数据库</h2><p>向量数据库是检索增强生成的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用向量数据库时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践向量数据库，我们可以掌握检索增强生成的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="相似度计算"><a href="#相似度计算" class="headerlink" title="相似度计算"></a>相似度计算</h2><p>相似度计算是检索增强生成的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用相似度计算时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践相似度计算，我们可以掌握检索增强生成的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="上下文窗口"><a href="#上下文窗口" class="headerlink" title="上下文窗口"></a>上下文窗口</h2><p>上下文窗口是检索增强生成的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用上下文窗口时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践上下文窗口，我们可以掌握检索增强生成的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="嵌入模型"><a href="#嵌入模型" class="headerlink" title="嵌入模型"></a>嵌入模型</h2><p>嵌入模型是检索增强生成的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用嵌入模型时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握嵌入模型和相关知识，将帮助我们构建更加完善的检索增强生成体系。</p>
+]]></content>
+      <categories>
+        <category>AI智能体</category>
+      </categories>
+      <tags>
+        <tag>检索增强生成</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Docker Compose 使用指南</title>
     <url>/2026/03/04/tools-docker-compose/</url>
     <content><![CDATA[<p>Docker Compose 是 Docker 官方提供的容器编排工具，通过 YAML 文件定义和运行多容器应用，简化了开发和部署。</p>
@@ -1733,29 +1846,50 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
-    <title>RAG技术进阶</title>
-    <url>/2026/03/04/rag%E6%8A%80%E6%9C%AF%E8%BF%9B%E9%98%B6-04/</url>
-    <content><![CDATA[<p>检索增强生成是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍检索增强生成的核心要点和实践经验。</p>
+    <title>Curl 命令使用技巧</title>
+    <url>/2026/03/04/tools-curl/</url>
+    <content><![CDATA[<p>Curl 是强大的命令行 HTTP 客户端，支持多种协议，是开发和测试的必备工具。</p>
 <span id="more"></span>
 
-<h2 id="向量数据库"><a href="#向量数据库" class="headerlink" title="向量数据库"></a>向量数据库</h2><p>向量数据库是检索增强生成的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用向量数据库时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践向量数据库，我们可以掌握检索增强生成的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="相似度计算"><a href="#相似度计算" class="headerlink" title="相似度计算"></a>相似度计算</h2><p>相似度计算是检索增强生成的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用相似度计算时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践相似度计算，我们可以掌握检索增强生成的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="上下文窗口"><a href="#上下文窗口" class="headerlink" title="上下文窗口"></a>上下文窗口</h2><p>上下文窗口是检索增强生成的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用上下文窗口时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践上下文窗口，我们可以掌握检索增强生成的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="嵌入模型"><a href="#嵌入模型" class="headerlink" title="嵌入模型"></a>嵌入模型</h2><p>嵌入模型是检索增强生成的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用嵌入模型时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握嵌入模型和相关知识，将帮助我们构建更加完善的检索增强生成体系。</p>
+<p>基本用法、<code>curl url</code> 请求 URL 并输出响应。<code>curl -O url</code> 保存响应到文件，文件名从 URL 提取。<code>curl -o filename url</code> 指定保存文件名。</p>
+<p>发送请求、<code>curl -X POST url</code> 使用 POST 方法，<code>curl -d &quot;data&quot; url</code> 发送 POST 数据，<code>curl -H &quot;Header: Value&quot; url</code> 添加请求头，<code>curl -u user:pass url</code> 添加基本认证。</p>
+<p>调试功能、<code>curl -v url</code> 显示详细请求过程，<code>curl -i url</code> 显示响应头，<code>curl -I url</code> 只显示响应头（HEAD 请求），<code>curl --trace output.txt url</code> 输出完整追踪到文件。</p>
+<p>Cookie 处理、<code>curl -c cookies.txt url</code> 保存 Cookie 到文件，<code>curl -b cookies.txt url</code> 从文件读取 Cookie，<code>curl -b &quot;name=value&quot; url</code> 直接设置 Cookie。</p>
+<p>上传文件、<code>curl -F &quot;file=@path&quot; url</code> 上传文件，<code>curl -T path url</code> 上传文件到 FTP。</p>
+<p>常用技巧、<code>curl -x proxy:port url</code> 使用代理，<code>curl -k url</code> 忽略 SSL 证书验证，<code>curl --compressed url</code> 启用压缩，<code>curl --limit-rate 1000B url</code> 限制下载速度。</p>
+<p>Curl 可以转换为代码、<code>curl -X POST ...</code> 可以在 Postman、VS Code 扩展等工具中导入，自动生成各种语言的代码。</p>
+<p>Curl 功能强大，但选项繁多。掌握常用选项就够日常使用，复杂场景查阅文档。熟练使用 Curl 能让你脱离图形界面，在终端高效工作。</p>
 ]]></content>
       <categories>
-        <category>AI智能体</category>
+        <category>实用工具</category>
       </categories>
       <tags>
-        <tag>检索增强生成</tag>
+        <tag>Curl</tag>
+        <tag>HTTP</tag>
+        <tag>命令行</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown 写作技巧</title>
+    <url>/2026/03/04/tools-markdown/</url>
+    <content><![CDATA[<p>Markdown 是一种轻量级标记语言，用简洁的语法实现富文本格式。掌握它能让写作更高效。</p>
+<span id="more"></span>
+
+<p>基础语法包括、<code>#</code> 标题、<code>**粗体**</code>、<code>*斜体*</code>、<code>~~删除线~~</code>、<code>[链接](url)</code>、<code>![图片](url)</code>、<code>&gt; 引用</code>、<code>- 列表</code>。这些简单符号就能表达大部分文本格式。</p>
+<p>代码块使用三个反引号包裹，可以指定语言实现语法高亮、<code>javascript ... </code>。行内代码用单个反引号、<code>code</code>。</p>
+<p>表格使用 <code>|</code> 分隔列，<code>-</code> 分隔表头和内容。对齐方式可以通过在 <code>---</code> 前加冒号实现、<code>---:</code> 右对齐，<code>:---:</code> 居中。</p>
+<p>任务列表用 <code>- [ ]</code> 和 <code>- [x]</code> 表示未完成和已完成。这对写待办事项很有用。</p>
+<p>高级特性包括、脚注、定义列表、数学公式（需要支持）、图表等。不过不同编辑器支持程度不同。</p>
+<p>推荐使用 Typora、VS Code、Obsidian 等 Markdown 编辑器。它们提供实时预览、快捷操作、插件扩展等功能。</p>
+<p>Markdown 的简单易用使其成为技术写作的首选。花点时间学习，你会发现写作变得如此轻松。</p>
+]]></content>
+      <categories>
+        <category>实用工具</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+        <tag>写作</tag>
+        <tag>技巧</tag>
       </tags>
   </entry>
   <entry>
@@ -1816,26 +1950,28 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
-    <title>Markdown 写作技巧</title>
-    <url>/2026/03/04/tools-markdown/</url>
-    <content><![CDATA[<p>Markdown 是一种轻量级标记语言，用简洁的语法实现富文本格式。掌握它能让写作更高效。</p>
+    <title>Vim 编辑器使用</title>
+    <url>/2026/03/04/tools-vim/</url>
+    <content><![CDATA[<p>Vim 是强大的终端编辑器，以其高效的键盘操作和丰富的插件系统著称。虽然学习曲线陡峭，但掌握后能极大提升编辑效率。</p>
 <span id="more"></span>
 
-<p>基础语法包括、<code>#</code> 标题、<code>**粗体**</code>、<code>*斜体*</code>、<code>~~删除线~~</code>、<code>[链接](url)</code>、<code>![图片](url)</code>、<code>&gt; 引用</code>、<code>- 列表</code>。这些简单符号就能表达大部分文本格式。</p>
-<p>代码块使用三个反引号包裹，可以指定语言实现语法高亮、<code>javascript ... </code>。行内代码用单个反引号、<code>code</code>。</p>
-<p>表格使用 <code>|</code> 分隔列，<code>-</code> 分隔表头和内容。对齐方式可以通过在 <code>---</code> 前加冒号实现、<code>---:</code> 右对齐，<code>:---:</code> 居中。</p>
-<p>任务列表用 <code>- [ ]</code> 和 <code>- [x]</code> 表示未完成和已完成。这对写待办事项很有用。</p>
-<p>高级特性包括、脚注、定义列表、数学公式（需要支持）、图表等。不过不同编辑器支持程度不同。</p>
-<p>推荐使用 Typora、VS Code、Obsidian 等 Markdown 编辑器。它们提供实时预览、快捷操作、插件扩展等功能。</p>
-<p>Markdown 的简单易用使其成为技术写作的首选。花点时间学习，你会发现写作变得如此轻松。</p>
+<p>Vim 有多种模式、普通模式（浏览、删除）、插入模式（输入文本）、可视模式（选择文本）、命令模式（执行命令）。ESC 键返回普通模式。</p>
+<p>基本移动、h（左）、j（下）、k（上）、l（右）。w&#x2F;W（下一个单词），b&#x2F;B（上一个单词），e&#x2F;E（单词末尾），0（行首），$（行尾），G（文件末尾）。</p>
+<p>编辑操作、i（在光标前插入），a（在光标后插入），o（新起一行），dd（删除行），yy（复制行），p（粘贴），u（撤销），Ctrl+r（重做）。</p>
+<p>搜索替换、&#x2F;pattern（向下搜索），?pattern（向上搜索），n&#x2F;N（下一个&#x2F;上一个），:s&#x2F;old&#x2F;new&#x2F;g（全局替换当前行），:%s&#x2F;old&#x2F;new&#x2F;g（全局替换文件）。</p>
+<p>分屏操作、:split（水平分屏），:vsplit（垂直分屏），Ctrl+w+w（切换窗口），Ctrl+w+q（关闭窗口）。</p>
+<p>Vim 配置文件、~&#x2F;.vimrc。常用配置、行号 <code>set number</code>，语法高亮 <code>syntax on</code>，缩进设置 <code>set tabstop=4 shiftwidth=4</code>。</p>
+<p>Vim 插件管理器、Vundle、vim-plug、dein.vim。常用插件、NERDTree（文件树）、CtrlP（模糊搜索）、vim-airline（状态栏）。</p>
+<p>Vimscript 是 Vim 的脚本语言，可以自定义函数和命令。对于复杂的配置，学习 Vimscript 很有帮助。</p>
+<p>Vim 是 Linux 服务器编辑文件的利器。即使日常使用 VS Code，掌握 Vim 也能在 SSH 远程编辑时游刃有余。</p>
 ]]></content>
       <categories>
         <category>实用工具</category>
       </categories>
       <tags>
-        <tag>Markdown</tag>
-        <tag>写作</tag>
-        <tag>技巧</tag>
+        <tag>Vim</tag>
+        <tag>编辑器</tag>
+        <tag>终端</tag>
       </tags>
   </entry>
   <entry>
@@ -1859,30 +1995,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
         <tag>API</tag>
         <tag>测试</tag>
         <tag>Postman</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Curl 命令使用技巧</title>
-    <url>/2026/03/04/tools-curl/</url>
-    <content><![CDATA[<p>Curl 是强大的命令行 HTTP 客户端，支持多种协议，是开发和测试的必备工具。</p>
-<span id="more"></span>
-
-<p>基本用法、<code>curl url</code> 请求 URL 并输出响应。<code>curl -O url</code> 保存响应到文件，文件名从 URL 提取。<code>curl -o filename url</code> 指定保存文件名。</p>
-<p>发送请求、<code>curl -X POST url</code> 使用 POST 方法，<code>curl -d &quot;data&quot; url</code> 发送 POST 数据，<code>curl -H &quot;Header: Value&quot; url</code> 添加请求头，<code>curl -u user:pass url</code> 添加基本认证。</p>
-<p>调试功能、<code>curl -v url</code> 显示详细请求过程，<code>curl -i url</code> 显示响应头，<code>curl -I url</code> 只显示响应头（HEAD 请求），<code>curl --trace output.txt url</code> 输出完整追踪到文件。</p>
-<p>Cookie 处理、<code>curl -c cookies.txt url</code> 保存 Cookie 到文件，<code>curl -b cookies.txt url</code> 从文件读取 Cookie，<code>curl -b &quot;name=value&quot; url</code> 直接设置 Cookie。</p>
-<p>上传文件、<code>curl -F &quot;file=@path&quot; url</code> 上传文件，<code>curl -T path url</code> 上传文件到 FTP。</p>
-<p>常用技巧、<code>curl -x proxy:port url</code> 使用代理，<code>curl -k url</code> 忽略 SSL 证书验证，<code>curl --compressed url</code> 启用压缩，<code>curl --limit-rate 1000B url</code> 限制下载速度。</p>
-<p>Curl 可以转换为代码、<code>curl -X POST ...</code> 可以在 Postman、VS Code 扩展等工具中导入，自动生成各种语言的代码。</p>
-<p>Curl 功能强大，但选项繁多。掌握常用选项就够日常使用，复杂场景查阅文档。熟练使用 Curl 能让你脱离图形界面，在终端高效工作。</p>
-]]></content>
-      <categories>
-        <category>实用工具</category>
-      </categories>
-      <tags>
-        <tag>Curl</tag>
-        <tag>HTTP</tag>
-        <tag>命令行</tag>
       </tags>
   </entry>
   <entry>
@@ -1910,31 +2022,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
-    <title>Vim 编辑器使用</title>
-    <url>/2026/03/04/tools-vim/</url>
-    <content><![CDATA[<p>Vim 是强大的终端编辑器，以其高效的键盘操作和丰富的插件系统著称。虽然学习曲线陡峭，但掌握后能极大提升编辑效率。</p>
-<span id="more"></span>
-
-<p>Vim 有多种模式、普通模式（浏览、删除）、插入模式（输入文本）、可视模式（选择文本）、命令模式（执行命令）。ESC 键返回普通模式。</p>
-<p>基本移动、h（左）、j（下）、k（上）、l（右）。w&#x2F;W（下一个单词），b&#x2F;B（上一个单词），e&#x2F;E（单词末尾），0（行首），$（行尾），G（文件末尾）。</p>
-<p>编辑操作、i（在光标前插入），a（在光标后插入），o（新起一行），dd（删除行），yy（复制行），p（粘贴），u（撤销），Ctrl+r（重做）。</p>
-<p>搜索替换、&#x2F;pattern（向下搜索），?pattern（向上搜索），n&#x2F;N（下一个&#x2F;上一个），:s&#x2F;old&#x2F;new&#x2F;g（全局替换当前行），:%s&#x2F;old&#x2F;new&#x2F;g（全局替换文件）。</p>
-<p>分屏操作、:split（水平分屏），:vsplit（垂直分屏），Ctrl+w+w（切换窗口），Ctrl+w+q（关闭窗口）。</p>
-<p>Vim 配置文件、~&#x2F;.vimrc。常用配置、行号 <code>set number</code>，语法高亮 <code>syntax on</code>，缩进设置 <code>set tabstop=4 shiftwidth=4</code>。</p>
-<p>Vim 插件管理器、Vundle、vim-plug、dein.vim。常用插件、NERDTree（文件树）、CtrlP（模糊搜索）、vim-airline（状态栏）。</p>
-<p>Vimscript 是 Vim 的脚本语言，可以自定义函数和命令。对于复杂的配置，学习 Vimscript 很有帮助。</p>
-<p>Vim 是 Linux 服务器编辑文件的利器。即使日常使用 VS Code，掌握 Vim 也能在 SSH 远程编辑时游刃有余。</p>
-]]></content>
-      <categories>
-        <category>实用工具</category>
-      </categories>
-      <tags>
-        <tag>Vim</tag>
-        <tag>编辑器</tag>
-        <tag>终端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>VS Code 高效使用技巧</title>
     <url>/2026/03/04/tools-vscode/</url>
     <content><![CDATA[<p>Visual Studio Code 是目前最受欢迎的代码编辑器之一。掌握它的高级技巧能显著提升开发效率。</p>
@@ -1958,7 +2045,7 @@ response <span class="token operator">=</span> client<span class="token punctuat
   </entry>
   <entry>
     <title>Transformer架构</title>
-    <url>/2026/03/04/transformer%E6%9E%B6%E6%9E%84-03/</url>
+    <url>/2026/03/04/transformer%E6%9E%B6%E6%9E%84-02/</url>
     <content><![CDATA[<p>注意力机制是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍注意力机制的核心要点和实践经验。</p>
 <span id="more"></span>
 
@@ -1983,34 +2070,8 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
-    <title>TypeScript高级类型</title>
-    <url>/2026/03/04/typescript%E9%AB%98%E7%BA%A7%E7%B1%BB%E5%9E%8B-10/</url>
-    <content><![CDATA[<p>类型系统是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍类型系统的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><p>泛型是类型系统的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用泛型时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践泛型，我们可以掌握类型系统的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="联合类型"><a href="#联合类型" class="headerlink" title="联合类型"></a>联合类型</h2><p>联合类型是类型系统的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用联合类型时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践联合类型，我们可以掌握类型系统的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="交叉类型"><a href="#交叉类型" class="headerlink" title="交叉类型"></a>交叉类型</h2><p>交叉类型是类型系统的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用交叉类型时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践交叉类型，我们可以掌握类型系统的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="条件类型"><a href="#条件类型" class="headerlink" title="条件类型"></a>条件类型</h2><p>条件类型是类型系统的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用条件类型时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握条件类型和相关知识，将帮助我们构建更加完善的类型系统体系。</p>
-]]></content>
-      <categories>
-        <category>Web开发</category>
-      </categories>
-      <tags>
-        <tag>类型系统</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Transformer架构</title>
-    <url>/2026/03/04/transformer%E6%9E%B6%E6%9E%84-02/</url>
+    <url>/2026/03/04/transformer%E6%9E%B6%E6%9E%84-03/</url>
     <content><![CDATA[<p>注意力机制是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍注意力机制的核心要点和实践经验。</p>
 <span id="more"></span>
 
@@ -2061,8 +2122,60 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
+    <title>TypeScript高级类型</title>
+    <url>/2026/03/04/typescript%E9%AB%98%E7%BA%A7%E7%B1%BB%E5%9E%8B-10/</url>
+    <content><![CDATA[<p>类型系统是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍类型系统的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><p>泛型是类型系统的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用泛型时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践泛型，我们可以掌握类型系统的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="联合类型"><a href="#联合类型" class="headerlink" title="联合类型"></a>联合类型</h2><p>联合类型是类型系统的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用联合类型时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践联合类型，我们可以掌握类型系统的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="交叉类型"><a href="#交叉类型" class="headerlink" title="交叉类型"></a>交叉类型</h2><p>交叉类型是类型系统的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用交叉类型时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践交叉类型，我们可以掌握类型系统的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="条件类型"><a href="#条件类型" class="headerlink" title="条件类型"></a>条件类型</h2><p>条件类型是类型系统的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用条件类型时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握条件类型和相关知识，将帮助我们构建更加完善的类型系统体系。</p>
+]]></content>
+      <categories>
+        <category>Web开发</category>
+      </categories>
+      <tags>
+        <tag>类型系统</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VSCode技巧</title>
     <url>/2026/03/04/vscode%E6%8A%80%E5%B7%A7-44/</url>
+    <content><![CDATA[<p>开发效率是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍开发效率的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>快捷键是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用快捷键时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践快捷键，我们可以掌握开发效率的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="插件推荐"><a href="#插件推荐" class="headerlink" title="插件推荐"></a>插件推荐</h2><p>插件推荐是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用插件推荐时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践插件推荐，我们可以掌握开发效率的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="调试配置"><a href="#调试配置" class="headerlink" title="调试配置"></a>调试配置</h2><p>调试配置是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用调试配置时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践调试配置，我们可以掌握开发效率的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="远程开发"><a href="#远程开发" class="headerlink" title="远程开发"></a>远程开发</h2><p>远程开发是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用远程开发时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握远程开发和相关知识，将帮助我们构建更加完善的开发效率体系。</p>
+]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+      <tags>
+        <tag>开发效率</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VSCode技巧</title>
+    <url>/2026/03/04/vscode%E6%8A%80%E5%B7%A7-45/</url>
     <content><![CDATA[<p>开发效率是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍开发效率的核心要点和实践经验。</p>
 <span id="more"></span>
 
@@ -2110,32 +2223,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </categories>
       <tags>
         <tag>响应式系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>VSCode技巧</title>
-    <url>/2026/03/04/vscode%E6%8A%80%E5%B7%A7-45/</url>
-    <content><![CDATA[<p>开发效率是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍开发效率的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>快捷键是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用快捷键时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践快捷键，我们可以掌握开发效率的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="插件推荐"><a href="#插件推荐" class="headerlink" title="插件推荐"></a>插件推荐</h2><p>插件推荐是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用插件推荐时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践插件推荐，我们可以掌握开发效率的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="调试配置"><a href="#调试配置" class="headerlink" title="调试配置"></a>调试配置</h2><p>调试配置是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用调试配置时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践调试配置，我们可以掌握开发效率的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="远程开发"><a href="#远程开发" class="headerlink" title="远程开发"></a>远程开发</h2><p>远程开发是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用远程开发时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握远程开发和相关知识，将帮助我们构建更加完善的开发效率体系。</p>
-]]></content>
-      <categories>
-        <category>工具使用</category>
-      </categories>
-      <tags>
-        <tag>开发效率</tag>
       </tags>
   </entry>
   <entry>
@@ -2217,8 +2304,113 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
+    <title>NAS平台 Nginx Proxy Manager 保姆级教程</title>
+    <url>/2026/03/05/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>在国内玩 NAS，想把一堆内网服务优雅地收口到一个域名下，既要省事、又要安全，反向代理就是那把顺手的瑞士军刀。很多朋友习惯用 Lucky，确实轻巧好用；但如果你一些特殊需求，需要Nginx 之类来解决，那么<strong>Nginx Proxy Manager</strong>会是一个靠谱的选择。（后文简称NPM）</p>
+<p>写这篇文章并不是要「二选一」地替换 Lucky，而是提供另一条同样通畅的方法：你同样会得到一个内网安全、外网可达、证书自动化的标准化入口，把 <a href="https://zhida.zhihu.com/search?content_id=262944954&content_type=Article&match_order=1&q=Jellyfin&zhida_source=entity">Jellyfin</a>、<a href="https://zhida.zhihu.com/search?content_id=262944954&content_type=Article&match_order=1&q=Photoprism&zhida_source=entity">Photoprism</a>、<a href="https://zhida.zhihu.com/search?content_id=262944954&content_type=Article&match_order=1&q=Home+Assistant&zhida_source=entity">Home Assistant</a>、私有博客等各类服务从杂乱的端口中打捞出来，整齐地挂到你的域名之下。</p>
+<blockquote>
+<p>以我的个人习惯来说，国内NAS一般使用Lucky，海外VPS则会选择NPM。<br>之前写过NPM分享，但只是针对VPS，因此补充NAS篇。也因为要分享的下一个项目会用到NPM，方便下篇以及后续引用吧～<br>鉴于国内网络环境，本文默认大家已经做好了DDNS。在”独立域名 + 自己托管 DNS（阿里云&#x2F;腾讯云&#x2F;Cloudflare）+ 跑在 NAS 上”的场景里，<a href="https://zhida.zhihu.com/search?content_id=262944954&content_type=Article&match_order=1&q=ddns-go&zhida_source=entity">ddns-go</a> 是目前最省心、最通用的开源DDNS方案，教程也挺多了吧？不过如果有需要，我会再补一篇相关的使用流程。</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h2><p>固定流程了，简单介绍下NPM。</p>
+<p>Nginx Proxy Manager 是一款基于 Docker 的可视化反向代理与证书管理面板，帮你把家里或办公室网络中的各类 Web 服务统一接入到公网或内网域名下，支持一键签发&#x2F;续期 Let’s Encrypt 证书，几乎不需要你手写 Nginx 配置。适合想要”图形化、少折腾、能稳定跑”的 NAS&#x2F;自建党用户。</p>
+<p>说白了就是图形化的 Nginx 。</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>之前买的一个备用域名，就拿它来做演示。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic4.zhimg.com/v2-4aacd1a7d6354c71f322f50d9cf10845_1440w.jpg&valid=false"></p>
+<p>先去你域名所在平台申请密钥，用于后续申请证书。因为国内环境走不了常规端口，所以要这么干。</p>
+<p>阿里云的为大家指个路。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic2.zhimg.com/v2-e5498c99c3603481b42944a87b20e7a9_1440w.jpg&valid=false"></p>
+<p>创建，这两项保存好备用，关掉后就不会再显示。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic1.zhimg.com/v2-23c3607a7078e565b61579026b7ce64c_1440w.jpg&valid=false"></p>
+<h2 id="部署流程"><a href="#部署流程" class="headerlink" title="部署流程"></a>部署流程</h2><p>还是以威联通NAS为例，不过基本适配所有品牌，改改文件映射目录即可。</p>
+<p>（看看威联通刚发布的新品 Qu805-N355，终于拿到咯～3k6香爆！）<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic1.zhimg.com/v2-48bef41ea7f088e0ad812ba83105d0e4_1440w.jpg&valid=false"><br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic2.zhimg.com/v2-002ef7329056a157cb6bda6fae01e9c1_1440w.jpg&valid=false"></p>
+<p>代码如下：</p>
+<pre><code>services:
+  app:
+    image: jc21/nginx-proxy-manager:latest # 中文版为 chishin/nginx-proxy-manager-zh:release
+    container_name: npm # 名称可自定义
+    restart: always
+    environment:
+      TZ: Asia/Shanghai             # 时区
+      DISABLE_IPV6: &quot;true&quot;          # 国内IPv6链路常不稳，先关
+    volumes:
+      - /share/Container/npm/data:/data
+      - /share/Container/npm/letsencrypt:/etc/letsencrypt
+    ports:
+      - &quot;81:81&quot;                     # 管理面板（仅局域网用）
+      - &quot;8442:80&quot;                   # 公网HTTP（非常用端口）
+      - &quot;8443:443&quot;                  # 公网HTTPS（非常用端口）
+</code></pre>
+<p><strong>中文镜像并没有重新构建后端代码，中文镜像基于官方镜像替换前端代码来实现的，所以中文版本的全部功能与官方版本完全相同，只是显示界面的文字不同的区别。</strong><br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://picx.zhimg.com/v2-db1b16ad8ff6bf0cee922570a2de3213_1440w.jpg&valid=false"></p>
+<p>冒号左侧的三个端口皆可替换成NAS未占用端口。</p>
+<p><code>81</code>是管理面板，一般不建议直接转发到公网，如果像我一样远程配置可以先开一会儿，搞定后再停用或删掉～</p>
+<p><code>8442</code>、<code>8443</code>两个端口则一定要转发到公网～<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://picx.zhimg.com/v2-4874563cfc00506cb0f846e8a470e135_1440w.jpg&valid=false"></p>
+<h2 id="使用展示"><a href="#使用展示" class="headerlink" title="使用展示"></a>使用展示</h2><p>按照上面代码部署完毕后，浏览器输入 NAS_IP:81 即可访问界面进行配置。</p>
+<pre><code>默认账户：admin@example.com
+默认密码：changeme
+</code></pre>
+<p><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic2.zhimg.com/v2-1677bb920cad4883453583855539f7b7_1440w.jpg&valid=false"></p>
+<p>初次登陆提示修改初始登录邮箱和密码。</p>
+<p>这个邮箱后面用来发送证书提醒。若随便填写的话，符合邮箱格式就行，真伪不重要，另外咱们得能记得住～<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic2.zhimg.com/v2-5e9b65e915996a48bb87ece20b6f15eb_1440w.jpg&valid=false"></p>
+<p>旧密码、新密码、确认新密码，保存即可。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic1.zhimg.com/v2-d6e22c9ac481346d1aa0fc02c406dd1c_1440w.jpg&valid=false"></p>
+<p>来到首页，点击下图红框标志。其他几个是跳转、转发和兜底，汉化版应该有翻译。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://picx.zhimg.com/v2-de0c89075e711c160a16e642599c8b97_1440w.jpg&valid=false"></p>
+<p>下面点哪里都可以，添加反向代理。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic4.zhimg.com/v2-1643388caab13ec3837ace7898920505_1440w.jpg&valid=false"></p>
+<p>逐步来设置。</p>
+<p>内网服务是 http 就选 http；若后端自己跑了 https，就选 https。IP和端口部分，填写后端服务的主机名或内网 IP，简单说就是这个IP能成功访问服务就行。Cache Assets是静态资源缓存，一般建议纯静态站开启，大家按需求选择。点击保存。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://picx.zhimg.com/v2-6bd9a6fed135a0edba4ecbfcb009ac91_1440w.jpg&valid=false"></p>
+<p>可以看到，这时候已经完成了绑定。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://picx.zhimg.com/v2-d662f9d5b7a0c320149ff10a39503c2f_1440w.jpg&valid=false"></p>
+<p>通过刚才配置的域名+8442，就能访问服务。不过通过该域名访问可以看到，显示不安全。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic1.zhimg.com/v2-3ed33809b7919c4b630462455345e956_1440w.jpg&valid=false"></p>
+<p>接着点击开始配置证书～<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pica.zhimg.com/v2-34fadf0c0c7d51a73e0c9fa662e0728e_1440w.jpg&valid=false"></p>
+<p>当我们为NPM配置完毕后，建议删掉上面路由中<code>81</code>端口的转发～</p>
+<h3 id="单个域名证书申请"><a href="#单个域名证书申请" class="headerlink" title="单个域名证书申请"></a>单个域名证书申请</h3><p>本小节情况是针对某一个子域名单独申请证书。该小节结束后，会再演示泛域名证书以应多，如果NPM常驻为主要反代工具，建议直接进行泛域名申请～<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pica.zhimg.com/v2-82f770f9152d8c6e02f60da5c366cdf0_1440w.jpg&valid=false"></p>
+<blockquote>
+<p>Force SSL：开<br>HTTP&#x2F;2 Support： 开<br>HSTS Enabled： 建议开（浏览器强制用 HTTPS）<br>HSTS Subdomains：只有当所有子域都走 HTTPS 时再开，否则先关<br>Email Address for Let’s Encrypt：填你的邮箱<br>I Agree to the TOS： 勾上<br>因 80 等常规端口不可用，勾 Use a DNS Challenge，接着选择服务商，填入上文准备工作中的ID和KEY</p>
+</blockquote>
+<p>按照上面的提示，填写后点击保存。应该要等一小会儿。成功后如下图所示。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pica.zhimg.com/v2-27f11ec590f1477b330fc062c3b46e64_1440w.jpg&valid=false"></p>
+<p>此时输入域名+8443端口，即可访问服务，可以看到不安全标志已经消失，反代流程结束～<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pica.zhimg.com/v2-f77d0155d5f6b702ad7fb498cd368bc6_1440w.jpg&valid=false"></p>
+<h3 id="泛域名证书申请"><a href="#泛域名证书申请" class="headerlink" title="泛域名证书申请"></a>泛域名证书申请</h3><p>来到证书板块，如图点击右上角。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic4.zhimg.com/v2-be352ece932cbe7e639c4cdaffa9e073_1440w.jpg&valid=false"></p>
+<p>跟上面一样，填写根域和泛域，以逗号间隔。勾选 Use a DNS Challenge，填写邮箱，选择DNS服务商，填入ID和KEY，同意条约后保存即可。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic3.zhimg.com/v2-0af894cce9edbbcf5d07789aadd8e05e_1440w.jpg&valid=false"></p>
+<p>申请完毕。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic1.zhimg.com/v2-f76dc6fb76e298477bac6f5187f67896_1440w.jpg&valid=false"></p>
+<p>后续我们再创建新的反代，那就方便多啦～<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pica.zhimg.com/v2-e71402c219716cd9f843189f01d9f9e2_1440w.jpg&valid=false"></p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>ddns-go + NPM，或者一站式的Lucky，就看大家需求了。</p>
+]]></content>
+      <categories>
+        <category>学习探索</category>
+      </categories>
+      <tags>
+        <tag>NAS</tag>
+        <tag>Nginx</tag>
+        <tag>Proxy</tag>
+        <tag>Manager</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>分布式事务</title>
     <url>/2026/03/04/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1-22/</url>
+    <content><![CDATA[<p>一致性方案是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍一致性方案的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="两阶段提交"><a href="#两阶段提交" class="headerlink" title="两阶段提交"></a>两阶段提交</h2><p>两阶段提交是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用两阶段提交时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践两阶段提交，我们可以掌握一致性方案的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="TCC"><a href="#TCC" class="headerlink" title="TCC"></a>TCC</h2><p>TCC是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用TCC时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践TCC，我们可以掌握一致性方案的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="Saga"><a href="#Saga" class="headerlink" title="Saga"></a>Saga</h2><p>Saga是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用Saga时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践Saga，我们可以掌握一致性方案的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="本地消息表"><a href="#本地消息表" class="headerlink" title="本地消息表"></a>本地消息表</h2><p>本地消息表是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用本地消息表时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握本地消息表和相关知识，将帮助我们构建更加完善的一致性方案体系。</p>
+]]></content>
+      <categories>
+        <category>网络架构</category>
+      </categories>
+      <tags>
+        <tag>一致性方案</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分布式事务</title>
+    <url>/2026/03/04/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1-23/</url>
     <content><![CDATA[<p>一致性方案是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍一致性方案的核心要点和实践经验。</p>
 <span id="more"></span>
 
@@ -2367,111 +2559,6 @@ https://web.com   #https协议<span aria-hidden="true" class="line-numbers-rows"
       </tags>
   </entry>
   <entry>
-    <title>NAS平台 Nginx Proxy Manager 保姆级教程</title>
-    <url>/2026/03/05/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<p>在国内玩 NAS，想把一堆内网服务优雅地收口到一个域名下，既要省事、又要安全，反向代理就是那把顺手的瑞士军刀。很多朋友习惯用 Lucky，确实轻巧好用；但如果你一些特殊需求，需要Nginx 之类来解决，那么<strong>Nginx Proxy Manager</strong>会是一个靠谱的选择。（后文简称NPM）</p>
-<p>写这篇文章并不是要「二选一」地替换 Lucky，而是提供另一条同样通畅的方法：你同样会得到一个内网安全、外网可达、证书自动化的标准化入口，把 <a href="https://zhida.zhihu.com/search?content_id=262944954&content_type=Article&match_order=1&q=Jellyfin&zhida_source=entity">Jellyfin</a>、<a href="https://zhida.zhihu.com/search?content_id=262944954&content_type=Article&match_order=1&q=Photoprism&zhida_source=entity">Photoprism</a>、<a href="https://zhida.zhihu.com/search?content_id=262944954&content_type=Article&match_order=1&q=Home+Assistant&zhida_source=entity">Home Assistant</a>、私有博客等各类服务从杂乱的端口中打捞出来，整齐地挂到你的域名之下。</p>
-<blockquote>
-<p>以我的个人习惯来说，国内NAS一般使用Lucky，海外VPS则会选择NPM。<br>之前写过NPM分享，但只是针对VPS，因此补充NAS篇。也因为要分享的下一个项目会用到NPM，方便下篇以及后续引用吧～<br>鉴于国内网络环境，本文默认大家已经做好了DDNS。在”独立域名 + 自己托管 DNS（阿里云&#x2F;腾讯云&#x2F;Cloudflare）+ 跑在 NAS 上”的场景里，<a href="https://zhida.zhihu.com/search?content_id=262944954&content_type=Article&match_order=1&q=ddns-go&zhida_source=entity">ddns-go</a> 是目前最省心、最通用的开源DDNS方案，教程也挺多了吧？不过如果有需要，我会再补一篇相关的使用流程。</p>
-</blockquote>
-<span id="more"></span>
-
-<h2 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h2><p>固定流程了，简单介绍下NPM。</p>
-<p>Nginx Proxy Manager 是一款基于 Docker 的可视化反向代理与证书管理面板，帮你把家里或办公室网络中的各类 Web 服务统一接入到公网或内网域名下，支持一键签发&#x2F;续期 Let’s Encrypt 证书，几乎不需要你手写 Nginx 配置。适合想要”图形化、少折腾、能稳定跑”的 NAS&#x2F;自建党用户。</p>
-<p>说白了就是图形化的 Nginx 。</p>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>之前买的一个备用域名，就拿它来做演示。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic4.zhimg.com/v2-4aacd1a7d6354c71f322f50d9cf10845_1440w.jpg&valid=false"></p>
-<p>先去你域名所在平台申请密钥，用于后续申请证书。因为国内环境走不了常规端口，所以要这么干。</p>
-<p>阿里云的为大家指个路。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic2.zhimg.com/v2-e5498c99c3603481b42944a87b20e7a9_1440w.jpg&valid=false"></p>
-<p>创建，这两项保存好备用，关掉后就不会再显示。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic1.zhimg.com/v2-23c3607a7078e565b61579026b7ce64c_1440w.jpg&valid=false"></p>
-<h2 id="部署流程"><a href="#部署流程" class="headerlink" title="部署流程"></a>部署流程</h2><p>还是以威联通NAS为例，不过基本适配所有品牌，改改文件映射目录即可。</p>
-<p>（看看威联通刚发布的新品 Qu805-N355，终于拿到咯～3k6香爆！）<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic1.zhimg.com/v2-48bef41ea7f088e0ad812ba83105d0e4_1440w.jpg&valid=false"><br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic2.zhimg.com/v2-002ef7329056a157cb6bda6fae01e9c1_1440w.jpg&valid=false"></p>
-<p>代码如下：</p>
-<pre><code>services:
-  app:
-    image: jc21/nginx-proxy-manager:latest # 中文版为 chishin/nginx-proxy-manager-zh:release
-    container_name: npm # 名称可自定义
-    restart: always
-    environment:
-      TZ: Asia/Shanghai             # 时区
-      DISABLE_IPV6: &quot;true&quot;          # 国内IPv6链路常不稳，先关
-    volumes:
-      - /share/Container/npm/data:/data
-      - /share/Container/npm/letsencrypt:/etc/letsencrypt
-    ports:
-      - &quot;81:81&quot;                     # 管理面板（仅局域网用）
-      - &quot;8442:80&quot;                   # 公网HTTP（非常用端口）
-      - &quot;8443:443&quot;                  # 公网HTTPS（非常用端口）
-</code></pre>
-<p><strong>中文镜像并没有重新构建后端代码，中文镜像基于官方镜像替换前端代码来实现的，所以中文版本的全部功能与官方版本完全相同，只是显示界面的文字不同的区别。</strong><br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://picx.zhimg.com/v2-db1b16ad8ff6bf0cee922570a2de3213_1440w.jpg&valid=false"></p>
-<p>冒号左侧的三个端口皆可替换成NAS未占用端口。</p>
-<p><code>81</code>是管理面板，一般不建议直接转发到公网，如果像我一样远程配置可以先开一会儿，搞定后再停用或删掉～</p>
-<p><code>8442</code>、<code>8443</code>两个端口则一定要转发到公网～<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://picx.zhimg.com/v2-4874563cfc00506cb0f846e8a470e135_1440w.jpg&valid=false"></p>
-<h2 id="使用展示"><a href="#使用展示" class="headerlink" title="使用展示"></a>使用展示</h2><p>按照上面代码部署完毕后，浏览器输入 NAS_IP:81 即可访问界面进行配置。</p>
-<pre><code>默认账户：admin@example.com
-默认密码：changeme
-</code></pre>
-<p><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic2.zhimg.com/v2-1677bb920cad4883453583855539f7b7_1440w.jpg&valid=false"></p>
-<p>初次登陆提示修改初始登录邮箱和密码。</p>
-<p>这个邮箱后面用来发送证书提醒。若随便填写的话，符合邮箱格式就行，真伪不重要，另外咱们得能记得住～<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic2.zhimg.com/v2-5e9b65e915996a48bb87ece20b6f15eb_1440w.jpg&valid=false"></p>
-<p>旧密码、新密码、确认新密码，保存即可。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic1.zhimg.com/v2-d6e22c9ac481346d1aa0fc02c406dd1c_1440w.jpg&valid=false"></p>
-<p>来到首页，点击下图红框标志。其他几个是跳转、转发和兜底，汉化版应该有翻译。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://picx.zhimg.com/v2-de0c89075e711c160a16e642599c8b97_1440w.jpg&valid=false"></p>
-<p>下面点哪里都可以，添加反向代理。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic4.zhimg.com/v2-1643388caab13ec3837ace7898920505_1440w.jpg&valid=false"></p>
-<p>逐步来设置。</p>
-<p>内网服务是 http 就选 http；若后端自己跑了 https，就选 https。IP和端口部分，填写后端服务的主机名或内网 IP，简单说就是这个IP能成功访问服务就行。Cache Assets是静态资源缓存，一般建议纯静态站开启，大家按需求选择。点击保存。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://picx.zhimg.com/v2-6bd9a6fed135a0edba4ecbfcb009ac91_1440w.jpg&valid=false"></p>
-<p>可以看到，这时候已经完成了绑定。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://picx.zhimg.com/v2-d662f9d5b7a0c320149ff10a39503c2f_1440w.jpg&valid=false"></p>
-<p>通过刚才配置的域名+8442，就能访问服务。不过通过该域名访问可以看到，显示不安全。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic1.zhimg.com/v2-3ed33809b7919c4b630462455345e956_1440w.jpg&valid=false"></p>
-<p>接着点击开始配置证书～<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pica.zhimg.com/v2-34fadf0c0c7d51a73e0c9fa662e0728e_1440w.jpg&valid=false"></p>
-<p>当我们为NPM配置完毕后，建议删掉上面路由中<code>81</code>端口的转发～</p>
-<h3 id="单个域名证书申请"><a href="#单个域名证书申请" class="headerlink" title="单个域名证书申请"></a>单个域名证书申请</h3><p>本小节情况是针对某一个子域名单独申请证书。该小节结束后，会再演示泛域名证书以应多，如果NPM常驻为主要反代工具，建议直接进行泛域名申请～<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pica.zhimg.com/v2-82f770f9152d8c6e02f60da5c366cdf0_1440w.jpg&valid=false"></p>
-<blockquote>
-<p>Force SSL：开<br>HTTP&#x2F;2 Support： 开<br>HSTS Enabled： 建议开（浏览器强制用 HTTPS）<br>HSTS Subdomains：只有当所有子域都走 HTTPS 时再开，否则先关<br>Email Address for Let’s Encrypt：填你的邮箱<br>I Agree to the TOS： 勾上<br>因 80 等常规端口不可用，勾 Use a DNS Challenge，接着选择服务商，填入上文准备工作中的ID和KEY</p>
-</blockquote>
-<p>按照上面的提示，填写后点击保存。应该要等一小会儿。成功后如下图所示。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pica.zhimg.com/v2-27f11ec590f1477b330fc062c3b46e64_1440w.jpg&valid=false"></p>
-<p>此时输入域名+8443端口，即可访问服务，可以看到不安全标志已经消失，反代流程结束～<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pica.zhimg.com/v2-f77d0155d5f6b702ad7fb498cd368bc6_1440w.jpg&valid=false"></p>
-<h3 id="泛域名证书申请"><a href="#泛域名证书申请" class="headerlink" title="泛域名证书申请"></a>泛域名证书申请</h3><p>来到证书板块，如图点击右上角。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic4.zhimg.com/v2-be352ece932cbe7e639c4cdaffa9e073_1440w.jpg&valid=false"></p>
-<p>跟上面一样，填写根域和泛域，以逗号间隔。勾选 Use a DNS Challenge，填写邮箱，选择DNS服务商，填入ID和KEY，同意条约后保存即可。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic3.zhimg.com/v2-0af894cce9edbbcf5d07789aadd8e05e_1440w.jpg&valid=false"></p>
-<p>申请完毕。<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pic1.zhimg.com/v2-f76dc6fb76e298477bac6f5187f67896_1440w.jpg&valid=false"></p>
-<p>后续我们再创建新的反代，那就方便多啦～<br><img data-src="https://cubox.pro/c/filters:no_upscale()?imageUrl=https://pica.zhimg.com/v2-e71402c219716cd9f843189f01d9f9e2_1440w.jpg&valid=false"></p>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>ddns-go + NPM，或者一站式的Lucky，就看大家需求了。</p>
-]]></content>
-      <categories>
-        <category>学习探索</category>
-      </categories>
-      <tags>
-        <tag>NAS</tag>
-        <tag>Nginx</tag>
-        <tag>Proxy</tag>
-        <tag>Manager</tag>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>分布式事务</title>
-    <url>/2026/03/04/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1-23/</url>
-    <content><![CDATA[<p>一致性方案是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍一致性方案的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="两阶段提交"><a href="#两阶段提交" class="headerlink" title="两阶段提交"></a>两阶段提交</h2><p>两阶段提交是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用两阶段提交时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践两阶段提交，我们可以掌握一致性方案的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="TCC"><a href="#TCC" class="headerlink" title="TCC"></a>TCC</h2><p>TCC是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用TCC时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践TCC，我们可以掌握一致性方案的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="Saga"><a href="#Saga" class="headerlink" title="Saga"></a>Saga</h2><p>Saga是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用Saga时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践Saga，我们可以掌握一致性方案的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="本地消息表"><a href="#本地消息表" class="headerlink" title="本地消息表"></a>本地消息表</h2><p>本地消息表是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用本地消息表时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握本地消息表和相关知识，将帮助我们构建更加完善的一致性方案体系。</p>
-]]></content>
-      <categories>
-        <category>网络架构</category>
-      </categories>
-      <tags>
-        <tag>一致性方案</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>前端性能优化</title>
     <url>/2026/03/04/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-12/</url>
     <content><![CDATA[<p>性能提升是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍性能提升的核心要点和实践经验。</p>
@@ -2495,32 +2582,6 @@ https://web.com   #https协议<span aria-hidden="true" class="line-numbers-rows"
       </categories>
       <tags>
         <tag>性能提升</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>团队沟通技巧</title>
-    <url>/2026/03/04/%E5%9B%A2%E9%98%9F%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7-38/</url>
-    <content><![CDATA[<p>高效协作是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍高效协作的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="会议管理"><a href="#会议管理" class="headerlink" title="会议管理"></a>会议管理</h2><p>会议管理是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用会议管理时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践会议管理，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="异步沟通"><a href="#异步沟通" class="headerlink" title="异步沟通"></a>异步沟通</h2><p>异步沟通是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用异步沟通时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践异步沟通，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="冲突解决"><a href="#冲突解决" class="headerlink" title="冲突解决"></a>冲突解决</h2><p>冲突解决是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用冲突解决时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践冲突解决，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="目标对齐"><a href="#目标对齐" class="headerlink" title="目标对齐"></a>目标对齐</h2><p>目标对齐是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用目标对齐时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握目标对齐和相关知识，将帮助我们构建更加完善的高效协作体系。</p>
-]]></content>
-      <categories>
-        <category>协作模式</category>
-      </categories>
-      <tags>
-        <tag>高效协作</tag>
       </tags>
   </entry>
   <entry>
@@ -2550,32 +2611,6 @@ https://web.com   #https协议<span aria-hidden="true" class="line-numbers-rows"
       </tags>
   </entry>
   <entry>
-    <title>多模态AI应用</title>
-    <url>/2026/03/04/%E5%A4%9A%E6%A8%A1%E6%80%81ai%E5%BA%94%E7%94%A8-06/</url>
-    <content><![CDATA[<p>跨模态理解是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍跨模态理解的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="图像识别"><a href="#图像识别" class="headerlink" title="图像识别"></a>图像识别</h2><p>图像识别是跨模态理解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用图像识别时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践图像识别，我们可以掌握跨模态理解的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="语音合成"><a href="#语音合成" class="headerlink" title="语音合成"></a>语音合成</h2><p>语音合成是跨模态理解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用语音合成时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践语音合成，我们可以掌握跨模态理解的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="视频理解"><a href="#视频理解" class="headerlink" title="视频理解"></a>视频理解</h2><p>视频理解是跨模态理解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用视频理解时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践视频理解，我们可以掌握跨模态理解的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="多模态融合"><a href="#多模态融合" class="headerlink" title="多模态融合"></a>多模态融合</h2><p>多模态融合是跨模态理解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用多模态融合时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握多模态融合和相关知识，将帮助我们构建更加完善的跨模态理解体系。</p>
-]]></content>
-      <categories>
-        <category>AI智能体</category>
-      </categories>
-      <tags>
-        <tag>跨模态理解</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>团队沟通技巧</title>
     <url>/2026/03/04/%E5%9B%A2%E9%98%9F%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7-39/</url>
     <content><![CDATA[<p>高效协作是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍高效协作的核心要点和实践经验。</p>
@@ -2599,6 +2634,58 @@ https://web.com   #https协议<span aria-hidden="true" class="line-numbers-rows"
       </categories>
       <tags>
         <tag>高效协作</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>团队沟通技巧</title>
+    <url>/2026/03/04/%E5%9B%A2%E9%98%9F%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7-38/</url>
+    <content><![CDATA[<p>高效协作是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍高效协作的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="会议管理"><a href="#会议管理" class="headerlink" title="会议管理"></a>会议管理</h2><p>会议管理是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用会议管理时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践会议管理，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="异步沟通"><a href="#异步沟通" class="headerlink" title="异步沟通"></a>异步沟通</h2><p>异步沟通是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用异步沟通时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践异步沟通，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="冲突解决"><a href="#冲突解决" class="headerlink" title="冲突解决"></a>冲突解决</h2><p>冲突解决是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用冲突解决时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践冲突解决，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="目标对齐"><a href="#目标对齐" class="headerlink" title="目标对齐"></a>目标对齐</h2><p>目标对齐是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用目标对齐时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握目标对齐和相关知识，将帮助我们构建更加完善的高效协作体系。</p>
+]]></content>
+      <categories>
+        <category>协作模式</category>
+      </categories>
+      <tags>
+        <tag>高效协作</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多模态AI应用</title>
+    <url>/2026/03/04/%E5%A4%9A%E6%A8%A1%E6%80%81ai%E5%BA%94%E7%94%A8-06/</url>
+    <content><![CDATA[<p>跨模态理解是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍跨模态理解的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="图像识别"><a href="#图像识别" class="headerlink" title="图像识别"></a>图像识别</h2><p>图像识别是跨模态理解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用图像识别时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践图像识别，我们可以掌握跨模态理解的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="语音合成"><a href="#语音合成" class="headerlink" title="语音合成"></a>语音合成</h2><p>语音合成是跨模态理解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用语音合成时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践语音合成，我们可以掌握跨模态理解的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="视频理解"><a href="#视频理解" class="headerlink" title="视频理解"></a>视频理解</h2><p>视频理解是跨模态理解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用视频理解时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践视频理解，我们可以掌握跨模态理解的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="多模态融合"><a href="#多模态融合" class="headerlink" title="多模态融合"></a>多模态融合</h2><p>多模态融合是跨模态理解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用多模态融合时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握多模态融合和相关知识，将帮助我们构建更加完善的跨模态理解体系。</p>
+]]></content>
+      <categories>
+        <category>AI智能体</category>
+      </categories>
+      <tags>
+        <tag>跨模态理解</tag>
       </tags>
   </entry>
   <entry>
@@ -2778,6 +2865,32 @@ https://web.com   #https协议<span aria-hidden="true" class="line-numbers-rows"
       </tags>
   </entry>
   <entry>
+    <title>容器网络原理</title>
+    <url>/2026/03/04/%E5%AE%B9%E5%99%A8%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86-17/</url>
+    <content><![CDATA[<p>Docker网络是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍Docker网络的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="Bridge模式"><a href="#Bridge模式" class="headerlink" title="Bridge模式"></a>Bridge模式</h2><p>Bridge模式是Docker网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用Bridge模式时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践Bridge模式，我们可以掌握Docker网络的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="Overlay网络"><a href="#Overlay网络" class="headerlink" title="Overlay网络"></a>Overlay网络</h2><p>Overlay网络是Docker网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用Overlay网络时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践Overlay网络，我们可以掌握Docker网络的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="网络隔离"><a href="#网络隔离" class="headerlink" title="网络隔离"></a>网络隔离</h2><p>网络隔离是Docker网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用网络隔离时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践网络隔离，我们可以掌握Docker网络的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="端口映射"><a href="#端口映射" class="headerlink" title="端口映射"></a>端口映射</h2><p>端口映射是Docker网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用端口映射时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握端口映射和相关知识，将帮助我们构建更加完善的Docker网络体系。</p>
+]]></content>
+      <categories>
+        <category>网络架构</category>
+      </categories>
+      <tags>
+        <tag>Docker网络</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>敏捷开发实践</title>
     <url>/2026/03/04/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5-32/</url>
     <content><![CDATA[<p>Scrum是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍Scrum的核心要点和实践经验。</p>
@@ -2801,6 +2914,344 @@ https://web.com   #https协议<span aria-hidden="true" class="line-numbers-rows"
       </categories>
       <tags>
         <tag>Scrum</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>敏捷开发实践</title>
+    <url>/2026/03/04/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5-33/</url>
+    <content><![CDATA[<p>Scrum是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍Scrum的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="Sprint"><a href="#Sprint" class="headerlink" title="Sprint"></a>Sprint</h2><p>Sprint是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用Sprint时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践Sprint，我们可以掌握Scrum的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="站立会议"><a href="#站立会议" class="headerlink" title="站立会议"></a>站立会议</h2><p>站立会议是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用站立会议时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践站立会议，我们可以掌握Scrum的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="回顾会议"><a href="#回顾会议" class="headerlink" title="回顾会议"></a>回顾会议</h2><p>回顾会议是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用回顾会议时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践回顾会议，我们可以掌握Scrum的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="用户故事"><a href="#用户故事" class="headerlink" title="用户故事"></a>用户故事</h2><p>用户故事是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用用户故事时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握用户故事和相关知识，将帮助我们构建更加完善的Scrum体系。</p>
+]]></content>
+      <categories>
+        <category>协作模式</category>
+      </categories>
+      <tags>
+        <tag>Scrum</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库优化</title>
+    <url>/2026/03/04/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96-31/</url>
+    <content><![CDATA[<p>性能调优是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍性能调优的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="索引优化"><a href="#索引优化" class="headerlink" title="索引优化"></a>索引优化</h2><p>索引优化是性能调优的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用索引优化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践索引优化，我们可以掌握性能调优的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="查询优化"><a href="#查询优化" class="headerlink" title="查询优化"></a>查询优化</h2><p>查询优化是性能调优的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用查询优化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践查询优化，我们可以掌握性能调优的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="分库分表"><a href="#分库分表" class="headerlink" title="分库分表"></a>分库分表</h2><p>分库分表是性能调优的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用分库分表时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践分库分表，我们可以掌握性能调优的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="读写分离"><a href="#读写分离" class="headerlink" title="读写分离"></a>读写分离</h2><p>读写分离是性能调优的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用读写分离时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握读写分离和相关知识，将帮助我们构建更加完善的性能调优体系。</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>性能调优</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库优化</title>
+    <url>/2026/03/04/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96-30/</url>
+    <content><![CDATA[<p>性能调优是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍性能调优的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="索引优化"><a href="#索引优化" class="headerlink" title="索引优化"></a>索引优化</h2><p>索引优化是性能调优的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用索引优化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践索引优化，我们可以掌握性能调优的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="查询优化"><a href="#查询优化" class="headerlink" title="查询优化"></a>查询优化</h2><p>查询优化是性能调优的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用查询优化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践查询优化，我们可以掌握性能调优的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="分库分表"><a href="#分库分表" class="headerlink" title="分库分表"></a>分库分表</h2><p>分库分表是性能调优的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用分库分表时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践分库分表，我们可以掌握性能调优的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="读写分离"><a href="#读写分离" class="headerlink" title="读写分离"></a>读写分离</h2><p>读写分离是性能调优的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用读写分离时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握读写分离和相关知识，将帮助我们构建更加完善的性能调优体系。</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>性能调优</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构实战</title>
+    <url>/2026/03/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E6%88%98-26/</url>
+    <content><![CDATA[<p>结构应用是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍结构应用的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h2><p>哈希表是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用哈希表时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践哈希表，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><p>二叉树是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用二叉树时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践二叉树，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h2><p>图论是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用图论时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践图论，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>堆排序是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用堆排序时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握堆排序和相关知识，将帮助我们构建更加完善的结构应用体系。</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>结构应用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构实战</title>
+    <url>/2026/03/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E6%88%98-27/</url>
+    <content><![CDATA[<p>结构应用是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍结构应用的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h2><p>哈希表是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用哈希表时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践哈希表，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><p>二叉树是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用二叉树时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践二叉树，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h2><p>图论是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用图论时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践图论，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>堆排序是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用堆排序时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握堆排序和相关知识，将帮助我们构建更加完善的结构应用体系。</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>结构应用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>服务网格技术</title>
+    <url>/2026/03/04/%E6%9C%8D%E5%8A%A1%E7%BD%91%E6%A0%BC%E6%8A%80%E6%9C%AF-18/</url>
+    <content><![CDATA[<p>Service Mesh是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍Service Mesh的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="流量管理"><a href="#流量管理" class="headerlink" title="流量管理"></a>流量管理</h2><p>流量管理是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用流量管理时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践流量管理，我们可以掌握Service Mesh的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="服务发现"><a href="#服务发现" class="headerlink" title="服务发现"></a>服务发现</h2><p>服务发现是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用服务发现时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践服务发现，我们可以掌握Service Mesh的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="安全认证"><a href="#安全认证" class="headerlink" title="安全认证"></a>安全认证</h2><p>安全认证是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用安全认证时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践安全认证，我们可以掌握Service Mesh的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="可观测性"><a href="#可观测性" class="headerlink" title="可观测性"></a>可观测性</h2><p>可观测性是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用可观测性时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握可观测性和相关知识，将帮助我们构建更加完善的Service Mesh体系。</p>
+]]></content>
+      <categories>
+        <category>网络架构</category>
+      </categories>
+      <tags>
+        <tag>Service Mesh</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>消息队列选型</title>
+    <url>/2026/03/04/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E9%80%89%E5%9E%8B-20/</url>
+    <content><![CDATA[<p>MQ对比是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍MQ对比的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h2><p>Kafka是MQ对比的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用Kafka时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践Kafka，我们可以掌握MQ对比的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="RabbitMQ"><a href="#RabbitMQ" class="headerlink" title="RabbitMQ"></a>RabbitMQ</h2><p>RabbitMQ是MQ对比的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用RabbitMQ时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践RabbitMQ，我们可以掌握MQ对比的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="RocketMQ"><a href="#RocketMQ" class="headerlink" title="RocketMQ"></a>RocketMQ</h2><p>RocketMQ是MQ对比的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用RocketMQ时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践RocketMQ，我们可以掌握MQ对比的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="消息持久化"><a href="#消息持久化" class="headerlink" title="消息持久化"></a>消息持久化</h2><p>消息持久化是MQ对比的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用消息持久化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握消息持久化和相关知识，将帮助我们构建更加完善的MQ对比体系。</p>
+]]></content>
+      <categories>
+        <category>网络架构</category>
+      </categories>
+      <tags>
+        <tag>MQ对比</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>服务网格技术</title>
+    <url>/2026/03/04/%E6%9C%8D%E5%8A%A1%E7%BD%91%E6%A0%BC%E6%8A%80%E6%9C%AF-19/</url>
+    <content><![CDATA[<p>Service Mesh是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍Service Mesh的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="流量管理"><a href="#流量管理" class="headerlink" title="流量管理"></a>流量管理</h2><p>流量管理是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用流量管理时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践流量管理，我们可以掌握Service Mesh的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="服务发现"><a href="#服务发现" class="headerlink" title="服务发现"></a>服务发现</h2><p>服务发现是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用服务发现时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践服务发现，我们可以掌握Service Mesh的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="安全认证"><a href="#安全认证" class="headerlink" title="安全认证"></a>安全认证</h2><p>安全认证是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用安全认证时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践安全认证，我们可以掌握Service Mesh的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="可观测性"><a href="#可观测性" class="headerlink" title="可观测性"></a>可观测性</h2><p>可观测性是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用可观测性时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握可观测性和相关知识，将帮助我们构建更加完善的Service Mesh体系。</p>
+]]></content>
+      <categories>
+        <category>网络架构</category>
+      </categories>
+      <tags>
+        <tag>Service Mesh</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>消息队列选型</title>
+    <url>/2026/03/04/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E9%80%89%E5%9E%8B-21/</url>
+    <content><![CDATA[<p>MQ对比是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍MQ对比的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h2><p>Kafka是MQ对比的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用Kafka时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践Kafka，我们可以掌握MQ对比的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="RabbitMQ"><a href="#RabbitMQ" class="headerlink" title="RabbitMQ"></a>RabbitMQ</h2><p>RabbitMQ是MQ对比的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用RabbitMQ时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践RabbitMQ，我们可以掌握MQ对比的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="RocketMQ"><a href="#RocketMQ" class="headerlink" title="RocketMQ"></a>RocketMQ</h2><p>RocketMQ是MQ对比的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用RocketMQ时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践RocketMQ，我们可以掌握MQ对比的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="消息持久化"><a href="#消息持久化" class="headerlink" title="消息持久化"></a>消息持久化</h2><p>消息持久化是MQ对比的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用消息持久化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握消息持久化和相关知识，将帮助我们构建更加完善的MQ对比体系。</p>
+]]></content>
+      <categories>
+        <category>网络架构</category>
+      </categories>
+      <tags>
+        <tag>MQ对比</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度学习基础</title>
+    <url>/2026/03/04/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-00/</url>
+    <content><![CDATA[<p>神经网络是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍神经网络的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h2><p>激活函数是神经网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用激活函数时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践激活函数，我们可以掌握神经网络的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="反向传播"><a href="#反向传播" class="headerlink" title="反向传播"></a>反向传播</h2><p>反向传播是神经网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用反向传播时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践反向传播，我们可以掌握神经网络的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h2><p>梯度下降是神经网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用梯度下降时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践梯度下降，我们可以掌握神经网络的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><p>损失函数是神经网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用损失函数时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握损失函数和相关知识，将帮助我们构建更加完善的神经网络体系。</p>
+]]></content>
+      <categories>
+        <category>AI智能体</category>
+      </categories>
+      <tags>
+        <tag>神经网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度学习基础</title>
+    <url>/2026/03/04/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-01/</url>
+    <content><![CDATA[<p>神经网络是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍神经网络的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h2><p>激活函数是神经网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用激活函数时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践激活函数，我们可以掌握神经网络的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="反向传播"><a href="#反向传播" class="headerlink" title="反向传播"></a>反向传播</h2><p>反向传播是神经网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用反向传播时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践反向传播，我们可以掌握神经网络的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h2><p>梯度下降是神经网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用梯度下降时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践梯度下降，我们可以掌握神经网络的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><p>损失函数是神经网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用损失函数时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握损失函数和相关知识，将帮助我们构建更加完善的神经网络体系。</p>
+]]></content>
+      <categories>
+        <category>AI智能体</category>
+      </categories>
+      <tags>
+        <tag>神经网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>知识管理体系</title>
+    <url>/2026/03/04/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E4%BD%93%E7%B3%BB-36/</url>
+    <content><![CDATA[<p>知识沉淀是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍知识沉淀的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="文档化"><a href="#文档化" class="headerlink" title="文档化"></a>文档化</h2><p>文档化是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用文档化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践文档化，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="技术分享"><a href="#技术分享" class="headerlink" title="技术分享"></a>技术分享</h2><p>技术分享是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用技术分享时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践技术分享，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="经验复盘"><a href="#经验复盘" class="headerlink" title="经验复盘"></a>经验复盘</h2><p>经验复盘是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用经验复盘时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践经验复盘，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="新人培养"><a href="#新人培养" class="headerlink" title="新人培养"></a>新人培养</h2><p>新人培养是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用新人培养时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握新人培养和相关知识，将帮助我们构建更加完善的知识沉淀体系。</p>
+]]></content>
+      <categories>
+        <category>协作模式</category>
+      </categories>
+      <tags>
+        <tag>知识沉淀</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>知识管理体系</title>
+    <url>/2026/03/04/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E4%BD%93%E7%B3%BB-37/</url>
+    <content><![CDATA[<p>知识沉淀是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍知识沉淀的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="文档化"><a href="#文档化" class="headerlink" title="文档化"></a>文档化</h2><p>文档化是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用文档化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践文档化，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="技术分享"><a href="#技术分享" class="headerlink" title="技术分享"></a>技术分享</h2><p>技术分享是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用技术分享时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践技术分享，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="经验复盘"><a href="#经验复盘" class="headerlink" title="经验复盘"></a>经验复盘</h2><p>经验复盘是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用经验复盘时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践经验复盘，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="新人培养"><a href="#新人培养" class="headerlink" title="新人培养"></a>新人培养</h2><p>新人培养是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用新人培养时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握新人培养和相关知识，将帮助我们构建更加完善的知识沉淀体系。</p>
+]]></content>
+      <categories>
+        <category>协作模式</category>
+      </categories>
+      <tags>
+        <tag>知识沉淀</tag>
       </tags>
   </entry>
   <entry>
@@ -3043,370 +3494,6 @@ https://web.com   #https协议<span aria-hidden="true" class="line-numbers-rows"
         <tag>大全</tag>
         <tag>linux</tag>
         <tag>windows</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>敏捷开发实践</title>
-    <url>/2026/03/04/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5-33/</url>
-    <content><![CDATA[<p>Scrum是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍Scrum的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="Sprint"><a href="#Sprint" class="headerlink" title="Sprint"></a>Sprint</h2><p>Sprint是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用Sprint时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践Sprint，我们可以掌握Scrum的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="站立会议"><a href="#站立会议" class="headerlink" title="站立会议"></a>站立会议</h2><p>站立会议是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用站立会议时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践站立会议，我们可以掌握Scrum的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="回顾会议"><a href="#回顾会议" class="headerlink" title="回顾会议"></a>回顾会议</h2><p>回顾会议是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用回顾会议时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践回顾会议，我们可以掌握Scrum的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="用户故事"><a href="#用户故事" class="headerlink" title="用户故事"></a>用户故事</h2><p>用户故事是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用用户故事时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握用户故事和相关知识，将帮助我们构建更加完善的Scrum体系。</p>
-]]></content>
-      <categories>
-        <category>协作模式</category>
-      </categories>
-      <tags>
-        <tag>Scrum</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>容器网络原理</title>
-    <url>/2026/03/04/%E5%AE%B9%E5%99%A8%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86-17/</url>
-    <content><![CDATA[<p>Docker网络是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍Docker网络的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="Bridge模式"><a href="#Bridge模式" class="headerlink" title="Bridge模式"></a>Bridge模式</h2><p>Bridge模式是Docker网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用Bridge模式时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践Bridge模式，我们可以掌握Docker网络的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="Overlay网络"><a href="#Overlay网络" class="headerlink" title="Overlay网络"></a>Overlay网络</h2><p>Overlay网络是Docker网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用Overlay网络时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践Overlay网络，我们可以掌握Docker网络的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="网络隔离"><a href="#网络隔离" class="headerlink" title="网络隔离"></a>网络隔离</h2><p>网络隔离是Docker网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用网络隔离时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践网络隔离，我们可以掌握Docker网络的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="端口映射"><a href="#端口映射" class="headerlink" title="端口映射"></a>端口映射</h2><p>端口映射是Docker网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用端口映射时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握端口映射和相关知识，将帮助我们构建更加完善的Docker网络体系。</p>
-]]></content>
-      <categories>
-        <category>网络架构</category>
-      </categories>
-      <tags>
-        <tag>Docker网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据库优化</title>
-    <url>/2026/03/04/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96-30/</url>
-    <content><![CDATA[<p>性能调优是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍性能调优的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="索引优化"><a href="#索引优化" class="headerlink" title="索引优化"></a>索引优化</h2><p>索引优化是性能调优的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用索引优化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践索引优化，我们可以掌握性能调优的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="查询优化"><a href="#查询优化" class="headerlink" title="查询优化"></a>查询优化</h2><p>查询优化是性能调优的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用查询优化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践查询优化，我们可以掌握性能调优的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="分库分表"><a href="#分库分表" class="headerlink" title="分库分表"></a>分库分表</h2><p>分库分表是性能调优的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用分库分表时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践分库分表，我们可以掌握性能调优的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="读写分离"><a href="#读写分离" class="headerlink" title="读写分离"></a>读写分离</h2><p>读写分离是性能调优的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用读写分离时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握读写分离和相关知识，将帮助我们构建更加完善的性能调优体系。</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>性能调优</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据库优化</title>
-    <url>/2026/03/04/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96-31/</url>
-    <content><![CDATA[<p>性能调优是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍性能调优的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="索引优化"><a href="#索引优化" class="headerlink" title="索引优化"></a>索引优化</h2><p>索引优化是性能调优的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用索引优化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践索引优化，我们可以掌握性能调优的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="查询优化"><a href="#查询优化" class="headerlink" title="查询优化"></a>查询优化</h2><p>查询优化是性能调优的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用查询优化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践查询优化，我们可以掌握性能调优的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="分库分表"><a href="#分库分表" class="headerlink" title="分库分表"></a>分库分表</h2><p>分库分表是性能调优的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用分库分表时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践分库分表，我们可以掌握性能调优的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="读写分离"><a href="#读写分离" class="headerlink" title="读写分离"></a>读写分离</h2><p>读写分离是性能调优的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用读写分离时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握读写分离和相关知识，将帮助我们构建更加完善的性能调优体系。</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>性能调优</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构实战</title>
-    <url>/2026/03/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E6%88%98-26/</url>
-    <content><![CDATA[<p>结构应用是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍结构应用的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h2><p>哈希表是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用哈希表时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践哈希表，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><p>二叉树是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用二叉树时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践二叉树，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h2><p>图论是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用图论时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践图论，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>堆排序是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用堆排序时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握堆排序和相关知识，将帮助我们构建更加完善的结构应用体系。</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>结构应用</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>服务网格技术</title>
-    <url>/2026/03/04/%E6%9C%8D%E5%8A%A1%E7%BD%91%E6%A0%BC%E6%8A%80%E6%9C%AF-18/</url>
-    <content><![CDATA[<p>Service Mesh是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍Service Mesh的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="流量管理"><a href="#流量管理" class="headerlink" title="流量管理"></a>流量管理</h2><p>流量管理是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用流量管理时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践流量管理，我们可以掌握Service Mesh的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="服务发现"><a href="#服务发现" class="headerlink" title="服务发现"></a>服务发现</h2><p>服务发现是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用服务发现时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践服务发现，我们可以掌握Service Mesh的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="安全认证"><a href="#安全认证" class="headerlink" title="安全认证"></a>安全认证</h2><p>安全认证是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用安全认证时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践安全认证，我们可以掌握Service Mesh的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="可观测性"><a href="#可观测性" class="headerlink" title="可观测性"></a>可观测性</h2><p>可观测性是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用可观测性时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握可观测性和相关知识，将帮助我们构建更加完善的Service Mesh体系。</p>
-]]></content>
-      <categories>
-        <category>网络架构</category>
-      </categories>
-      <tags>
-        <tag>Service Mesh</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构实战</title>
-    <url>/2026/03/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E6%88%98-27/</url>
-    <content><![CDATA[<p>结构应用是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍结构应用的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h2><p>哈希表是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用哈希表时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践哈希表，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><p>二叉树是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用二叉树时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践二叉树，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h2><p>图论是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用图论时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践图论，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>堆排序是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用堆排序时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握堆排序和相关知识，将帮助我们构建更加完善的结构应用体系。</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>结构应用</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>服务网格技术</title>
-    <url>/2026/03/04/%E6%9C%8D%E5%8A%A1%E7%BD%91%E6%A0%BC%E6%8A%80%E6%9C%AF-19/</url>
-    <content><![CDATA[<p>Service Mesh是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍Service Mesh的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="流量管理"><a href="#流量管理" class="headerlink" title="流量管理"></a>流量管理</h2><p>流量管理是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用流量管理时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践流量管理，我们可以掌握Service Mesh的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="服务发现"><a href="#服务发现" class="headerlink" title="服务发现"></a>服务发现</h2><p>服务发现是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用服务发现时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践服务发现，我们可以掌握Service Mesh的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="安全认证"><a href="#安全认证" class="headerlink" title="安全认证"></a>安全认证</h2><p>安全认证是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用安全认证时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践安全认证，我们可以掌握Service Mesh的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="可观测性"><a href="#可观测性" class="headerlink" title="可观测性"></a>可观测性</h2><p>可观测性是Service Mesh的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用可观测性时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握可观测性和相关知识，将帮助我们构建更加完善的Service Mesh体系。</p>
-]]></content>
-      <categories>
-        <category>网络架构</category>
-      </categories>
-      <tags>
-        <tag>Service Mesh</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>消息队列选型</title>
-    <url>/2026/03/04/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E9%80%89%E5%9E%8B-20/</url>
-    <content><![CDATA[<p>MQ对比是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍MQ对比的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h2><p>Kafka是MQ对比的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用Kafka时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践Kafka，我们可以掌握MQ对比的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="RabbitMQ"><a href="#RabbitMQ" class="headerlink" title="RabbitMQ"></a>RabbitMQ</h2><p>RabbitMQ是MQ对比的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用RabbitMQ时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践RabbitMQ，我们可以掌握MQ对比的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="RocketMQ"><a href="#RocketMQ" class="headerlink" title="RocketMQ"></a>RocketMQ</h2><p>RocketMQ是MQ对比的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用RocketMQ时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践RocketMQ，我们可以掌握MQ对比的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="消息持久化"><a href="#消息持久化" class="headerlink" title="消息持久化"></a>消息持久化</h2><p>消息持久化是MQ对比的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用消息持久化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握消息持久化和相关知识，将帮助我们构建更加完善的MQ对比体系。</p>
-]]></content>
-      <categories>
-        <category>网络架构</category>
-      </categories>
-      <tags>
-        <tag>MQ对比</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>消息队列选型</title>
-    <url>/2026/03/04/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E9%80%89%E5%9E%8B-21/</url>
-    <content><![CDATA[<p>MQ对比是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍MQ对比的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="Kafka"><a href="#Kafka" class="headerlink" title="Kafka"></a>Kafka</h2><p>Kafka是MQ对比的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用Kafka时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践Kafka，我们可以掌握MQ对比的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="RabbitMQ"><a href="#RabbitMQ" class="headerlink" title="RabbitMQ"></a>RabbitMQ</h2><p>RabbitMQ是MQ对比的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用RabbitMQ时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践RabbitMQ，我们可以掌握MQ对比的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="RocketMQ"><a href="#RocketMQ" class="headerlink" title="RocketMQ"></a>RocketMQ</h2><p>RocketMQ是MQ对比的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用RocketMQ时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践RocketMQ，我们可以掌握MQ对比的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="消息持久化"><a href="#消息持久化" class="headerlink" title="消息持久化"></a>消息持久化</h2><p>消息持久化是MQ对比的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用消息持久化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握消息持久化和相关知识，将帮助我们构建更加完善的MQ对比体系。</p>
-]]></content>
-      <categories>
-        <category>网络架构</category>
-      </categories>
-      <tags>
-        <tag>MQ对比</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>深度学习基础</title>
-    <url>/2026/03/04/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-00/</url>
-    <content><![CDATA[<p>神经网络是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍神经网络的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h2><p>激活函数是神经网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用激活函数时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践激活函数，我们可以掌握神经网络的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="反向传播"><a href="#反向传播" class="headerlink" title="反向传播"></a>反向传播</h2><p>反向传播是神经网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用反向传播时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践反向传播，我们可以掌握神经网络的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h2><p>梯度下降是神经网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用梯度下降时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践梯度下降，我们可以掌握神经网络的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><p>损失函数是神经网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用损失函数时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握损失函数和相关知识，将帮助我们构建更加完善的神经网络体系。</p>
-]]></content>
-      <categories>
-        <category>AI智能体</category>
-      </categories>
-      <tags>
-        <tag>神经网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>深度学习基础</title>
-    <url>/2026/03/04/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-01/</url>
-    <content><![CDATA[<p>神经网络是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍神经网络的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h2><p>激活函数是神经网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用激活函数时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践激活函数，我们可以掌握神经网络的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="反向传播"><a href="#反向传播" class="headerlink" title="反向传播"></a>反向传播</h2><p>反向传播是神经网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用反向传播时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践反向传播，我们可以掌握神经网络的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h2><p>梯度下降是神经网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用梯度下降时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践梯度下降，我们可以掌握神经网络的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><p>损失函数是神经网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用损失函数时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握损失函数和相关知识，将帮助我们构建更加完善的神经网络体系。</p>
-]]></content>
-      <categories>
-        <category>AI智能体</category>
-      </categories>
-      <tags>
-        <tag>神经网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>知识管理体系</title>
-    <url>/2026/03/04/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E4%BD%93%E7%B3%BB-36/</url>
-    <content><![CDATA[<p>知识沉淀是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍知识沉淀的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="文档化"><a href="#文档化" class="headerlink" title="文档化"></a>文档化</h2><p>文档化是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用文档化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践文档化，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="技术分享"><a href="#技术分享" class="headerlink" title="技术分享"></a>技术分享</h2><p>技术分享是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用技术分享时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践技术分享，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="经验复盘"><a href="#经验复盘" class="headerlink" title="经验复盘"></a>经验复盘</h2><p>经验复盘是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用经验复盘时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践经验复盘，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="新人培养"><a href="#新人培养" class="headerlink" title="新人培养"></a>新人培养</h2><p>新人培养是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用新人培养时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握新人培养和相关知识，将帮助我们构建更加完善的知识沉淀体系。</p>
-]]></content>
-      <categories>
-        <category>协作模式</category>
-      </categories>
-      <tags>
-        <tag>知识沉淀</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>知识管理体系</title>
-    <url>/2026/03/04/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E4%BD%93%E7%B3%BB-37/</url>
-    <content><![CDATA[<p>知识沉淀是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍知识沉淀的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="文档化"><a href="#文档化" class="headerlink" title="文档化"></a>文档化</h2><p>文档化是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用文档化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践文档化，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="技术分享"><a href="#技术分享" class="headerlink" title="技术分享"></a>技术分享</h2><p>技术分享是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用技术分享时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践技术分享，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="经验复盘"><a href="#经验复盘" class="headerlink" title="经验复盘"></a>经验复盘</h2><p>经验复盘是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用经验复盘时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践经验复盘，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="新人培养"><a href="#新人培养" class="headerlink" title="新人培养"></a>新人培养</h2><p>新人培养是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用新人培养时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握新人培养和相关知识，将帮助我们构建更加完善的知识沉淀体系。</p>
-]]></content>
-      <categories>
-        <category>协作模式</category>
-      </categories>
-      <tags>
-        <tag>知识沉淀</tag>
       </tags>
   </entry>
   <entry>

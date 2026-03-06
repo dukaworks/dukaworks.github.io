@@ -61,6 +61,26 @@
     <author>
       <name>Duka</name>
     </author>
+    <category term="AI智能体" scheme="http://blog.dukaworks.io/categories/AI%E6%99%BA%E8%83%BD%E4%BD%93/"/>
+    <category term="技术教程" scheme="http://blog.dukaworks.io/categories/AI%E6%99%BA%E8%83%BD%E4%BD%93/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"/>
+    <category term="OpenClaw" scheme="http://blog.dukaworks.io/tags/OpenClaw/"/>
+    <category term="AI助手" scheme="http://blog.dukaworks.io/tags/AI%E5%8A%A9%E6%89%8B/"/>
+    <category term="技能" scheme="http://blog.dukaworks.io/tags/%E6%8A%80%E8%83%BD/"/>
+    <category term="搜索增强" scheme="http://blog.dukaworks.io/tags/%E6%90%9C%E7%B4%A2%E5%A2%9E%E5%BC%BA/"/>
+    <category term="自学习" scheme="http://blog.dukaworks.io/tags/%E8%87%AA%E5%AD%A6%E4%B9%A0/"/>
+    <category term="Tavily" scheme="http://blog.dukaworks.io/tags/Tavily/"/>
+    <category term="Multi Search Engine" scheme="http://blog.dukaworks.io/tags/Multi-Search-Engine/"/>
+    <id>http://blog.dukaworks.io/2026/03/05/openclaw-evolution-record/</id>
+    <link href="http://blog.dukaworks.io/2026/03/05/openclaw-evolution-record/"/>
+    <published>2026-03-05T08:50:00.000Z</published>
+    <summary>一篇史诗级的教程，指导你如何通过安装一系列精心挑选的技能，将标准的 OpenClaw 助手升级为拥有极致信息获取与自学习能力的超级智能体。本文是第一部分：奠定基础。</summary>
+    <title>教程：从零打造 OpenClaw 的极致搜索与自学习能力</title>
+    <updated>2026-03-06T03:36:10.649Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
     <category term="学习探索" scheme="http://blog.dukaworks.io/categories/%E5%AD%A6%E4%B9%A0%E6%8E%A2%E7%B4%A2/"/>
     <category term="NAS" scheme="http://blog.dukaworks.io/tags/NAS/"/>
     <category term="Nginx" scheme="http://blog.dukaworks.io/tags/Nginx/"/>
@@ -332,20 +352,5 @@
     </summary>
     <title>容器网络原理</title>
     <updated>2026-03-03T20:08:33.584Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Duka</name>
-    </author>
-    <category term="学习笔记" scheme="http://blog.dukaworks.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <category term="系统调用" scheme="http://blog.dukaworks.io/tags/%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8/"/>
-    <id>http://blog.dukaworks.io/2026/03/04/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B-29/</id>
-    <link href="http://blog.dukaworks.io/2026/03/04/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B-29/"/>
-    <published>2026-03-04T11:35:00.000Z</published>
-    <summary>
-      <![CDATA[<p>系统调用是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍系统调用的核心要点和实践经验。</p>]]>
-    </summary>
-    <title>Linux系统编程</title>
-    <updated>2026-03-03T20:08:33.586Z</updated>
   </entry>
 </feed>
