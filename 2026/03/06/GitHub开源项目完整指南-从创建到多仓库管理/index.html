@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/avatar.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar.png">
+  <link rel="mask-icon" href="/images/avatar.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Consolas:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=monospace:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.dukaworks.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism-one-light","dark":"prism-one-dark"},"copy_button":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"giscus","storage":true,"lazyload":false,"nav":null,"activeClass":"giscus"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="从零开始创建 GitHub 开源项目，包括仓库初始化、分支管理、多仓库协作等完整流程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitHub 开源项目完整指南：从创建到多仓库管理">
+<meta property="og:url" content="http://blog.dukaworks.io/2026/03/06/GitHub%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97-%E4%BB%8E%E5%88%9B%E5%BB%BA%E5%88%B0%E5%A4%9A%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/index.html">
+<meta property="og:site_name" content="Duka的技术博客">
+<meta property="og:description" content="从零开始创建 GitHub 开源项目，包括仓库初始化、分支管理、多仓库协作等完整流程">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-03-06T02:00:00.000Z">
+<meta property="article:modified_time" content="2026-03-09T05:16:53.040Z">
+<meta property="article:author" content="Duka">
+<meta property="article:tag" content="Git">
+<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="开源">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="项目管理">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://blog.dukaworks.io/2026/03/06/GitHub%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97-%E4%BB%8E%E5%88%9B%E5%BB%BA%E5%88%B0%E5%A4%9A%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://blog.dukaworks.io/2026/03/06/GitHub%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97-%E4%BB%8E%E5%88%9B%E5%BB%BA%E5%88%B0%E5%A4%9A%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/","path":"2026/03/06/GitHub开源项目完整指南-从创建到多仓库管理/","title":"GitHub 开源项目完整指南：从创建到多仓库管理"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>GitHub 开源项目完整指南：从创建到多仓库管理 | Duka的技术博客</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HMHJDVVTR"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-2HMHJDVVTR","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js" defer></script>
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+  <script src="/js/third-party/fancybox.js" defer></script>
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<meta name="google-site-verification" content="a36kL8YMowS8mwypAfo6pJ3aW1gsriJw11qHLn2tsxo" />
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Duka的技术博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Duka的技术博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">AI 网络 技术 随笔 热点</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-ai智能体"><a href="/categories/AI%E6%99%BA%E8%83%BD%E4%BD%93/" rel="section"><i class="fa fa-robot fa-fw"></i>AI智能体</a></li><li class="menu-item menu-item-联创项目"><a href="/categories/%E8%81%94%E5%88%9B%E9%A1%B9%E7%9B%AE/" rel="section"><i class="fa fa-project-diagram fa-fw"></i>联创项目</a></li><li class="menu-item menu-item-学习探索"><a href="/categories/%E5%AD%A6%E4%B9%A0%E6%8E%A2%E7%B4%A2/" rel="section"><i class="fa fa-book fa-fw"></i>学习探索</a></li><li class="menu-item menu-item-web开发"><a href="/categories/Web%E5%BC%80%E5%8F%91/" rel="section"><i class="fa fa-code fa-fw"></i>Web开发</a></li><li class="menu-item menu-item-网络架构"><a href="/categories/%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84/" rel="section"><i class="fa fa-network-wired fa-fw"></i>网络架构</a></li><li class="menu-item menu-item-实用工具"><a href="/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/" rel="section"><i class="fa fa-tools fa-fw"></i>实用工具</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GitHub-%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8E%E5%88%9B%E5%BB%BA%E5%88%B0%E5%A4%9A%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86"><span class="nav-number">1.</span> <span class="nav-text">GitHub 开源项目完整指南：从创建到多仓库管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%88%9B%E5%BB%BA-GitHub-%E8%B4%A6%E5%8F%B7"><span class="nav-number">1.1.</span> <span class="nav-text">一、创建 GitHub 账号</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E6%B3%A8%E5%86%8C%E8%B4%A6%E5%8F%B7"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 注册账号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E9%85%8D%E7%BD%AE-SSH-%E5%AF%86%E9%92%A5%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 配置 SSH 密钥（推荐）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93"><span class="nav-number">1.2.</span> <span class="nav-text">二、创建第一个仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E5%9C%A8-GitHub-%E7%BD%91%E9%A1%B5%E5%88%9B%E5%BB%BA"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 在 GitHub 网页创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E6%9C%AC%E5%9C%B0%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 本地初始化项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E8%A7%84%E8%8C%83"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 项目结构规范</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81Git-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="nav-number">1.3.</span> <span class="nav-text">三、Git 基础操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E6%97%A5%E5%B8%B8%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B"><span class="nav-number">1.3.1.</span> <span class="nav-text">3.1 日常开发流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E5%B8%B8%E7%94%A8-Git-%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5"><span class="nav-number">1.3.2.</span> <span class="nav-text">3.2 常用 Git 命令速查</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E7%AD%96%E7%95%A5"><span class="nav-number">1.4.</span> <span class="nav-text">四、分支管理策略</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-Git-Flow-%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="nav-number">1.4.1.</span> <span class="nav-text">4.1 Git Flow 工作流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-GitHub-Flow-%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="nav-number">1.4.2.</span> <span class="nav-text">4.2 GitHub Flow 工作流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-%E5%88%86%E6%94%AF%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83"><span class="nav-number">1.4.3.</span> <span class="nav-text">4.3 分支命名规范</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA-GitHub-%E4%BB%93%E5%BA%93"><span class="nav-number">1.5.</span> <span class="nav-text">五、管理多个 GitHub 仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-%E6%9C%AC%E5%9C%B0%E5%A4%9A%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86"><span class="nav-number">1.5.1.</span> <span class="nav-text">5.1 本地多仓库管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-%E4%BD%BF%E7%94%A8-GitHub-CLI%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="nav-number">1.5.2.</span> <span class="nav-text">5.2 使用 GitHub CLI（推荐）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-%E5%A4%9A%E8%B4%A6%E5%8F%B7%E7%AE%A1%E7%90%86"><span class="nav-number">1.5.3.</span> <span class="nav-text">5.3 多账号管理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81GitHub-%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E6%8A%80%E5%B7%A7"><span class="nav-number">1.6.</span> <span class="nav-text">六、GitHub 项目管理技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-Issue-%E7%AE%A1%E7%90%86"><span class="nav-number">1.6.1.</span> <span class="nav-text">6.1 Issue 管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-Pull-Request-%E8%A7%84%E8%8C%83"><span class="nav-number">1.6.2.</span> <span class="nav-text">6.2 Pull Request 规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-Actions-%E8%87%AA%E5%8A%A8%E5%8C%96"><span class="nav-number">1.6.3.</span> <span class="nav-text">6.3 Actions 自动化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-4-%E4%BF%9D%E6%8A%A4%E5%88%86%E6%94%AF%E8%A7%84%E5%88%99"><span class="nav-number">1.6.4.</span> <span class="nav-text">6.4 保护分支规则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5"><span class="nav-number">1.7.</span> <span class="nav-text">七、开源项目最佳实践</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-README-%E6%A8%A1%E6%9D%BF"><span class="nav-number">1.7.1.</span> <span class="nav-text">7.1 README 模板</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">1.8.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%A1%A3"><span class="nav-number">1.9.</span> <span class="nav-text">文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%A1%E7%8C%AE"><span class="nav-number">1.10.</span> <span class="nav-text">贡献</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%B8%E5%8F%AF%E8%AF%81"><span class="nav-number">1.11.</span> <span class="nav-text">许可证</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Q2-%E5%A6%82%E4%BD%95%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E6%8F%90%E4%BA%A4%EF%BC%9F"><span class="nav-number">1.11.1.</span> <span class="nav-text">Q2: 如何合并多个提交？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Q3-%E5%A6%82%E4%BD%95%E5%90%8C%E6%AD%A5-Fork-%E7%9A%84%E4%BB%93%E5%BA%93%EF%BC%9F"><span class="nav-number">1.11.2.</span> <span class="nav-text">Q3: 如何同步 Fork 的仓库？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Q4-%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E5%90%88%E5%B9%B6%E5%86%B2%E7%AA%81%EF%BC%9F"><span class="nav-number">1.11.3.</span> <span class="nav-text">Q4: 如何处理合并冲突？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E3%80%81%E6%80%BB%E7%BB%93"><span class="nav-number">1.12.</span> <span class="nav-text">九、总结</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Duka"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Duka</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">118</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">198</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/dukaworks" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;dukaworks" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:dukaworks.zy@gmail.com" title="E-Mail → mailto:dukaworks.zy@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/dukatalk" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;dukatalk" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://youtube.com/dukatalk" title="YouTube → https:&#x2F;&#x2F;youtube.com&#x2F;dukatalk" rel="noopener me" target="_blank"><i class="fab fa-youtube fa-fw"></i>YouTube</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/subscribe/" title="RSS → &#x2F;subscribe&#x2F;" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://blog.dukaworks.io/2026/03/06/GitHub%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97-%E4%BB%8E%E5%88%9B%E5%BB%BA%E5%88%B0%E5%A4%9A%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Duka">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Duka的技术博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="GitHub 开源项目完整指南：从创建到多仓库管理 | Duka的技术博客">
+      <meta itemprop="description" content="从零开始创建 GitHub 开源项目，包括仓库初始化、分支管理、多仓库协作等完整流程">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          GitHub 开源项目完整指南：从创建到多仓库管理
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-03-06 10:00:00" itemprop="dateCreated datePublished" datetime="2026-03-06T10:00:00+08:00">2026-03-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-03-09 13:16:53" itemprop="dateModified" datetime="2026-03-09T13:16:53+08:00">2026-03-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">学习探索</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>6 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">从零开始创建 GitHub 开源项目，包括仓库初始化、分支管理、多仓库协作等完整流程</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="GitHub-开源项目完整指南：从创建到多仓库管理"><a href="#GitHub-开源项目完整指南：从创建到多仓库管理" class="headerlink" title="GitHub 开源项目完整指南：从创建到多仓库管理"></a>GitHub 开源项目完整指南：从创建到多仓库管理</h1><p>作为一名开发者，GitHub 是我们日常工作中不可或缺的工具。本文将从零开始，带你完整走完创建和管理 GitHub 开源项目的全流程。</p>
+<span id="more"></span>
+
+<h2 id="一、创建-GitHub-账号"><a href="#一、创建-GitHub-账号" class="headerlink" title="一、创建 GitHub 账号"></a>一、创建 GitHub 账号</h2><h3 id="1-1-注册账号"><a href="#1-1-注册账号" class="headerlink" title="1.1 注册账号"></a>1.1 注册账号</h3><ol>
+<li>访问 <a target="_blank" rel="noopener" href="https://github.com/">github.com</a></li>
+<li>点击 “Sign up” 注册</li>
+<li>填写用户名、邮箱、密码</li>
+<li>验证邮箱</li>
+</ol>
+<h3 id="1-2-配置-SSH-密钥（推荐）"><a href="#1-2-配置-SSH-密钥（推荐）" class="headerlink" title="1.2 配置 SSH 密钥（推荐）"></a>1.2 配置 SSH 密钥（推荐）</h3><p>SSH 密钥让你无需每次输入密码就能推送代码：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 生成 SSH 密钥</span>
+ssh-keygen <span class="token parameter variable">-t</span> ed25519 <span class="token parameter variable">-C</span> <span class="token string">"your_email@example.com"</span>
+
+<span class="token comment"># 复制公钥内容</span>
+<span class="token function">cat</span> ~/.ssh/id_ed25519.pub
+
+<span class="token comment"># 添加到 GitHub：Settings -> SSH and GPG keys -> New SSH key</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="二、创建第一个仓库"><a href="#二、创建第一个仓库" class="headerlink" title="二、创建第一个仓库"></a>二、创建第一个仓库</h2><h3 id="2-1-在-GitHub-网页创建"><a href="#2-1-在-GitHub-网页创建" class="headerlink" title="2.1 在 GitHub 网页创建"></a>2.1 在 GitHub 网页创建</h3><ol>
+<li>点击右上角 “+” -&gt; “New repository”</li>
+<li>填写仓库信息：<ul>
+<li><strong>Repository name</strong>: 项目名（如 <code>my-awesome-project</code>）</li>
+<li><strong>Description</strong>: 项目描述</li>
+<li><strong>Public&#x2F;Private</strong>: 公开或私有</li>
+<li><strong>Initialize with README</strong>: 勾选，自动创建 README</li>
+<li><strong>Add .gitignore</strong>: 选择项目类型（如 Node、Python）</li>
+<li><strong>Choose a license</strong>: 选择开源协议（如 MIT）</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-2-本地初始化项目"><a href="#2-2-本地初始化项目" class="headerlink" title="2.2 本地初始化项目"></a>2.2 本地初始化项目</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 克隆仓库到本地</span>
+<span class="token function">git</span> clone git@github.com:yourname/my-awesome-project.git
+<span class="token builtin class-name">cd</span> my-awesome-project
+
+<span class="token comment"># 或者本地初始化后关联远程</span>
+<span class="token function">git</span> init
+<span class="token function">git</span> remote <span class="token function">add</span> origin git@github.com:yourname/my-awesome-project.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-3-项目结构规范"><a href="#2-3-项目结构规范" class="headerlink" title="2.3 项目结构规范"></a>2.3 项目结构规范</h3><p>一个规范的开源项目结构：</p>
+<pre class="line-numbers language-none"><code class="language-none">my-awesome-project&#x2F;
+├── README.md              # 项目说明
+├── LICENSE                # 开源协议
+├── .gitignore            # Git 忽略文件
+├── CONTRIBUTING.md       # 贡献指南
+├── CHANGELOG.md          # 更新日志
+├── docs&#x2F;                 # 文档目录
+├── src&#x2F;                  # 源代码
+├── tests&#x2F;                # 测试代码
+└── examples&#x2F;             # 示例代码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="三、Git-基础操作"><a href="#三、Git-基础操作" class="headerlink" title="三、Git 基础操作"></a>三、Git 基础操作</h2><h3 id="3-1-日常开发流程"><a href="#3-1-日常开发流程" class="headerlink" title="3.1 日常开发流程"></a>3.1 日常开发流程</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 拉取最新代码</span>
+<span class="token function">git</span> pull origin main
+
+<span class="token comment"># 2. 创建并切换到新分支</span>
+<span class="token function">git</span> checkout <span class="token parameter variable">-b</span> feature/new-feature
+
+<span class="token comment"># 3. 修改代码...</span>
+
+<span class="token comment"># 4. 查看修改状态</span>
+<span class="token function">git</span> status
+
+<span class="token comment"># 5. 添加修改到暂存区</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+
+<span class="token comment"># 6. 提交修改</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"feat: 添加新功能"</span>
+
+<span class="token comment"># 7. 推送到远程</span>
+<span class="token function">git</span> push origin feature/new-feature
+
+<span class="token comment"># 8. 在 GitHub 上创建 Pull Request</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-2-常用-Git-命令速查"><a href="#3-2-常用-Git-命令速查" class="headerlink" title="3.2 常用 Git 命令速查"></a>3.2 常用 Git 命令速查</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>git status</code></td>
+<td>查看当前状态</td>
+</tr>
+<tr>
+<td><code>git add .</code></td>
+<td>添加所有修改</td>
+</tr>
+<tr>
+<td><code>git commit -m &quot;msg&quot;</code></td>
+<td>提交修改</td>
+</tr>
+<tr>
+<td><code>git push origin branch</code></td>
+<td>推送到远程</td>
+</tr>
+<tr>
+<td><code>git pull origin branch</code></td>
+<td>拉取远程代码</td>
+</tr>
+<tr>
+<td><code>git branch</code></td>
+<td>查看分支列表</td>
+</tr>
+<tr>
+<td><code>git checkout -b name</code></td>
+<td>创建并切换分支</td>
+</tr>
+<tr>
+<td><code>git merge branch</code></td>
+<td>合并分支</td>
+</tr>
+<tr>
+<td><code>git log --oneline</code></td>
+<td>查看提交历史</td>
+</tr>
+</tbody></table>
+<h2 id="四、分支管理策略"><a href="#四、分支管理策略" class="headerlink" title="四、分支管理策略"></a>四、分支管理策略</h2><h3 id="4-1-Git-Flow-工作流"><a href="#4-1-Git-Flow-工作流" class="headerlink" title="4.1 Git Flow 工作流"></a>4.1 Git Flow 工作流</h3><p>适合大型项目：</p>
+<pre class="line-numbers language-none"><code class="language-none">main        生产分支，稳定版本
+├── develop 开发分支，日常开发
+├── feature&#x2F;* 功能分支，新功能开发
+├── release&#x2F;* 发布分支，版本发布
+└── hotfix&#x2F;*  热修复分支，紧急修复<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-2-GitHub-Flow-工作流"><a href="#4-2-GitHub-Flow-工作流" class="headerlink" title="4.2 GitHub Flow 工作流"></a>4.2 GitHub Flow 工作流</h3><p>适合小型项目：</p>
+<pre class="line-numbers language-none"><code class="language-none">main
+├── feature-branch-1  功能分支1
+├── feature-branch-2  功能分支2
+└── bugfix-branch     修复分支<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-3-分支命名规范"><a href="#4-3-分支命名规范" class="headerlink" title="4.3 分支命名规范"></a>4.3 分支命名规范</h3><pre class="line-numbers language-none"><code class="language-none">feature&#x2F;login-page      # 新功能
+bugfix&#x2F;fix-memory-leak  # Bug 修复
+hotfix&#x2F;security-patch   # 紧急修复
+docs&#x2F;update-readme      # 文档更新
+refactor&#x2F;optimize-db    # 代码重构<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="五、管理多个-GitHub-仓库"><a href="#五、管理多个-GitHub-仓库" class="headerlink" title="五、管理多个 GitHub 仓库"></a>五、管理多个 GitHub 仓库</h2><h3 id="5-1-本地多仓库管理"><a href="#5-1-本地多仓库管理" class="headerlink" title="5.1 本地多仓库管理"></a>5.1 本地多仓库管理</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看所有远程仓库</span>
+<span class="token function">git</span> remote <span class="token parameter variable">-v</span>
+
+<span class="token comment"># 添加多个远程仓库</span>
+<span class="token function">git</span> remote <span class="token function">add</span> upstream https://github.com/original/repo.git
+<span class="token function">git</span> remote <span class="token function">add</span> fork https://github.com/yourname/repo.git
+
+<span class="token comment"># 从上游仓库拉取更新</span>
+<span class="token function">git</span> pull upstream main
+
+<span class="token comment"># 推送到自己的仓库</span>
+<span class="token function">git</span> push fork main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="5-2-使用-GitHub-CLI（推荐）"><a href="#5-2-使用-GitHub-CLI（推荐）" class="headerlink" title="5.2 使用 GitHub CLI（推荐）"></a>5.2 使用 GitHub CLI（推荐）</h3><p>GitHub 官方命令行工具：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 安装</span>
+<span class="token comment"># macOS: brew install gh</span>
+<span class="token comment"># Windows: winget install --id GitHub.cli</span>
+
+<span class="token comment"># 登录</span>
+<span class="token function">git</span> auth login
+
+<span class="token comment"># 克隆仓库</span>
+gh repo clone owner/repo
+
+<span class="token comment"># 创建 PR</span>
+gh <span class="token function">pr</span> create <span class="token parameter variable">--title</span> <span class="token string">"标题"</span> <span class="token parameter variable">--body</span> <span class="token string">"描述"</span>
+
+<span class="token comment"># 查看 Issues</span>
+gh issue list
+
+<span class="token comment"># Fork 仓库</span>
+gh repo fork owner/repo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="5-3-多账号管理"><a href="#5-3-多账号管理" class="headerlink" title="5.3 多账号管理"></a>5.3 多账号管理</h3><p>如果你需要管理多个 GitHub 账号（如工作号和个人号）：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 生成两个 SSH 密钥</span>
+ssh-keygen <span class="token parameter variable">-t</span> ed25519 <span class="token parameter variable">-C</span> <span class="token string">"personal@email.com"</span> <span class="token parameter variable">-f</span> ~/.ssh/id_ed25519_personal
+ssh-keygen <span class="token parameter variable">-t</span> ed25519 <span class="token parameter variable">-C</span> <span class="token string">"work@email.com"</span> <span class="token parameter variable">-f</span> ~/.ssh/id_ed25519_work
+
+<span class="token comment"># 2. 配置 SSH config</span>
+<span class="token function">cat</span> <span class="token operator">>></span> ~/.ssh/config <span class="token operator">&lt;&lt;</span> <span class="token string">EOF
+# 个人账号
+Host github-personal
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519_personal
+
+# 工作账号
+Host github-work
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519_work
+EOF</span>
+
+<span class="token comment"># 3. 使用不同的 Host 克隆</span>
+<span class="token comment"># 个人项目</span>
+<span class="token function">git</span> clone git@github-personal:personal-name/repo.git
+
+<span class="token comment"># 工作项目</span>
+<span class="token function">git</span> clone git@github-work:work-name/repo.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="六、GitHub-项目管理技巧"><a href="#六、GitHub-项目管理技巧" class="headerlink" title="六、GitHub 项目管理技巧"></a>六、GitHub 项目管理技巧</h2><h3 id="6-1-Issue-管理"><a href="#6-1-Issue-管理" class="headerlink" title="6.1 Issue 管理"></a>6.1 Issue 管理</h3><ul>
+<li>使用 Labels 分类（bug、feature、question）</li>
+<li>使用 Milestones 规划版本</li>
+<li>使用 Projects 看板管理进度</li>
+</ul>
+<h3 id="6-2-Pull-Request-规范"><a href="#6-2-Pull-Request-规范" class="headerlink" title="6.2 Pull Request 规范"></a>6.2 Pull Request 规范</h3><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">##</span> 描述</span>
+简要描述这个 PR 做了什么
+
+<span class="token title important"><span class="token punctuation">##</span> 改动类型</span>
+<span class="token list punctuation">-</span> [ ] Bug 修复
+<span class="token list punctuation">-</span> [ ] 新功能
+<span class="token list punctuation">-</span> [ ] 文档更新
+<span class="token list punctuation">-</span> [ ] 代码重构
+
+<span class="token title important"><span class="token punctuation">##</span> 测试</span>
+<span class="token list punctuation">-</span> [ ] 本地测试通过
+<span class="token list punctuation">-</span> [ ] 添加了单元测试
+
+<span class="token title important"><span class="token punctuation">##</span> 截图（如有 UI 改动）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="6-3-Actions-自动化"><a href="#6-3-Actions-自动化" class="headerlink" title="6.3 Actions 自动化"></a>6.3 Actions 自动化</h3><p>创建 <code>.github/workflows/ci.yml</code>：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> CI
+
+<span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>push<span class="token punctuation">,</span> pull_request<span class="token punctuation">]</span>
+
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">test</span><span class="token punctuation">:</span>
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v3
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Setup Node.js
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>node@v3
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">node-version</span><span class="token punctuation">:</span> <span class="token string">'18'</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">run</span><span class="token punctuation">:</span> npm install
+      <span class="token punctuation">-</span> <span class="token key atrule">run</span><span class="token punctuation">:</span> npm test<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="6-4-保护分支规则"><a href="#6-4-保护分支规则" class="headerlink" title="6.4 保护分支规则"></a>6.4 保护分支规则</h3><p>在仓库 Settings -&gt; Branches 中设置：</p>
+<ul>
+<li>要求 PR 才能合并到 main</li>
+<li>要求代码审查（Code Review）</li>
+<li>要求 CI 通过</li>
+<li>禁止强制推送</li>
+</ul>
+<h2 id="七、开源项目最佳实践"><a href="#七、开源项目最佳实践" class="headerlink" title="七、开源项目最佳实践"></a>七、开源项目最佳实践</h2><h3 id="7-1-README-模板"><a href="#7-1-README-模板" class="headerlink" title="7.1 README 模板"></a>7.1 README 模板</h3><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 项目名</span>
+
+<span class="token url">[<span class="token content">![License</span>](<span class="token url">https://img.shields.io/badge/license-MIT-blue.svg</span>)</span>](LICENSE)
+
+<span class="token title important"><span class="token punctuation">##</span> 简介</span>
+
+一句话描述项目是什么。
+
+<span class="token title important"><span class="token punctuation">##</span> 功能特性</span>
+
+<span class="token list punctuation">-</span> ✅ 功能1
+<span class="token list punctuation">-</span> ✅ 功能2
+<span class="token list punctuation">-</span> ✅ 功能3
+
+<span class="token title important"><span class="token punctuation">##</span> 安装</span>
+
+```bash
+npm install my-package<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> myLib <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'my-package'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+myLib<span class="token punctuation">.</span><span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><p>详细文档请查看 <a href="./docs">docs</a> 目录。</p>
+<h2 id="贡献"><a href="#贡献" class="headerlink" title="贡献"></a>贡献</h2><p>欢迎提交 Issue 和 Pull Request！</p>
+<h2 id="许可证"><a href="#许可证" class="headerlink" title="许可证"></a>许可证</h2><p><a href="LICENSE">MIT</a></p>
+<pre class="line-numbers language-none"><code class="language-none">
+### 7.2 选择合适的开源协议
+
+| 协议 | 特点 | 适用场景 |
+|------|------|----------|
+| MIT | 最宽松，保留版权声明即可 | 大多数项目 |
+| Apache-2.0 | 允许专利授权 | 企业项目 |
+| GPL-3.0 | 传染性，修改必须开源 | 开源工具 |
+| BSD | 简单宽松 | 学术项目 |
+
+### 7.3 版本号规范（SemVer）
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>主版本号.次版本号.修订号<br>1.0.0</p>
+<ul>
+<li>主版本号：不兼容的 API 修改</li>
+<li>次版本号：向下兼容的功能新增</li>
+<li>修订号：向下兼容的问题修复</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">
+## 八、常见问题
+
+### Q1: 如何撤销错误的提交？
+
+&#96;&#96;&#96;bash
+# 撤销最后一次提交，保留修改
+git reset --soft HEAD~1
+
+# 撤销最后一次提交，丢弃修改
+git reset --hard HEAD~1
+
+# 修改最后一次提交的 message
+git commit --amend -m &quot;新的提交信息&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Q2-如何合并多个提交？"><a href="#Q2-如何合并多个提交？" class="headerlink" title="Q2: 如何合并多个提交？"></a>Q2: 如何合并多个提交？</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 合并最近 3 个提交</span>
+<span class="token function">git</span> rebase <span class="token parameter variable">-i</span> HEAD~3
+<span class="token comment"># 在编辑器中将 pick 改为 squash</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Q3-如何同步-Fork-的仓库？"><a href="#Q3-如何同步-Fork-的仓库？" class="headerlink" title="Q3: 如何同步 Fork 的仓库？"></a>Q3: 如何同步 Fork 的仓库？</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 添加上游仓库</span>
+<span class="token function">git</span> remote <span class="token function">add</span> upstream https://github.com/original/repo.git
+
+<span class="token comment"># 拉取上游更新</span>
+<span class="token function">git</span> fetch upstream
+
+<span class="token comment"># 合并到本地分支</span>
+<span class="token function">git</span> checkout main
+<span class="token function">git</span> merge upstream/main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Q4-如何处理合并冲突？"><a href="#Q4-如何处理合并冲突？" class="headerlink" title="Q4: 如何处理合并冲突？"></a>Q4: 如何处理合并冲突？</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 拉取代码时出现冲突</span>
+<span class="token function">git</span> pull origin main
+
+<span class="token comment"># 2. 编辑冲突文件，解决冲突</span>
+<span class="token comment"># 冲突标记：&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD  =======  >>>>>>> branch</span>
+
+<span class="token comment"># 3. 添加解决后的文件</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+
+<span class="token comment"># 4. 完成合并</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"merge: 解决冲突"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="九、总结"><a href="#九、总结" class="headerlink" title="九、总结"></a>九、总结</h2><p>GitHub 不仅是代码托管平台，更是开发者协作的重要工具。掌握这些技能：</p>
+<ol>
+<li>✅ 熟练 Git 基本操作</li>
+<li>✅ 理解分支管理策略</li>
+<li>✅ 规范提交信息和 PR</li>
+<li>✅ 善用 GitHub 项目管理功能</li>
+<li>✅ 维护良好的开源项目文档</li>
+</ol>
+<p>希望这篇指南能帮助你更好地使用 GitHub！</p>
+<hr>
+<p><strong>参考资源</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.github.com/">GitHub Docs</a></li>
+<li><a target="_blank" rel="noopener" href="https://git-scm.com/doc">Git 官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v2">Pro Git 电子书</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/GitHub/" rel="tag"># GitHub</a>
+              <a href="/tags/Git/" rel="tag"># Git</a>
+              <a href="/tags/%E5%BC%80%E6%BA%90/" rel="tag"># 开源</a>
+              <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" rel="tag"># 项目管理</a>
+              <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"># 教程</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/03/06/%E5%AE%8C%E7%BE%8E%E7%9A%84%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C/" rel="prev" title="完美的家庭网络">
+                  <i class="fa fa-angle-left"></i> 完美的家庭网络
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2026/03/06/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F-Frp%E7%9A%84Docker%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/" rel="next" title="内网穿透：Frp-内网穿透的不二选择（Docker部署方式）">
+                  内网穿透：Frp-内网穿透的不二选择（Docker部署方式） <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments giscus-container">
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Duka</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">64k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3:53</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="giscus" type="application/json">{"enable":true,"repo":"dukaworks/dukaworks.github.io","repo_id":"R_kgDORcsYzQ","category":"General","category_id":"DIC_kwDORcsYzc4C3pTx","mapping":"pathname","strict":0,"reactions_enabled":1,"emit_metadata":0,"theme":"preferred_color_scheme","lang":"zh-CN","crossorigin":"anonymous","input_position":"bottom","loading":"lazy"}</script>
+
+<script>
+document.addEventListener('page:loaded', () => {
+  if (!CONFIG.page.comments) return;
+
+  NexT.utils.loadComments('.giscus-container')
+    .then(() => NexT.utils.getScript('https://giscus.app/client.js', {
+      attributes: {
+        async                   : true,
+        crossOrigin             : 'anonymous',
+        'data-repo'             : CONFIG.giscus.repo,
+        'data-repo-id'          : CONFIG.giscus.repo_id,
+        'data-category'         : CONFIG.giscus.category,
+        'data-category-id'      : CONFIG.giscus.category_id,
+        'data-mapping'          : CONFIG.giscus.mapping,
+        'data-strict'           : CONFIG.giscus.strict,
+        'data-reactions-enabled': CONFIG.giscus.reactions_enabled,
+        'data-emit-metadata'    : CONFIG.giscus.emit_metadata,
+        'data-theme'            : CONFIG.giscus.theme,
+        'data-lang'             : CONFIG.giscus.lang,
+        'data-input-position'   : CONFIG.giscus.input_position,
+        'data-loading'          : CONFIG.giscus.loading
+      },
+      parentNode: document.querySelector('.giscus-container')
+    }));
+});
+</script>
+
+</body>
+</html>

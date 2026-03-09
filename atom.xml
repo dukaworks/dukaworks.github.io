@@ -59,6 +59,24 @@
     <author>
       <name>Duka</name>
     </author>
+    <category term="Web开发" scheme="http://blog.dukaworks.io/categories/Web%E5%BC%80%E5%8F%91/"/>
+    <category term="Hexo" scheme="http://blog.dukaworks.io/tags/Hexo/"/>
+    <category term="教程" scheme="http://blog.dukaworks.io/tags/%E6%95%99%E7%A8%8B/"/>
+    <category term="博客" scheme="http://blog.dukaworks.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="Next" scheme="http://blog.dukaworks.io/tags/Next/"/>
+    <category term="静态网站" scheme="http://blog.dukaworks.io/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/"/>
+    <category term="多人协作" scheme="http://blog.dukaworks.io/tags/%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C/"/>
+    <id>http://blog.dukaworks.io/2026/03/06/Hexo%E5%8D%9A%E5%AE%A2%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97-%E6%90%AD%E5%BB%BA%E5%88%B0%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C/</id>
+    <link href="http://blog.dukaworks.io/2026/03/06/Hexo%E5%8D%9A%E5%AE%A2%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97-%E6%90%AD%E5%BB%BA%E5%88%B0%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C/"/>
+    <published>2026-03-06T03:00:00.000Z</published>
+    <summary>从零开始搭建 Hexo 博客，包括主题选择、日常维护、多人协作写作等完整流程</summary>
+    <title>Hexo 博客完整指南：从搭建到多人协作</title>
+    <updated>2026-03-09T05:47:07.767Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
     <category term="内网穿透" scheme="http://blog.dukaworks.io/categories/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
     <category term="学习探索" scheme="http://blog.dukaworks.io/categories/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/%E5%AD%A6%E4%B9%A0%E6%8E%A2%E7%B4%A2/"/>
     <category term="内网穿透" scheme="http://blog.dukaworks.io/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
@@ -83,8 +101,25 @@
       <name>Duka</name>
     </author>
     <category term="学习探索" scheme="http://blog.dukaworks.io/categories/%E5%AD%A6%E4%B9%A0%E6%8E%A2%E7%B4%A2/"/>
-    <category term="网络" scheme="http://blog.dukaworks.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    <category term="GitHub" scheme="http://blog.dukaworks.io/tags/GitHub/"/>
+    <category term="Git" scheme="http://blog.dukaworks.io/tags/Git/"/>
+    <category term="开源" scheme="http://blog.dukaworks.io/tags/%E5%BC%80%E6%BA%90/"/>
+    <category term="项目管理" scheme="http://blog.dukaworks.io/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
     <category term="教程" scheme="http://blog.dukaworks.io/tags/%E6%95%99%E7%A8%8B/"/>
+    <id>http://blog.dukaworks.io/2026/03/06/GitHub%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97-%E4%BB%8E%E5%88%9B%E5%BB%BA%E5%88%B0%E5%A4%9A%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/</id>
+    <link href="http://blog.dukaworks.io/2026/03/06/GitHub%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97-%E4%BB%8E%E5%88%9B%E5%BB%BA%E5%88%B0%E5%A4%9A%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/"/>
+    <published>2026-03-06T02:00:00.000Z</published>
+    <summary>从零开始创建 GitHub 开源项目，包括仓库初始化、分支管理、多仓库协作等完整流程</summary>
+    <title>GitHub 开源项目完整指南：从创建到多仓库管理</title>
+    <updated>2026-03-09T05:16:53.040Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="学习探索" scheme="http://blog.dukaworks.io/categories/%E5%AD%A6%E4%B9%A0%E6%8E%A2%E7%B4%A2/"/>
+    <category term="教程" scheme="http://blog.dukaworks.io/tags/%E6%95%99%E7%A8%8B/"/>
+    <category term="网络" scheme="http://blog.dukaworks.io/tags/%E7%BD%91%E7%BB%9C/"/>
     <category term="家庭网络" scheme="http://blog.dukaworks.io/tags/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C/"/>
     <category term="家庭" scheme="http://blog.dukaworks.io/tags/%E5%AE%B6%E5%BA%AD/"/>
     <category term="AIO" scheme="http://blog.dukaworks.io/tags/AIO/"/>
@@ -125,11 +160,11 @@
       <name>Duka</name>
     </author>
     <category term="学习探索" scheme="http://blog.dukaworks.io/categories/%E5%AD%A6%E4%B9%A0%E6%8E%A2%E7%B4%A2/"/>
+    <category term="教程" scheme="http://blog.dukaworks.io/tags/%E6%95%99%E7%A8%8B/"/>
     <category term="NAS" scheme="http://blog.dukaworks.io/tags/NAS/"/>
     <category term="Nginx" scheme="http://blog.dukaworks.io/tags/Nginx/"/>
     <category term="Proxy" scheme="http://blog.dukaworks.io/tags/Proxy/"/>
     <category term="Manager" scheme="http://blog.dukaworks.io/tags/Manager/"/>
-    <category term="教程" scheme="http://blog.dukaworks.io/tags/%E6%95%99%E7%A8%8B/"/>
     <id>http://blog.dukaworks.io/2026/03/05/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B/</id>
     <link href="http://blog.dukaworks.io/2026/03/05/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B/"/>
     <published>2026-03-05T08:16:41.000Z</published>
@@ -335,35 +370,5 @@
     </summary>
     <title>算法思维训练</title>
     <updated>2026-03-03T20:08:33.586Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Duka</name>
-    </author>
-    <category term="Web开发" scheme="http://blog.dukaworks.io/categories/Web%E5%BC%80%E5%8F%91/"/>
-    <category term="视觉效果" scheme="http://blog.dukaworks.io/tags/%E8%A7%86%E8%A7%89%E6%95%88%E6%9E%9C/"/>
-    <id>http://blog.dukaworks.io/2026/03/04/css%E5%8A%A8%E7%94%BB%E6%8A%80%E5%B7%A7-14/</id>
-    <link href="http://blog.dukaworks.io/2026/03/04/css%E5%8A%A8%E7%94%BB%E6%8A%80%E5%B7%A7-14/"/>
-    <published>2026-03-04T12:20:00.000Z</published>
-    <summary>
-      <![CDATA[<p>视觉效果是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍视觉效果的核心要点和实践经验。</p>]]>
-    </summary>
-    <title>CSS动画技巧</title>
-    <updated>2026-03-03T20:08:33.584Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Duka</name>
-    </author>
-    <category term="AI智能体" scheme="http://blog.dukaworks.io/categories/AI%E6%99%BA%E8%83%BD%E4%BD%93/"/>
-    <category term="检索增强生成" scheme="http://blog.dukaworks.io/tags/%E6%A3%80%E7%B4%A2%E5%A2%9E%E5%BC%BA%E7%94%9F%E6%88%90/"/>
-    <id>http://blog.dukaworks.io/2026/03/04/rag%E6%8A%80%E6%9C%AF%E8%BF%9B%E9%98%B6-05/</id>
-    <link href="http://blog.dukaworks.io/2026/03/04/rag%E6%8A%80%E6%9C%AF%E8%BF%9B%E9%98%B6-05/"/>
-    <published>2026-03-04T11:58:00.000Z</published>
-    <summary>
-      <![CDATA[<p>检索增强生成是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍检索增强生成的核心要点和实践经验。</p>]]>
-    </summary>
-    <title>RAG技术进阶</title>
-    <updated>2026-03-03T20:08:33.583Z</updated>
   </entry>
 </feed>

@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/avatar.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar.png">
+  <link rel="mask-icon" href="/images/avatar.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Consolas:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=monospace:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.dukaworks.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism-one-light","dark":"prism-one-dark"},"copy_button":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"giscus","storage":true,"lazyload":false,"nav":null,"activeClass":"giscus"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="从零开始搭建 Hexo 博客，包括主题选择、日常维护、多人协作写作等完整流程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo 博客完整指南：从搭建到多人协作">
+<meta property="og:url" content="http://blog.dukaworks.io/2026/03/06/Hexo%E5%8D%9A%E5%AE%A2%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97-%E6%90%AD%E5%BB%BA%E5%88%B0%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C/index.html">
+<meta property="og:site_name" content="Duka的技术博客">
+<meta property="og:description" content="从零开始搭建 Hexo 博客，包括主题选择、日常维护、多人协作写作等完整流程">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-03-06T03:00:00.000Z">
+<meta property="article:modified_time" content="2026-03-09T05:47:07.767Z">
+<meta property="article:author" content="Duka">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Next">
+<meta property="article:tag" content="博客">
+<meta property="article:tag" content="多人协作">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="静态网站">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://blog.dukaworks.io/2026/03/06/Hexo%E5%8D%9A%E5%AE%A2%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97-%E6%90%AD%E5%BB%BA%E5%88%B0%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://blog.dukaworks.io/2026/03/06/Hexo%E5%8D%9A%E5%AE%A2%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97-%E6%90%AD%E5%BB%BA%E5%88%B0%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C/","path":"2026/03/06/Hexo博客完整指南-搭建到多人协作/","title":"Hexo 博客完整指南：从搭建到多人协作"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Hexo 博客完整指南：从搭建到多人协作 | Duka的技术博客</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HMHJDVVTR"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-2HMHJDVVTR","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js" defer></script>
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+  <script src="/js/third-party/fancybox.js" defer></script>
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<meta name="google-site-verification" content="a36kL8YMowS8mwypAfo6pJ3aW1gsriJw11qHLn2tsxo" />
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Duka的技术博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Duka的技术博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">AI 网络 技术 随笔 热点</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-ai智能体"><a href="/categories/AI%E6%99%BA%E8%83%BD%E4%BD%93/" rel="section"><i class="fa fa-robot fa-fw"></i>AI智能体</a></li><li class="menu-item menu-item-联创项目"><a href="/categories/%E8%81%94%E5%88%9B%E9%A1%B9%E7%9B%AE/" rel="section"><i class="fa fa-project-diagram fa-fw"></i>联创项目</a></li><li class="menu-item menu-item-学习探索"><a href="/categories/%E5%AD%A6%E4%B9%A0%E6%8E%A2%E7%B4%A2/" rel="section"><i class="fa fa-book fa-fw"></i>学习探索</a></li><li class="menu-item menu-item-web开发"><a href="/categories/Web%E5%BC%80%E5%8F%91/" rel="section"><i class="fa fa-code fa-fw"></i>Web开发</a></li><li class="menu-item menu-item-网络架构"><a href="/categories/%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84/" rel="section"><i class="fa fa-network-wired fa-fw"></i>网络架构</a></li><li class="menu-item menu-item-实用工具"><a href="/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/" rel="section"><i class="fa fa-tools fa-fw"></i>实用工具</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-%E5%8D%9A%E5%AE%A2%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8E%E6%90%AD%E5%BB%BA%E5%88%B0%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">Hexo 博客完整指南：从搭建到多人协作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-number">1.1.</span> <span class="nav-text">一、环境准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E5%AE%89%E8%A3%85-Node-js"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 安装 Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E5%AE%89%E8%A3%85-Git"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 安装 Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E5%AE%89%E8%A3%85-Hexo"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.3 安装 Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE"><span class="nav-number">1.2.</span> <span class="nav-text">二、创建博客项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 初始化项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E8%AF%B4%E6%98%8E"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 项目结构说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 基础配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%B8%BB%E9%A2%98%E9%80%89%E6%8B%A9%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="nav-number">1.3.</span> <span class="nav-text">三、主题选择与配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E7%83%AD%E9%97%A8%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90"><span class="nav-number">1.3.1.</span> <span class="nav-text">3.1 热门主题推荐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E5%AE%89%E8%A3%85-NexT-%E4%B8%BB%E9%A2%98%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="nav-number">1.3.2.</span> <span class="nav-text">3.2 安装 NexT 主题（推荐）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-NexT-%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.3 NexT 主题配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%97%A5%E5%B8%B8%E5%86%99%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="nav-number">1.4.</span> <span class="nav-text">四、日常写作流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E5%88%9B%E5%BB%BA%E6%96%87%E7%AB%A0"><span class="nav-number">1.4.1.</span> <span class="nav-text">4.1 创建文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E6%96%87%E7%AB%A0%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.4.2.</span> <span class="nav-text">4.2 文章格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">1.4.3.</span> <span class="nav-text">4.3 常用命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA"><span class="nav-number">1.5.</span> <span class="nav-text">五、功能增强</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%EF%BC%88Giscus%EF%BC%89"><span class="nav-number">1.5.1.</span> <span class="nav-text">5.1 评论系统（Giscus）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD"><span class="nav-number">1.5.2.</span> <span class="nav-text">5.2 搜索功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-RSS-%E8%AE%A2%E9%98%85"><span class="nav-number">1.5.3.</span> <span class="nav-text">5.3 RSS 订阅</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-%E7%AB%99%E7%82%B9%E5%9C%B0%E5%9B%BE"><span class="nav-number">1.5.4.</span> <span class="nav-text">5.4 站点地图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C%E5%86%99%E4%BD%9C"><span class="nav-number">1.6.</span> <span class="nav-text">六、多人协作写作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-%E5%8D%8F%E4%BD%9C%E6%96%B9%E6%A1%88"><span class="nav-number">1.6.1.</span> <span class="nav-text">6.1 协作方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.6.2.</span> <span class="nav-text">6.2 仓库设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BA%E6%BA%90%E7%A0%81%E4%BB%93%E5%BA%93%EF%BC%88hexo-source%EF%BC%89"><span class="nav-number">1.6.2.1.</span> <span class="nav-text">1. 创建源码仓库（hexo-source）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%88%9B%E5%BB%BA%E9%83%A8%E7%BD%B2%E4%BB%93%E5%BA%93%EF%BC%88yourname-github-io%EF%BC%89"><span class="nav-number">1.6.2.2.</span> <span class="nav-text">2. 创建部署仓库（yourname.github.io）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E9%85%8D%E7%BD%AE%E9%83%A8%E7%BD%B2%E5%AF%86%E9%92%A5"><span class="nav-number">1.6.2.3.</span> <span class="nav-text">3. 配置部署密钥</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E6%B7%BB%E5%8A%A0%E5%8D%8F%E4%BD%9C%E8%80%85"><span class="nav-number">1.6.2.4.</span> <span class="nav-text">4. 添加协作者</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-%E5%8D%8F%E4%BD%9C%E8%80%85%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="nav-number">1.6.3.</span> <span class="nav-text">6.3 协作者工作流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-4-GitHub-Actions-%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%EF%BC%88%E5%8F%8C%E4%BB%93%E5%BA%93%EF%BC%89"><span class="nav-number">1.6.4.</span> <span class="nav-text">6.4 GitHub Actions 自动部署（双仓库）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-5-%E5%86%99%E4%BD%9C%E8%A7%84%E8%8C%83"><span class="nav-number">1.6.5.</span> <span class="nav-text">6.5 写作规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-6-%E5%9B%BE%E7%89%87%E7%AE%A1%E7%90%86%E6%96%B9%E6%A1%88"><span class="nav-number">1.6.6.</span> <span class="nav-text">6.6 图片管理方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B9%E6%A1%88-1%EF%BC%9A%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%EF%BC%88%E9%80%82%E5%90%88%E5%B0%91%E9%87%8F%E5%9B%BE%E7%89%87%EF%BC%89"><span class="nav-number">1.6.6.1.</span> <span class="nav-text">方案 1：本地图片（适合少量图片）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B9%E6%A1%88-2%EF%BC%9AGitHub-jsDelivr%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="nav-number">1.6.6.2.</span> <span class="nav-text">方案 2：GitHub + jsDelivr（推荐）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B9%E6%A1%88-3%EF%BC%9A%E5%95%86%E4%B8%9A%E5%9B%BE%E5%BA%8A"><span class="nav-number">1.6.6.3.</span> <span class="nav-text">方案 3：商业图床</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9%E5%BB%BA%E8%AE%AE"><span class="nav-number">1.6.6.4.</span> <span class="nav-text">图片压缩建议</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-7-%E5%86%B2%E7%AA%81%E5%A4%84%E7%90%86"><span class="nav-number">1.6.7.</span> <span class="nav-text">6.7 冲突处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E5%A4%9A%E8%AE%BE%E5%A4%87%E5%8D%8F%E4%BD%9C%E5%86%99%E4%BD%9C"><span class="nav-number">1.7.</span> <span class="nav-text">七、多设备协作写作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-%E6%96%B9%E6%A1%88%E5%AF%B9%E6%AF%94"><span class="nav-number">1.7.1.</span> <span class="nav-text">7.1 方案对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-Git-%E5%A4%9A%E8%AE%BE%E5%A4%87%E6%96%B9%E6%A1%88%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="nav-number">1.7.2.</span> <span class="nav-text">7.2 Git 多设备方案（推荐）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%BE%E5%A4%87A%EF%BC%88%E5%85%AC%E5%8F%B8-PC%EF%BC%89%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.7.2.1.</span> <span class="nav-text">设备A（公司 PC）初始化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%BE%E5%A4%87B%EF%BC%88%E5%AE%B6%E9%87%8C%E7%AC%94%E8%AE%B0%E6%9C%AC%EF%BC%89%E5%90%8C%E6%AD%A5"><span class="nav-number">1.7.2.2.</span> <span class="nav-text">设备B（家里笔记本）同步</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%9E%E5%88%B0%E8%AE%BE%E5%A4%87A%EF%BC%88%E7%AC%AC%E4%BA%8C%E5%A4%A9%EF%BC%89"><span class="nav-number">1.7.2.3.</span> <span class="nav-text">回到设备A（第二天）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-%E5%A4%9A%E8%AE%BE%E5%A4%87%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="nav-number">1.7.3.</span> <span class="nav-text">7.3 多设备工作流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4-%E5%85%B3%E9%94%AE%E5%8E%9F%E5%88%99"><span class="nav-number">1.7.4.</span> <span class="nav-text">7.4 关键原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-5-%E5%86%B2%E7%AA%81%E5%A4%84%E7%90%86%EF%BC%88%E5%A4%9A%E8%AE%BE%E5%A4%87%EF%BC%89"><span class="nav-number">1.7.5.</span> <span class="nav-text">7.5 冲突处理（多设备）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-6-%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7"><span class="nav-number">1.7.6.</span> <span class="nav-text">7.6 实用技巧</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-7-%E9%85%8D%E7%BD%AE-SSH-%E5%85%8D%E5%AF%86%EF%BC%88%E6%AF%8F%E5%8F%B0%E8%AE%BE%E5%A4%87%EF%BC%89"><span class="nav-number">1.7.7.</span> <span class="nav-text">7.7 配置 SSH 免密（每台设备）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-8-%E6%80%BB%E7%BB%93"><span class="nav-number">1.7.8.</span> <span class="nav-text">7.8 总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AB%E3%80%81%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-number">1.8.</span> <span class="nav-text">八、常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Q1-%E9%83%A8%E7%BD%B2%E5%90%8E%E6%A0%B7%E5%BC%8F%E4%B8%A2%E5%A4%B1%EF%BC%9F"><span class="nav-number">1.8.1.</span> <span class="nav-text">Q1: 部署后样式丢失？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Q2-%E5%A6%82%E4%BD%95%E5%A4%87%E4%BB%BD%E5%8D%9A%E5%AE%A2%EF%BC%9F"><span class="nav-number">1.8.2.</span> <span class="nav-text">Q2: 如何备份博客？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Q3-%E5%A6%82%E4%BD%95%E8%BF%81%E7%A7%BB%E5%88%B0%E6%96%B0%E7%94%B5%E8%84%91%EF%BC%9F"><span class="nav-number">1.8.3.</span> <span class="nav-text">Q3: 如何迁移到新电脑？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Q4-%E6%96%87%E7%AB%A0%E6%8E%92%E5%BA%8F%E9%94%99%E4%B9%B1%EF%BC%9F"><span class="nav-number">1.8.4.</span> <span class="nav-text">Q4: 文章排序错乱？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Q5-%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4%E6%96%87%E7%AB%A0%EF%BC%9F"><span class="nav-number">1.8.5.</span> <span class="nav-text">Q5: 如何删除文章？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AB%E3%80%81%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="nav-number">1.9.</span> <span class="nav-text">八、性能优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-%E5%9B%BE%E7%89%87%E4%BC%98%E5%8C%96"><span class="nav-number">1.9.1.</span> <span class="nav-text">8.1 图片优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96"><span class="nav-number">1.9.2.</span> <span class="nav-text">8.2 代码优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-3-SEO-%E4%BC%98%E5%8C%96"><span class="nav-number">1.9.3.</span> <span class="nav-text">8.3 SEO 优化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E3%80%81%E6%80%BB%E7%BB%93"><span class="nav-number">1.10.</span> <span class="nav-text">九、总结</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Duka"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Duka</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">118</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">198</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/dukaworks" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;dukaworks" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:dukaworks.zy@gmail.com" title="E-Mail → mailto:dukaworks.zy@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/dukatalk" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;dukatalk" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://youtube.com/dukatalk" title="YouTube → https:&#x2F;&#x2F;youtube.com&#x2F;dukatalk" rel="noopener me" target="_blank"><i class="fab fa-youtube fa-fw"></i>YouTube</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/subscribe/" title="RSS → &#x2F;subscribe&#x2F;" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://blog.dukaworks.io/2026/03/06/Hexo%E5%8D%9A%E5%AE%A2%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97-%E6%90%AD%E5%BB%BA%E5%88%B0%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Duka">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Duka的技术博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Hexo 博客完整指南：从搭建到多人协作 | Duka的技术博客">
+      <meta itemprop="description" content="从零开始搭建 Hexo 博客，包括主题选择、日常维护、多人协作写作等完整流程">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo 博客完整指南：从搭建到多人协作
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-03-06 11:00:00" itemprop="dateCreated datePublished" datetime="2026-03-06T11:00:00+08:00">2026-03-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-03-09 13:47:07" itemprop="dateModified" datetime="2026-03-09T13:47:07+08:00">2026-03-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Web%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">Web开发</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>13 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">从零开始搭建 Hexo 博客，包括主题选择、日常维护、多人协作写作等完整流程</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="Hexo-博客完整指南：从搭建到多人协作"><a href="#Hexo-博客完整指南：从搭建到多人协作" class="headerlink" title="Hexo 博客完整指南：从搭建到多人协作"></a>Hexo 博客完整指南：从搭建到多人协作</h1><p>Hexo 是一个快速、简洁且高效的静态博客框架。本文将带你从零开始，搭建一个功能完善的技术博客，并支持多人协作写作。</p>
+<span id="more"></span>
+
+<h2 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h2><h3 id="1-1-安装-Node-js"><a href="#1-1-安装-Node-js" class="headerlink" title="1.1 安装 Node.js"></a>1.1 安装 Node.js</h3><p>Hexo 基于 Node.js，需要先安装：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 下载安装 Node.js (建议 LTS 版本)</span>
+<span class="token comment"># https://nodejs.org</span>
+
+<span class="token comment"># 验证安装</span>
+<span class="token function">node</span> <span class="token parameter variable">-v</span>  <span class="token comment"># v18.x.x 或更高</span>
+<span class="token function">npm</span> <span class="token parameter variable">-v</span>   <span class="token comment"># 9.x.x 或更高</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="1-2-安装-Git"><a href="#1-2-安装-Git" class="headerlink" title="1.2 安装 Git"></a>1.2 安装 Git</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># Windows: https://git-scm.com/download/win</span>
+<span class="token comment"># macOS: brew install git</span>
+<span class="token comment"># Linux: sudo apt-get install git</span>
+
+<span class="token comment"># 配置 Git</span>
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> user.name <span class="token string">"Your Name"</span>
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> user.email <span class="token string">"your_email@example.com"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="1-3-安装-Hexo"><a href="#1-3-安装-Hexo" class="headerlink" title="1.3 安装 Hexo"></a>1.3 安装 Hexo</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 全局安装 Hexo CLI</span>
+<span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> hexo-cli
+
+<span class="token comment"># 验证安装</span>
+hexo <span class="token parameter variable">-v</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="二、创建博客项目"><a href="#二、创建博客项目" class="headerlink" title="二、创建博客项目"></a>二、创建博客项目</h2><h3 id="2-1-初始化项目"><a href="#2-1-初始化项目" class="headerlink" title="2.1 初始化项目"></a>2.1 初始化项目</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 创建博客目录</span>
+hexo init my-blog
+<span class="token builtin class-name">cd</span> my-blog
+
+<span class="token comment"># 安装依赖</span>
+<span class="token function">npm</span> <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-2-项目结构说明"><a href="#2-2-项目结构说明" class="headerlink" title="2.2 项目结构说明"></a>2.2 项目结构说明</h3><pre class="line-numbers language-none"><code class="language-none">my-blog&#x2F;
+├── _config.yml          # 站点配置文件
+├── package.json         # 项目依赖
+├── scaffolds&#x2F;           # 文章模板
+├── source&#x2F;              # 源代码
+│   ├── _posts&#x2F;         # 文章目录
+│   ├── _drafts&#x2F;        # 草稿目录
+│   ├── about&#x2F;          # 关于页面
+│   └── images&#x2F;         # 图片资源
+├── themes&#x2F;             # 主题目录
+└── public&#x2F;             # 生成的静态文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-3-基础配置"><a href="#2-3-基础配置" class="headerlink" title="2.3 基础配置"></a>2.3 基础配置</h3><p>编辑 <code>_config.yml</code>：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 站点信息</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> 你的博客名称
+<span class="token key atrule">subtitle</span><span class="token punctuation">:</span> 博客副标题
+<span class="token key atrule">description</span><span class="token punctuation">:</span> 博客描述
+<span class="token key atrule">keywords</span><span class="token punctuation">:</span> 关键词<span class="token punctuation">,</span>用逗号分隔
+<span class="token key atrule">author</span><span class="token punctuation">:</span> 作者名
+<span class="token key atrule">language</span><span class="token punctuation">:</span> zh<span class="token punctuation">-</span>CN
+<span class="token key atrule">timezone</span><span class="token punctuation">:</span> Asia/Shanghai
+
+<span class="token comment"># URL</span>
+<span class="token key atrule">url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//yourname.github.io
+<span class="token key atrule">permalink</span><span class="token punctuation">:</span> <span class="token punctuation">:</span>year/<span class="token punctuation">:</span>month/<span class="token punctuation">:</span>day/<span class="token punctuation">:</span>title/
+
+<span class="token comment"># 部署配置</span>
+<span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> git
+  <span class="token key atrule">repo</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/yourname/yourname.github.io.git
+  <span class="token key atrule">branch</span><span class="token punctuation">:</span> main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="三、主题选择与配置"><a href="#三、主题选择与配置" class="headerlink" title="三、主题选择与配置"></a>三、主题选择与配置</h2><h3 id="3-1-热门主题推荐"><a href="#3-1-热门主题推荐" class="headerlink" title="3.1 热门主题推荐"></a>3.1 热门主题推荐</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>特点</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>NexT</strong></td>
+<td>功能丰富，文档完善</td>
+<td>技术博客</td>
+</tr>
+<tr>
+<td><strong>Butterfly</strong></td>
+<td>美观现代，动画丰富</td>
+<td>个人博客</td>
+</tr>
+<tr>
+<td><strong>Fluid</strong></td>
+<td>简洁优雅，配置简单</td>
+<td>写作博客</td>
+</tr>
+<tr>
+<td><strong>Matery</strong></td>
+<td>Material Design</td>
+<td>视觉博客</td>
+</tr>
+<tr>
+<td><strong>Stun</strong></td>
+<td>极简风格</td>
+<td>极简主义</td>
+</tr>
+</tbody></table>
+<h3 id="3-2-安装-NexT-主题（推荐）"><a href="#3-2-安装-NexT-主题（推荐）" class="headerlink" title="3.2 安装 NexT 主题（推荐）"></a>3.2 安装 NexT 主题（推荐）</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 进入博客目录</span>
+<span class="token builtin class-name">cd</span> my-blog
+
+<span class="token comment"># 克隆主题</span>
+<span class="token function">git</span> clone https://github.com/next-theme/hexo-theme-next themes/next
+
+<span class="token comment"># 修改 _config.yml</span>
+theme: next<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-3-NexT-主题配置"><a href="#3-3-NexT-主题配置" class="headerlink" title="3.3 NexT 主题配置"></a>3.3 NexT 主题配置</h3><p>创建主题配置文件：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 复制配置文件到根目录</span>
+<span class="token function">cp</span> themes/next/_config.yml _config.next.yml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>常用配置：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 主题方案</span>
+<span class="token key atrule">scheme</span><span class="token punctuation">:</span> Gemini
+
+<span class="token comment"># 暗黑模式</span>
+<span class="token key atrule">brand</span><span class="token punctuation">:</span>
+  <span class="token key atrule">dark_mode</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">light_mode</span><span class="token punctuation">:</span> auto
+
+<span class="token comment"># 菜单配置</span>
+<span class="token key atrule">menu</span><span class="token punctuation">:</span>
+  <span class="token key atrule">home</span><span class="token punctuation">:</span> / <span class="token punctuation">|</span><span class="token punctuation">|</span> fa fa<span class="token punctuation">-</span>home
+  <span class="token key atrule">archives</span><span class="token punctuation">:</span> /archives/ <span class="token punctuation">|</span><span class="token punctuation">|</span> fa fa<span class="token punctuation">-</span>archive
+  <span class="token key atrule">tags</span><span class="token punctuation">:</span> /tags/ <span class="token punctuation">|</span><span class="token punctuation">|</span> fa fa<span class="token punctuation">-</span>tags
+  <span class="token key atrule">about</span><span class="token punctuation">:</span> /about/ <span class="token punctuation">|</span><span class="token punctuation">|</span> fa fa<span class="token punctuation">-</span>user
+
+<span class="token comment"># 社交链接</span>
+<span class="token key atrule">social</span><span class="token punctuation">:</span>
+  <span class="token key atrule">GitHub</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/yourname <span class="token punctuation">|</span><span class="token punctuation">|</span> fab fa<span class="token punctuation">-</span>github
+  <span class="token key atrule">Email</span><span class="token punctuation">:</span> mailto<span class="token punctuation">:</span>your@email.com <span class="token punctuation">|</span><span class="token punctuation">|</span> fa fa<span class="token punctuation">-</span>envelope<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="四、日常写作流程"><a href="#四、日常写作流程" class="headerlink" title="四、日常写作流程"></a>四、日常写作流程</h2><h3 id="4-1-创建文章"><a href="#4-1-创建文章" class="headerlink" title="4.1 创建文章"></a>4.1 创建文章</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 创建新文章</span>
+hexo new <span class="token string">"文章标题"</span>
+
+<span class="token comment"># 创建草稿</span>
+hexo new draft <span class="token string">"草稿标题"</span>
+
+<span class="token comment"># 创建页面</span>
+hexo new page <span class="token string">"关于"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-2-文章格式"><a href="#4-2-文章格式" class="headerlink" title="4.2 文章格式"></a>4.2 文章格式</h3><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token front-matter-block"><span class="token punctuation">---</span>
+<span class="token front-matter yaml language-yaml"><span class="token key atrule">title</span><span class="token punctuation">:</span> 文章标题
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2026-03-06 10:00:00</span>
+<span class="token key atrule">categories</span><span class="token punctuation">:</span> 分类名称
+<span class="token key atrule">tags</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>标签1<span class="token punctuation">,</span> 标签2<span class="token punctuation">]</span>
+<span class="token key atrule">description</span><span class="token punctuation">:</span> 文章描述</span>
+<span class="token punctuation">---</span></span>
+
+<span class="token title important"><span class="token punctuation">#</span> 正文标题</span>
+
+正文内容...
+
+<span class="token comment">&lt;!-- more --></span>
+
+这是摘要和正文的分隔线，上面的内容会显示在首页。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-3-常用命令"><a href="#4-3-常用命令" class="headerlink" title="4.3 常用命令"></a>4.3 常用命令</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 本地预览</span>
+hexo clean <span class="token operator">&amp;&amp;</span> hexo g <span class="token operator">&amp;&amp;</span> hexo s
+
+<span class="token comment"># 生成静态文件</span>
+hexo generate
+
+<span class="token comment"># 部署到 GitHub Pages</span>
+hexo deploy
+
+<span class="token comment"># 草稿发布</span>
+hexo publish draft <span class="token string">"草稿标题"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="五、功能增强"><a href="#五、功能增强" class="headerlink" title="五、功能增强"></a>五、功能增强</h2><h3 id="5-1-评论系统（Giscus）"><a href="#5-1-评论系统（Giscus）" class="headerlink" title="5.1 评论系统（Giscus）"></a>5.1 评论系统（Giscus）</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 安装插件</span>
+<span class="token function">npm</span> <span class="token function">install</span> hexo-next-giscus<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>配置 <code>_config.next.yml</code>：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">giscus</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">repo</span><span class="token punctuation">:</span> yourname/yourname.github.io
+  <span class="token key atrule">repo_id</span><span class="token punctuation">:</span> xxx
+  <span class="token key atrule">category</span><span class="token punctuation">:</span> General
+  <span class="token key atrule">category_id</span><span class="token punctuation">:</span> xxx
+  <span class="token key atrule">mapping</span><span class="token punctuation">:</span> pathname<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="5-2-搜索功能"><a href="#5-2-搜索功能" class="headerlink" title="5.2 搜索功能"></a>5.2 搜索功能</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-searchdb<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>配置 <code>_config.yml</code>：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">search</span><span class="token punctuation">:</span>
+  <span class="token key atrule">path</span><span class="token punctuation">:</span> search.xml
+  <span class="token key atrule">field</span><span class="token punctuation">:</span> post<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="5-3-RSS-订阅"><a href="#5-3-RSS-订阅" class="headerlink" title="5.3 RSS 订阅"></a>5.3 RSS 订阅</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-feed<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>配置 <code>_config.yml</code>：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">feed</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> atom
+  <span class="token key atrule">path</span><span class="token punctuation">:</span> atom.xml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="5-4-站点地图"><a href="#5-4-站点地图" class="headerlink" title="5.4 站点地图"></a>5.4 站点地图</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-sitemap<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>配置 <code>_config.yml</code>：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">sitemap</span><span class="token punctuation">:</span>
+  <span class="token key atrule">path</span><span class="token punctuation">:</span> sitemap.xml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="六、多人协作写作"><a href="#六、多人协作写作" class="headerlink" title="六、多人协作写作"></a>六、多人协作写作</h2><h3 id="6-1-协作方案"><a href="#6-1-协作方案" class="headerlink" title="6.1 协作方案"></a>6.1 协作方案</h3><p>多人协作 Hexo 博客的推荐方案（双仓库）：</p>
+<pre class="line-numbers language-none"><code class="language-none">hexo-source 仓库（私有，存放源码）
+├── source&#x2F;_posts&#x2F;     ← 文章源码
+├── themes&#x2F;            ← 主题文件
+├── _config.yml        ← 站点配置
+├── _config.next.yml   ← 主题配置
+└── package.json       ← 依赖配置
+       ↓
+GitHub Actions 自动构建部署
+       ↓
+yourname.github.io 仓库（公开，GitHub Pages）
+├── index.html         ← 生成的静态页面
+├── 2026&#x2F;03&#x2F;06&#x2F;        ← 文章页面
+└── ...                ← CSS&#x2F;JS&#x2F;图片资源<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>为什么用双仓库？</strong></p>
+<table>
+<thead>
+<tr>
+<th>仓库</th>
+<th>用途</th>
+<th>可见性</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>hexo-source</code></td>
+<td>源码仓库</td>
+<td>私有</td>
+<td>Markdown文章、配置、主题</td>
+</tr>
+<tr>
+<td><code>yourname.github.io</code></td>
+<td>部署仓库</td>
+<td>公开</td>
+<td>生成的HTML静态文件</td>
+</tr>
+</tbody></table>
+<p>优点：</p>
+<ul>
+<li>✅ 源码私密，草稿不会暴露</li>
+<li>✅ 多人协作更安全</li>
+<li>✅ 构建历史清晰分离</li>
+<li>✅ 支持私有文章&#x2F;草稿</li>
+</ul>
+<h3 id="6-2-仓库设置"><a href="#6-2-仓库设置" class="headerlink" title="6.2 仓库设置"></a>6.2 仓库设置</h3><h4 id="1-创建源码仓库（hexo-source）"><a href="#1-创建源码仓库（hexo-source）" class="headerlink" title="1. 创建源码仓库（hexo-source）"></a>1. 创建源码仓库（hexo-source）</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 在 GitHub 创建私有仓库：hexo-source</span>
+<span class="token comment"># 不要初始化 README，保持为空</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h4 id="2-创建部署仓库（yourname-github-io）"><a href="#2-创建部署仓库（yourname-github-io）" class="headerlink" title="2. 创建部署仓库（yourname.github.io）"></a>2. 创建部署仓库（yourname.github.io）</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 创建公开仓库，名称必须是 yourname.github.io</span>
+<span class="token comment"># 用于 GitHub Pages 部署</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h4 id="3-配置部署密钥"><a href="#3-配置部署密钥" class="headerlink" title="3. 配置部署密钥"></a>3. 配置部署密钥</h4><p>为了让 GitHub Actions 有权限推送到部署仓库，需要配置 Deploy Key：</p>
+<p><strong>步骤1：生成 SSH 密钥对</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-keygen <span class="token parameter variable">-t</span> rsa <span class="token parameter variable">-b</span> <span class="token number">4096</span> <span class="token parameter variable">-C</span> <span class="token string">"hexo-deploy"</span> <span class="token parameter variable">-f</span> hexo-deploy-key
+<span class="token comment"># 会生成两个文件：</span>
+<span class="token comment"># hexo-deploy-key     （私钥）</span>
+<span class="token comment"># hexo-deploy-key.pub （公钥）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>步骤2：在部署仓库添加公钥</strong></p>
+<ul>
+<li>打开 <code>yourname.github.io</code> 仓库</li>
+<li>Settings → Deploy keys → Add deploy key</li>
+<li>Title: <code>HEXO_DEPLOY</code></li>
+<li>Key: 粘贴 <code>hexo-deploy-key.pub</code> 的内容</li>
+<li>✅ 勾选 “Allow write access”</li>
+</ul>
+<p><strong>步骤3：在源码仓库添加私钥</strong></p>
+<ul>
+<li>打开 <code>hexo-source</code> 仓库</li>
+<li>Settings → Secrets and variables → Actions → New repository secret</li>
+<li>Name: <code>HEXO_DEPLOY_KEY</code></li>
+<li>Secret: 粘贴 <code>hexo-deploy-key</code> 的内容（私钥）</li>
+</ul>
+<h4 id="4-添加协作者"><a href="#4-添加协作者" class="headerlink" title="4. 添加协作者"></a>4. 添加协作者</h4><ul>
+<li>打开 <code>hexo-source</code> 仓库</li>
+<li>Settings → Collaborators → Add people</li>
+<li>输入协作者 GitHub 用户名</li>
+</ul>
+<h3 id="6-3-协作者工作流程"><a href="#6-3-协作者工作流程" class="headerlink" title="6.3 协作者工作流程"></a>6.3 协作者工作流程</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 克隆源码仓库（不是部署仓库！）</span>
+<span class="token function">git</span> clone https://github.com/yourname/hexo-source.git
+<span class="token builtin class-name">cd</span> hexo-source
+
+<span class="token comment"># 2. 安装依赖</span>
+<span class="token function">npm</span> <span class="token function">install</span>
+
+<span class="token comment"># 3. 创建新分支</span>
+<span class="token function">git</span> checkout <span class="token parameter variable">-b</span> article/new-post
+
+<span class="token comment"># 4. 写作</span>
+hexo new <span class="token string">"新文章标题"</span>
+<span class="token comment"># 编辑文章...</span>
+
+<span class="token comment"># 5. 本地预览</span>
+hexo clean <span class="token operator">&amp;&amp;</span> hexo g <span class="token operator">&amp;&amp;</span> hexo s
+
+<span class="token comment"># 6. 提交代码</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"add: 新文章《标题》"</span>
+<span class="token function">git</span> push origin article/new-post
+
+<span class="token comment"># 7. 创建 Pull Request</span>
+<span class="token comment"># 在 GitHub 上合并到 main 分支</span>
+
+<span class="token comment"># 8. 自动部署</span>
+<span class="token comment"># GitHub Actions 会自动构建并部署到 yourname.github.io</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>⚠️ 重要提醒：</strong></p>
+<ul>
+<li>协作者只需要克隆 <code>hexo-source</code> 仓库</li>
+<li>不要直接修改 <code>yourname.github.io</code> 仓库（会被自动覆盖）</li>
+<li>所有写作都在 <code>hexo-source</code> 仓库完成</li>
+</ul>
+<h3 id="6-4-GitHub-Actions-自动部署（双仓库）"><a href="#6-4-GitHub-Actions-自动部署（双仓库）" class="headerlink" title="6.4 GitHub Actions 自动部署（双仓库）"></a>6.4 GitHub Actions 自动部署（双仓库）</h3><p>在 <code>hexo-source</code> 仓库创建 <code>.github/workflows/deploy.yml</code>：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy Hexo Blog
+
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">push</span><span class="token punctuation">:</span>
+    <span class="token key atrule">branches</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> main
+  <span class="token key atrule">pull_request</span><span class="token punctuation">:</span>
+    <span class="token key atrule">branches</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> main
+
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">build</span><span class="token punctuation">:</span>
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token comment"># 1. 检出源码</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v3
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">submodules</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+          <span class="token key atrule">fetch-depth</span><span class="token punctuation">:</span> <span class="token number">0</span>
+
+      <span class="token comment"># 2. 设置 Node.js</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Setup Node.js
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>node@v3
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">node-version</span><span class="token punctuation">:</span> <span class="token string">'18'</span>
+
+      <span class="token comment"># 3. 安装依赖</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install Dependencies
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> npm install
+
+      <span class="token comment"># 4. 构建（PR时不部署）</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Build
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> hexo generate
+
+      <span class="token comment"># 5. 部署到 yourname.github.io（仅 main 分支推送时）</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> github.event_name == 'push' <span class="token important">&amp;&amp;</span> github.ref == 'refs/heads/main'
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> peaceiris/actions<span class="token punctuation">-</span>gh<span class="token punctuation">-</span>pages@v3
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">deploy_key</span><span class="token punctuation">:</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.HEXO_DEPLOY_KEY <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
+          <span class="token key atrule">external_repository</span><span class="token punctuation">:</span> yourname/yourname.github.io
+          <span class="token key atrule">publish_dir</span><span class="token punctuation">:</span> ./public
+          <span class="token key atrule">publish_branch</span><span class="token punctuation">:</span> main
+          <span class="token key atrule">commit_message</span><span class="token punctuation">:</span> <span class="token string">"deploy: $&#123;&#123; github.event.head_commit.message &#125;&#125;"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>配置说明：</strong></p>
+<table>
+<thead>
+<tr>
+<th>配置项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>deploy_key</code></td>
+<td>使用 Deploy Key 方式推送（更安全）</td>
+</tr>
+<tr>
+<td><code>external_repository</code></td>
+<td>部署目标仓库（yourname.github.io）</td>
+</tr>
+<tr>
+<td><code>publish_dir</code></td>
+<td>构建输出目录（Hexo 默认是 public）</td>
+</tr>
+<tr>
+<td><code>publish_branch</code></td>
+<td>目标仓库的分支（main）</td>
+</tr>
+</tbody></table>
+<p><strong>工作流程：</strong></p>
+<ol>
+<li>推送代码到 <code>hexo-source</code> 的 <code>main</code> 分支</li>
+<li>GitHub Actions 自动触发构建</li>
+<li>生成静态文件到 <code>public</code> 目录</li>
+<li>使用 Deploy Key 推送到 <code>yourname.github.io</code></li>
+<li>GitHub Pages 自动更新网站</li>
+</ol>
+<h3 id="6-5-写作规范"><a href="#6-5-写作规范" class="headerlink" title="6.5 写作规范"></a>6.5 写作规范</h3><p><strong>分支命名</strong>：</p>
+<pre class="line-numbers language-none"><code class="language-none">article&#x2F;文章标题      # 新文章
+docs&#x2F;更新文档         # 文档更新
+fix&#x2F;修复问题          # 修复问题
+config&#x2F;配置调整       # 配置修改<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>提交信息规范</strong>：</p>
+<pre class="line-numbers language-none"><code class="language-none">add: 添加新文章《标题》
+update: 更新文章内容
+delete: 删除文章
+config: 修改主题配置
+docs: 更新文档<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>文章模板</strong>（<code>scaffolds/post.md</code>）：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token front-matter-block"><span class="token punctuation">---</span>
+<span class="token front-matter yaml language-yaml"><span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> title <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> date <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
+<span class="token key atrule">categories</span><span class="token punctuation">:</span> 
+<span class="token key atrule">tags</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+description<span class="token punctuation">:</span></span> 
+<span class="token punctuation">---</span></span>
+
+<span class="token comment">&lt;!-- more --></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="6-6-图片管理方案"><a href="#6-6-图片管理方案" class="headerlink" title="6.6 图片管理方案"></a>6.6 图片管理方案</h3><h4 id="方案-1：本地图片（适合少量图片）"><a href="#方案-1：本地图片（适合少量图片）" class="headerlink" title="方案 1：本地图片（适合少量图片）"></a>方案 1：本地图片（适合少量图片）</h4><pre class="line-numbers language-none"><code class="language-none">source&#x2F;_posts&#x2F;文章名&#x2F;
+├── index.md
+└── images&#x2F;
+    └── screenshot.png<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>引用方式：</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token url"><span class="token operator">!</span>[<span class="token content">描述</span>](<span class="token url">./images/screenshot.png</span>)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>缺点：</strong></p>
+<ul>
+<li>仓库体积会变大</li>
+<li>多人协作时图片冲突</li>
+<li>不适合大量图片</li>
+</ul>
+<h4 id="方案-2：GitHub-jsDelivr（推荐）"><a href="#方案-2：GitHub-jsDelivr（推荐）" class="headerlink" title="方案 2：GitHub + jsDelivr（推荐）"></a>方案 2：GitHub + jsDelivr（推荐）</h4><p>利用 GitHub 仓库作为图床，jsDelivr CDN 加速：</p>
+<p><strong>步骤：</strong></p>
+<ol>
+<li><p><strong>创建图床仓库</strong></p>
+<ul>
+<li>新建仓库：<code>blog-images</code></li>
+<li>设置为公开</li>
+</ul>
+</li>
+<li><p><strong>上传图片</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 克隆图床仓库</span>
+<span class="token function">git</span> clone https://github.com/yourname/blog-images.git
+<span class="token builtin class-name">cd</span> blog-images
+
+<span class="token comment"># 创建目录结构</span>
+<span class="token function">mkdir</span> <span class="token parameter variable">-p</span> <span class="token number">2026</span>/03
+
+<span class="token comment"># 复制图片</span>
+<span class="token function">cp</span> ~/Downloads/screenshot.png <span class="token number">2026</span>/03/
+
+<span class="token comment"># 提交</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"add: 添加截图"</span>
+<span class="token function">git</span> push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><strong>获取图片链接</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;yourname&#x2F;blog-images@main&#x2F;2026&#x2F;03&#x2F;screenshot.png<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p><strong>在文章中使用</strong></p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token url"><span class="token operator">!</span>[<span class="token content">描述</span>](<span class="token url">https://cdn.jsdelivr.net/gh/yourname/blog-images@main/2026/03/screenshot.png</span>)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ol>
+<p><strong>优点：</strong></p>
+<ul>
+<li>✅ 免费</li>
+<li>✅ CDN 加速（全球访问快）</li>
+<li>✅ 版本控制</li>
+<li>✅ 不增加博客仓库体积</li>
+</ul>
+<h4 id="方案-3：商业图床"><a href="#方案-3：商业图床" class="headerlink" title="方案 3：商业图床"></a>方案 3：商业图床</h4><table>
+<thead>
+<tr>
+<th>图床</th>
+<th>免费额度</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>阿里云 OSS</td>
+<td>5GB&#x2F;月</td>
+<td>稳定可靠</td>
+</tr>
+<tr>
+<td>腾讯云 COS</td>
+<td>50GB&#x2F;月</td>
+<td>国内速度快</td>
+</tr>
+<tr>
+<td>七牛云</td>
+<td>10GB&#x2F;月</td>
+<td>有免费域名</td>
+</tr>
+<tr>
+<td>SM.MS</td>
+<td>5GB</td>
+<td>简单易用</td>
+</tr>
+</tbody></table>
+<p><strong>推荐：</strong> 个人博客用 GitHub + jsDelivr 足够，企业项目用阿里云&#x2F;腾讯云。</p>
+<h4 id="图片压缩建议"><a href="#图片压缩建议" class="headerlink" title="图片压缩建议"></a>图片压缩建议</h4><p>上传前压缩图片，减少加载时间：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://tinypng.com/">TinyPNG</a> - 在线压缩</li>
+<li><a target="_blank" rel="noopener" href="https://imageoptim.com/">ImageOptim</a> - Mac 工具</li>
+<li><a target="_blank" rel="noopener" href="https://squoosh.app/">Squoosh</a> - Google 出品</li>
+</ul>
+<h3 id="6-7-冲突处理"><a href="#6-7-冲突处理" class="headerlink" title="6.7 冲突处理"></a>6.7 冲突处理</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 拉取最新代码</span>
+<span class="token function">git</span> pull origin main
+
+<span class="token comment"># 如有冲突，手动解决后</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"merge: 解决冲突"</span>
+<span class="token function">git</span> push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="七、多设备协作写作"><a href="#七、多设备协作写作" class="headerlink" title="七、多设备协作写作"></a>七、多设备协作写作</h2><p>很多小伙伴在公司用 PC，回家用自己的笔记本，如何在多台设备上无缝协作写作？</p>
+<h3 id="7-1-方案对比"><a href="#7-1-方案对比" class="headerlink" title="7.1 方案对比"></a>7.1 方案对比</h3><table>
+<thead>
+<tr>
+<th>方案</th>
+<th>优点</th>
+<th>缺点</th>
+<th>推荐度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Git 同步（推荐）</strong></td>
+<td>版本控制、历史记录、多人协作</td>
+<td>需要学习 Git</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>云盘同步（OneDrive&#x2F;坚果云）</td>
+<td>简单、自动同步</td>
+<td>冲突处理麻烦、无版本控制</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>U盘拷贝</td>
+<td>简单直接</td>
+<td>容易丢失、版本混乱</td>
+<td>⭐</td>
+</tr>
+</tbody></table>
+<h3 id="7-2-Git-多设备方案（推荐）"><a href="#7-2-Git-多设备方案（推荐）" class="headerlink" title="7.2 Git 多设备方案（推荐）"></a>7.2 Git 多设备方案（推荐）</h3><p><strong>核心思路：</strong> 用 GitHub 作为中央仓库，各设备通过 Git 同步。</p>
+<h4 id="设备A（公司-PC）初始化"><a href="#设备A（公司-PC）初始化" class="headerlink" title="设备A（公司 PC）初始化"></a>设备A（公司 PC）初始化</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 克隆源码仓库（第一次）</span>
+<span class="token function">git</span> clone https://github.com/yourname/hexo-source.git
+<span class="token builtin class-name">cd</span> hexo-source
+
+<span class="token comment"># 2. 安装依赖</span>
+<span class="token function">npm</span> <span class="token function">install</span>
+
+<span class="token comment"># 3. 日常写作</span>
+hexo new <span class="token string">"新文章"</span>
+<span class="token comment"># 编辑文章...</span>
+
+<span class="token comment"># 4. 提交代码</span>
+hexo clean <span class="token operator">&amp;&amp;</span> hexo g <span class="token operator">&amp;&amp;</span> hexo s  <span class="token comment"># 本地预览</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"add: 新文章《标题》"</span>
+<span class="token function">git</span> push origin main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="设备B（家里笔记本）同步"><a href="#设备B（家里笔记本）同步" class="headerlink" title="设备B（家里笔记本）同步"></a>设备B（家里笔记本）同步</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 克隆源码仓库（第一次）</span>
+<span class="token function">git</span> clone https://github.com/yourname/hexo-source.git
+<span class="token builtin class-name">cd</span> hexo-source
+<span class="token function">npm</span> <span class="token function">install</span>
+
+<span class="token comment"># 2. 每天开始写作前 - 拉取最新代码</span>
+<span class="token function">git</span> pull origin main
+
+<span class="token comment"># 3. 继续写作...</span>
+hexo new <span class="token string">"另一篇文章"</span>
+<span class="token comment"># 编辑...</span>
+
+<span class="token comment"># 4. 提交</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"add: 另一篇文章"</span>
+<span class="token function">git</span> push origin main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="回到设备A（第二天）"><a href="#回到设备A（第二天）" class="headerlink" title="回到设备A（第二天）"></a>回到设备A（第二天）</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 拉取家里写的文章</span>
+<span class="token function">git</span> pull origin main
+
+<span class="token comment"># 继续写作...</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="7-3-多设备工作流程"><a href="#7-3-多设备工作流程" class="headerlink" title="7.3 多设备工作流程"></a>7.3 多设备工作流程</h3><pre class="line-numbers language-none"><code class="language-none">公司 PC                    GitHub 仓库                家里笔记本
+   |                            |                            |
+   ├── 写作文章A ──────────────┼────────────────────────────┤
+   │   git push ───────────────┼────────────────────────────┤
+   │                           │◄────────────────────────────┤
+   │                           │                            ├── git pull
+   │                           │                            │   获取文章A
+   │                           │                            ├── 继续写作B
+   │                           │◄────────────────────────────┤
+   │                           │                            │   git push
+   ├── git pull ───────────────┤                            │
+   │   获取文章B ──────────────┤                            │
+   │   继续写作C ──────────────┤                            │
+   │   git push ───────────────┤                            │
+   │                           │                            ├── git pull
+   │                           │                            │   获取文章C<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="7-4-关键原则"><a href="#7-4-关键原则" class="headerlink" title="7.4 关键原则"></a>7.4 关键原则</h3><p><strong>原则1：写作前总是先 pull</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 每天开始写作前</span>
+<span class="token function">git</span> pull origin main
+
+<span class="token comment"># 然后再写作</span>
+hexo new <span class="token string">"文章"</span>
+<span class="token comment"># 编辑...</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>原则2：写作后及时 push</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 完成一个阶段（比如写完一节）就提交</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"add: 完成文章第一节"</span>
+<span class="token function">git</span> push origin main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>原则3：不要长时间不提交</strong></p>
+<p>❌ 错误：写了一整天，回家才提交 → 容易冲突<br>✅ 正确：写完一节就提交 → 减少冲突</p>
+<h3 id="7-5-冲突处理（多设备）"><a href="#7-5-冲突处理（多设备）" class="headerlink" title="7.5 冲突处理（多设备）"></a>7.5 冲突处理（多设备）</h3><p>如果两台设备都修改了同一篇文章：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 设备A 提交并推送</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"update: 修改文章A"</span>
+<span class="token function">git</span> push origin main
+
+<span class="token comment"># 设备B 尝试推送（会失败）</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"update: 也修改了文章A"</span>
+<span class="token function">git</span> push origin main
+<span class="token comment"># ❌ 错误：rejected</span>
+
+<span class="token comment"># 设备B 需要先拉取合并</span>
+<span class="token function">git</span> pull origin main
+<span class="token comment"># 出现冲突标记</span>
+
+<span class="token comment"># 编辑冲突文件，解决冲突</span>
+<span class="token comment"># &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
+<span class="token comment"># 设备B的修改</span>
+<span class="token comment"># =======</span>
+<span class="token comment"># 设备A的修改</span>
+<span class="token comment"># >>>>>>> main</span>
+
+<span class="token comment"># 保留需要的版本，删除标记</span>
+
+<span class="token comment"># 重新提交</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"merge: 合并设备A和B的修改"</span>
+<span class="token function">git</span> push origin main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="7-6-实用技巧"><a href="#7-6-实用技巧" class="headerlink" title="7.6 实用技巧"></a>7.6 实用技巧</h3><p><strong>技巧1：查看修改内容</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看哪些文件被修改</span>
+<span class="token function">git</span> status
+
+<span class="token comment"># 查看具体修改内容</span>
+<span class="token function">git</span> <span class="token function">diff</span>
+
+<span class="token comment"># 查看某篇文章的修改</span>
+<span class="token function">git</span> <span class="token function">diff</span> source/_posts/文章名.md<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>技巧2：临时保存修改（stash）</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 临时保存当前修改（不想提交，但要切换分支）</span>
+<span class="token function">git</span> stash
+
+<span class="token comment"># 恢复修改</span>
+<span class="token function">git</span> stash pop<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>技巧3：查看提交历史</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看最近提交</span>
+<span class="token function">git</span> log <span class="token parameter variable">--oneline</span> <span class="token parameter variable">-10</span>
+
+<span class="token comment"># 查看某篇文章的修改历史</span>
+<span class="token function">git</span> log <span class="token parameter variable">--oneline</span> source/_posts/文章名.md<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>技巧4：撤销误操作</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 撤销最后一次提交（保留修改）</span>
+<span class="token function">git</span> reset <span class="token parameter variable">--soft</span> HEAD~1
+
+<span class="token comment"># 撤销对某篇文章的修改（恢复到上次提交）</span>
+<span class="token function">git</span> checkout -- source/_posts/文章名.md<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="7-7-配置-SSH-免密（每台设备）"><a href="#7-7-配置-SSH-免密（每台设备）" class="headerlink" title="7.7 配置 SSH 免密（每台设备）"></a>7.7 配置 SSH 免密（每台设备）</h3><p>避免每次 push&#x2F;pull 都输入密码：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 生成 SSH 密钥（每台设备做一次）</span>
+ssh-keygen <span class="token parameter variable">-t</span> ed25519 <span class="token parameter variable">-C</span> <span class="token string">"公司PC"</span> <span class="token parameter variable">-f</span> ~/.ssh/id_ed25519_work
+ssh-keygen <span class="token parameter variable">-t</span> ed25519 <span class="token parameter variable">-C</span> <span class="token string">"家里笔记本"</span> <span class="token parameter variable">-f</span> ~/.ssh/id_ed25519_home
+
+<span class="token comment"># 添加公钥到 GitHub</span>
+<span class="token comment"># Settings -> SSH and GPG keys -> New SSH key</span>
+
+<span class="token comment"># 测试连接</span>
+<span class="token function">ssh</span> <span class="token parameter variable">-T</span> git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="7-8-总结"><a href="#7-8-总结" class="headerlink" title="7.8 总结"></a>7.8 总结</h3><p><strong>多设备协作的核心：</strong></p>
+<ol>
+<li>✅ 所有设备都从 GitHub 克隆同一个仓库</li>
+<li>✅ 写作前 <code>git pull</code> 获取最新内容</li>
+<li>✅ 写作后 <code>git push</code> 提交到云端</li>
+<li>✅ 及时提交，不要积压太多修改</li>
+<li>✅ 冲突时手动合并，保留需要的版本</li>
+</ol>
+<p>这样，公司写一半，回家继续写，无缝衔接！</p>
+<hr>
+<h2 id="八、常见问题"><a href="#八、常见问题" class="headerlink" title="八、常见问题"></a>八、常见问题</h2><h3 id="Q1-部署后样式丢失？"><a href="#Q1-部署后样式丢失？" class="headerlink" title="Q1: 部署后样式丢失？"></a>Q1: 部署后样式丢失？</h3><p>检查 <code>_config.yml</code> 中的 <code>url</code> 配置是否正确。</p>
+<h3 id="Q2-如何备份博客？"><a href="#Q2-如何备份博客？" class="headerlink" title="Q2: 如何备份博客？"></a>Q2: 如何备份博客？</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 提交所有代码到 GitHub</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"backup: 备份博客"</span>
+<span class="token function">git</span> push
+
+<span class="token comment"># 图片等资源也要提交</span>
+<span class="token function">git</span> <span class="token function">add</span> source/images/
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"backup: 备份图片"</span>
+<span class="token function">git</span> push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Q3-如何迁移到新电脑？"><a href="#Q3-如何迁移到新电脑？" class="headerlink" title="Q3: 如何迁移到新电脑？"></a>Q3: 如何迁移到新电脑？</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 新电脑上</span>
+<span class="token function">git</span> clone https://github.com/yourname/yourname.github.io.git
+<span class="token builtin class-name">cd</span> yourname.github.io
+<span class="token function">npm</span> <span class="token function">install</span>
+hexo clean <span class="token operator">&amp;&amp;</span> hexo g <span class="token operator">&amp;&amp;</span> hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Q4-文章排序错乱？"><a href="#Q4-文章排序错乱？" class="headerlink" title="Q4: 文章排序错乱？"></a>Q4: 文章排序错乱？</h3><p>检查文章 front-matter 中的 <code>date</code> 字段格式：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2026-03-06 10:00:00</span>  <span class="token comment"># 正确</span>
+<span class="token key atrule">date</span><span class="token punctuation">:</span> 2026<span class="token punctuation">-</span>03<span class="token punctuation">-</span>6 10<span class="token punctuation">:</span>0<span class="token punctuation">:</span><span class="token number">0</span>     <span class="token comment"># 错误</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="Q5-如何删除文章？"><a href="#Q5-如何删除文章？" class="headerlink" title="Q5: 如何删除文章？"></a>Q5: 如何删除文章？</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 删除 source/_posts/文章名.md</span>
+<span class="token comment"># 然后重新生成部署</span>
+hexo clean <span class="token operator">&amp;&amp;</span> hexo g <span class="token operator">&amp;&amp;</span> hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="八、性能优化"><a href="#八、性能优化" class="headerlink" title="八、性能优化"></a>八、性能优化</h2><h3 id="8-1-图片优化"><a href="#8-1-图片优化" class="headerlink" title="8.1 图片优化"></a>8.1 图片优化</h3><ul>
+<li>使用 WebP 格式</li>
+<li>压缩图片（TinyPNG）</li>
+<li>懒加载（lazyload）</li>
+</ul>
+<h3 id="8-2-代码优化"><a href="#8-2-代码优化" class="headerlink" title="8.2 代码优化"></a>8.2 代码优化</h3><ul>
+<li>代码压缩</li>
+<li>CSS&#x2F;JS 合并</li>
+<li>CDN 加速</li>
+</ul>
+<h3 id="8-3-SEO-优化"><a href="#8-3-SEO-优化" class="headerlink" title="8.3 SEO 优化"></a>8.3 SEO 优化</h3><ul>
+<li>站点地图</li>
+<li>友好的 URL</li>
+<li>Meta 标签</li>
+<li>结构化数据</li>
+</ul>
+<h2 id="九、总结"><a href="#九、总结" class="headerlink" title="九、总结"></a>九、总结</h2><p>Hexo 博客的优势：</p>
+<p>✅ <strong>快速</strong>：静态页面，加载速度快<br>✅ <strong>免费</strong>：GitHub Pages 免费托管<br>✅ <strong>安全</strong>：无数据库，无后端漏洞<br>✅ <strong>灵活</strong>：丰富的主题和插件<br>✅ <strong>协作</strong>：Git 版本控制，多人协作</p>
+<p>通过本文，你应该能够：</p>
+<ol>
+<li>独立搭建 Hexo 博客</li>
+<li>选择和配置主题</li>
+<li>日常写作和维护</li>
+<li>实现多人协作写作</li>
+<li>部署到 GitHub Pages</li>
+</ol>
+<p>开始你的博客之旅吧！</p>
+<hr>
+<p><strong>参考资源</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/docs/">Hexo 官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://theme-next.js.org/">NexT 主题文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.github.com/pages">GitHub Pages 文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.markdownguide.org/">Markdown 语法指南</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+              <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"># 教程</a>
+              <a href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag"># 博客</a>
+              <a href="/tags/Next/" rel="tag"># Next</a>
+              <a href="/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" rel="tag"># 静态网站</a>
+              <a href="/tags/%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C/" rel="tag"># 多人协作</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/03/06/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F-Frp%E7%9A%84Docker%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/" rel="prev" title="内网穿透：Frp-内网穿透的不二选择（Docker部署方式）">
+                  <i class="fa fa-angle-left"></i> 内网穿透：Frp-内网穿透的不二选择（Docker部署方式）
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2026/03/07/%E4%BB%8E%E9%9B%B6%E6%92%B8%E4%B8%80%E4%B8%AA%E9%AB%98%E9%A2%9C%E5%80%BCHome-Lab%E5%AF%BC%E8%88%AA%E9%A1%B5/" rel="next" title="告别浏览器书签！我用一天，从零撸一个高颜值 Home-Lab 导航页">
+                  告别浏览器书签！我用一天，从零撸一个高颜值 Home-Lab 导航页 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments giscus-container">
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Duka</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">64k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3:53</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="giscus" type="application/json">{"enable":true,"repo":"dukaworks/dukaworks.github.io","repo_id":"R_kgDORcsYzQ","category":"General","category_id":"DIC_kwDORcsYzc4C3pTx","mapping":"pathname","strict":0,"reactions_enabled":1,"emit_metadata":0,"theme":"preferred_color_scheme","lang":"zh-CN","crossorigin":"anonymous","input_position":"bottom","loading":"lazy"}</script>
+
+<script>
+document.addEventListener('page:loaded', () => {
+  if (!CONFIG.page.comments) return;
+
+  NexT.utils.loadComments('.giscus-container')
+    .then(() => NexT.utils.getScript('https://giscus.app/client.js', {
+      attributes: {
+        async                   : true,
+        crossOrigin             : 'anonymous',
+        'data-repo'             : CONFIG.giscus.repo,
+        'data-repo-id'          : CONFIG.giscus.repo_id,
+        'data-category'         : CONFIG.giscus.category,
+        'data-category-id'      : CONFIG.giscus.category_id,
+        'data-mapping'          : CONFIG.giscus.mapping,
+        'data-strict'           : CONFIG.giscus.strict,
+        'data-reactions-enabled': CONFIG.giscus.reactions_enabled,
+        'data-emit-metadata'    : CONFIG.giscus.emit_metadata,
+        'data-theme'            : CONFIG.giscus.theme,
+        'data-lang'             : CONFIG.giscus.lang,
+        'data-input-position'   : CONFIG.giscus.input_position,
+        'data-loading'          : CONFIG.giscus.loading
+      },
+      parentNode: document.querySelector('.giscus-container')
+    }));
+});
+</script>
+
+</body>
+</html>
