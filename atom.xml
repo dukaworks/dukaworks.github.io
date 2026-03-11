@@ -91,9 +91,9 @@
     </author>
     <category term="Web开发" scheme="http://blog.dukaworks.io/categories/Web%E5%BC%80%E5%8F%91/"/>
     <category term="Hexo" scheme="http://blog.dukaworks.io/tags/Hexo/"/>
-    <category term="教程" scheme="http://blog.dukaworks.io/tags/%E6%95%99%E7%A8%8B/"/>
     <category term="博客" scheme="http://blog.dukaworks.io/tags/%E5%8D%9A%E5%AE%A2/"/>
     <category term="Next" scheme="http://blog.dukaworks.io/tags/Next/"/>
+    <category term="教程" scheme="http://blog.dukaworks.io/tags/%E6%95%99%E7%A8%8B/"/>
     <category term="静态网站" scheme="http://blog.dukaworks.io/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/"/>
     <category term="多人协作" scheme="http://blog.dukaworks.io/tags/%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C/"/>
     <id>http://blog.dukaworks.io/2026/03/06/Hexo%E5%8D%9A%E5%AE%A2%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97-%E6%90%AD%E5%BB%BA%E5%88%B0%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C/</id>
@@ -131,11 +131,11 @@
       <name>Duka</name>
     </author>
     <category term="学习探索" scheme="http://blog.dukaworks.io/categories/%E5%AD%A6%E4%B9%A0%E6%8E%A2%E7%B4%A2/"/>
+    <category term="教程" scheme="http://blog.dukaworks.io/tags/%E6%95%99%E7%A8%8B/"/>
     <category term="GitHub" scheme="http://blog.dukaworks.io/tags/GitHub/"/>
     <category term="Git" scheme="http://blog.dukaworks.io/tags/Git/"/>
     <category term="开源" scheme="http://blog.dukaworks.io/tags/%E5%BC%80%E6%BA%90/"/>
     <category term="项目管理" scheme="http://blog.dukaworks.io/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
-    <category term="教程" scheme="http://blog.dukaworks.io/tags/%E6%95%99%E7%A8%8B/"/>
     <id>http://blog.dukaworks.io/2026/03/06/GitHub%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97-%E4%BB%8E%E5%88%9B%E5%BB%BA%E5%88%B0%E5%A4%9A%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/</id>
     <link href="http://blog.dukaworks.io/2026/03/06/GitHub%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97-%E4%BB%8E%E5%88%9B%E5%BB%BA%E5%88%B0%E5%A4%9A%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/"/>
     <published>2026-03-06T02:00:00.000Z</published>

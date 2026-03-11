@@ -66,360 +66,6 @@
       </tags>
   </entry>
   <entry>
-    <title>GitHub 开源项目完整指南：从创建到多仓库管理</title>
-    <url>/2026/03/06/GitHub%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97-%E4%BB%8E%E5%88%9B%E5%BB%BA%E5%88%B0%E5%A4%9A%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<h1 id="GitHub-开源项目完整指南：从创建到多仓库管理"><a href="#GitHub-开源项目完整指南：从创建到多仓库管理" class="headerlink" title="GitHub 开源项目完整指南：从创建到多仓库管理"></a>GitHub 开源项目完整指南：从创建到多仓库管理</h1><p>作为一名开发者，GitHub 是我们日常工作中不可或缺的工具。本文将从零开始，带你完整走完创建和管理 GitHub 开源项目的全流程。</p>
-<span id="more"></span>
-
-<h2 id="一、创建-GitHub-账号"><a href="#一、创建-GitHub-账号" class="headerlink" title="一、创建 GitHub 账号"></a>一、创建 GitHub 账号</h2><h3 id="1-1-注册账号"><a href="#1-1-注册账号" class="headerlink" title="1.1 注册账号"></a>1.1 注册账号</h3><ol>
-<li>访问 <a href="https://github.com/">github.com</a></li>
-<li>点击 “Sign up” 注册</li>
-<li>填写用户名、邮箱、密码</li>
-<li>验证邮箱</li>
-</ol>
-<h3 id="1-2-配置-SSH-密钥（推荐）"><a href="#1-2-配置-SSH-密钥（推荐）" class="headerlink" title="1.2 配置 SSH 密钥（推荐）"></a>1.2 配置 SSH 密钥（推荐）</h3><p>SSH 密钥让你无需每次输入密码就能推送代码：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 生成 SSH 密钥</span>
-ssh-keygen <span class="token parameter variable">-t</span> ed25519 <span class="token parameter variable">-C</span> <span class="token string">"your_email@example.com"</span>
-
-<span class="token comment"># 复制公钥内容</span>
-<span class="token function">cat</span> ~/.ssh/id_ed25519.pub
-
-<span class="token comment"># 添加到 GitHub：Settings -> SSH and GPG keys -> New SSH key</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="二、创建第一个仓库"><a href="#二、创建第一个仓库" class="headerlink" title="二、创建第一个仓库"></a>二、创建第一个仓库</h2><h3 id="2-1-在-GitHub-网页创建"><a href="#2-1-在-GitHub-网页创建" class="headerlink" title="2.1 在 GitHub 网页创建"></a>2.1 在 GitHub 网页创建</h3><ol>
-<li>点击右上角 “+” -&gt; “New repository”</li>
-<li>填写仓库信息：<ul>
-<li><strong>Repository name</strong>: 项目名（如 <code>my-awesome-project</code>）</li>
-<li><strong>Description</strong>: 项目描述</li>
-<li><strong>Public&#x2F;Private</strong>: 公开或私有</li>
-<li><strong>Initialize with README</strong>: 勾选，自动创建 README</li>
-<li><strong>Add .gitignore</strong>: 选择项目类型（如 Node、Python）</li>
-<li><strong>Choose a license</strong>: 选择开源协议（如 MIT）</li>
-</ul>
-</li>
-</ol>
-<h3 id="2-2-本地初始化项目"><a href="#2-2-本地初始化项目" class="headerlink" title="2.2 本地初始化项目"></a>2.2 本地初始化项目</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 克隆仓库到本地</span>
-<span class="token function">git</span> clone git@github.com:yourname/my-awesome-project.git
-<span class="token builtin class-name">cd</span> my-awesome-project
-
-<span class="token comment"># 或者本地初始化后关联远程</span>
-<span class="token function">git</span> init
-<span class="token function">git</span> remote <span class="token function">add</span> origin git@github.com:yourname/my-awesome-project.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="2-3-项目结构规范"><a href="#2-3-项目结构规范" class="headerlink" title="2.3 项目结构规范"></a>2.3 项目结构规范</h3><p>一个规范的开源项目结构：</p>
-<pre class="line-numbers language-none"><code class="language-none">my-awesome-project&#x2F;
-├── README.md              # 项目说明
-├── LICENSE                # 开源协议
-├── .gitignore            # Git 忽略文件
-├── CONTRIBUTING.md       # 贡献指南
-├── CHANGELOG.md          # 更新日志
-├── docs&#x2F;                 # 文档目录
-├── src&#x2F;                  # 源代码
-├── tests&#x2F;                # 测试代码
-└── examples&#x2F;             # 示例代码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="三、Git-基础操作"><a href="#三、Git-基础操作" class="headerlink" title="三、Git 基础操作"></a>三、Git 基础操作</h2><h3 id="3-1-日常开发流程"><a href="#3-1-日常开发流程" class="headerlink" title="3.1 日常开发流程"></a>3.1 日常开发流程</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 拉取最新代码</span>
-<span class="token function">git</span> pull origin main
-
-<span class="token comment"># 2. 创建并切换到新分支</span>
-<span class="token function">git</span> checkout <span class="token parameter variable">-b</span> feature/new-feature
-
-<span class="token comment"># 3. 修改代码...</span>
-
-<span class="token comment"># 4. 查看修改状态</span>
-<span class="token function">git</span> status
-
-<span class="token comment"># 5. 添加修改到暂存区</span>
-<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
-
-<span class="token comment"># 6. 提交修改</span>
-<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"feat: 添加新功能"</span>
-
-<span class="token comment"># 7. 推送到远程</span>
-<span class="token function">git</span> push origin feature/new-feature
-
-<span class="token comment"># 8. 在 GitHub 上创建 Pull Request</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="3-2-常用-Git-命令速查"><a href="#3-2-常用-Git-命令速查" class="headerlink" title="3.2 常用 Git 命令速查"></a>3.2 常用 Git 命令速查</h3><table>
-<thead>
-<tr>
-<th>命令</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>git status</code></td>
-<td>查看当前状态</td>
-</tr>
-<tr>
-<td><code>git add .</code></td>
-<td>添加所有修改</td>
-</tr>
-<tr>
-<td><code>git commit -m &quot;msg&quot;</code></td>
-<td>提交修改</td>
-</tr>
-<tr>
-<td><code>git push origin branch</code></td>
-<td>推送到远程</td>
-</tr>
-<tr>
-<td><code>git pull origin branch</code></td>
-<td>拉取远程代码</td>
-</tr>
-<tr>
-<td><code>git branch</code></td>
-<td>查看分支列表</td>
-</tr>
-<tr>
-<td><code>git checkout -b name</code></td>
-<td>创建并切换分支</td>
-</tr>
-<tr>
-<td><code>git merge branch</code></td>
-<td>合并分支</td>
-</tr>
-<tr>
-<td><code>git log --oneline</code></td>
-<td>查看提交历史</td>
-</tr>
-</tbody></table>
-<h2 id="四、分支管理策略"><a href="#四、分支管理策略" class="headerlink" title="四、分支管理策略"></a>四、分支管理策略</h2><h3 id="4-1-Git-Flow-工作流"><a href="#4-1-Git-Flow-工作流" class="headerlink" title="4.1 Git Flow 工作流"></a>4.1 Git Flow 工作流</h3><p>适合大型项目：</p>
-<pre class="line-numbers language-none"><code class="language-none">main        生产分支，稳定版本
-├── develop 开发分支，日常开发
-├── feature&#x2F;* 功能分支，新功能开发
-├── release&#x2F;* 发布分支，版本发布
-└── hotfix&#x2F;*  热修复分支，紧急修复<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="4-2-GitHub-Flow-工作流"><a href="#4-2-GitHub-Flow-工作流" class="headerlink" title="4.2 GitHub Flow 工作流"></a>4.2 GitHub Flow 工作流</h3><p>适合小型项目：</p>
-<pre class="line-numbers language-none"><code class="language-none">main
-├── feature-branch-1  功能分支1
-├── feature-branch-2  功能分支2
-└── bugfix-branch     修复分支<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="4-3-分支命名规范"><a href="#4-3-分支命名规范" class="headerlink" title="4.3 分支命名规范"></a>4.3 分支命名规范</h3><pre class="line-numbers language-none"><code class="language-none">feature&#x2F;login-page      # 新功能
-bugfix&#x2F;fix-memory-leak  # Bug 修复
-hotfix&#x2F;security-patch   # 紧急修复
-docs&#x2F;update-readme      # 文档更新
-refactor&#x2F;optimize-db    # 代码重构<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="五、管理多个-GitHub-仓库"><a href="#五、管理多个-GitHub-仓库" class="headerlink" title="五、管理多个 GitHub 仓库"></a>五、管理多个 GitHub 仓库</h2><h3 id="5-1-本地多仓库管理"><a href="#5-1-本地多仓库管理" class="headerlink" title="5.1 本地多仓库管理"></a>5.1 本地多仓库管理</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看所有远程仓库</span>
-<span class="token function">git</span> remote <span class="token parameter variable">-v</span>
-
-<span class="token comment"># 添加多个远程仓库</span>
-<span class="token function">git</span> remote <span class="token function">add</span> upstream https://github.com/original/repo.git
-<span class="token function">git</span> remote <span class="token function">add</span> fork https://github.com/yourname/repo.git
-
-<span class="token comment"># 从上游仓库拉取更新</span>
-<span class="token function">git</span> pull upstream main
-
-<span class="token comment"># 推送到自己的仓库</span>
-<span class="token function">git</span> push fork main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="5-2-使用-GitHub-CLI（推荐）"><a href="#5-2-使用-GitHub-CLI（推荐）" class="headerlink" title="5.2 使用 GitHub CLI（推荐）"></a>5.2 使用 GitHub CLI（推荐）</h3><p>GitHub 官方命令行工具：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 安装</span>
-<span class="token comment"># macOS: brew install gh</span>
-<span class="token comment"># Windows: winget install --id GitHub.cli</span>
-
-<span class="token comment"># 登录</span>
-<span class="token function">git</span> auth login
-
-<span class="token comment"># 克隆仓库</span>
-gh repo clone owner/repo
-
-<span class="token comment"># 创建 PR</span>
-gh <span class="token function">pr</span> create <span class="token parameter variable">--title</span> <span class="token string">"标题"</span> <span class="token parameter variable">--body</span> <span class="token string">"描述"</span>
-
-<span class="token comment"># 查看 Issues</span>
-gh issue list
-
-<span class="token comment"># Fork 仓库</span>
-gh repo fork owner/repo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="5-3-多账号管理"><a href="#5-3-多账号管理" class="headerlink" title="5.3 多账号管理"></a>5.3 多账号管理</h3><p>如果你需要管理多个 GitHub 账号（如工作号和个人号）：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 生成两个 SSH 密钥</span>
-ssh-keygen <span class="token parameter variable">-t</span> ed25519 <span class="token parameter variable">-C</span> <span class="token string">"personal@email.com"</span> <span class="token parameter variable">-f</span> ~/.ssh/id_ed25519_personal
-ssh-keygen <span class="token parameter variable">-t</span> ed25519 <span class="token parameter variable">-C</span> <span class="token string">"work@email.com"</span> <span class="token parameter variable">-f</span> ~/.ssh/id_ed25519_work
-
-<span class="token comment"># 2. 配置 SSH config</span>
-<span class="token function">cat</span> <span class="token operator">>></span> ~/.ssh/config <span class="token operator">&lt;&lt;</span> <span class="token string">EOF
-# 个人账号
-Host github-personal
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/id_ed25519_personal
-
-# 工作账号
-Host github-work
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/id_ed25519_work
-EOF</span>
-
-<span class="token comment"># 3. 使用不同的 Host 克隆</span>
-<span class="token comment"># 个人项目</span>
-<span class="token function">git</span> clone git@github-personal:personal-name/repo.git
-
-<span class="token comment"># 工作项目</span>
-<span class="token function">git</span> clone git@github-work:work-name/repo.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="六、GitHub-项目管理技巧"><a href="#六、GitHub-项目管理技巧" class="headerlink" title="六、GitHub 项目管理技巧"></a>六、GitHub 项目管理技巧</h2><h3 id="6-1-Issue-管理"><a href="#6-1-Issue-管理" class="headerlink" title="6.1 Issue 管理"></a>6.1 Issue 管理</h3><ul>
-<li>使用 Labels 分类（bug、feature、question）</li>
-<li>使用 Milestones 规划版本</li>
-<li>使用 Projects 看板管理进度</li>
-</ul>
-<h3 id="6-2-Pull-Request-规范"><a href="#6-2-Pull-Request-规范" class="headerlink" title="6.2 Pull Request 规范"></a>6.2 Pull Request 规范</h3><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">##</span> 描述</span>
-简要描述这个 PR 做了什么
-
-<span class="token title important"><span class="token punctuation">##</span> 改动类型</span>
-<span class="token list punctuation">-</span> [ ] Bug 修复
-<span class="token list punctuation">-</span> [ ] 新功能
-<span class="token list punctuation">-</span> [ ] 文档更新
-<span class="token list punctuation">-</span> [ ] 代码重构
-
-<span class="token title important"><span class="token punctuation">##</span> 测试</span>
-<span class="token list punctuation">-</span> [ ] 本地测试通过
-<span class="token list punctuation">-</span> [ ] 添加了单元测试
-
-<span class="token title important"><span class="token punctuation">##</span> 截图（如有 UI 改动）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="6-3-Actions-自动化"><a href="#6-3-Actions-自动化" class="headerlink" title="6.3 Actions 自动化"></a>6.3 Actions 自动化</h3><p>创建 <code>.github/workflows/ci.yml</code>：</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> CI
-
-<span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>push<span class="token punctuation">,</span> pull_request<span class="token punctuation">]</span>
-
-<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
-  <span class="token key atrule">test</span><span class="token punctuation">:</span>
-    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
-    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
-      <span class="token punctuation">-</span> <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v3
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Setup Node.js
-        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>node@v3
-        <span class="token key atrule">with</span><span class="token punctuation">:</span>
-          <span class="token key atrule">node-version</span><span class="token punctuation">:</span> <span class="token string">'18'</span>
-      <span class="token punctuation">-</span> <span class="token key atrule">run</span><span class="token punctuation">:</span> npm install
-      <span class="token punctuation">-</span> <span class="token key atrule">run</span><span class="token punctuation">:</span> npm test<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="6-4-保护分支规则"><a href="#6-4-保护分支规则" class="headerlink" title="6.4 保护分支规则"></a>6.4 保护分支规则</h3><p>在仓库 Settings -&gt; Branches 中设置：</p>
-<ul>
-<li>要求 PR 才能合并到 main</li>
-<li>要求代码审查（Code Review）</li>
-<li>要求 CI 通过</li>
-<li>禁止强制推送</li>
-</ul>
-<h2 id="七、开源项目最佳实践"><a href="#七、开源项目最佳实践" class="headerlink" title="七、开源项目最佳实践"></a>七、开源项目最佳实践</h2><h3 id="7-1-README-模板"><a href="#7-1-README-模板" class="headerlink" title="7.1 README 模板"></a>7.1 README 模板</h3><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 项目名</span>
-
-<span class="token url">[<span class="token content">![License</span>](<span class="token url">https://img.shields.io/badge/license-MIT-blue.svg</span>)</span>](LICENSE)
-
-<span class="token title important"><span class="token punctuation">##</span> 简介</span>
-
-一句话描述项目是什么。
-
-<span class="token title important"><span class="token punctuation">##</span> 功能特性</span>
-
-<span class="token list punctuation">-</span> ✅ 功能1
-<span class="token list punctuation">-</span> ✅ 功能2
-<span class="token list punctuation">-</span> ✅ 功能3
-
-<span class="token title important"><span class="token punctuation">##</span> 安装</span>
-
-```bash
-npm install my-package<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> myLib <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'my-package'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-myLib<span class="token punctuation">.</span><span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><p>详细文档请查看 <a href="./docs">docs</a> 目录。</p>
-<h2 id="贡献"><a href="#贡献" class="headerlink" title="贡献"></a>贡献</h2><p>欢迎提交 Issue 和 Pull Request！</p>
-<h2 id="许可证"><a href="#许可证" class="headerlink" title="许可证"></a>许可证</h2><p><a href="LICENSE">MIT</a></p>
-<pre class="line-numbers language-none"><code class="language-none">
-### 7.2 选择合适的开源协议
-
-| 协议 | 特点 | 适用场景 |
-|------|------|----------|
-| MIT | 最宽松，保留版权声明即可 | 大多数项目 |
-| Apache-2.0 | 允许专利授权 | 企业项目 |
-| GPL-3.0 | 传染性，修改必须开源 | 开源工具 |
-| BSD | 简单宽松 | 学术项目 |
-
-### 7.3 版本号规范（SemVer）
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>主版本号.次版本号.修订号<br>1.0.0</p>
-<ul>
-<li>主版本号：不兼容的 API 修改</li>
-<li>次版本号：向下兼容的功能新增</li>
-<li>修订号：向下兼容的问题修复</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">
-## 八、常见问题
-
-### Q1: 如何撤销错误的提交？
-
-&#96;&#96;&#96;bash
-# 撤销最后一次提交，保留修改
-git reset --soft HEAD~1
-
-# 撤销最后一次提交，丢弃修改
-git reset --hard HEAD~1
-
-# 修改最后一次提交的 message
-git commit --amend -m &quot;新的提交信息&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="Q2-如何合并多个提交？"><a href="#Q2-如何合并多个提交？" class="headerlink" title="Q2: 如何合并多个提交？"></a>Q2: 如何合并多个提交？</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 合并最近 3 个提交</span>
-<span class="token function">git</span> rebase <span class="token parameter variable">-i</span> HEAD~3
-<span class="token comment"># 在编辑器中将 pick 改为 squash</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="Q3-如何同步-Fork-的仓库？"><a href="#Q3-如何同步-Fork-的仓库？" class="headerlink" title="Q3: 如何同步 Fork 的仓库？"></a>Q3: 如何同步 Fork 的仓库？</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 添加上游仓库</span>
-<span class="token function">git</span> remote <span class="token function">add</span> upstream https://github.com/original/repo.git
-
-<span class="token comment"># 拉取上游更新</span>
-<span class="token function">git</span> fetch upstream
-
-<span class="token comment"># 合并到本地分支</span>
-<span class="token function">git</span> checkout main
-<span class="token function">git</span> merge upstream/main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="Q4-如何处理合并冲突？"><a href="#Q4-如何处理合并冲突？" class="headerlink" title="Q4: 如何处理合并冲突？"></a>Q4: 如何处理合并冲突？</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 拉取代码时出现冲突</span>
-<span class="token function">git</span> pull origin main
-
-<span class="token comment"># 2. 编辑冲突文件，解决冲突</span>
-<span class="token comment"># 冲突标记：&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD  =======  >>>>>>> branch</span>
-
-<span class="token comment"># 3. 添加解决后的文件</span>
-<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
-
-<span class="token comment"># 4. 完成合并</span>
-<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"merge: 解决冲突"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="九、总结"><a href="#九、总结" class="headerlink" title="九、总结"></a>九、总结</h2><p>GitHub 不仅是代码托管平台，更是开发者协作的重要工具。掌握这些技能：</p>
-<ol>
-<li>✅ 熟练 Git 基本操作</li>
-<li>✅ 理解分支管理策略</li>
-<li>✅ 规范提交信息和 PR</li>
-<li>✅ 善用 GitHub 项目管理功能</li>
-<li>✅ 维护良好的开源项目文档</li>
-</ol>
-<p>希望这篇指南能帮助你更好地使用 GitHub！</p>
-<hr>
-<p><strong>参考资源</strong></p>
-<ul>
-<li><a href="https://docs.github.com/">GitHub Docs</a></li>
-<li><a href="https://git-scm.com/doc">Git 官方文档</a></li>
-<li><a href="https://git-scm.com/book/zh/v2">Pro Git 电子书</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>学习探索</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>Git</tag>
-        <tag>开源</tag>
-        <tag>项目管理</tag>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>HTML格式测试文章</title>
     <url>/2026/03/04/HTML%E6%A0%BC%E5%BC%8F%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<p>这篇文章用于测试各种 HTML 格式代码片段的效果。</p>
@@ -563,6 +209,95 @@ module.exports = {
         <tag>Markdown</tag>
         <tag>HTML</tag>
         <tag>格式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我做了一个 frpc 控制台：连接、改配置、看日志、重启，一条链路闭环</title>
+    <url>/2026/03/11/Frpc-GUI-%E9%80%9A%E8%BF%87SSH%E8%BF%9C%E7%A8%8B%E5%8F%AF%E8%A7%86%E5%8C%96%E7%AE%A1%E7%90%86frpc%EF%BC%88Desktop-Docker%EF%BC%89/</url>
+    <content><![CDATA[<h3 id="Frpc-GUI：通过-SSH-远程可视化管理-frpc（Desktop-Docker）"><a href="#Frpc-GUI：通过-SSH-远程可视化管理-frpc（Desktop-Docker）" class="headerlink" title="Frpc-GUI：通过 SSH 远程可视化管理 frpc（Desktop &#x2F; Docker）"></a>Frpc-GUI：通过 SSH 远程可视化管理 frpc（Desktop &#x2F; Docker）</h3><h3 id="告别-SSH-nano：用-Frpc-GUI-管理多台服务器上的-frpc"><a href="#告别-SSH-nano：用-Frpc-GUI-管理多台服务器上的-frpc" class="headerlink" title="告别 SSH + nano：用 Frpc-GUI 管理多台服务器上的 frpc"></a>告别 SSH + nano：用 Frpc-GUI 管理多台服务器上的 frpc</h3><blockquote>
+<p>摘要<br>Frpc-GUI 是一个现代化面板，用于通过 SSH 远程管理目标机器上的 frpc：保存多服务器连接、可视化管理 proxies、编辑配置、查看状态与日志，并在需要时重启服务。适合 frpc 部署在路由器 &#x2F; NAS &#x2F; VPS &#x2F; 小主机等场景。<br>链接：</p>
+</blockquote>
+<ul>
+<li>GitHub： <a href="https://github.com/dukaworks/frpc-gui">https://github.com/dukaworks/frpc-gui</a></li>
+<li>Releases： <a href="https://github.com/dukaworks/frpc-gui/releases">https://github.com/dukaworks/frpc-gui/releases</a></li>
+<li>Docker 镜像： ghcr.io&#x2F;dukaworks&#x2F;frpc-gui:latest</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="背景：frpc-的“日常运维摩擦”"><a href="#背景：frpc-的“日常运维摩擦”" class="headerlink" title="背景：frpc 的“日常运维摩擦”"></a>背景：frpc 的“日常运维摩擦”</h2><p>frpc 很稳定，但“改配置”这件事并不轻松，尤其当它跑在路由器&#x2F;NAS&#x2F;VPS 上时：</p>
+<ul>
+<li>改一次代理：SSH 上去找配置文件（TOML&#x2F;INI）→ 手改 → 重启 → tail 日志</li>
+<li>多台机器：靠记忆&#x2F;笔记切来切去，容易弄错目标机或配置文件路径</li>
+<li>改完验证：状态、日志、端口连通、域名访问……经常要来回折腾<br>我希望把这套流程变得更像“控制台”： 连接 → 编辑 → 保存 → 验证 ，并且能方便地管理多台服务器。</li>
+</ul>
+<h2 id="Frpc-GUI-是什么"><a href="#Frpc-GUI-是什么" class="headerlink" title="Frpc-GUI 是什么"></a>Frpc-GUI 是什么</h2><p>Frpc-GUI 是一个用于远程管理 frpc 的可视化控制台。</p>
+<ul>
+<li>控制端运行在你的电脑（桌面版）或一台机器上（Docker&#x2F;Web）</li>
+<li>通过 SSH 连接到目标机</li>
+<li>对目标机上的 frpc 做常见运维动作：读&#x2F;写配置、重启、看状态和日志</li>
+</ul>
+<h2 id="特性概览"><a href="#特性概览" class="headerlink" title="特性概览"></a>特性概览</h2><ul>
+<li>SSH 远程连接 ：连接任意运行 frpc 的服务器&#x2F;路由器&#x2F;NAS</li>
+<li>多服务器档案 ：保存多套 SSH 连接配置，支持列表分页</li>
+<li>可视化管理 proxies ：新增&#x2F;编辑&#x2F;删除，支持批量操作</li>
+<li>配置模式 + 源码模式 ：兼顾新手和熟练用户</li>
+<li>状态与日志 ：查看状态、抓日志、按需重启（Docker&#x2F;Systemd&#x2F;进程等场景）</li>
+<li>桌面版外链体验更合理 ：FRPS URL 这类地址会用系统默认浏览器打开，更适合登录&#x2F;授权流程</li>
+<li>双语界面 ：English &#x2F; 中文（i18n）</li>
+</ul>
+<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="方式一：桌面版（推荐）"><a href="#方式一：桌面版（推荐）" class="headerlink" title="方式一：桌面版（推荐）"></a>方式一：桌面版（推荐）</h3><p>从 GitHub Releases 下载对应平台安装包：</p>
+<ul>
+<li><a href="https://github.com/dukaworks/frpc-gui/releases">https://github.com/dukaworks/frpc-gui/releases</a><br>包含：</li>
+<li>Windows： .exe installer + .zip</li>
+<li>macOS： .dmg</li>
+<li>Linux： .deb</li>
+</ul>
+<p>启动后：</p>
+<ol>
+<li>填 SSH 连接信息并保存</li>
+<li>连接目标机</li>
+<li>在 Proxies&#x2F;Config&#x2F;Logs 页面完成配置与验证</li>
+</ol>
+<h3 id="方式二：Docker"><a href="#方式二：Docker" class="headerlink" title="方式二：Docker"></a>方式二：Docker</h3><p>Docker Compose：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> compose up <span class="token parameter variable">-d</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>访问：</p>
+<ul>
+<li><a href="http://localhost:3000/">http://localhost:3000</a><br>Docker Run：</li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> run <span class="token parameter variable">-d</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--name</span> frpc-gui <span class="token punctuation">\</span>
+  <span class="token parameter variable">-p</span> <span class="token number">3000</span>:3000 <span class="token punctuation">\</span> 
+  ghcr.io/dukaworks/frpc-gui:latest<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="工作原理（简述）"><a href="#工作原理（简述）" class="headerlink" title="工作原理（简述）"></a>工作原理（简述）</h2><ul>
+<li>你在本地（桌面版）或浏览器（Docker&#x2F;Web）打开 Frpc-GUI</li>
+<li>Frpc-GUI 通过 SSH 在目标机上执行：读取&#x2F;写入配置、重启、抓日志、状态检查等操作</li>
+<li>桌面版内置服务绑定 127.0.0.1 ，减少暴露面</li>
+</ul>
+<h2 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h2><p>README 已提供中英文完整截图：</p>
+<ul>
+<li><a href="https://github.com/dukaworks/frpc-gui">https://github.com/dukaworks/frpc-gui</a></li>
+<li>中文说明： <a href="https://github.com/dukaworks/frpc-gui/blob/main/README_zh.md">https://github.com/dukaworks/frpc-gui/blob/main/README_zh.md</a></li>
+</ul>
+<h2 id="适合人群"><a href="#适合人群" class="headerlink" title="适合人群"></a>适合人群</h2><ul>
+<li>frpc 跑在 OpenWrt &#x2F; NAS &#x2F; PVE &#x2F; VPS &#x2F; 小主机上</li>
+<li>需要频繁调整代理或管理多台机器</li>
+<li>希望把“命令行串联工作流”变成“可视化闭环流程”</li>
+</ul>
+<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>如果你愿意分享你的部署环境（OpenWrt &#x2F; fnOS &#x2F; PVE &#x2F; 群晖 &#x2F; 纯 VPS），我可以优先把常见路径、服务管理方式、以及一些模板配置做得更开箱即用。</p>
+]]></content>
+      <categories>
+        <category>联创项目</category>
+        <category>Web开发</category>
+        <category>实用工具</category>
+      </categories>
+      <tags>
+        <tag>frpc</tag>
+        <tag>ssh</tag>
+        <tag>docker</tag>
+        <tag>gui</tag>
+        <tag>Windows</tag>
+        <tag>linux</tag>
+        <tag>MacOS</tag>
       </tags>
   </entry>
   <entry>
@@ -1331,33 +1066,11 @@ hexo clean <span class="token operator">&amp;&amp;</span> hexo g <span class="to
       </categories>
       <tags>
         <tag>Hexo</tag>
-        <tag>教程</tag>
         <tag>博客</tag>
         <tag>Next</tag>
+        <tag>教程</tag>
         <tag>静态网站</tag>
         <tag>多人协作</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>模型微调入门</title>
-    <url>/2026/03/04/ai-fine-tuning/</url>
-    <content><![CDATA[<p>模型微调（Fine-tuning）是在预训练模型基础上，使用特定领域的数据进一步训练，使模型适应特定任务的技术。</p>
-<span id="more"></span>
-
-<p>微调的优势在于、模型会学习特定领域的知识和风格，输出更符合实际需求；相比从零训练，所需数据量和计算资源更少；可以保留预训练模型的通用能力。</p>
-<p>常见的微调方法包括、全参数微调、LoRA（Low-Rank Adaptation）、Prefix Tuning、Prompt Tuning。LoRA 只训练少量参数，效果接近全参数微调，计算成本低，是目前最受欢迎的方法。</p>
-<p>微调前需要准备高质量的数据集。数据应该包含输入输出对，格式统一，数量充足。对于对话模型，需要多轮对话数据；对于分类模型，需要标注数据。</p>
-<p>Hugging Face 的 PEFT、Transformers 库提供了便捷的微调接口。选择合适的预训练模型（如 Llama、Mistral），配置训练参数，开始训练。</p>
-<p>微调后需要评估模型效果。可以使用测试集评估，也可以人工抽检。如果效果不理想，可能需要调整数据质量、增加训练轮数、调整学习率等。</p>
-<p>微调是定制 AI 模型的有效途径。随着工具的成熟，越来越多的开发者能够创建自己的专属模型。</p>
-]]></content>
-      <categories>
-        <category>AI智能体</category>
-      </categories>
-      <tags>
-        <tag>微调</tag>
-        <tag>训练</tag>
-        <tag>模型</tag>
       </tags>
   </entry>
   <entry>
@@ -1381,116 +1094,399 @@ hexo clean <span class="token operator">&amp;&amp;</span> hexo g <span class="to
       </tags>
   </entry>
   <entry>
-    <title>我做了一个 frpc 控制台：连接、改配置、看日志、重启，一条链路闭环</title>
-    <url>/2026/03/11/Frpc-GUI-%E9%80%9A%E8%BF%87SSH%E8%BF%9C%E7%A8%8B%E5%8F%AF%E8%A7%86%E5%8C%96%E7%AE%A1%E7%90%86frpc%EF%BC%88Desktop-Docker%EF%BC%89/</url>
-    <content><![CDATA[<h3 id="Frpc-GUI：通过-SSH-远程可视化管理-frpc（Desktop-Docker）"><a href="#Frpc-GUI：通过-SSH-远程可视化管理-frpc（Desktop-Docker）" class="headerlink" title="Frpc-GUI：通过 SSH 远程可视化管理 frpc（Desktop &#x2F; Docker）"></a>Frpc-GUI：通过 SSH 远程可视化管理 frpc（Desktop &#x2F; Docker）</h3><h3 id="告别-SSH-nano：用-Frpc-GUI-管理多台服务器上的-frpc"><a href="#告别-SSH-nano：用-Frpc-GUI-管理多台服务器上的-frpc" class="headerlink" title="告别 SSH + nano：用 Frpc-GUI 管理多台服务器上的 frpc"></a>告别 SSH + nano：用 Frpc-GUI 管理多台服务器上的 frpc</h3><blockquote>
-<p>摘要<br>Frpc-GUI 是一个现代化面板，用于通过 SSH 远程管理目标机器上的 frpc：保存多服务器连接、可视化管理 proxies、编辑配置、查看状态与日志，并在需要时重启服务。适合 frpc 部署在路由器 &#x2F; NAS &#x2F; VPS &#x2F; 小主机等场景。<br>链接：</p>
-</blockquote>
-<ul>
-<li>GitHub： <a href="https://github.com/dukaworks/frpc-gui">https://github.com/dukaworks/frpc-gui</a></li>
-<li>Releases： <a href="https://github.com/dukaworks/frpc-gui/releases">https://github.com/dukaworks/frpc-gui/releases</a></li>
-<li>Docker 镜像： ghcr.io&#x2F;dukaworks&#x2F;frpc-gui:latest</li>
-</ul>
+    <title>GitHub 开源项目完整指南：从创建到多仓库管理</title>
+    <url>/2026/03/06/GitHub%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97-%E4%BB%8E%E5%88%9B%E5%BB%BA%E5%88%B0%E5%A4%9A%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<h1 id="GitHub-开源项目完整指南：从创建到多仓库管理"><a href="#GitHub-开源项目完整指南：从创建到多仓库管理" class="headerlink" title="GitHub 开源项目完整指南：从创建到多仓库管理"></a>GitHub 开源项目完整指南：从创建到多仓库管理</h1><p>作为一名开发者，GitHub 是我们日常工作中不可或缺的工具。本文将从零开始，带你完整走完创建和管理 GitHub 开源项目的全流程。</p>
 <span id="more"></span>
 
-<h2 id="背景：frpc-的“日常运维摩擦”"><a href="#背景：frpc-的“日常运维摩擦”" class="headerlink" title="背景：frpc 的“日常运维摩擦”"></a>背景：frpc 的“日常运维摩擦”</h2><p>frpc 很稳定，但“改配置”这件事并不轻松，尤其当它跑在路由器&#x2F;NAS&#x2F;VPS 上时：</p>
-<ul>
-<li>改一次代理：SSH 上去找配置文件（TOML&#x2F;INI）→ 手改 → 重启 → tail 日志</li>
-<li>多台机器：靠记忆&#x2F;笔记切来切去，容易弄错目标机或配置文件路径</li>
-<li>改完验证：状态、日志、端口连通、域名访问……经常要来回折腾<br>我希望把这套流程变得更像“控制台”： 连接 → 编辑 → 保存 → 验证 ，并且能方便地管理多台服务器。</li>
-</ul>
-<h2 id="Frpc-GUI-是什么"><a href="#Frpc-GUI-是什么" class="headerlink" title="Frpc-GUI 是什么"></a>Frpc-GUI 是什么</h2><p>Frpc-GUI 是一个用于远程管理 frpc 的可视化控制台。</p>
-<ul>
-<li>控制端运行在你的电脑（桌面版）或一台机器上（Docker&#x2F;Web）</li>
-<li>通过 SSH 连接到目标机</li>
-<li>对目标机上的 frpc 做常见运维动作：读&#x2F;写配置、重启、看状态和日志</li>
-</ul>
-<h2 id="特性概览"><a href="#特性概览" class="headerlink" title="特性概览"></a>特性概览</h2><ul>
-<li>SSH 远程连接 ：连接任意运行 frpc 的服务器&#x2F;路由器&#x2F;NAS</li>
-<li>多服务器档案 ：保存多套 SSH 连接配置，支持列表分页</li>
-<li>可视化管理 proxies ：新增&#x2F;编辑&#x2F;删除，支持批量操作</li>
-<li>配置模式 + 源码模式 ：兼顾新手和熟练用户</li>
-<li>状态与日志 ：查看状态、抓日志、按需重启（Docker&#x2F;Systemd&#x2F;进程等场景）</li>
-<li>桌面版外链体验更合理 ：FRPS URL 这类地址会用系统默认浏览器打开，更适合登录&#x2F;授权流程</li>
-<li>双语界面 ：English &#x2F; 中文（i18n）</li>
-</ul>
-<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="方式一：桌面版（推荐）"><a href="#方式一：桌面版（推荐）" class="headerlink" title="方式一：桌面版（推荐）"></a>方式一：桌面版（推荐）</h3><p>从 GitHub Releases 下载对应平台安装包：</p>
-<ul>
-<li><a href="https://github.com/dukaworks/frpc-gui/releases">https://github.com/dukaworks/frpc-gui/releases</a><br>包含：</li>
-<li>Windows： .exe installer + .zip</li>
-<li>macOS： .dmg</li>
-<li>Linux： .deb</li>
-</ul>
-<p>启动后：</p>
-<ol>
-<li>填 SSH 连接信息并保存</li>
-<li>连接目标机</li>
-<li>在 Proxies&#x2F;Config&#x2F;Logs 页面完成配置与验证</li>
+<h2 id="一、创建-GitHub-账号"><a href="#一、创建-GitHub-账号" class="headerlink" title="一、创建 GitHub 账号"></a>一、创建 GitHub 账号</h2><h3 id="1-1-注册账号"><a href="#1-1-注册账号" class="headerlink" title="1.1 注册账号"></a>1.1 注册账号</h3><ol>
+<li>访问 <a href="https://github.com/">github.com</a></li>
+<li>点击 “Sign up” 注册</li>
+<li>填写用户名、邮箱、密码</li>
+<li>验证邮箱</li>
 </ol>
-<h3 id="方式二：Docker"><a href="#方式二：Docker" class="headerlink" title="方式二：Docker"></a>方式二：Docker</h3><p>Docker Compose：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> compose up <span class="token parameter variable">-d</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>访问：</p>
+<h3 id="1-2-配置-SSH-密钥（推荐）"><a href="#1-2-配置-SSH-密钥（推荐）" class="headerlink" title="1.2 配置 SSH 密钥（推荐）"></a>1.2 配置 SSH 密钥（推荐）</h3><p>SSH 密钥让你无需每次输入密码就能推送代码：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 生成 SSH 密钥</span>
+ssh-keygen <span class="token parameter variable">-t</span> ed25519 <span class="token parameter variable">-C</span> <span class="token string">"your_email@example.com"</span>
+
+<span class="token comment"># 复制公钥内容</span>
+<span class="token function">cat</span> ~/.ssh/id_ed25519.pub
+
+<span class="token comment"># 添加到 GitHub：Settings -> SSH and GPG keys -> New SSH key</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="二、创建第一个仓库"><a href="#二、创建第一个仓库" class="headerlink" title="二、创建第一个仓库"></a>二、创建第一个仓库</h2><h3 id="2-1-在-GitHub-网页创建"><a href="#2-1-在-GitHub-网页创建" class="headerlink" title="2.1 在 GitHub 网页创建"></a>2.1 在 GitHub 网页创建</h3><ol>
+<li>点击右上角 “+” -&gt; “New repository”</li>
+<li>填写仓库信息：<ul>
+<li><strong>Repository name</strong>: 项目名（如 <code>my-awesome-project</code>）</li>
+<li><strong>Description</strong>: 项目描述</li>
+<li><strong>Public&#x2F;Private</strong>: 公开或私有</li>
+<li><strong>Initialize with README</strong>: 勾选，自动创建 README</li>
+<li><strong>Add .gitignore</strong>: 选择项目类型（如 Node、Python）</li>
+<li><strong>Choose a license</strong>: 选择开源协议（如 MIT）</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-2-本地初始化项目"><a href="#2-2-本地初始化项目" class="headerlink" title="2.2 本地初始化项目"></a>2.2 本地初始化项目</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 克隆仓库到本地</span>
+<span class="token function">git</span> clone git@github.com:yourname/my-awesome-project.git
+<span class="token builtin class-name">cd</span> my-awesome-project
+
+<span class="token comment"># 或者本地初始化后关联远程</span>
+<span class="token function">git</span> init
+<span class="token function">git</span> remote <span class="token function">add</span> origin git@github.com:yourname/my-awesome-project.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-3-项目结构规范"><a href="#2-3-项目结构规范" class="headerlink" title="2.3 项目结构规范"></a>2.3 项目结构规范</h3><p>一个规范的开源项目结构：</p>
+<pre class="line-numbers language-none"><code class="language-none">my-awesome-project&#x2F;
+├── README.md              # 项目说明
+├── LICENSE                # 开源协议
+├── .gitignore            # Git 忽略文件
+├── CONTRIBUTING.md       # 贡献指南
+├── CHANGELOG.md          # 更新日志
+├── docs&#x2F;                 # 文档目录
+├── src&#x2F;                  # 源代码
+├── tests&#x2F;                # 测试代码
+└── examples&#x2F;             # 示例代码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="三、Git-基础操作"><a href="#三、Git-基础操作" class="headerlink" title="三、Git 基础操作"></a>三、Git 基础操作</h2><h3 id="3-1-日常开发流程"><a href="#3-1-日常开发流程" class="headerlink" title="3.1 日常开发流程"></a>3.1 日常开发流程</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 拉取最新代码</span>
+<span class="token function">git</span> pull origin main
+
+<span class="token comment"># 2. 创建并切换到新分支</span>
+<span class="token function">git</span> checkout <span class="token parameter variable">-b</span> feature/new-feature
+
+<span class="token comment"># 3. 修改代码...</span>
+
+<span class="token comment"># 4. 查看修改状态</span>
+<span class="token function">git</span> status
+
+<span class="token comment"># 5. 添加修改到暂存区</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+
+<span class="token comment"># 6. 提交修改</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"feat: 添加新功能"</span>
+
+<span class="token comment"># 7. 推送到远程</span>
+<span class="token function">git</span> push origin feature/new-feature
+
+<span class="token comment"># 8. 在 GitHub 上创建 Pull Request</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-2-常用-Git-命令速查"><a href="#3-2-常用-Git-命令速查" class="headerlink" title="3.2 常用 Git 命令速查"></a>3.2 常用 Git 命令速查</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>git status</code></td>
+<td>查看当前状态</td>
+</tr>
+<tr>
+<td><code>git add .</code></td>
+<td>添加所有修改</td>
+</tr>
+<tr>
+<td><code>git commit -m &quot;msg&quot;</code></td>
+<td>提交修改</td>
+</tr>
+<tr>
+<td><code>git push origin branch</code></td>
+<td>推送到远程</td>
+</tr>
+<tr>
+<td><code>git pull origin branch</code></td>
+<td>拉取远程代码</td>
+</tr>
+<tr>
+<td><code>git branch</code></td>
+<td>查看分支列表</td>
+</tr>
+<tr>
+<td><code>git checkout -b name</code></td>
+<td>创建并切换分支</td>
+</tr>
+<tr>
+<td><code>git merge branch</code></td>
+<td>合并分支</td>
+</tr>
+<tr>
+<td><code>git log --oneline</code></td>
+<td>查看提交历史</td>
+</tr>
+</tbody></table>
+<h2 id="四、分支管理策略"><a href="#四、分支管理策略" class="headerlink" title="四、分支管理策略"></a>四、分支管理策略</h2><h3 id="4-1-Git-Flow-工作流"><a href="#4-1-Git-Flow-工作流" class="headerlink" title="4.1 Git Flow 工作流"></a>4.1 Git Flow 工作流</h3><p>适合大型项目：</p>
+<pre class="line-numbers language-none"><code class="language-none">main        生产分支，稳定版本
+├── develop 开发分支，日常开发
+├── feature&#x2F;* 功能分支，新功能开发
+├── release&#x2F;* 发布分支，版本发布
+└── hotfix&#x2F;*  热修复分支，紧急修复<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-2-GitHub-Flow-工作流"><a href="#4-2-GitHub-Flow-工作流" class="headerlink" title="4.2 GitHub Flow 工作流"></a>4.2 GitHub Flow 工作流</h3><p>适合小型项目：</p>
+<pre class="line-numbers language-none"><code class="language-none">main
+├── feature-branch-1  功能分支1
+├── feature-branch-2  功能分支2
+└── bugfix-branch     修复分支<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-3-分支命名规范"><a href="#4-3-分支命名规范" class="headerlink" title="4.3 分支命名规范"></a>4.3 分支命名规范</h3><pre class="line-numbers language-none"><code class="language-none">feature&#x2F;login-page      # 新功能
+bugfix&#x2F;fix-memory-leak  # Bug 修复
+hotfix&#x2F;security-patch   # 紧急修复
+docs&#x2F;update-readme      # 文档更新
+refactor&#x2F;optimize-db    # 代码重构<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="五、管理多个-GitHub-仓库"><a href="#五、管理多个-GitHub-仓库" class="headerlink" title="五、管理多个 GitHub 仓库"></a>五、管理多个 GitHub 仓库</h2><h3 id="5-1-本地多仓库管理"><a href="#5-1-本地多仓库管理" class="headerlink" title="5.1 本地多仓库管理"></a>5.1 本地多仓库管理</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看所有远程仓库</span>
+<span class="token function">git</span> remote <span class="token parameter variable">-v</span>
+
+<span class="token comment"># 添加多个远程仓库</span>
+<span class="token function">git</span> remote <span class="token function">add</span> upstream https://github.com/original/repo.git
+<span class="token function">git</span> remote <span class="token function">add</span> fork https://github.com/yourname/repo.git
+
+<span class="token comment"># 从上游仓库拉取更新</span>
+<span class="token function">git</span> pull upstream main
+
+<span class="token comment"># 推送到自己的仓库</span>
+<span class="token function">git</span> push fork main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="5-2-使用-GitHub-CLI（推荐）"><a href="#5-2-使用-GitHub-CLI（推荐）" class="headerlink" title="5.2 使用 GitHub CLI（推荐）"></a>5.2 使用 GitHub CLI（推荐）</h3><p>GitHub 官方命令行工具：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 安装</span>
+<span class="token comment"># macOS: brew install gh</span>
+<span class="token comment"># Windows: winget install --id GitHub.cli</span>
+
+<span class="token comment"># 登录</span>
+<span class="token function">git</span> auth login
+
+<span class="token comment"># 克隆仓库</span>
+gh repo clone owner/repo
+
+<span class="token comment"># 创建 PR</span>
+gh <span class="token function">pr</span> create <span class="token parameter variable">--title</span> <span class="token string">"标题"</span> <span class="token parameter variable">--body</span> <span class="token string">"描述"</span>
+
+<span class="token comment"># 查看 Issues</span>
+gh issue list
+
+<span class="token comment"># Fork 仓库</span>
+gh repo fork owner/repo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="5-3-多账号管理"><a href="#5-3-多账号管理" class="headerlink" title="5.3 多账号管理"></a>5.3 多账号管理</h3><p>如果你需要管理多个 GitHub 账号（如工作号和个人号）：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 生成两个 SSH 密钥</span>
+ssh-keygen <span class="token parameter variable">-t</span> ed25519 <span class="token parameter variable">-C</span> <span class="token string">"personal@email.com"</span> <span class="token parameter variable">-f</span> ~/.ssh/id_ed25519_personal
+ssh-keygen <span class="token parameter variable">-t</span> ed25519 <span class="token parameter variable">-C</span> <span class="token string">"work@email.com"</span> <span class="token parameter variable">-f</span> ~/.ssh/id_ed25519_work
+
+<span class="token comment"># 2. 配置 SSH config</span>
+<span class="token function">cat</span> <span class="token operator">>></span> ~/.ssh/config <span class="token operator">&lt;&lt;</span> <span class="token string">EOF
+# 个人账号
+Host github-personal
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519_personal
+
+# 工作账号
+Host github-work
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519_work
+EOF</span>
+
+<span class="token comment"># 3. 使用不同的 Host 克隆</span>
+<span class="token comment"># 个人项目</span>
+<span class="token function">git</span> clone git@github-personal:personal-name/repo.git
+
+<span class="token comment"># 工作项目</span>
+<span class="token function">git</span> clone git@github-work:work-name/repo.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="六、GitHub-项目管理技巧"><a href="#六、GitHub-项目管理技巧" class="headerlink" title="六、GitHub 项目管理技巧"></a>六、GitHub 项目管理技巧</h2><h3 id="6-1-Issue-管理"><a href="#6-1-Issue-管理" class="headerlink" title="6.1 Issue 管理"></a>6.1 Issue 管理</h3><ul>
+<li>使用 Labels 分类（bug、feature、question）</li>
+<li>使用 Milestones 规划版本</li>
+<li>使用 Projects 看板管理进度</li>
+</ul>
+<h3 id="6-2-Pull-Request-规范"><a href="#6-2-Pull-Request-规范" class="headerlink" title="6.2 Pull Request 规范"></a>6.2 Pull Request 规范</h3><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">##</span> 描述</span>
+简要描述这个 PR 做了什么
+
+<span class="token title important"><span class="token punctuation">##</span> 改动类型</span>
+<span class="token list punctuation">-</span> [ ] Bug 修复
+<span class="token list punctuation">-</span> [ ] 新功能
+<span class="token list punctuation">-</span> [ ] 文档更新
+<span class="token list punctuation">-</span> [ ] 代码重构
+
+<span class="token title important"><span class="token punctuation">##</span> 测试</span>
+<span class="token list punctuation">-</span> [ ] 本地测试通过
+<span class="token list punctuation">-</span> [ ] 添加了单元测试
+
+<span class="token title important"><span class="token punctuation">##</span> 截图（如有 UI 改动）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="6-3-Actions-自动化"><a href="#6-3-Actions-自动化" class="headerlink" title="6.3 Actions 自动化"></a>6.3 Actions 自动化</h3><p>创建 <code>.github/workflows/ci.yml</code>：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> CI
+
+<span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>push<span class="token punctuation">,</span> pull_request<span class="token punctuation">]</span>
+
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">test</span><span class="token punctuation">:</span>
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v3
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Setup Node.js
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>node@v3
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">node-version</span><span class="token punctuation">:</span> <span class="token string">'18'</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">run</span><span class="token punctuation">:</span> npm install
+      <span class="token punctuation">-</span> <span class="token key atrule">run</span><span class="token punctuation">:</span> npm test<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="6-4-保护分支规则"><a href="#6-4-保护分支规则" class="headerlink" title="6.4 保护分支规则"></a>6.4 保护分支规则</h3><p>在仓库 Settings -&gt; Branches 中设置：</p>
 <ul>
-<li><a href="http://localhost:3000/">http://localhost:3000</a><br>Docker Run：</li>
+<li>要求 PR 才能合并到 main</li>
+<li>要求代码审查（Code Review）</li>
+<li>要求 CI 通过</li>
+<li>禁止强制推送</li>
 </ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> run <span class="token parameter variable">-d</span> <span class="token punctuation">\</span>
-  <span class="token parameter variable">--name</span> frpc-gui <span class="token punctuation">\</span>
-  <span class="token parameter variable">-p</span> <span class="token number">3000</span>:3000 <span class="token punctuation">\</span> 
-  ghcr.io/dukaworks/frpc-gui:latest<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="工作原理（简述）"><a href="#工作原理（简述）" class="headerlink" title="工作原理（简述）"></a>工作原理（简述）</h2><ul>
-<li>你在本地（桌面版）或浏览器（Docker&#x2F;Web）打开 Frpc-GUI</li>
-<li>Frpc-GUI 通过 SSH 在目标机上执行：读取&#x2F;写入配置、重启、抓日志、状态检查等操作</li>
-<li>桌面版内置服务绑定 127.0.0.1 ，减少暴露面</li>
-</ul>
-<h2 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h2><p>README 已提供中英文完整截图：</p>
+<h2 id="七、开源项目最佳实践"><a href="#七、开源项目最佳实践" class="headerlink" title="七、开源项目最佳实践"></a>七、开源项目最佳实践</h2><h3 id="7-1-README-模板"><a href="#7-1-README-模板" class="headerlink" title="7.1 README 模板"></a>7.1 README 模板</h3><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 项目名</span>
+
+<span class="token url">[<span class="token content">![License</span>](<span class="token url">https://img.shields.io/badge/license-MIT-blue.svg</span>)</span>](LICENSE)
+
+<span class="token title important"><span class="token punctuation">##</span> 简介</span>
+
+一句话描述项目是什么。
+
+<span class="token title important"><span class="token punctuation">##</span> 功能特性</span>
+
+<span class="token list punctuation">-</span> ✅ 功能1
+<span class="token list punctuation">-</span> ✅ 功能2
+<span class="token list punctuation">-</span> ✅ 功能3
+
+<span class="token title important"><span class="token punctuation">##</span> 安装</span>
+
+```bash
+npm install my-package<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> myLib <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'my-package'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+myLib<span class="token punctuation">.</span><span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><p>详细文档请查看 <a href="./docs">docs</a> 目录。</p>
+<h2 id="贡献"><a href="#贡献" class="headerlink" title="贡献"></a>贡献</h2><p>欢迎提交 Issue 和 Pull Request！</p>
+<h2 id="许可证"><a href="#许可证" class="headerlink" title="许可证"></a>许可证</h2><p><a href="LICENSE">MIT</a></p>
+<pre class="line-numbers language-none"><code class="language-none">
+### 7.2 选择合适的开源协议
+
+| 协议 | 特点 | 适用场景 |
+|------|------|----------|
+| MIT | 最宽松，保留版权声明即可 | 大多数项目 |
+| Apache-2.0 | 允许专利授权 | 企业项目 |
+| GPL-3.0 | 传染性，修改必须开源 | 开源工具 |
+| BSD | 简单宽松 | 学术项目 |
+
+### 7.3 版本号规范（SemVer）
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>主版本号.次版本号.修订号<br>1.0.0</p>
 <ul>
-<li><a href="https://github.com/dukaworks/frpc-gui">https://github.com/dukaworks/frpc-gui</a></li>
-<li>中文说明： <a href="https://github.com/dukaworks/frpc-gui/blob/main/README_zh.md">https://github.com/dukaworks/frpc-gui/blob/main/README_zh.md</a></li>
+<li>主版本号：不兼容的 API 修改</li>
+<li>次版本号：向下兼容的功能新增</li>
+<li>修订号：向下兼容的问题修复</li>
 </ul>
-<h2 id="适合人群"><a href="#适合人群" class="headerlink" title="适合人群"></a>适合人群</h2><ul>
-<li>frpc 跑在 OpenWrt &#x2F; NAS &#x2F; PVE &#x2F; VPS &#x2F; 小主机上</li>
-<li>需要频繁调整代理或管理多台机器</li>
-<li>希望把“命令行串联工作流”变成“可视化闭环流程”</li>
+<pre class="line-numbers language-none"><code class="language-none">
+## 八、常见问题
+
+### Q1: 如何撤销错误的提交？
+
+&#96;&#96;&#96;bash
+# 撤销最后一次提交，保留修改
+git reset --soft HEAD~1
+
+# 撤销最后一次提交，丢弃修改
+git reset --hard HEAD~1
+
+# 修改最后一次提交的 message
+git commit --amend -m &quot;新的提交信息&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Q2-如何合并多个提交？"><a href="#Q2-如何合并多个提交？" class="headerlink" title="Q2: 如何合并多个提交？"></a>Q2: 如何合并多个提交？</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 合并最近 3 个提交</span>
+<span class="token function">git</span> rebase <span class="token parameter variable">-i</span> HEAD~3
+<span class="token comment"># 在编辑器中将 pick 改为 squash</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Q3-如何同步-Fork-的仓库？"><a href="#Q3-如何同步-Fork-的仓库？" class="headerlink" title="Q3: 如何同步 Fork 的仓库？"></a>Q3: 如何同步 Fork 的仓库？</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 添加上游仓库</span>
+<span class="token function">git</span> remote <span class="token function">add</span> upstream https://github.com/original/repo.git
+
+<span class="token comment"># 拉取上游更新</span>
+<span class="token function">git</span> fetch upstream
+
+<span class="token comment"># 合并到本地分支</span>
+<span class="token function">git</span> checkout main
+<span class="token function">git</span> merge upstream/main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Q4-如何处理合并冲突？"><a href="#Q4-如何处理合并冲突？" class="headerlink" title="Q4: 如何处理合并冲突？"></a>Q4: 如何处理合并冲突？</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 拉取代码时出现冲突</span>
+<span class="token function">git</span> pull origin main
+
+<span class="token comment"># 2. 编辑冲突文件，解决冲突</span>
+<span class="token comment"># 冲突标记：&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD  =======  >>>>>>> branch</span>
+
+<span class="token comment"># 3. 添加解决后的文件</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+
+<span class="token comment"># 4. 完成合并</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"merge: 解决冲突"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="九、总结"><a href="#九、总结" class="headerlink" title="九、总结"></a>九、总结</h2><p>GitHub 不仅是代码托管平台，更是开发者协作的重要工具。掌握这些技能：</p>
+<ol>
+<li>✅ 熟练 Git 基本操作</li>
+<li>✅ 理解分支管理策略</li>
+<li>✅ 规范提交信息和 PR</li>
+<li>✅ 善用 GitHub 项目管理功能</li>
+<li>✅ 维护良好的开源项目文档</li>
+</ol>
+<p>希望这篇指南能帮助你更好地使用 GitHub！</p>
+<hr>
+<p><strong>参考资源</strong></p>
+<ul>
+<li><a href="https://docs.github.com/">GitHub Docs</a></li>
+<li><a href="https://git-scm.com/doc">Git 官方文档</a></li>
+<li><a href="https://git-scm.com/book/zh/v2">Pro Git 电子书</a></li>
 </ul>
-<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>如果你愿意分享你的部署环境（OpenWrt &#x2F; fnOS &#x2F; PVE &#x2F; 群晖 &#x2F; 纯 VPS），我可以优先把常见路径、服务管理方式、以及一些模板配置做得更开箱即用。</p>
 ]]></content>
       <categories>
-        <category>联创项目</category>
-        <category>Web开发</category>
-        <category>实用工具</category>
+        <category>学习探索</category>
       </categories>
       <tags>
-        <tag>frpc</tag>
-        <tag>ssh</tag>
-        <tag>docker</tag>
-        <tag>gui</tag>
-        <tag>Windows</tag>
-        <tag>linux</tag>
-        <tag>MacOS</tag>
+        <tag>教程</tag>
+        <tag>GitHub</tag>
+        <tag>Git</tag>
+        <tag>开源</tag>
+        <tag>项目管理</tag>
       </tags>
   </entry>
   <entry>
-    <title>LangChain 框架入门</title>
-    <url>/2026/03/04/ai-langchain/</url>
-    <content><![CDATA[<p>LangChain 是一个开发语言模型应用的框架，它提供了丰富的组件，简化了 AI 应用的开发过程。</p>
+    <title>ChatGPT 入门指南</title>
+    <url>/2026/03/04/ai-chatgpt-intro/</url>
+    <content><![CDATA[<p>ChatGPT 是目前最流行的对话式 AI 助手之一。本文将介绍 ChatGPT 的基本概念和使用方法。</p>
 <span id="more"></span>
 
-<p>LangChain 的核心概念、Model（语言模型）、Prompt（提示词）、Chain（链）、Agent（智能体）、Memory（记忆）。Model 负责生成文本，Prompt 封装提示模板，Chain 连接多个组件，Agent 决定行动，Memory 保存对话历史。</p>
-<p>PromptTemplate 提供了灵活的提示词管理。可以定义变量，从输入值填充。支持 Few-shot 示例、输出解析器等高级功能。</p>
-<p>Chain 是最常用的概念。SimpleSequentialChain 按顺序执行多个链，输出上一个链的输入下一个链。RouterChain 根据输入路由到不同的子链。</p>
-<p>Agent 能够自主决定行动。ReAct Agent 交替思考和行动，Zero-shot Agent 一次性决定所有行动。Tool 是 Agent 可以使用的工具，如搜索、计算、API 调用等。</p>
-<p>Memory 让模型记住对话历史。ConversationBufferMemory 保存所有历史，ConversationSummaryMemory 总结历史，节省 Token。</p>
-<p>VectorStore 用于文档检索。LangChain 支持多种向量数据库、Chroma、Pinecone、FAISS 等。配合 Embeddings 模型，实现语义搜索。</p>
-<p>LangChain 支持多种模型、OpenAI、Hugging Face、Anthropic、本地模型（如 Llama）。可以通过统一的接口切换不同模型。</p>
-<p>使用 LangChain，开发者不需要关注底层细节，专注于业务逻辑。它大大降低了开发 AI 应用的门槛，让更多人能够构建智能应用。</p>
+<p>ChatGPT 基于大型语言模型（LLM）构建，能够理解和生成自然语言。它的核心优势在于能够进行流畅的多轮对话，理解上下文，并根据用户需求提供相关答案。</p>
+<p>使用 ChatGPT 时，需要注意提示词（Prompt）的撰写技巧。一个好的提示词应该清晰、具体，并提供足够的上下文信息。例如，”请帮我写一个 Python 脚本” 就不如 “请帮我写一个 Python 脚本，用于批量重命名文件夹中的图片文件” 来得有效。</p>
+<p>ChatGPT 在编程、写作、学习等领域都有广泛应用。对于开发者来说，它可以帮助生成代码片段、解释复杂概念、调试代码错误。对于写作者，它可以提供灵感、润色文本、生成大纲。</p>
+<p>随着技术的发展，ChatGPT 的能力也在不断提升。未来，我们可能会看到更多专业化的版本，如医疗、法律等领域的专用模型。</p>
 ]]></content>
       <categories>
         <category>AI智能体</category>
       </categories>
       <tags>
-        <tag>LangChain</tag>
-        <tag>框架</tag>
-        <tag>开发</tag>
+        <tag>ChatGPT</tag>
+        <tag>LLM</tag>
+        <tag>入门</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>模型微调入门</title>
+    <url>/2026/03/04/ai-fine-tuning/</url>
+    <content><![CDATA[<p>模型微调（Fine-tuning）是在预训练模型基础上，使用特定领域的数据进一步训练，使模型适应特定任务的技术。</p>
+<span id="more"></span>
+
+<p>微调的优势在于、模型会学习特定领域的知识和风格，输出更符合实际需求；相比从零训练，所需数据量和计算资源更少；可以保留预训练模型的通用能力。</p>
+<p>常见的微调方法包括、全参数微调、LoRA（Low-Rank Adaptation）、Prefix Tuning、Prompt Tuning。LoRA 只训练少量参数，效果接近全参数微调，计算成本低，是目前最受欢迎的方法。</p>
+<p>微调前需要准备高质量的数据集。数据应该包含输入输出对，格式统一，数量充足。对于对话模型，需要多轮对话数据；对于分类模型，需要标注数据。</p>
+<p>Hugging Face 的 PEFT、Transformers 库提供了便捷的微调接口。选择合适的预训练模型（如 Llama、Mistral），配置训练参数，开始训练。</p>
+<p>微调后需要评估模型效果。可以使用测试集评估，也可以人工抽检。如果效果不理想，可能需要调整数据质量、增加训练轮数、调整学习率等。</p>
+<p>微调是定制 AI 模型的有效途径。随着工具的成熟，越来越多的开发者能够创建自己的专属模型。</p>
+]]></content>
+      <categories>
+        <category>AI智能体</category>
+      </categories>
+      <tags>
+        <tag>微调</tag>
+        <tag>训练</tag>
+        <tag>模型</tag>
       </tags>
   </entry>
   <entry>
@@ -1551,9 +1547,9 @@ response <span class="token operator">=</span> client<span class="token punctuat
         <category>AI智能体</category>
       </categories>
       <tags>
-        <tag>开发</tag>
         <tag>OpenAI</tag>
         <tag>API</tag>
+        <tag>开发</tag>
       </tags>
   </entry>
   <entry>
@@ -1595,26 +1591,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
         <tag>RAG</tag>
         <tag>检索增强</tag>
         <tag>问答</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ChatGPT 入门指南</title>
-    <url>/2026/03/04/ai-chatgpt-intro/</url>
-    <content><![CDATA[<p>ChatGPT 是目前最流行的对话式 AI 助手之一。本文将介绍 ChatGPT 的基本概念和使用方法。</p>
-<span id="more"></span>
-
-<p>ChatGPT 基于大型语言模型（LLM）构建，能够理解和生成自然语言。它的核心优势在于能够进行流畅的多轮对话，理解上下文，并根据用户需求提供相关答案。</p>
-<p>使用 ChatGPT 时，需要注意提示词（Prompt）的撰写技巧。一个好的提示词应该清晰、具体，并提供足够的上下文信息。例如，”请帮我写一个 Python 脚本” 就不如 “请帮我写一个 Python 脚本，用于批量重命名文件夹中的图片文件” 来得有效。</p>
-<p>ChatGPT 在编程、写作、学习等领域都有广泛应用。对于开发者来说，它可以帮助生成代码片段、解释复杂概念、调试代码错误。对于写作者，它可以提供灵感、润色文本、生成大纲。</p>
-<p>随着技术的发展，ChatGPT 的能力也在不断提升。未来，我们可能会看到更多专业化的版本，如医疗、法律等领域的专用模型。</p>
-]]></content>
-      <categories>
-        <category>AI智能体</category>
-      </categories>
-      <tags>
-        <tag>ChatGPT</tag>
-        <tag>LLM</tag>
-        <tag>入门</tag>
       </tags>
   </entry>
   <entry>
@@ -1691,6 +1667,30 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
+    <title>LangChain 框架入门</title>
+    <url>/2026/03/04/ai-langchain/</url>
+    <content><![CDATA[<p>LangChain 是一个开发语言模型应用的框架，它提供了丰富的组件，简化了 AI 应用的开发过程。</p>
+<span id="more"></span>
+
+<p>LangChain 的核心概念、Model（语言模型）、Prompt（提示词）、Chain（链）、Agent（智能体）、Memory（记忆）。Model 负责生成文本，Prompt 封装提示模板，Chain 连接多个组件，Agent 决定行动，Memory 保存对话历史。</p>
+<p>PromptTemplate 提供了灵活的提示词管理。可以定义变量，从输入值填充。支持 Few-shot 示例、输出解析器等高级功能。</p>
+<p>Chain 是最常用的概念。SimpleSequentialChain 按顺序执行多个链，输出上一个链的输入下一个链。RouterChain 根据输入路由到不同的子链。</p>
+<p>Agent 能够自主决定行动。ReAct Agent 交替思考和行动，Zero-shot Agent 一次性决定所有行动。Tool 是 Agent 可以使用的工具，如搜索、计算、API 调用等。</p>
+<p>Memory 让模型记住对话历史。ConversationBufferMemory 保存所有历史，ConversationSummaryMemory 总结历史，节省 Token。</p>
+<p>VectorStore 用于文档检索。LangChain 支持多种向量数据库、Chroma、Pinecone、FAISS 等。配合 Embeddings 模型，实现语义搜索。</p>
+<p>LangChain 支持多种模型、OpenAI、Hugging Face、Anthropic、本地模型（如 Llama）。可以通过统一的接口切换不同模型。</p>
+<p>使用 LangChain，开发者不需要关注底层细节，专注于业务逻辑。它大大降低了开发 AI 应用的门槛，让更多人能够构建智能应用。</p>
+]]></content>
+      <categories>
+        <category>AI智能体</category>
+      </categories>
+      <tags>
+        <tag>开发</tag>
+        <tag>LangChain</tag>
+        <tag>框架</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Flexbox 布局完全指南</title>
     <url>/2026/03/04/dev-css-flexbox/</url>
     <content><![CDATA[<p>Flexbox（Flexible Box）是 CSS3 引入的布局模式，专门用于一维布局。它让复杂的布局变得简单直观。</p>
@@ -1711,6 +1711,30 @@ response <span class="token operator">=</span> client<span class="token punctuat
         <tag>CSS</tag>
         <tag>Flexbox</tag>
         <tag>布局</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSS Grid 布局详解</title>
+    <url>/2026/03/04/dev-css-grid/</url>
+    <content><![CDATA[<p>CSS Grid 是最强大的 CSS 布局系统，专门用于二维布局。它可以同时处理行和列，实现复杂的网格布局。</p>
+<span id="more"></span>
+
+<p>Grid 的核心概念、容器、轨道、单元格、区域。设置 <code>display: grid</code> 的元素是容器，轨道是行或列，单元格是行和列的交叉点，区域是任意单元格组合。</p>
+<p>定义网格、<code>grid-template-columns</code> 定义列轨道，<code>grid-template-rows</code> 定义行轨道。使用 <code>repeat()</code> 函数简化重复定义，<code>fr</code> 单位表示比例。例如、<code>grid-template-columns: repeat(3、 1fr)</code> 定义三个等宽列。</p>
+<p>定位项目、<code>grid-column</code> 和 <code>grid-row</code> 定位项目，可以跨越多列多行。使用命名网格线更直观、<code>grid-template-columns: [start] 1fr [mid] 2fr [end]</code>。</p>
+<p>区域布局、<code>grid-template-areas</code> 定义区域，<code>grid-area</code> 将项目放入区域。这种方式代码语义化，易于理解和维护。</p>
+<p>Grid 布局技巧、隐式网格自动创建行列，<code>grid-auto-flow</code> 控制填充顺序，<code>minmax()</code> 设置最小最大尺寸，<code>auto-fit</code> 和 <code>auto-fill</code> 实现响应式。</p>
+<p>Grid 的对齐功能丰富、<code>justify-items</code>、<code>align-items</code> 控制单元格对齐，<code>justify-content</code>、<code>align-content</code> 控制整体对齐。</p>
+<p>Grid 适合二维布局，如页面整体布局、仪表盘、图片画廊。与 Flexbox 配合使用，可以实现任意复杂的布局。</p>
+<p>Grid 的浏览器支持已经很好，现代浏览器全面支持。使用 Autoprefixer 处理兼容性，放心使用。</p>
+]]></content>
+      <categories>
+        <category>Web开发</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>布局</tag>
+        <tag>Grid</tag>
       </tags>
   </entry>
   <entry>
@@ -1757,30 +1781,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
-    <title>CSS Grid 布局详解</title>
-    <url>/2026/03/04/dev-css-grid/</url>
-    <content><![CDATA[<p>CSS Grid 是最强大的 CSS 布局系统，专门用于二维布局。它可以同时处理行和列，实现复杂的网格布局。</p>
-<span id="more"></span>
-
-<p>Grid 的核心概念、容器、轨道、单元格、区域。设置 <code>display: grid</code> 的元素是容器，轨道是行或列，单元格是行和列的交叉点，区域是任意单元格组合。</p>
-<p>定义网格、<code>grid-template-columns</code> 定义列轨道，<code>grid-template-rows</code> 定义行轨道。使用 <code>repeat()</code> 函数简化重复定义，<code>fr</code> 单位表示比例。例如、<code>grid-template-columns: repeat(3、 1fr)</code> 定义三个等宽列。</p>
-<p>定位项目、<code>grid-column</code> 和 <code>grid-row</code> 定位项目，可以跨越多列多行。使用命名网格线更直观、<code>grid-template-columns: [start] 1fr [mid] 2fr [end]</code>。</p>
-<p>区域布局、<code>grid-template-areas</code> 定义区域，<code>grid-area</code> 将项目放入区域。这种方式代码语义化，易于理解和维护。</p>
-<p>Grid 布局技巧、隐式网格自动创建行列，<code>grid-auto-flow</code> 控制填充顺序，<code>minmax()</code> 设置最小最大尺寸，<code>auto-fit</code> 和 <code>auto-fill</code> 实现响应式。</p>
-<p>Grid 的对齐功能丰富、<code>justify-items</code>、<code>align-items</code> 控制单元格对齐，<code>justify-content</code>、<code>align-content</code> 控制整体对齐。</p>
-<p>Grid 适合二维布局，如页面整体布局、仪表盘、图片画廊。与 Flexbox 配合使用，可以实现任意复杂的布局。</p>
-<p>Grid 的浏览器支持已经很好，现代浏览器全面支持。使用 Autoprefixer 处理兼容性，放心使用。</p>
-]]></content>
-      <categories>
-        <category>Web开发</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>布局</tag>
-        <tag>Grid</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>RESTful API 设计最佳实践</title>
     <url>/2026/03/04/dev-restful-api/</url>
     <content><![CDATA[<p>RESTful API 是目前最流行的 Web API 设计风格。良好的 API 设计能够提高开发效率，降低维护成本。</p>
@@ -1824,6 +1824,55 @@ response <span class="token operator">=</span> client<span class="token punctuat
         <tag>开发</tag>
         <tag>测试</tag>
         <tag>质量保证</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TypeScript 类型系统</title>
+    <url>/2026/03/04/dev-typescript/</url>
+    <content><![CDATA[<p>TypeScript 是 JavaScript 的超集，添加了静态类型检查。它提高了代码的可维护性和开发体验，是现代前端开发的标准选择。</p>
+<span id="more"></span>
+
+<p>基本类型、string、number、boolean、null、undefined、any、unknown、never、void。any 表示任意类型，unknown 是更安全的 any，never 表示不可能存在的类型。</p>
+<p>类型注解、<code>let name: string = &quot;hello&quot;</code>。TypeScript 可以自动推断类型，大部分时候不需要显式注解。</p>
+<p>数组类型、<code>let nums: number[] = [1、 2、 3]</code> 或 <code>let nums: Array&lt;number&gt; = [1、 2、 3]</code>。元组类型、<code>let pair: [string、 number] = [&quot;hello&quot;、 42]</code>。</p>
+<p>对象类型、<code>let user: { name: string; age: number } = { name: &quot;John&quot;、 age: 30 }</code>。可选属性用 <code>?</code>、<code>{ name: string; age?: number }</code>。</p>
+<p>函数类型、<code>function greet(name: string): void { console.log(name); }</code>。箭头函数、<code>const add = (a: number、 b: number): number =&gt; a + b</code>。</p>
+<p>泛型、<code>function identity&lt;T&gt;(arg: T): T { return arg; }</code>。泛型让函数和类可以处理多种类型。</p>
+<p>高级类型、联合类型 <code>string | number</code>，交叉类型 <code>A &amp; B</code>，字面量类型 <code>&quot;a&quot; | &quot;b&quot;</code>，类型断言 <code>value as string</code>。</p>
+<p>类型守卫和类型谓词、<code>typeof</code> 和 <code>instanceof</code> 检查类型，<code>isString(x: unknown): x is string</code> 定义谓词。</p>
+<p>类型推断是 TypeScript 的强大功能。大多数时候不需要手动标注，让编译器推断。只在必要时明确类型。</p>
+<p>TypeScript 的类型系统既有深度又有广度。掌握它需要时间，但回报巨大。大型项目用 TypeScript 能避免很多错误。</p>
+]]></content>
+      <categories>
+        <category>Web开发</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>TypeScript</tag>
+        <tag>类型</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Webpack 配置入门</title>
+    <url>/2026/03/04/dev-webpack-basics/</url>
+    <content><![CDATA[<p>Webpack 是目前最流行的前端打包工具，它将各种资源（JS、CSS、图片等）打包成浏览器可执行的文件。</p>
+<span id="more"></span>
+
+<p>Webpack 的核心概念、Entry（入口）、Output（输出）、Loader（加载器）、Plugin（插件）。Entry 指定打包起点，Output 配置输出位置，Loader 处理非 JS 文件，Plugin 扩展功能。</p>
+<p>基本配置文件、指定 mode（development 或 production），设置 entry（入口文件），配置 output（输出路径和文件名），配置 module.rules（Loader 规则），配置 plugins（插件列表）。</p>
+<p>常用 Loader、babel-loader 转译 ES6+，css-loader 处理 CSS，style-loader 注入样式，file-loader 处理文件。多个 Loader 用数组配置，执行顺序从右到左。</p>
+<p>常用 Plugin、HtmlWebpackPlugin 生成 HTML，CleanWebpackPlugin 清理输出目录，MiniCssExtractPlugin 提取 CSS 到单独文件，DefinePlugin 定义环境变量。</p>
+<p>开发模式使用 webpack-dev-server，提供热更新（HMR）和实时预览。生产模式需要优化压缩，启用 Tree Shaking 删除未使用代码，Code Splitting 分包提升加载速度。</p>
+<p>Webpack 5 改进了很多，内置了很多功能，移除了一些常用 Plugin。但配置复杂度仍然较高。对于简单项目，Vite 等替代工具可能更合适。</p>
+<p>学习 Webpack 要理解其工作原理、从 Entry 开始，构建依赖图，Loader 转换资源，Plugin 扩展功能，最后打包输出。理解原理才能灵活配置。</p>
+]]></content>
+      <categories>
+        <category>Web开发</category>
+      </categories>
+      <tags>
+        <tag>Webpack</tag>
+        <tag>打包</tag>
+        <tag>构建工具</tag>
       </tags>
   </entry>
   <entry>
@@ -1875,26 +1924,50 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
-    <title>Webpack 配置入门</title>
-    <url>/2026/03/04/dev-webpack-basics/</url>
-    <content><![CDATA[<p>Webpack 是目前最流行的前端打包工具，它将各种资源（JS、CSS、图片等）打包成浏览器可执行的文件。</p>
+    <title>Docker容器化</title>
+    <url>/2026/03/04/docker%E5%AE%B9%E5%99%A8%E5%8C%96-43/</url>
+    <content><![CDATA[<p>环境隔离是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍环境隔离的核心要点和实践经验。</p>
 <span id="more"></span>
 
-<p>Webpack 的核心概念、Entry（入口）、Output（输出）、Loader（加载器）、Plugin（插件）。Entry 指定打包起点，Output 配置输出位置，Loader 处理非 JS 文件，Plugin 扩展功能。</p>
-<p>基本配置文件、指定 mode（development 或 production），设置 entry（入口文件），配置 output（输出路径和文件名），配置 module.rules（Loader 规则），配置 plugins（插件列表）。</p>
-<p>常用 Loader、babel-loader 转译 ES6+，css-loader 处理 CSS，style-loader 注入样式，file-loader 处理文件。多个 Loader 用数组配置，执行顺序从右到左。</p>
-<p>常用 Plugin、HtmlWebpackPlugin 生成 HTML，CleanWebpackPlugin 清理输出目录，MiniCssExtractPlugin 提取 CSS 到单独文件，DefinePlugin 定义环境变量。</p>
-<p>开发模式使用 webpack-dev-server，提供热更新（HMR）和实时预览。生产模式需要优化压缩，启用 Tree Shaking 删除未使用代码，Code Splitting 分包提升加载速度。</p>
-<p>Webpack 5 改进了很多，内置了很多功能，移除了一些常用 Plugin。但配置复杂度仍然较高。对于简单项目，Vite 等替代工具可能更合适。</p>
-<p>学习 Webpack 要理解其工作原理、从 Entry 开始，构建依赖图，Loader 转换资源，Plugin 扩展功能，最后打包输出。理解原理才能灵活配置。</p>
+<h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h2><p>Dockerfile是环境隔离的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用Dockerfile时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践Dockerfile，我们可以掌握环境隔离的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="镜像优化"><a href="#镜像优化" class="headerlink" title="镜像优化"></a>镜像优化</h2><p>镜像优化是环境隔离的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用镜像优化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践镜像优化，我们可以掌握环境隔离的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="多阶段构建"><a href="#多阶段构建" class="headerlink" title="多阶段构建"></a>多阶段构建</h2><p>多阶段构建是环境隔离的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用多阶段构建时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践多阶段构建，我们可以掌握环境隔离的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="容器编排"><a href="#容器编排" class="headerlink" title="容器编排"></a>容器编排</h2><p>容器编排是环境隔离的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用容器编排时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握容器编排和相关知识，将帮助我们构建更加完善的环境隔离体系。</p>
+]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+      <tags>
+        <tag>环境隔离</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端工程化实践</title>
+    <url>/2026/03/04/frontend-engineering-49/</url>
+    <content><![CDATA[<p>前端工程化是提升开发效率和质量的重要手段。通过系统化的工具和流程，我们可以构建更加健壮的前端应用。本文将介绍前端工程化的核心实践。</p>
+<span id="more"></span>
+
+<h2 id="模块化开发"><a href="#模块化开发" class="headerlink" title="模块化开发"></a>模块化开发</h2><p>模块化是前端工程化的基础。通过 ES Modules、Webpack 等工具，我们可以实现代码的模块化组织，提升代码的可维护性。</p>
+<p>在构建复杂应用时，合理划分模块边界非常重要。每个模块应该有清晰的职责和接口。</p>
+<h2 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h2><p>代码规范是团队协作的基础。通过 ESLint、Prettier 等工具，我们可以统一代码风格，减少沟通成本。</p>
+<p>建立代码审查流程，确保每一行代码都符合规范，这是保证代码质量的重要手段。</p>
+<h2 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h2><p>持续集成可以自动运行测试和构建，及时发现和解决问题。通过 GitHub Actions 等工具，我们可以实现自动化的 CI&#x2F;CD 流程。</p>
+<p>掌握前端工程化实践，将帮助我们构建更加高效、可靠的前端开发体系。</p>
 ]]></content>
       <categories>
         <category>Web开发</category>
       </categories>
       <tags>
-        <tag>Webpack</tag>
-        <tag>打包</tag>
-        <tag>构建工具</tag>
+        <tag>前端</tag>
+        <tag>工程化</tag>
       </tags>
   </entry>
   <entry>
@@ -1968,27 +2041,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
-    <title>前端工程化实践</title>
-    <url>/2026/03/04/frontend-engineering-49/</url>
-    <content><![CDATA[<p>前端工程化是提升开发效率和质量的重要手段。通过系统化的工具和流程，我们可以构建更加健壮的前端应用。本文将介绍前端工程化的核心实践。</p>
-<span id="more"></span>
-
-<h2 id="模块化开发"><a href="#模块化开发" class="headerlink" title="模块化开发"></a>模块化开发</h2><p>模块化是前端工程化的基础。通过 ES Modules、Webpack 等工具，我们可以实现代码的模块化组织，提升代码的可维护性。</p>
-<p>在构建复杂应用时，合理划分模块边界非常重要。每个模块应该有清晰的职责和接口。</p>
-<h2 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h2><p>代码规范是团队协作的基础。通过 ESLint、Prettier 等工具，我们可以统一代码风格，减少沟通成本。</p>
-<p>建立代码审查流程，确保每一行代码都符合规范，这是保证代码质量的重要手段。</p>
-<h2 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h2><p>持续集成可以自动运行测试和构建，及时发现和解决问题。通过 GitHub Actions 等工具，我们可以实现自动化的 CI&#x2F;CD 流程。</p>
-<p>掌握前端工程化实践，将帮助我们构建更加高效、可靠的前端开发体系。</p>
-]]></content>
-      <categories>
-        <category>Web开发</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>工程化</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git高级用法</title>
     <url>/2026/03/04/git%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95-40/</url>
     <content><![CDATA[<p>版本控制是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍版本控制的核心要点和实践经验。</p>
@@ -2041,32 +2093,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
-    <title>TypeScript 类型系统</title>
-    <url>/2026/03/04/dev-typescript/</url>
-    <content><![CDATA[<p>TypeScript 是 JavaScript 的超集，添加了静态类型检查。它提高了代码的可维护性和开发体验，是现代前端开发的标准选择。</p>
-<span id="more"></span>
-
-<p>基本类型、string、number、boolean、null、undefined、any、unknown、never、void。any 表示任意类型，unknown 是更安全的 any，never 表示不可能存在的类型。</p>
-<p>类型注解、<code>let name: string = &quot;hello&quot;</code>。TypeScript 可以自动推断类型，大部分时候不需要显式注解。</p>
-<p>数组类型、<code>let nums: number[] = [1、 2、 3]</code> 或 <code>let nums: Array&lt;number&gt; = [1、 2、 3]</code>。元组类型、<code>let pair: [string、 number] = [&quot;hello&quot;、 42]</code>。</p>
-<p>对象类型、<code>let user: { name: string; age: number } = { name: &quot;John&quot;、 age: 30 }</code>。可选属性用 <code>?</code>、<code>{ name: string; age?: number }</code>。</p>
-<p>函数类型、<code>function greet(name: string): void { console.log(name); }</code>。箭头函数、<code>const add = (a: number、 b: number): number =&gt; a + b</code>。</p>
-<p>泛型、<code>function identity&lt;T&gt;(arg: T): T { return arg; }</code>。泛型让函数和类可以处理多种类型。</p>
-<p>高级类型、联合类型 <code>string | number</code>，交叉类型 <code>A &amp; B</code>，字面量类型 <code>&quot;a&quot; | &quot;b&quot;</code>，类型断言 <code>value as string</code>。</p>
-<p>类型守卫和类型谓词、<code>typeof</code> 和 <code>instanceof</code> 检查类型，<code>isString(x: unknown): x is string</code> 定义谓词。</p>
-<p>类型推断是 TypeScript 的强大功能。大多数时候不需要手动标注，让编译器推断。只在必要时明确类型。</p>
-<p>TypeScript 的类型系统既有深度又有广度。掌握它需要时间，但回报巨大。大型项目用 TypeScript 能避免很多错误。</p>
-]]></content>
-      <categories>
-        <category>Web开发</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-        <tag>TypeScript</tag>
-        <tag>类型</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>联合博客项目启动</title>
     <url>/2026/03/04/joint-blog-project/</url>
     <content><![CDATA[<p>我们今天正式启动了一个联合博客项目。这个项目的目标是通过协作创作，分享技术知识和经验，同时锻炼团队协作能力。</p>
@@ -2109,6 +2135,28 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
+    <title>团队协作工具推荐</title>
+    <url>/2026/03/04/joint-collaboration-tools/</url>
+    <content><![CDATA[<p>高效的团队协作离不开合适的工具。根据我们项目的特点，推荐以下工具组合。</p>
+<span id="more"></span>
+
+<p>项目管理、Notion 或飞书。Notion 功能强大，可以文档、任务、知识库一体化管理。飞书在国内更稳定，集成了即时通讯、日历、文档等功能，适合国内团队。</p>
+<p>代码协作、GitHub 或 GitLab。GitHub 是最大的开源社区，Pull Request 工作流成熟。GitLab 提供更完整的 DevOps 功能，CI&#x2F;CD 集成方便。</p>
+<p>即时通讯、Slack 或企业微信。Slack 拥有丰富的集成，可以和各种开发工具联动。企业微信在国内使用方便，审批、会议等功能完善。</p>
+<p>设计协作、Figma。云端设计工具，多人实时编辑，版本管理方便。可以直接生成代码片段，与开发无缝对接。</p>
+<p>文档协作、语雀或腾讯文档。语雀专注于技术文档，支持 Markdown，版本控制强大。腾讯文档更通用，表格、演示文稿等功能齐全。</p>
+<p>选择工具时要考虑团队规模、协作模式、使用习惯。工具只是手段，不是目的。找到适合团队的组合，才能发挥最大效用。</p>
+]]></content>
+      <categories>
+        <category>联创项目</category>
+      </categories>
+      <tags>
+        <tag>协作</tag>
+        <tag>工具</tag>
+        <tag>团队</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>团队决策机制</title>
     <url>/2026/03/04/joint-decision-making/</url>
     <content><![CDATA[<p>高效的团队决策机制是项目成功的关键。合理的决策流程既能保证质量，又能提高效率。</p>
@@ -2127,9 +2175,9 @@ response <span class="token operator">=</span> client<span class="token punctuat
         <category>联创项目</category>
       </categories>
       <tags>
+        <tag>团队</tag>
         <tag>决策</tag>
         <tag>管理</tag>
-        <tag>团队</tag>
       </tags>
   </entry>
   <entry>
@@ -2158,29 +2206,48 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
-    <title>Docker容器化</title>
-    <url>/2026/03/04/docker%E5%AE%B9%E5%99%A8%E5%8C%96-43/</url>
-    <content><![CDATA[<p>环境隔离是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍环境隔离的核心要点和实践经验。</p>
+    <title>项目未来规划</title>
+    <url>/2026/03/04/joint-project-future/</url>
+    <content><![CDATA[<p>联合博客项目已经运行了一段时间，是时候规划一下未来的发展方向了。</p>
 <span id="more"></span>
 
-<h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h2><p>Dockerfile是环境隔离的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用Dockerfile时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践Dockerfile，我们可以掌握环境隔离的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="镜像优化"><a href="#镜像优化" class="headerlink" title="镜像优化"></a>镜像优化</h2><p>镜像优化是环境隔离的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用镜像优化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践镜像优化，我们可以掌握环境隔离的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="多阶段构建"><a href="#多阶段构建" class="headerlink" title="多阶段构建"></a>多阶段构建</h2><p>多阶段构建是环境隔离的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用多阶段构建时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践多阶段构建，我们可以掌握环境隔离的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="容器编排"><a href="#容器编排" class="headerlink" title="容器编排"></a>容器编排</h2><p>容器编排是环境隔离的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用容器编排时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握容器编排和相关知识，将帮助我们构建更加完善的环境隔离体系。</p>
+<p>短期目标（1-3 个月）、</p>
+<ol>
+<li>完成基础功能、评论系统、搜索功能、RSS 订阅</li>
+<li>丰富内容、每个分类至少 10 篇文章</li>
+<li>优化体验、主题定制、性能优化、SEO 优化</li>
+<li>建立规范、写作规范、代码规范、审查流程</li>
+</ol>
+<p>中期目标（3-6 个月）、</p>
+<ol>
+<li>扩展内容、增加新的分类，如数据库、算法、运维等</li>
+<li>功能增强、邮件订阅、社交分享、相关文章推荐</li>
+<li>多平台支持、适配移动端，考虑小程序</li>
+<li>社区建设、建立读者群，收集反馈，增加互动</li>
+</ol>
+<p>长期目标（6-12 个月）、</p>
+<ol>
+<li>品牌打造、形成独特的写作风格和技术视角</li>
+<li>内容变现、接广告、付费专栏、技术咨询</li>
+<li>团队扩张、招募新成员，扩大影响力</li>
+<li>产品孵化、将博客内容转化为课程、书籍、工具</li>
+</ol>
+<p>要实现这些目标，我们需要、</p>
+<ol>
+<li>持续投入时间，保持内容质量</li>
+<li>定期复盘，调整方向</li>
+<li>学习新技能，提升竞争力</li>
+<li>保持热情，享受过程</li>
+</ol>
+<p>博客不仅是记录和分享，更是个人成长和团队协作的平台。让我们一起努力，把这个项目做大做强！</p>
 ]]></content>
       <categories>
-        <category>工具使用</category>
+        <category>联创项目</category>
       </categories>
       <tags>
-        <tag>环境隔离</tag>
+        <tag>规划</tag>
+        <tag>未来</tag>
+        <tag>展望</tag>
       </tags>
   </entry>
   <entry>
@@ -2248,73 +2315,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
-    <title>团队协作工具推荐</title>
-    <url>/2026/03/04/joint-collaboration-tools/</url>
-    <content><![CDATA[<p>高效的团队协作离不开合适的工具。根据我们项目的特点，推荐以下工具组合。</p>
-<span id="more"></span>
-
-<p>项目管理、Notion 或飞书。Notion 功能强大，可以文档、任务、知识库一体化管理。飞书在国内更稳定，集成了即时通讯、日历、文档等功能，适合国内团队。</p>
-<p>代码协作、GitHub 或 GitLab。GitHub 是最大的开源社区，Pull Request 工作流成熟。GitLab 提供更完整的 DevOps 功能，CI&#x2F;CD 集成方便。</p>
-<p>即时通讯、Slack 或企业微信。Slack 拥有丰富的集成，可以和各种开发工具联动。企业微信在国内使用方便，审批、会议等功能完善。</p>
-<p>设计协作、Figma。云端设计工具，多人实时编辑，版本管理方便。可以直接生成代码片段，与开发无缝对接。</p>
-<p>文档协作、语雀或腾讯文档。语雀专注于技术文档，支持 Markdown，版本控制强大。腾讯文档更通用，表格、演示文稿等功能齐全。</p>
-<p>选择工具时要考虑团队规模、协作模式、使用习惯。工具只是手段，不是目的。找到适合团队的组合，才能发挥最大效用。</p>
-]]></content>
-      <categories>
-        <category>联创项目</category>
-      </categories>
-      <tags>
-        <tag>团队</tag>
-        <tag>协作</tag>
-        <tag>工具</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>项目未来规划</title>
-    <url>/2026/03/04/joint-project-future/</url>
-    <content><![CDATA[<p>联合博客项目已经运行了一段时间，是时候规划一下未来的发展方向了。</p>
-<span id="more"></span>
-
-<p>短期目标（1-3 个月）、</p>
-<ol>
-<li>完成基础功能、评论系统、搜索功能、RSS 订阅</li>
-<li>丰富内容、每个分类至少 10 篇文章</li>
-<li>优化体验、主题定制、性能优化、SEO 优化</li>
-<li>建立规范、写作规范、代码规范、审查流程</li>
-</ol>
-<p>中期目标（3-6 个月）、</p>
-<ol>
-<li>扩展内容、增加新的分类，如数据库、算法、运维等</li>
-<li>功能增强、邮件订阅、社交分享、相关文章推荐</li>
-<li>多平台支持、适配移动端，考虑小程序</li>
-<li>社区建设、建立读者群，收集反馈，增加互动</li>
-</ol>
-<p>长期目标（6-12 个月）、</p>
-<ol>
-<li>品牌打造、形成独特的写作风格和技术视角</li>
-<li>内容变现、接广告、付费专栏、技术咨询</li>
-<li>团队扩张、招募新成员，扩大影响力</li>
-<li>产品孵化、将博客内容转化为课程、书籍、工具</li>
-</ol>
-<p>要实现这些目标，我们需要、</p>
-<ol>
-<li>持续投入时间，保持内容质量</li>
-<li>定期复盘，调整方向</li>
-<li>学习新技能，提升竞争力</li>
-<li>保持热情，享受过程</li>
-</ol>
-<p>博客不仅是记录和分享，更是个人成长和团队协作的平台。让我们一起努力，把这个项目做大做强！</p>
-]]></content>
-      <categories>
-        <category>联创项目</category>
-      </categories>
-      <tags>
-        <tag>规划</tag>
-        <tag>未来</tag>
-        <tag>展望</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>设计模式学习笔记</title>
     <url>/2026/03/04/learn-design-patterns/</url>
     <content><![CDATA[<p>设计模式是软件开发中常见问题的通用解决方案。学习设计模式能提高代码质量，促进团队成员间的沟通。</p>
@@ -2355,6 +2355,48 @@ response <span class="token operator">=</span> client<span class="token punctuat
         <tag>Docker</tag>
         <tag>容器</tag>
         <tag>虚拟化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git 工作流学习笔记</title>
+    <url>/2026/03/04/learn-git-workflow/</url>
+    <content><![CDATA[<p>Git 是现代软件开发中不可或缺的版本控制工具。学习 Git 工作流有助于提高团队协作效率和代码管理能力。</p>
+<span id="more"></span>
+
+<p>常见的 Git 工作流包括、集中式工作流、功能分支工作流、Git Flow 工作流、Forking 工作流。每种工作流都有其适用场景。</p>
+<p><strong>集中式工作流</strong>最简单，所有成员直接在主分支提交，适合小团队。<strong>功能分支工作流</strong>为每个功能创建独立分支，适合中小型项目。<strong>Git Flow</strong> 更加规范，定义了主分支、开发分支、功能分支、发布分支、修复分支，适合有固定发布周期的项目。<strong>Forking 工作流</strong>常用于开源项目，贡献者 Fork 仓库后提交 Pull Request。</p>
+<p>在实际使用中，选择合适的工作流很重要。同时，养成良好的提交习惯也很关键、提交信息要清晰明确，一次提交只做一件事，及时推送远程分支。</p>
+<p>对于初学者，建议从简单的功能分支工作流开始，逐步掌握更复杂的工作流。多练习，多总结，才能熟练运用。</p>
+]]></content>
+      <categories>
+        <category>学习探索</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>版本控制</tag>
+        <tag>工作流</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GraphQL 入门指南</title>
+    <url>/2026/03/04/learn-graphql/</url>
+    <content><![CDATA[<p>GraphQL 是 Facebook 开发的数据查询语言，它允许客户端精确指定需要的数据，避免了 REST API 的过度获取或不足获取问题。</p>
+<span id="more"></span>
+
+<p>GraphQL 的核心概念包括、Schema 定义数据结构，Query 查询数据，Mutation 修改数据，Subscription 订阅实时更新。Schema 用 GraphQL Schema Language 定义，描述可用的类型、字段和操作。</p>
+<p>查询语法简单直观。例如、<code>{ user(id: 1) { name email posts { title } } }</code>。这个查询会获取用户的基本信息和文章标题，只返回请求的字段，不多不少。</p>
+<p>与 REST 相比，GraphQL 有以下优势、一个端点满足所有请求；客户端按需获取数据；类型系统提供文档和验证；强类型减少错误。但也带来了复杂度、查询解析、缓存、安全等需要额外考虑。</p>
+<p>实现 GraphQL 需要选择合适的库。Apollo Server 是最流行的实现，提供了丰富的功能。Relay 是 Facebook 的客户端库，优化了数据获取和缓存。</p>
+<p>GraphQL 适合复杂数据需求的场景，如社交网络、电商平台。对于简单应用，REST 可能更直接。选择要根据项目特点决定。</p>
+<p>学习 GraphQL 要理解其设计哲学和最佳实践。不要盲目使用，要评估是否真的需要它带来的灵活性。</p>
+]]></content>
+      <categories>
+        <category>学习探索</category>
+      </categories>
+      <tags>
+        <tag>API</tag>
+        <tag>GraphQL</tag>
+        <tag>后端</tag>
       </tags>
   </entry>
   <entry>
@@ -2405,26 +2447,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
-    <title>Git 工作流学习笔记</title>
-    <url>/2026/03/04/learn-git-workflow/</url>
-    <content><![CDATA[<p>Git 是现代软件开发中不可或缺的版本控制工具。学习 Git 工作流有助于提高团队协作效率和代码管理能力。</p>
-<span id="more"></span>
-
-<p>常见的 Git 工作流包括、集中式工作流、功能分支工作流、Git Flow 工作流、Forking 工作流。每种工作流都有其适用场景。</p>
-<p><strong>集中式工作流</strong>最简单，所有成员直接在主分支提交，适合小团队。<strong>功能分支工作流</strong>为每个功能创建独立分支，适合中小型项目。<strong>Git Flow</strong> 更加规范，定义了主分支、开发分支、功能分支、发布分支、修复分支，适合有固定发布周期的项目。<strong>Forking 工作流</strong>常用于开源项目，贡献者 Fork 仓库后提交 Pull Request。</p>
-<p>在实际使用中，选择合适的工作流很重要。同时，养成良好的提交习惯也很关键、提交信息要清晰明确，一次提交只做一件事，及时推送远程分支。</p>
-<p>对于初学者，建议从简单的功能分支工作流开始，逐步掌握更复杂的工作流。多练习，多总结，才能熟练运用。</p>
-]]></content>
-      <categories>
-        <category>学习探索</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-        <tag>版本控制</tag>
-        <tag>工作流</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Rust 语言入门</title>
     <url>/2026/03/04/learn-rust-basics/</url>
     <content><![CDATA[<p>Rust 是一门系统级编程语言，注重安全性、并发性和性能。它由 Mozilla 开发，被广泛应用于嵌入式、WebAssembly、命令行工具等领域。</p>
@@ -2445,28 +2467,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
         <tag>Rust</tag>
         <tag>编程语言</tag>
         <tag>系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GraphQL 入门指南</title>
-    <url>/2026/03/04/learn-graphql/</url>
-    <content><![CDATA[<p>GraphQL 是 Facebook 开发的数据查询语言，它允许客户端精确指定需要的数据，避免了 REST API 的过度获取或不足获取问题。</p>
-<span id="more"></span>
-
-<p>GraphQL 的核心概念包括、Schema 定义数据结构，Query 查询数据，Mutation 修改数据，Subscription 订阅实时更新。Schema 用 GraphQL Schema Language 定义，描述可用的类型、字段和操作。</p>
-<p>查询语法简单直观。例如、<code>{ user(id: 1) { name email posts { title } } }</code>。这个查询会获取用户的基本信息和文章标题，只返回请求的字段，不多不少。</p>
-<p>与 REST 相比，GraphQL 有以下优势、一个端点满足所有请求；客户端按需获取数据；类型系统提供文档和验证；强类型减少错误。但也带来了复杂度、查询解析、缓存、安全等需要额外考虑。</p>
-<p>实现 GraphQL 需要选择合适的库。Apollo Server 是最流行的实现，提供了丰富的功能。Relay 是 Facebook 的客户端库，优化了数据获取和缓存。</p>
-<p>GraphQL 适合复杂数据需求的场景，如社交网络、电商平台。对于简单应用，REST 可能更直接。选择要根据项目特点决定。</p>
-<p>学习 GraphQL 要理解其设计哲学和最佳实践。不要盲目使用，要评估是否真的需要它带来的灵活性。</p>
-]]></content>
-      <categories>
-        <category>学习探索</category>
-      </categories>
-      <tags>
-        <tag>API</tag>
-        <tag>GraphQL</tag>
-        <tag>后端</tag>
       </tags>
   </entry>
   <entry>
@@ -2522,6 +2522,32 @@ response <span class="token operator">=</span> client<span class="token punctuat
   </entry>
   <entry>
     <title>Linux运维</title>
+    <url>/2026/03/04/linux%E8%BF%90%E7%BB%B4-46/</url>
+    <content><![CDATA[<p>系统管理是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍系统管理的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="Shell脚本"><a href="#Shell脚本" class="headerlink" title="Shell脚本"></a>Shell脚本</h2><p>Shell脚本是系统管理的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用Shell脚本时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践Shell脚本，我们可以掌握系统管理的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="进程监控"><a href="#进程监控" class="headerlink" title="进程监控"></a>进程监控</h2><p>进程监控是系统管理的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用进程监控时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践进程监控，我们可以掌握系统管理的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="日志分析"><a href="#日志分析" class="headerlink" title="日志分析"></a>日志分析</h2><p>日志分析是系统管理的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用日志分析时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践日志分析，我们可以掌握系统管理的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="性能调优"><a href="#性能调优" class="headerlink" title="性能调优"></a>性能调优</h2><p>性能调优是系统管理的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用性能调优时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握性能调优和相关知识，将帮助我们构建更加完善的系统管理体系。</p>
+]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+      <tags>
+        <tag>系统管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux运维</title>
     <url>/2026/03/04/linux%E8%BF%90%E7%BB%B4-47/</url>
     <content><![CDATA[<p>系统管理是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍系统管理的核心要点和实践经验。</p>
 <span id="more"></span>
@@ -2572,58 +2598,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
-    <title>Linux运维</title>
-    <url>/2026/03/04/linux%E8%BF%90%E7%BB%B4-46/</url>
-    <content><![CDATA[<p>系统管理是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍系统管理的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="Shell脚本"><a href="#Shell脚本" class="headerlink" title="Shell脚本"></a>Shell脚本</h2><p>Shell脚本是系统管理的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用Shell脚本时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践Shell脚本，我们可以掌握系统管理的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="进程监控"><a href="#进程监控" class="headerlink" title="进程监控"></a>进程监控</h2><p>进程监控是系统管理的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用进程监控时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践进程监控，我们可以掌握系统管理的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="日志分析"><a href="#日志分析" class="headerlink" title="日志分析"></a>日志分析</h2><p>日志分析是系统管理的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用日志分析时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践日志分析，我们可以掌握系统管理的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="性能调优"><a href="#性能调优" class="headerlink" title="性能调优"></a>性能调优</h2><p>性能调优是系统管理的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用性能调优时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握性能调优和相关知识，将帮助我们构建更加完善的系统管理体系。</p>
-]]></content>
-      <categories>
-        <category>工具使用</category>
-      </categories>
-      <tags>
-        <tag>系统管理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux系统编程</title>
-    <url>/2026/03/04/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B-28/</url>
-    <content><![CDATA[<p>系统调用是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍系统调用的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="文件I-O"><a href="#文件I-O" class="headerlink" title="文件I&#x2F;O"></a>文件I&#x2F;O</h2><p>文件I&#x2F;O是系统调用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用文件I&#x2F;O时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践文件I&#x2F;O，我们可以掌握系统调用的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h2><p>进程管理是系统调用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用进程管理时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践进程管理，我们可以掌握系统调用的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="线程同步"><a href="#线程同步" class="headerlink" title="线程同步"></a>线程同步</h2><p>线程同步是系统调用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用线程同步时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践线程同步，我们可以掌握系统调用的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="信号处理"><a href="#信号处理" class="headerlink" title="信号处理"></a>信号处理</h2><p>信号处理是系统调用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用信号处理时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握信号处理和相关知识，将帮助我们构建更加完善的系统调用体系。</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>系统调用</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CDN 加速原理</title>
     <url>/2026/03/04/network-cdn/</url>
     <content><![CDATA[<p>CDN（内容分发网络）通过将内容缓存到分布在全球的边缘节点，实现就近访问，大大提升了网站访问速度和用户体验。</p>
@@ -2643,6 +2617,28 @@ response <span class="token operator">=</span> client<span class="token punctuat
         <tag>缓存</tag>
         <tag>CDN</tag>
         <tag>加速</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTTPS 原理与配置</title>
+    <url>/2026/03/04/network-https/</url>
+    <content><![CDATA[<p>HTTPS 是 HTTP 的安全版本，通过 TLS&#x2F;SSL 协议加密通信内容，防止数据被窃取或篡改。在现代互联网中，HTTPS 已经成为标配。</p>
+<span id="more"></span>
+
+<p>HTTPS 的工作流程包括、客户端发起连接、服务器发送证书、客户端验证证书、协商加密参数、建立加密通道。整个过程依赖于公钥加密技术，确保只有持有私钥的服务器才能解密数据。</p>
+<p>SSL 证书由受信任的证书颁发机构（CA）签发。证书包含公钥、域名、有效期等信息。客户端通过验证证书的签名和有效性，确保连接到的是真实的服务器。</p>
+<p>配置 HTTPS 需要获取 SSL 证书。Let’s Encrypt 提供免费的自动化证书，是个人站点的首选。商业证书提供更好的信任等级和技术支持。</p>
+<p>Nginx 配置 HTTPS 很简单、指定证书文件路径和私钥文件路径，配置 SSL 协议版本和加密套件。建议启用 HSTS 头，强制客户端使用 HTTPS。</p>
+<p>虽然 HTTPS 会增加一些性能开销，但现代硬件和优化技术已经将这种开销降到可以接受的程度。HTTPS 提供的安全价值远超过性能成本。</p>
+<p>部署 HTTPS 是每个网站所有者的责任。让我们共同营造一个更安全的互联网环境。</p>
+]]></content>
+      <categories>
+        <category>网络架构</category>
+      </categories>
+      <tags>
+        <tag>HTTPS</tag>
+        <tag>SSL</tag>
+        <tag>安全</tag>
       </tags>
   </entry>
   <entry>
@@ -2669,28 +2665,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
-    <title>微服务架构实践</title>
-    <url>/2026/03/04/network-microservices/</url>
-    <content><![CDATA[<p>微服务架构将单体应用拆分成多个小型服务，每个服务独立部署、独立扩展。这种架构提高了系统的灵活性和可维护性。</p>
-<span id="more"></span>
-
-<p>微服务的优势包括、技术栈灵活、独立部署、故障隔离、团队自治。但同时也带来了复杂性、服务发现、配置管理、数据一致性、监控运维等挑战。</p>
-<p>服务发现是微服务的核心问题。服务需要能够找到彼此的位置。Consul、Etcd、ZooKeeper 等工具提供了服务注册和发现功能。Kubernetes 的 Service 内置了服务发现机制。</p>
-<p>服务间通信方式主要有两种、同步调用（HTTP&#x2F;REST、gRPC）和异步消息（MQ、Kafka）。同步调用简单直接，但增加了耦合度。异步消息解耦了服务，但增加了系统复杂度。</p>
-<p>数据一致性在微服务中是难题。CAP 定理告诉我们，在分布式系统中，一致性、可用性、分区容错性不能同时满足。通常采用最终一致性模型，通过事件溯源、CQRS 等模式实现。</p>
-<p>服务网格是微服务架构的新趋势。Istio、Linkerd 等服务网格提供了统一的流量管理、安全、可观测性功能，减轻了业务代码的负担。</p>
-<p>微服务架构不是银弹。在应用前要评估业务特点、团队能力、基础设施水平。对于小团队或小型项目，单体架构可能是更好的选择。</p>
-]]></content>
-      <categories>
-        <category>网络架构</category>
-      </categories>
-      <tags>
-        <tag>架构</tag>
-        <tag>微服务</tag>
-        <tag>分布式</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>负载均衡策略</title>
     <url>/2026/03/04/network-load-balance/</url>
     <content><![CDATA[<p>负载均衡将流量分发到多台服务器，避免单点过载，提高系统的处理能力和可用性。它是构建高可用架构的基础组件。</p>
@@ -2713,6 +2687,52 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
+    <title>微服务架构实践</title>
+    <url>/2026/03/04/network-microservices/</url>
+    <content><![CDATA[<p>微服务架构将单体应用拆分成多个小型服务，每个服务独立部署、独立扩展。这种架构提高了系统的灵活性和可维护性。</p>
+<span id="more"></span>
+
+<p>微服务的优势包括、技术栈灵活、独立部署、故障隔离、团队自治。但同时也带来了复杂性、服务发现、配置管理、数据一致性、监控运维等挑战。</p>
+<p>服务发现是微服务的核心问题。服务需要能够找到彼此的位置。Consul、Etcd、ZooKeeper 等工具提供了服务注册和发现功能。Kubernetes 的 Service 内置了服务发现机制。</p>
+<p>服务间通信方式主要有两种、同步调用（HTTP&#x2F;REST、gRPC）和异步消息（MQ、Kafka）。同步调用简单直接，但增加了耦合度。异步消息解耦了服务，但增加了系统复杂度。</p>
+<p>数据一致性在微服务中是难题。CAP 定理告诉我们，在分布式系统中，一致性、可用性、分区容错性不能同时满足。通常采用最终一致性模型，通过事件溯源、CQRS 等模式实现。</p>
+<p>服务网格是微服务架构的新趋势。Istio、Linkerd 等服务网格提供了统一的流量管理、安全、可观测性功能，减轻了业务代码的负担。</p>
+<p>微服务架构不是银弹。在应用前要评估业务特点、团队能力、基础设施水平。对于小团队或小型项目，单体架构可能是更好的选择。</p>
+]]></content>
+      <categories>
+        <category>网络架构</category>
+      </categories>
+      <tags>
+        <tag>架构</tag>
+        <tag>微服务</tag>
+        <tag>分布式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>代理服务器原理</title>
+    <url>/2026/03/04/network-proxy/</url>
+    <content><![CDATA[<p>代理服务器（Proxy）是客户端和目标服务器之间的中间层，转发请求和响应，实现各种功能。</p>
+<span id="more"></span>
+
+<p>正向代理是客户端的代理。客户端配置代理服务器，请求通过代理转发到目标。客户端隐藏，服务器不知道真实客户端。用途包括、访问受限网站、缓存加速、匿名访问。</p>
+<p>反向代理是服务器的代理。客户端访问代理，代理转发到后端服务器。后端隐藏，客户端不知道真实服务器。用途包括、负载均衡、缓存加速、SSL 终止、安全防护。</p>
+<p>Nginx 是常用的反向代理服务器。配置简单、<code>proxy_pass http://backend;</code>。Nginx 可以根据路径、域名等规则转发请求，实现灵活的路由。</p>
+<p>代理服务器可以实现负载均衡。轮询、最少连接、IP 哈希等算法分配请求。后端服务器故障时自动剔除，恢复后自动加入。</p>
+<p>正向代理常见于翻墙、访问内网等场景。HTTP 代理只代理 HTTP 请求，SOCKS 代理支持任意协议。配置浏览器或系统的代理设置。</p>
+<p>代理的安全功能包括、访问控制（白名单&#x2F;黑名单）、URL 过滤、内容过滤、病毒扫描。企业常用代理上网行为管理。</p>
+<p>代理的缺点、增加延迟，单点故障，可能成为瓶颈。需要合理配置，监控性能。</p>
+<p>代理是网络架构的重要组件。理解代理的工作原理，对于构建高可用、高性能的系统很有帮助。</p>
+]]></content>
+      <categories>
+        <category>网络架构</category>
+      </categories>
+      <tags>
+        <tag>安全</tag>
+        <tag>代理</tag>
+        <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>TCP/IP 协议详解</title>
     <url>/2026/03/04/network-tcp-ip/</url>
     <content><![CDATA[<p>TCP&#x2F;IP 是互联网的基础协议栈，由传输层（TCP&#x2F;UDP）和网络层（IP）组成，负责数据在网络中的可靠传输。</p>
@@ -2729,8 +2749,8 @@ response <span class="token operator">=</span> client<span class="token punctuat
         <category>网络架构</category>
       </categories>
       <tags>
-        <tag>TCP/IP</tag>
         <tag>网络</tag>
+        <tag>TCP/IP</tag>
         <tag>协议</tag>
       </tags>
   </entry>
@@ -2758,52 +2778,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
-    <title>代理服务器原理</title>
-    <url>/2026/03/04/network-proxy/</url>
-    <content><![CDATA[<p>代理服务器（Proxy）是客户端和目标服务器之间的中间层，转发请求和响应，实现各种功能。</p>
-<span id="more"></span>
-
-<p>正向代理是客户端的代理。客户端配置代理服务器，请求通过代理转发到目标。客户端隐藏，服务器不知道真实客户端。用途包括、访问受限网站、缓存加速、匿名访问。</p>
-<p>反向代理是服务器的代理。客户端访问代理，代理转发到后端服务器。后端隐藏，客户端不知道真实服务器。用途包括、负载均衡、缓存加速、SSL 终止、安全防护。</p>
-<p>Nginx 是常用的反向代理服务器。配置简单、<code>proxy_pass http://backend;</code>。Nginx 可以根据路径、域名等规则转发请求，实现灵活的路由。</p>
-<p>代理服务器可以实现负载均衡。轮询、最少连接、IP 哈希等算法分配请求。后端服务器故障时自动剔除，恢复后自动加入。</p>
-<p>正向代理常见于翻墙、访问内网等场景。HTTP 代理只代理 HTTP 请求，SOCKS 代理支持任意协议。配置浏览器或系统的代理设置。</p>
-<p>代理的安全功能包括、访问控制（白名单&#x2F;黑名单）、URL 过滤、内容过滤、病毒扫描。企业常用代理上网行为管理。</p>
-<p>代理的缺点、增加延迟，单点故障，可能成为瓶颈。需要合理配置，监控性能。</p>
-<p>代理是网络架构的重要组件。理解代理的工作原理，对于构建高可用、高性能的系统很有帮助。</p>
-]]></content>
-      <categories>
-        <category>网络架构</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-        <tag>代理</tag>
-        <tag>安全</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HTTPS 原理与配置</title>
-    <url>/2026/03/04/network-https/</url>
-    <content><![CDATA[<p>HTTPS 是 HTTP 的安全版本，通过 TLS&#x2F;SSL 协议加密通信内容，防止数据被窃取或篡改。在现代互联网中，HTTPS 已经成为标配。</p>
-<span id="more"></span>
-
-<p>HTTPS 的工作流程包括、客户端发起连接、服务器发送证书、客户端验证证书、协商加密参数、建立加密通道。整个过程依赖于公钥加密技术，确保只有持有私钥的服务器才能解密数据。</p>
-<p>SSL 证书由受信任的证书颁发机构（CA）签发。证书包含公钥、域名、有效期等信息。客户端通过验证证书的签名和有效性，确保连接到的是真实的服务器。</p>
-<p>配置 HTTPS 需要获取 SSL 证书。Let’s Encrypt 提供免费的自动化证书，是个人站点的首选。商业证书提供更好的信任等级和技术支持。</p>
-<p>Nginx 配置 HTTPS 很简单、指定证书文件路径和私钥文件路径，配置 SSL 协议版本和加密套件。建议启用 HSTS 头，强制客户端使用 HTTPS。</p>
-<p>虽然 HTTPS 会增加一些性能开销，但现代硬件和优化技术已经将这种开销降到可以接受的程度。HTTPS 提供的安全价值远超过性能成本。</p>
-<p>部署 HTTPS 是每个网站所有者的责任。让我们共同营造一个更安全的互联网环境。</p>
-]]></content>
-      <categories>
-        <category>网络架构</category>
-      </categories>
-      <tags>
-        <tag>安全</tag>
-        <tag>HTTPS</tag>
-        <tag>SSL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>AI智能体：占位文章</title>
     <url>/2026/03/04/placeholder-ai-agent/</url>
     <content><![CDATA[<p>这是关于“AI智能体”分类的占位文章。</p>
@@ -2818,93 +2792,6 @@ response <span class="token operator">=</span> client<span class="token punctuat
       </tags>
   </entry>
   <entry>
-    <title>教程：从零打造 OpenClaw 的极致搜索与自学习能力</title>
-    <url>/2026/03/05/openclaw-evolution-record/</url>
-    <content><![CDATA[<p>标准的 OpenClaw 助手在面对复杂的搜索任务和“围墙花园”内的信息时，常常会显得力不从心。本教程将指导你如何通过一系列“赛博义体”升级，为你的 AI 助手赋予超凡的能力。</p>
-<p>跟随本教程，你将学会如何为 OpenClaw 集成强大的搜索引擎、赋予它自学习能力，并为后续更高级的“平台渗透”和“深度研究”能力打下坚实的基础。</p>
-<span id="more"></span>
-
-<h2 id="准备工作-Prerequisites"><a href="#准备工作-Prerequisites" class="headerlink" title="准备工作 (Prerequisites)"></a>准备工作 (Prerequisites)</h2><p>在开始之前，请确保你已经拥有：</p>
-<ul>
-<li>一个正常运行的 OpenClaw 实例。</li>
-<li>终端（命令行）的访问权限。</li>
-<li><code>clawhub</code> 命令行工具已基本可用（即使有限制）。</li>
-<li>一个 <a href="https://tavily.com/">Tavily</a> 账户，并获取免费的 API 密钥。</li>
-</ul>
-<div style="background-color: #e3f2fd; border-left: 4px solid #222; padding: 15px; margin: 20px 0; border-radius: 4px;">
-  <strong>第一部分目标：奠定基础</strong><br>
-  本部分将专注于安装和配置核心的搜索与自学习技能，这些是后续所有高级功能的基础。
-</div>
-
-
-<h2 id="步骤一：升级核心搜索引擎"><a href="#步骤一：升级核心搜索引擎" class="headerlink" title="步骤一：升级核心搜索引擎"></a>步骤一：升级核心搜索引擎</h2><p>我们将安装两个强大的技能：专为 AI Agent 设计的 <code>Tavily</code>，以及集成了17个免费搜索引擎的 <code>Multi Search Engine</code>。</p>
-<h3 id="1-1-安装-Multi-Search-Engine-web-search-plus"><a href="#1-1-安装-Multi-Search-Engine-web-search-plus" class="headerlink" title="1.1 安装 Multi Search Engine (web-search-plus)"></a>1.1 安装 Multi Search Engine (<code>web-search-plus</code>)</h3><p><code>Multi Search Engine</code> 是一个强大的补充，它不需要API密钥，非常适合作为日常搜索和免费的备用方案。</p>
-<p>首先，通过 <code>clawhub</code> 找到它的准确名称并安装。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 搜索技能，确认其在 ClawHub 上的名称 (slug)</span>
-clawhub search <span class="token string">"multi search"</span>
-<span class="token comment"># 在返回结果中，可以找到名为 web-search-plus 的技能，评分较高</span>
-
-<span class="token comment"># 2. 使用 clawhub 安装该技能</span>
-clawhub <span class="token function">install</span> web-search-plus
-<span class="token comment"># 当看到 'OK. Installed ...' 的输出时，表示安装成功</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<div style="background-color: #fffbe6; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0; border-radius: 4px;">
-  <strong>💡 提示与常见问题</strong><br>
-  `clawhub` 命令可能会遇到请求速率限制 (Rate Limit Exceeded) 或一次只能安装一个包的问题。如果 `install` 失败，请稍等几分钟再试，或将多个安装命令分开执行。
-</div>
-
-
-<h3 id="1-2-配置-Tavily-远程MCP模式"><a href="#1-2-配置-Tavily-远程MCP模式" class="headerlink" title="1.2 配置 Tavily (远程MCP模式)"></a>1.2 配置 Tavily (远程MCP模式)</h3><p>对于 <code>Tavily</code>，我们采用一种更高级、更优雅的集成方式：<strong>远程MCP服务</strong>。这可以让你直接连接到 Tavily 官方维护的服务，无需在本地安装任何技能包。</p>
-<div style="background-color: #e8f5e9; border-left: 4px solid #4caf50; padding: 15px; margin: 20px 0; border-radius: 4px;">
-  <strong>⭐ 核心概念：MCP (Model Context Protocol)</strong><br>
-  MCP 是一种允许 OpenClaw 与外部工具服务进行标准化交互的协议。通过连接到远程 MCP 服务器，你可以即时获得该服务提供的所有能力，而无需关心其本地实现。
-</div>
-
-
-<p>要配置远程 MCP 服务，你需要编辑 <code>mcporter</code> 工具的配置文件。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 创建或编辑 mcporter 配置文件</span>
-<span class="token comment"># 该文件通常位于 workspace/config/mcporter.json</span>
-<span class="token comment"># 注意：其顶层键名必须是 "mcpServers"</span>
-<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span> <span class="token string">'EOF'<span class="token bash punctuation"> <span class="token operator">></span> config/mcporter.json</span>
-&#123;
-  "mcpServers": &#123;
-    "tavily_search": &#123;
-      "url": "https://mcp.tavily.com/mcp/?tavilyApiKey=YOUR_TAVILY_API_KEY"
-    &#125;
-  &#125;
-&#125;
-EOF</span>
-
-<span class="token comment"># 2. 使用 mcporter list 命令验证配置</span>
-mcporter list
-<span class="token comment"># 如果输出中包含 'tavily_search (5 tools, ...)' 和 '1 healthy'，则表示配置成功！</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>重要</strong>: 请将上面命令中的 <code>YOUR_TAVILY_API_KEY</code> 替换为你自己的 Tavily API 密钥。</p>
-<h2 id="步骤二：赋予AI自学习能力-find-skills"><a href="#步骤二：赋予AI自学习能力-find-skills" class="headerlink" title="步骤二：赋予AI自学习能力 (find-skills)"></a>步骤二：赋予AI自学习能力 (find-skills)</h2><p>安装 <code>find-skills</code> 技能，你的 OpenClaw 助手就能在遇到未知问题时，主动去 <code>ClawHub</code> 市场上寻找并推荐可能解决问题的新技能。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 搜索以确认技能名称</span>
-clawhub search find-skills
-<span class="token comment"># 在结果中选择评分最高的 'find-skills'</span>
-
-<span class="token comment"># 2. 安装技能</span>
-clawhub <span class="token function">install</span> find-skills<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>至此，第一阶段的基础设施已全部搭建完毕！你的 OpenClaw 现在拥有了强大的混合搜索引擎和自我进化的初步潜力。</p>
-]]></content>
-      <categories>
-        <category>AI智能体</category>
-        <category>技术教程</category>
-      </categories>
-      <tags>
-        <tag>OpenClaw</tag>
-        <tag>AI助手</tag>
-        <tag>技能</tag>
-        <tag>搜索增强</tag>
-        <tag>自学习</tag>
-        <tag>Tavily</tag>
-        <tag>Multi Search Engine</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>联创项目：占位文章</title>
     <url>/2026/03/04/placeholder-joint-venture/</url>
     <content><![CDATA[<p>这是关于“联创项目”分类的占位文章。</p>
@@ -2912,6 +2799,20 @@ clawhub <span class="token function">install</span> find-skills<span aria-hidden
 ]]></content>
       <categories>
         <category>联创项目</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>占位</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学习探索：占位文章</title>
+    <url>/2026/03/04/placeholder-learning-exploration/</url>
+    <content><![CDATA[<p>这是关于“学习探索”分类的占位文章。</p>
+<p>这里将记录我对新知识、新领域的好奇心与探索过程。</p>
+]]></content>
+      <categories>
+        <category>学习探索</category>
       </categories>
       <tags>
         <tag>测试</tag>
@@ -2961,69 +2862,8 @@ clawhub <span class="token function">install</span> find-skills<span aria-hidden
       </tags>
   </entry>
   <entry>
-    <title>学习探索：占位文章</title>
-    <url>/2026/03/04/placeholder-learning-exploration/</url>
-    <content><![CDATA[<p>这是关于“学习探索”分类的占位文章。</p>
-<p>这里将记录我对新知识、新领域的好奇心与探索过程。</p>
-]]></content>
-      <categories>
-        <category>学习探索</category>
-      </categories>
-      <tags>
-        <tag>测试</tag>
-        <tag>占位</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Curl 命令使用技巧</title>
-    <url>/2026/03/04/tools-curl/</url>
-    <content><![CDATA[<p>Curl 是强大的命令行 HTTP 客户端，支持多种协议，是开发和测试的必备工具。</p>
-<span id="more"></span>
-
-<p>基本用法、<code>curl url</code> 请求 URL 并输出响应。<code>curl -O url</code> 保存响应到文件，文件名从 URL 提取。<code>curl -o filename url</code> 指定保存文件名。</p>
-<p>发送请求、<code>curl -X POST url</code> 使用 POST 方法，<code>curl -d &quot;data&quot; url</code> 发送 POST 数据，<code>curl -H &quot;Header: Value&quot; url</code> 添加请求头，<code>curl -u user:pass url</code> 添加基本认证。</p>
-<p>调试功能、<code>curl -v url</code> 显示详细请求过程，<code>curl -i url</code> 显示响应头，<code>curl -I url</code> 只显示响应头（HEAD 请求），<code>curl --trace output.txt url</code> 输出完整追踪到文件。</p>
-<p>Cookie 处理、<code>curl -c cookies.txt url</code> 保存 Cookie 到文件，<code>curl -b cookies.txt url</code> 从文件读取 Cookie，<code>curl -b &quot;name=value&quot; url</code> 直接设置 Cookie。</p>
-<p>上传文件、<code>curl -F &quot;file=@path&quot; url</code> 上传文件，<code>curl -T path url</code> 上传文件到 FTP。</p>
-<p>常用技巧、<code>curl -x proxy:port url</code> 使用代理，<code>curl -k url</code> 忽略 SSL 证书验证，<code>curl --compressed url</code> 启用压缩，<code>curl --limit-rate 1000B url</code> 限制下载速度。</p>
-<p>Curl 可以转换为代码、<code>curl -X POST ...</code> 可以在 Postman、VS Code 扩展等工具中导入，自动生成各种语言的代码。</p>
-<p>Curl 功能强大，但选项繁多。掌握常用选项就够日常使用，复杂场景查阅文档。熟练使用 Curl 能让你脱离图形界面，在终端高效工作。</p>
-]]></content>
-      <categories>
-        <category>实用工具</category>
-      </categories>
-      <tags>
-        <tag>Curl</tag>
-        <tag>HTTP</tag>
-        <tag>命令行</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Markdown 写作技巧</title>
-    <url>/2026/03/04/tools-markdown/</url>
-    <content><![CDATA[<p>Markdown 是一种轻量级标记语言，用简洁的语法实现富文本格式。掌握它能让写作更高效。</p>
-<span id="more"></span>
-
-<p>基础语法包括、<code>#</code> 标题、<code>**粗体**</code>、<code>*斜体*</code>、<code>~~删除线~~</code>、<code>[链接](url)</code>、<code>![图片](url)</code>、<code>&gt; 引用</code>、<code>- 列表</code>。这些简单符号就能表达大部分文本格式。</p>
-<p>代码块使用三个反引号包裹，可以指定语言实现语法高亮、<code>javascript ... </code>。行内代码用单个反引号、<code>code</code>。</p>
-<p>表格使用 <code>|</code> 分隔列，<code>-</code> 分隔表头和内容。对齐方式可以通过在 <code>---</code> 前加冒号实现、<code>---:</code> 右对齐，<code>:---:</code> 居中。</p>
-<p>任务列表用 <code>- [ ]</code> 和 <code>- [x]</code> 表示未完成和已完成。这对写待办事项很有用。</p>
-<p>高级特性包括、脚注、定义列表、数学公式（需要支持）、图表等。不过不同编辑器支持程度不同。</p>
-<p>推荐使用 Typora、VS Code、Obsidian 等 Markdown 编辑器。它们提供实时预览、快捷操作、插件扩展等功能。</p>
-<p>Markdown 的简单易用使其成为技术写作的首选。花点时间学习，你会发现写作变得如此轻松。</p>
-]]></content>
-      <categories>
-        <category>实用工具</category>
-      </categories>
-      <tags>
-        <tag>Markdown</tag>
-        <tag>写作</tag>
-        <tag>技巧</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>RAG技术进阶</title>
-    <url>/2026/03/04/rag%E6%8A%80%E6%9C%AF%E8%BF%9B%E9%98%B6-05/</url>
+    <url>/2026/03/04/rag%E6%8A%80%E6%9C%AF%E8%BF%9B%E9%98%B6-04/</url>
     <content><![CDATA[<p>检索增强生成是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍检索增强生成的核心要点和实践经验。</p>
 <span id="more"></span>
 
@@ -3049,7 +2889,7 @@ clawhub <span class="token function">install</span> find-skills<span aria-hidden
   </entry>
   <entry>
     <title>RAG技术进阶</title>
-    <url>/2026/03/04/rag%E6%8A%80%E6%9C%AF%E8%BF%9B%E9%98%B6-04/</url>
+    <url>/2026/03/04/rag%E6%8A%80%E6%9C%AF%E8%BF%9B%E9%98%B6-05/</url>
     <content><![CDATA[<p>检索增强生成是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍检索增强生成的核心要点和实践经验。</p>
 <span id="more"></span>
 
@@ -3166,6 +3006,53 @@ clawhub <span class="token function">install</span> find-skills<span aria-hidden
       </tags>
   </entry>
   <entry>
+    <title>Curl 命令使用技巧</title>
+    <url>/2026/03/04/tools-curl/</url>
+    <content><![CDATA[<p>Curl 是强大的命令行 HTTP 客户端，支持多种协议，是开发和测试的必备工具。</p>
+<span id="more"></span>
+
+<p>基本用法、<code>curl url</code> 请求 URL 并输出响应。<code>curl -O url</code> 保存响应到文件，文件名从 URL 提取。<code>curl -o filename url</code> 指定保存文件名。</p>
+<p>发送请求、<code>curl -X POST url</code> 使用 POST 方法，<code>curl -d &quot;data&quot; url</code> 发送 POST 数据，<code>curl -H &quot;Header: Value&quot; url</code> 添加请求头，<code>curl -u user:pass url</code> 添加基本认证。</p>
+<p>调试功能、<code>curl -v url</code> 显示详细请求过程，<code>curl -i url</code> 显示响应头，<code>curl -I url</code> 只显示响应头（HEAD 请求），<code>curl --trace output.txt url</code> 输出完整追踪到文件。</p>
+<p>Cookie 处理、<code>curl -c cookies.txt url</code> 保存 Cookie 到文件，<code>curl -b cookies.txt url</code> 从文件读取 Cookie，<code>curl -b &quot;name=value&quot; url</code> 直接设置 Cookie。</p>
+<p>上传文件、<code>curl -F &quot;file=@path&quot; url</code> 上传文件，<code>curl -T path url</code> 上传文件到 FTP。</p>
+<p>常用技巧、<code>curl -x proxy:port url</code> 使用代理，<code>curl -k url</code> 忽略 SSL 证书验证，<code>curl --compressed url</code> 启用压缩，<code>curl --limit-rate 1000B url</code> 限制下载速度。</p>
+<p>Curl 可以转换为代码、<code>curl -X POST ...</code> 可以在 Postman、VS Code 扩展等工具中导入，自动生成各种语言的代码。</p>
+<p>Curl 功能强大，但选项繁多。掌握常用选项就够日常使用，复杂场景查阅文档。熟练使用 Curl 能让你脱离图形界面，在终端高效工作。</p>
+]]></content>
+      <categories>
+        <category>实用工具</category>
+      </categories>
+      <tags>
+        <tag>Curl</tag>
+        <tag>HTTP</tag>
+        <tag>命令行</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown 写作技巧</title>
+    <url>/2026/03/04/tools-markdown/</url>
+    <content><![CDATA[<p>Markdown 是一种轻量级标记语言，用简洁的语法实现富文本格式。掌握它能让写作更高效。</p>
+<span id="more"></span>
+
+<p>基础语法包括、<code>#</code> 标题、<code>**粗体**</code>、<code>*斜体*</code>、<code>~~删除线~~</code>、<code>[链接](url)</code>、<code>![图片](url)</code>、<code>&gt; 引用</code>、<code>- 列表</code>。这些简单符号就能表达大部分文本格式。</p>
+<p>代码块使用三个反引号包裹，可以指定语言实现语法高亮、<code>javascript ... </code>。行内代码用单个反引号、<code>code</code>。</p>
+<p>表格使用 <code>|</code> 分隔列，<code>-</code> 分隔表头和内容。对齐方式可以通过在 <code>---</code> 前加冒号实现、<code>---:</code> 右对齐，<code>:---:</code> 居中。</p>
+<p>任务列表用 <code>- [ ]</code> 和 <code>- [x]</code> 表示未完成和已完成。这对写待办事项很有用。</p>
+<p>高级特性包括、脚注、定义列表、数学公式（需要支持）、图表等。不过不同编辑器支持程度不同。</p>
+<p>推荐使用 Typora、VS Code、Obsidian 等 Markdown 编辑器。它们提供实时预览、快捷操作、插件扩展等功能。</p>
+<p>Markdown 的简单易用使其成为技术写作的首选。花点时间学习，你会发现写作变得如此轻松。</p>
+]]></content>
+      <categories>
+        <category>实用工具</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+        <tag>写作</tag>
+        <tag>技巧</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Postman 使用指南</title>
     <url>/2026/03/04/tools-postman/</url>
     <content><![CDATA[<p>Postman 是 API 开发和测试的必备工具。它提供了直观的界面，简化了 API 调用和调试过程。</p>
@@ -3189,6 +3076,81 @@ clawhub <span class="token function">install</span> find-skills<span aria-hidden
       </tags>
   </entry>
   <entry>
+    <title>SSH 远程连接</title>
+    <url>/2026/03/04/tools-ssh/</url>
+    <content><![CDATA[<p>SSH（Secure Shell）是远程登录 Linux 服务器的标准协议，提供加密的通信通道，安全可靠。</p>
+<span id="more"></span>
+
+<p>基本连接、<code>ssh user@host</code> 连接到远程主机，首次连接会提示保存主机密钥。<code>ssh user@host -p 2222</code> 指定端口（默认 22）。<code>ssh -i key.pem user@host</code> 使用密钥文件认证。</p>
+<p>密钥认证比密码更安全、更方便。生成密钥、<code>ssh-keygen -t rsa -b 4096</code>。公钥复制到服务器、<code>ssh-copy-id user@host</code>。之后登录无需密码。</p>
+<p>SSH 端口转发可以实现内网穿透。本地端口转发、<code>ssh -L local_port:remote_host:remote_port user@jump_host</code>。远程端口转发、<code>ssh -R remote_port:local_host:local_port user@jump_host</code>。</p>
+<p>SSH 配置文件 <code>~/.ssh/config</code> 简化连接。定义 Host 别名、用户名、主机、端口、密钥等，之后直接 <code>ssh alias</code> 连接。</p>
+<p>SSH 命令执行、<code>ssh user@host &quot;command&quot;</code> 在远程主机执行命令。<code>ssh user@host &quot;tar -czf - /data&quot; &gt; backup.tar.gz</code> 远程打包传回本地。</p>
+<p>SSH 隧道可以实现安全的远程访问。例如，访问远程数据库、<code>ssh -L 3306:localhost:3306 user@host</code>，然后本地连接 localhost:3306 就是远程数据库。</p>
+<p>SSH 还支持文件传输、<code>scp local_file user@host:/remote/path</code> 上传文件，<code>scp user@host:/remote/path local_file</code> 下载文件。rsync 更适合大量文件同步。</p>
+<p>SSH 是服务器运维的基础工具。掌握 SSH 能让你轻松管理远程服务器，是 Linux 用户的必备技能。</p>
+]]></content>
+      <categories>
+        <category>实用工具</category>
+      </categories>
+      <tags>
+        <tag>SSH</tag>
+        <tag>远程</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux系统编程</title>
+    <url>/2026/03/04/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B-28/</url>
+    <content><![CDATA[<p>系统调用是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍系统调用的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="文件I-O"><a href="#文件I-O" class="headerlink" title="文件I&#x2F;O"></a>文件I&#x2F;O</h2><p>文件I&#x2F;O是系统调用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用文件I&#x2F;O时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践文件I&#x2F;O，我们可以掌握系统调用的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h2><p>进程管理是系统调用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用进程管理时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践进程管理，我们可以掌握系统调用的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="线程同步"><a href="#线程同步" class="headerlink" title="线程同步"></a>线程同步</h2><p>线程同步是系统调用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用线程同步时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践线程同步，我们可以掌握系统调用的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="信号处理"><a href="#信号处理" class="headerlink" title="信号处理"></a>信号处理</h2><p>信号处理是系统调用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用信号处理时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握信号处理和相关知识，将帮助我们构建更加完善的系统调用体系。</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>系统调用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vim 编辑器使用</title>
+    <url>/2026/03/04/tools-vim/</url>
+    <content><![CDATA[<p>Vim 是强大的终端编辑器，以其高效的键盘操作和丰富的插件系统著称。虽然学习曲线陡峭，但掌握后能极大提升编辑效率。</p>
+<span id="more"></span>
+
+<p>Vim 有多种模式、普通模式（浏览、删除）、插入模式（输入文本）、可视模式（选择文本）、命令模式（执行命令）。ESC 键返回普通模式。</p>
+<p>基本移动、h（左）、j（下）、k（上）、l（右）。w&#x2F;W（下一个单词），b&#x2F;B（上一个单词），e&#x2F;E（单词末尾），0（行首），$（行尾），G（文件末尾）。</p>
+<p>编辑操作、i（在光标前插入），a（在光标后插入），o（新起一行），dd（删除行），yy（复制行），p（粘贴），u（撤销），Ctrl+r（重做）。</p>
+<p>搜索替换、&#x2F;pattern（向下搜索），?pattern（向上搜索），n&#x2F;N（下一个&#x2F;上一个），:s&#x2F;old&#x2F;new&#x2F;g（全局替换当前行），:%s&#x2F;old&#x2F;new&#x2F;g（全局替换文件）。</p>
+<p>分屏操作、:split（水平分屏），:vsplit（垂直分屏），Ctrl+w+w（切换窗口），Ctrl+w+q（关闭窗口）。</p>
+<p>Vim 配置文件、~&#x2F;.vimrc。常用配置、行号 <code>set number</code>，语法高亮 <code>syntax on</code>，缩进设置 <code>set tabstop=4 shiftwidth=4</code>。</p>
+<p>Vim 插件管理器、Vundle、vim-plug、dein.vim。常用插件、NERDTree（文件树）、CtrlP（模糊搜索）、vim-airline（状态栏）。</p>
+<p>Vimscript 是 Vim 的脚本语言，可以自定义函数和命令。对于复杂的配置，学习 Vimscript 很有帮助。</p>
+<p>Vim 是 Linux 服务器编辑文件的利器。即使日常使用 VS Code，掌握 Vim 也能在 SSH 远程编辑时游刃有余。</p>
+]]></content>
+      <categories>
+        <category>实用工具</category>
+      </categories>
+      <tags>
+        <tag>Vim</tag>
+        <tag>编辑器</tag>
+        <tag>终端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VS Code 高效使用技巧</title>
     <url>/2026/03/04/tools-vscode/</url>
     <content><![CDATA[<p>Visual Studio Code 是目前最受欢迎的代码编辑器之一。掌握它的高级技巧能显著提升开发效率。</p>
@@ -3206,34 +3168,8 @@ clawhub <span class="token function">install</span> find-skills<span aria-hidden
       </categories>
       <tags>
         <tag>效率</tag>
-        <tag>VS Code</tag>
         <tag>编辑器</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Transformer架构</title>
-    <url>/2026/03/04/transformer%E6%9E%B6%E6%9E%84-02/</url>
-    <content><![CDATA[<p>注意力机制是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍注意力机制的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="自注意力"><a href="#自注意力" class="headerlink" title="自注意力"></a>自注意力</h2><p>自注意力是注意力机制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用自注意力时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践自注意力，我们可以掌握注意力机制的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="多头注意力"><a href="#多头注意力" class="headerlink" title="多头注意力"></a>多头注意力</h2><p>多头注意力是注意力机制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用多头注意力时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践多头注意力，我们可以掌握注意力机制的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="位置编码"><a href="#位置编码" class="headerlink" title="位置编码"></a>位置编码</h2><p>位置编码是注意力机制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用位置编码时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践位置编码，我们可以掌握注意力机制的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="残差连接"><a href="#残差连接" class="headerlink" title="残差连接"></a>残差连接</h2><p>残差连接是注意力机制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用残差连接时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握残差连接和相关知识，将帮助我们构建更加完善的注意力机制体系。</p>
-]]></content>
-      <categories>
-        <category>AI智能体</category>
-      </categories>
-      <tags>
-        <tag>注意力机制</tag>
+        <tag>VS Code</tag>
       </tags>
   </entry>
   <entry>
@@ -3263,28 +3199,116 @@ clawhub <span class="token function">install</span> find-skills<span aria-hidden
       </tags>
   </entry>
   <entry>
-    <title>Vim 编辑器使用</title>
-    <url>/2026/03/04/tools-vim/</url>
-    <content><![CDATA[<p>Vim 是强大的终端编辑器，以其高效的键盘操作和丰富的插件系统著称。虽然学习曲线陡峭，但掌握后能极大提升编辑效率。</p>
+    <title>Transformer架构</title>
+    <url>/2026/03/04/transformer%E6%9E%B6%E6%9E%84-02/</url>
+    <content><![CDATA[<p>注意力机制是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍注意力机制的核心要点和实践经验。</p>
 <span id="more"></span>
 
-<p>Vim 有多种模式、普通模式（浏览、删除）、插入模式（输入文本）、可视模式（选择文本）、命令模式（执行命令）。ESC 键返回普通模式。</p>
-<p>基本移动、h（左）、j（下）、k（上）、l（右）。w&#x2F;W（下一个单词），b&#x2F;B（上一个单词），e&#x2F;E（单词末尾），0（行首），$（行尾），G（文件末尾）。</p>
-<p>编辑操作、i（在光标前插入），a（在光标后插入），o（新起一行），dd（删除行），yy（复制行），p（粘贴），u（撤销），Ctrl+r（重做）。</p>
-<p>搜索替换、&#x2F;pattern（向下搜索），?pattern（向上搜索），n&#x2F;N（下一个&#x2F;上一个），:s&#x2F;old&#x2F;new&#x2F;g（全局替换当前行），:%s&#x2F;old&#x2F;new&#x2F;g（全局替换文件）。</p>
-<p>分屏操作、:split（水平分屏），:vsplit（垂直分屏），Ctrl+w+w（切换窗口），Ctrl+w+q（关闭窗口）。</p>
-<p>Vim 配置文件、~&#x2F;.vimrc。常用配置、行号 <code>set number</code>，语法高亮 <code>syntax on</code>，缩进设置 <code>set tabstop=4 shiftwidth=4</code>。</p>
-<p>Vim 插件管理器、Vundle、vim-plug、dein.vim。常用插件、NERDTree（文件树）、CtrlP（模糊搜索）、vim-airline（状态栏）。</p>
-<p>Vimscript 是 Vim 的脚本语言，可以自定义函数和命令。对于复杂的配置，学习 Vimscript 很有帮助。</p>
-<p>Vim 是 Linux 服务器编辑文件的利器。即使日常使用 VS Code，掌握 Vim 也能在 SSH 远程编辑时游刃有余。</p>
+<h2 id="自注意力"><a href="#自注意力" class="headerlink" title="自注意力"></a>自注意力</h2><p>自注意力是注意力机制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用自注意力时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践自注意力，我们可以掌握注意力机制的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="多头注意力"><a href="#多头注意力" class="headerlink" title="多头注意力"></a>多头注意力</h2><p>多头注意力是注意力机制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用多头注意力时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践多头注意力，我们可以掌握注意力机制的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="位置编码"><a href="#位置编码" class="headerlink" title="位置编码"></a>位置编码</h2><p>位置编码是注意力机制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用位置编码时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践位置编码，我们可以掌握注意力机制的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="残差连接"><a href="#残差连接" class="headerlink" title="残差连接"></a>残差连接</h2><p>残差连接是注意力机制的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用残差连接时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握残差连接和相关知识，将帮助我们构建更加完善的注意力机制体系。</p>
 ]]></content>
       <categories>
-        <category>实用工具</category>
+        <category>AI智能体</category>
       </categories>
       <tags>
-        <tag>编辑器</tag>
-        <tag>Vim</tag>
-        <tag>终端</tag>
+        <tag>注意力机制</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>教程：从零打造 OpenClaw 的极致搜索与自学习能力</title>
+    <url>/2026/03/05/openclaw-evolution-record/</url>
+    <content><![CDATA[<p>标准的 OpenClaw 助手在面对复杂的搜索任务和“围墙花园”内的信息时，常常会显得力不从心。本教程将指导你如何通过一系列“赛博义体”升级，为你的 AI 助手赋予超凡的能力。</p>
+<p>跟随本教程，你将学会如何为 OpenClaw 集成强大的搜索引擎、赋予它自学习能力，并为后续更高级的“平台渗透”和“深度研究”能力打下坚实的基础。</p>
+<span id="more"></span>
+
+<h2 id="准备工作-Prerequisites"><a href="#准备工作-Prerequisites" class="headerlink" title="准备工作 (Prerequisites)"></a>准备工作 (Prerequisites)</h2><p>在开始之前，请确保你已经拥有：</p>
+<ul>
+<li>一个正常运行的 OpenClaw 实例。</li>
+<li>终端（命令行）的访问权限。</li>
+<li><code>clawhub</code> 命令行工具已基本可用（即使有限制）。</li>
+<li>一个 <a href="https://tavily.com/">Tavily</a> 账户，并获取免费的 API 密钥。</li>
+</ul>
+<div style="background-color: #e3f2fd; border-left: 4px solid #222; padding: 15px; margin: 20px 0; border-radius: 4px;">
+  <strong>第一部分目标：奠定基础</strong><br>
+  本部分将专注于安装和配置核心的搜索与自学习技能，这些是后续所有高级功能的基础。
+</div>
+
+
+<h2 id="步骤一：升级核心搜索引擎"><a href="#步骤一：升级核心搜索引擎" class="headerlink" title="步骤一：升级核心搜索引擎"></a>步骤一：升级核心搜索引擎</h2><p>我们将安装两个强大的技能：专为 AI Agent 设计的 <code>Tavily</code>，以及集成了17个免费搜索引擎的 <code>Multi Search Engine</code>。</p>
+<h3 id="1-1-安装-Multi-Search-Engine-web-search-plus"><a href="#1-1-安装-Multi-Search-Engine-web-search-plus" class="headerlink" title="1.1 安装 Multi Search Engine (web-search-plus)"></a>1.1 安装 Multi Search Engine (<code>web-search-plus</code>)</h3><p><code>Multi Search Engine</code> 是一个强大的补充，它不需要API密钥，非常适合作为日常搜索和免费的备用方案。</p>
+<p>首先，通过 <code>clawhub</code> 找到它的准确名称并安装。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 搜索技能，确认其在 ClawHub 上的名称 (slug)</span>
+clawhub search <span class="token string">"multi search"</span>
+<span class="token comment"># 在返回结果中，可以找到名为 web-search-plus 的技能，评分较高</span>
+
+<span class="token comment"># 2. 使用 clawhub 安装该技能</span>
+clawhub <span class="token function">install</span> web-search-plus
+<span class="token comment"># 当看到 'OK. Installed ...' 的输出时，表示安装成功</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<div style="background-color: #fffbe6; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0; border-radius: 4px;">
+  <strong>💡 提示与常见问题</strong><br>
+  `clawhub` 命令可能会遇到请求速率限制 (Rate Limit Exceeded) 或一次只能安装一个包的问题。如果 `install` 失败，请稍等几分钟再试，或将多个安装命令分开执行。
+</div>
+
+
+<h3 id="1-2-配置-Tavily-远程MCP模式"><a href="#1-2-配置-Tavily-远程MCP模式" class="headerlink" title="1.2 配置 Tavily (远程MCP模式)"></a>1.2 配置 Tavily (远程MCP模式)</h3><p>对于 <code>Tavily</code>，我们采用一种更高级、更优雅的集成方式：<strong>远程MCP服务</strong>。这可以让你直接连接到 Tavily 官方维护的服务，无需在本地安装任何技能包。</p>
+<div style="background-color: #e8f5e9; border-left: 4px solid #4caf50; padding: 15px; margin: 20px 0; border-radius: 4px;">
+  <strong>⭐ 核心概念：MCP (Model Context Protocol)</strong><br>
+  MCP 是一种允许 OpenClaw 与外部工具服务进行标准化交互的协议。通过连接到远程 MCP 服务器，你可以即时获得该服务提供的所有能力，而无需关心其本地实现。
+</div>
+
+
+<p>要配置远程 MCP 服务，你需要编辑 <code>mcporter</code> 工具的配置文件。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 创建或编辑 mcporter 配置文件</span>
+<span class="token comment"># 该文件通常位于 workspace/config/mcporter.json</span>
+<span class="token comment"># 注意：其顶层键名必须是 "mcpServers"</span>
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span> <span class="token string">'EOF'<span class="token bash punctuation"> <span class="token operator">></span> config/mcporter.json</span>
+&#123;
+  "mcpServers": &#123;
+    "tavily_search": &#123;
+      "url": "https://mcp.tavily.com/mcp/?tavilyApiKey=YOUR_TAVILY_API_KEY"
+    &#125;
+  &#125;
+&#125;
+EOF</span>
+
+<span class="token comment"># 2. 使用 mcporter list 命令验证配置</span>
+mcporter list
+<span class="token comment"># 如果输出中包含 'tavily_search (5 tools, ...)' 和 '1 healthy'，则表示配置成功！</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>重要</strong>: 请将上面命令中的 <code>YOUR_TAVILY_API_KEY</code> 替换为你自己的 Tavily API 密钥。</p>
+<h2 id="步骤二：赋予AI自学习能力-find-skills"><a href="#步骤二：赋予AI自学习能力-find-skills" class="headerlink" title="步骤二：赋予AI自学习能力 (find-skills)"></a>步骤二：赋予AI自学习能力 (find-skills)</h2><p>安装 <code>find-skills</code> 技能，你的 OpenClaw 助手就能在遇到未知问题时，主动去 <code>ClawHub</code> 市场上寻找并推荐可能解决问题的新技能。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 搜索以确认技能名称</span>
+clawhub search find-skills
+<span class="token comment"># 在结果中选择评分最高的 'find-skills'</span>
+
+<span class="token comment"># 2. 安装技能</span>
+clawhub <span class="token function">install</span> find-skills<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>至此，第一阶段的基础设施已全部搭建完毕！你的 OpenClaw 现在拥有了强大的混合搜索引擎和自我进化的初步潜力。</p>
+]]></content>
+      <categories>
+        <category>AI智能体</category>
+        <category>技术教程</category>
+      </categories>
+      <tags>
+        <tag>OpenClaw</tag>
+        <tag>AI助手</tag>
+        <tag>技能</tag>
+        <tag>搜索增强</tag>
+        <tag>自学习</tag>
+        <tag>Tavily</tag>
+        <tag>Multi Search Engine</tag>
       </tags>
   </entry>
   <entry>
@@ -3311,32 +3335,6 @@ clawhub <span class="token function">install</span> find-skills<span aria-hidden
       </categories>
       <tags>
         <tag>类型系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>VSCode技巧</title>
-    <url>/2026/03/04/vscode%E6%8A%80%E5%B7%A7-45/</url>
-    <content><![CDATA[<p>开发效率是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍开发效率的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>快捷键是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用快捷键时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践快捷键，我们可以掌握开发效率的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="插件推荐"><a href="#插件推荐" class="headerlink" title="插件推荐"></a>插件推荐</h2><p>插件推荐是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用插件推荐时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践插件推荐，我们可以掌握开发效率的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="调试配置"><a href="#调试配置" class="headerlink" title="调试配置"></a>调试配置</h2><p>调试配置是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用调试配置时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践调试配置，我们可以掌握开发效率的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="远程开发"><a href="#远程开发" class="headerlink" title="远程开发"></a>远程开发</h2><p>远程开发是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用远程开发时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握远程开发和相关知识，将帮助我们构建更加完善的开发效率体系。</p>
-]]></content>
-      <categories>
-        <category>工具使用</category>
-      </categories>
-      <tags>
-        <tag>开发效率</tag>
       </tags>
   </entry>
   <entry>
@@ -3393,7 +3391,7 @@ clawhub <span class="token function">install</span> find-skills<span aria-hidden
   </entry>
   <entry>
     <title>Vue3响应式原理</title>
-    <url>/2026/03/04/vue3%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86-09/</url>
+    <url>/2026/03/04/vue3%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86-08/</url>
     <content><![CDATA[<p>响应式系统是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍响应式系统的核心要点和实践经验。</p>
 <span id="more"></span>
 
@@ -3418,8 +3416,34 @@ clawhub <span class="token function">install</span> find-skills<span aria-hidden
       </tags>
   </entry>
   <entry>
+    <title>VSCode技巧</title>
+    <url>/2026/03/04/vscode%E6%8A%80%E5%B7%A7-45/</url>
+    <content><![CDATA[<p>开发效率是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍开发效率的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>快捷键是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用快捷键时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践快捷键，我们可以掌握开发效率的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="插件推荐"><a href="#插件推荐" class="headerlink" title="插件推荐"></a>插件推荐</h2><p>插件推荐是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用插件推荐时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践插件推荐，我们可以掌握开发效率的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="调试配置"><a href="#调试配置" class="headerlink" title="调试配置"></a>调试配置</h2><p>调试配置是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用调试配置时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践调试配置，我们可以掌握开发效率的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="远程开发"><a href="#远程开发" class="headerlink" title="远程开发"></a>远程开发</h2><p>远程开发是开发效率的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用远程开发时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握远程开发和相关知识，将帮助我们构建更加完善的开发效率体系。</p>
+]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+      <tags>
+        <tag>开发效率</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vue3响应式原理</title>
-    <url>/2026/03/04/vue3%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86-08/</url>
+    <url>/2026/03/04/vue3%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86-09/</url>
     <content><![CDATA[<p>响应式系统是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍响应式系统的核心要点和实践经验。</p>
 <span id="more"></span>
 
@@ -3446,32 +3470,6 @@ clawhub <span class="token function">install</span> find-skills<span aria-hidden
   <entry>
     <title>代码规范制定</title>
     <url>/2026/03/04/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83%E5%88%B6%E5%AE%9A-34/</url>
-    <content><![CDATA[<p>规范统一是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍规范统一的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h2><p>命名规则是规范统一的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用命名规则时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践命名规则，我们可以掌握规范统一的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="注释规范"><a href="#注释规范" class="headerlink" title="注释规范"></a>注释规范</h2><p>注释规范是规范统一的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用注释规范时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践注释规范，我们可以掌握规范统一的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="格式化"><a href="#格式化" class="headerlink" title="格式化"></a>格式化</h2><p>格式化是规范统一的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用格式化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践格式化，我们可以掌握规范统一的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="代码审查"><a href="#代码审查" class="headerlink" title="代码审查"></a>代码审查</h2><p>代码审查是规范统一的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用代码审查时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握代码审查和相关知识，将帮助我们构建更加完善的规范统一体系。</p>
-]]></content>
-      <categories>
-        <category>协作模式</category>
-      </categories>
-      <tags>
-        <tag>规范统一</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>代码规范制定</title>
-    <url>/2026/03/04/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83%E5%88%B6%E5%AE%9A-35/</url>
     <content><![CDATA[<p>规范统一是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍规范统一的核心要点和实践经验。</p>
 <span id="more"></span>
 
@@ -3572,6 +3570,58 @@ clawhub <span class="token function">install</span> find-skills<span aria-hidden
         <tag>Nginx</tag>
         <tag>Proxy</tag>
         <tag>Manager</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>代码规范制定</title>
+    <url>/2026/03/04/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83%E5%88%B6%E5%AE%9A-35/</url>
+    <content><![CDATA[<p>规范统一是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍规范统一的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h2><p>命名规则是规范统一的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用命名规则时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践命名规则，我们可以掌握规范统一的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="注释规范"><a href="#注释规范" class="headerlink" title="注释规范"></a>注释规范</h2><p>注释规范是规范统一的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用注释规范时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践注释规范，我们可以掌握规范统一的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="格式化"><a href="#格式化" class="headerlink" title="格式化"></a>格式化</h2><p>格式化是规范统一的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用格式化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践格式化，我们可以掌握规范统一的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="代码审查"><a href="#代码审查" class="headerlink" title="代码审查"></a>代码审查</h2><p>代码审查是规范统一的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用代码审查时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握代码审查和相关知识，将帮助我们构建更加完善的规范统一体系。</p>
+]]></content>
+      <categories>
+        <category>协作模式</category>
+      </categories>
+      <tags>
+        <tag>规范统一</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分布式事务</title>
+    <url>/2026/03/04/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1-23/</url>
+    <content><![CDATA[<p>一致性方案是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍一致性方案的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="两阶段提交"><a href="#两阶段提交" class="headerlink" title="两阶段提交"></a>两阶段提交</h2><p>两阶段提交是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用两阶段提交时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践两阶段提交，我们可以掌握一致性方案的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="TCC"><a href="#TCC" class="headerlink" title="TCC"></a>TCC</h2><p>TCC是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用TCC时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践TCC，我们可以掌握一致性方案的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="Saga"><a href="#Saga" class="headerlink" title="Saga"></a>Saga</h2><p>Saga是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用Saga时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践Saga，我们可以掌握一致性方案的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="本地消息表"><a href="#本地消息表" class="headerlink" title="本地消息表"></a>本地消息表</h2><p>本地消息表是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用本地消息表时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握本地消息表和相关知识，将帮助我们构建更加完善的一致性方案体系。</p>
+]]></content>
+      <categories>
+        <category>网络架构</category>
+      </categories>
+      <tags>
+        <tag>一致性方案</tag>
       </tags>
   </entry>
   <entry>
@@ -3840,32 +3890,6 @@ https://web.com   #https协议<span aria-hidden="true" class="line-numbers-rows"
       </tags>
   </entry>
   <entry>
-    <title>前端性能优化</title>
-    <url>/2026/03/04/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-13/</url>
-    <content><![CDATA[<p>性能提升是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍性能提升的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="代码分割"><a href="#代码分割" class="headerlink" title="代码分割"></a>代码分割</h2><p>代码分割是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用代码分割时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践代码分割，我们可以掌握性能提升的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="懒加载"><a href="#懒加载" class="headerlink" title="懒加载"></a>懒加载</h2><p>懒加载是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用懒加载时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践懒加载，我们可以掌握性能提升的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="缓存策略"><a href="#缓存策略" class="headerlink" title="缓存策略"></a>缓存策略</h2><p>缓存策略是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用缓存策略时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践缓存策略，我们可以掌握性能提升的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="资源压缩"><a href="#资源压缩" class="headerlink" title="资源压缩"></a>资源压缩</h2><p>资源压缩是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用资源压缩时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握资源压缩和相关知识，将帮助我们构建更加完善的性能提升体系。</p>
-]]></content>
-      <categories>
-        <category>Web开发</category>
-      </categories>
-      <tags>
-        <tag>性能提升</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>分布式事务</title>
     <url>/2026/03/04/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1-22/</url>
     <content><![CDATA[<p>一致性方案是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍一致性方案的核心要点和实践经验。</p>
@@ -3892,29 +3916,55 @@ https://web.com   #https协议<span aria-hidden="true" class="line-numbers-rows"
       </tags>
   </entry>
   <entry>
-    <title>分布式事务</title>
-    <url>/2026/03/04/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1-23/</url>
-    <content><![CDATA[<p>一致性方案是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍一致性方案的核心要点和实践经验。</p>
+    <title>前端性能优化</title>
+    <url>/2026/03/04/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-13/</url>
+    <content><![CDATA[<p>性能提升是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍性能提升的核心要点和实践经验。</p>
 <span id="more"></span>
 
-<h2 id="两阶段提交"><a href="#两阶段提交" class="headerlink" title="两阶段提交"></a>两阶段提交</h2><p>两阶段提交是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用两阶段提交时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践两阶段提交，我们可以掌握一致性方案的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="TCC"><a href="#TCC" class="headerlink" title="TCC"></a>TCC</h2><p>TCC是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用TCC时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践TCC，我们可以掌握一致性方案的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="Saga"><a href="#Saga" class="headerlink" title="Saga"></a>Saga</h2><p>Saga是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用Saga时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践Saga，我们可以掌握一致性方案的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="本地消息表"><a href="#本地消息表" class="headerlink" title="本地消息表"></a>本地消息表</h2><p>本地消息表是一致性方案的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用本地消息表时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握本地消息表和相关知识，将帮助我们构建更加完善的一致性方案体系。</p>
+<h2 id="代码分割"><a href="#代码分割" class="headerlink" title="代码分割"></a>代码分割</h2><p>代码分割是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用代码分割时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践代码分割，我们可以掌握性能提升的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="懒加载"><a href="#懒加载" class="headerlink" title="懒加载"></a>懒加载</h2><p>懒加载是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用懒加载时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践懒加载，我们可以掌握性能提升的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="缓存策略"><a href="#缓存策略" class="headerlink" title="缓存策略"></a>缓存策略</h2><p>缓存策略是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用缓存策略时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践缓存策略，我们可以掌握性能提升的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="资源压缩"><a href="#资源压缩" class="headerlink" title="资源压缩"></a>资源压缩</h2><p>资源压缩是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用资源压缩时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握资源压缩和相关知识，将帮助我们构建更加完善的性能提升体系。</p>
 ]]></content>
       <categories>
-        <category>网络架构</category>
+        <category>Web开发</category>
       </categories>
       <tags>
-        <tag>一致性方案</tag>
+        <tag>性能提升</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>团队沟通技巧</title>
+    <url>/2026/03/04/%E5%9B%A2%E9%98%9F%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7-39/</url>
+    <content><![CDATA[<p>高效协作是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍高效协作的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="会议管理"><a href="#会议管理" class="headerlink" title="会议管理"></a>会议管理</h2><p>会议管理是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用会议管理时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践会议管理，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="异步沟通"><a href="#异步沟通" class="headerlink" title="异步沟通"></a>异步沟通</h2><p>异步沟通是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用异步沟通时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践异步沟通，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="冲突解决"><a href="#冲突解决" class="headerlink" title="冲突解决"></a>冲突解决</h2><p>冲突解决是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用冲突解决时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践冲突解决，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="目标对齐"><a href="#目标对齐" class="headerlink" title="目标对齐"></a>目标对齐</h2><p>目标对齐是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用目标对齐时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握目标对齐和相关知识，将帮助我们构建更加完善的高效协作体系。</p>
+]]></content>
+      <categories>
+        <category>协作模式</category>
+      </categories>
+      <tags>
+        <tag>高效协作</tag>
       </tags>
   </entry>
   <entry>
@@ -4051,58 +4101,6 @@ https://web.com   #https协议<span aria-hidden="true" class="line-numbers-rows"
       </tags>
   </entry>
   <entry>
-    <title>前端性能优化</title>
-    <url>/2026/03/04/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-12/</url>
-    <content><![CDATA[<p>性能提升是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍性能提升的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="代码分割"><a href="#代码分割" class="headerlink" title="代码分割"></a>代码分割</h2><p>代码分割是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用代码分割时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践代码分割，我们可以掌握性能提升的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="懒加载"><a href="#懒加载" class="headerlink" title="懒加载"></a>懒加载</h2><p>懒加载是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用懒加载时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践懒加载，我们可以掌握性能提升的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="缓存策略"><a href="#缓存策略" class="headerlink" title="缓存策略"></a>缓存策略</h2><p>缓存策略是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用缓存策略时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践缓存策略，我们可以掌握性能提升的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="资源压缩"><a href="#资源压缩" class="headerlink" title="资源压缩"></a>资源压缩</h2><p>资源压缩是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用资源压缩时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握资源压缩和相关知识，将帮助我们构建更加完善的性能提升体系。</p>
-]]></content>
-      <categories>
-        <category>Web开发</category>
-      </categories>
-      <tags>
-        <tag>性能提升</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>团队沟通技巧</title>
-    <url>/2026/03/04/%E5%9B%A2%E9%98%9F%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7-39/</url>
-    <content><![CDATA[<p>高效协作是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍高效协作的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="会议管理"><a href="#会议管理" class="headerlink" title="会议管理"></a>会议管理</h2><p>会议管理是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用会议管理时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践会议管理，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="异步沟通"><a href="#异步沟通" class="headerlink" title="异步沟通"></a>异步沟通</h2><p>异步沟通是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用异步沟通时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践异步沟通，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="冲突解决"><a href="#冲突解决" class="headerlink" title="冲突解决"></a>冲突解决</h2><p>冲突解决是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用冲突解决时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践冲突解决，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="目标对齐"><a href="#目标对齐" class="headerlink" title="目标对齐"></a>目标对齐</h2><p>目标对齐是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用目标对齐时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握目标对齐和相关知识，将帮助我们构建更加完善的高效协作体系。</p>
-]]></content>
-      <categories>
-        <category>协作模式</category>
-      </categories>
-      <tags>
-        <tag>高效协作</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>多模态AI应用</title>
     <url>/2026/03/04/%E5%A4%9A%E6%A8%A1%E6%80%81ai%E5%BA%94%E7%94%A8-06/</url>
     <content><![CDATA[<p>跨模态理解是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍跨模态理解的核心要点和实践经验。</p>
@@ -4126,6 +4124,32 @@ https://web.com   #https协议<span aria-hidden="true" class="line-numbers-rows"
       </categories>
       <tags>
         <tag>跨模态理解</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>团队沟通技巧</title>
+    <url>/2026/03/04/%E5%9B%A2%E9%98%9F%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7-38/</url>
+    <content><![CDATA[<p>高效协作是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍高效协作的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="会议管理"><a href="#会议管理" class="headerlink" title="会议管理"></a>会议管理</h2><p>会议管理是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用会议管理时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践会议管理，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="异步沟通"><a href="#异步沟通" class="headerlink" title="异步沟通"></a>异步沟通</h2><p>异步沟通是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用异步沟通时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践异步沟通，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="冲突解决"><a href="#冲突解决" class="headerlink" title="冲突解决"></a>冲突解决</h2><p>冲突解决是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用冲突解决时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践冲突解决，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="目标对齐"><a href="#目标对齐" class="headerlink" title="目标对齐"></a>目标对齐</h2><p>目标对齐是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用目标对齐时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握目标对齐和相关知识，将帮助我们构建更加完善的高效协作体系。</p>
+]]></content>
+      <categories>
+        <category>协作模式</category>
+      </categories>
+      <tags>
+        <tag>高效协作</tag>
       </tags>
   </entry>
   <entry>
@@ -4178,108 +4202,6 @@ https://web.com   #https协议<span aria-hidden="true" class="line-numbers-rows"
       </categories>
       <tags>
         <tag>Docker网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>容器网络原理</title>
-    <url>/2026/03/04/%E5%AE%B9%E5%99%A8%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86-17/</url>
-    <content><![CDATA[<p>Docker网络是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍Docker网络的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="Bridge模式"><a href="#Bridge模式" class="headerlink" title="Bridge模式"></a>Bridge模式</h2><p>Bridge模式是Docker网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用Bridge模式时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践Bridge模式，我们可以掌握Docker网络的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="Overlay网络"><a href="#Overlay网络" class="headerlink" title="Overlay网络"></a>Overlay网络</h2><p>Overlay网络是Docker网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用Overlay网络时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践Overlay网络，我们可以掌握Docker网络的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="网络隔离"><a href="#网络隔离" class="headerlink" title="网络隔离"></a>网络隔离</h2><p>网络隔离是Docker网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用网络隔离时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践网络隔离，我们可以掌握Docker网络的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="端口映射"><a href="#端口映射" class="headerlink" title="端口映射"></a>端口映射</h2><p>端口映射是Docker网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用端口映射时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握端口映射和相关知识，将帮助我们构建更加完善的Docker网络体系。</p>
-]]></content>
-      <categories>
-        <category>网络架构</category>
-      </categories>
-      <tags>
-        <tag>Docker网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>团队沟通技巧</title>
-    <url>/2026/03/04/%E5%9B%A2%E9%98%9F%E6%B2%9F%E9%80%9A%E6%8A%80%E5%B7%A7-38/</url>
-    <content><![CDATA[<p>高效协作是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍高效协作的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="会议管理"><a href="#会议管理" class="headerlink" title="会议管理"></a>会议管理</h2><p>会议管理是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用会议管理时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践会议管理，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="异步沟通"><a href="#异步沟通" class="headerlink" title="异步沟通"></a>异步沟通</h2><p>异步沟通是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用异步沟通时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践异步沟通，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="冲突解决"><a href="#冲突解决" class="headerlink" title="冲突解决"></a>冲突解决</h2><p>冲突解决是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用冲突解决时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践冲突解决，我们可以掌握高效协作的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="目标对齐"><a href="#目标对齐" class="headerlink" title="目标对齐"></a>目标对齐</h2><p>目标对齐是高效协作的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用目标对齐时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握目标对齐和相关知识，将帮助我们构建更加完善的高效协作体系。</p>
-]]></content>
-      <categories>
-        <category>协作模式</category>
-      </categories>
-      <tags>
-        <tag>高效协作</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SSH 远程连接</title>
-    <url>/2026/03/04/tools-ssh/</url>
-    <content><![CDATA[<p>SSH（Secure Shell）是远程登录 Linux 服务器的标准协议，提供加密的通信通道，安全可靠。</p>
-<span id="more"></span>
-
-<p>基本连接、<code>ssh user@host</code> 连接到远程主机，首次连接会提示保存主机密钥。<code>ssh user@host -p 2222</code> 指定端口（默认 22）。<code>ssh -i key.pem user@host</code> 使用密钥文件认证。</p>
-<p>密钥认证比密码更安全、更方便。生成密钥、<code>ssh-keygen -t rsa -b 4096</code>。公钥复制到服务器、<code>ssh-copy-id user@host</code>。之后登录无需密码。</p>
-<p>SSH 端口转发可以实现内网穿透。本地端口转发、<code>ssh -L local_port:remote_host:remote_port user@jump_host</code>。远程端口转发、<code>ssh -R remote_port:local_host:local_port user@jump_host</code>。</p>
-<p>SSH 配置文件 <code>~/.ssh/config</code> 简化连接。定义 Host 别名、用户名、主机、端口、密钥等，之后直接 <code>ssh alias</code> 连接。</p>
-<p>SSH 命令执行、<code>ssh user@host &quot;command&quot;</code> 在远程主机执行命令。<code>ssh user@host &quot;tar -czf - /data&quot; &gt; backup.tar.gz</code> 远程打包传回本地。</p>
-<p>SSH 隧道可以实现安全的远程访问。例如，访问远程数据库、<code>ssh -L 3306:localhost:3306 user@host</code>，然后本地连接 localhost:3306 就是远程数据库。</p>
-<p>SSH 还支持文件传输、<code>scp local_file user@host:/remote/path</code> 上传文件，<code>scp user@host:/remote/path local_file</code> 下载文件。rsync 更适合大量文件同步。</p>
-<p>SSH 是服务器运维的基础工具。掌握 SSH 能让你轻松管理远程服务器，是 Linux 用户的必备技能。</p>
-]]></content>
-      <categories>
-        <category>实用工具</category>
-      </categories>
-      <tags>
-        <tag>SSH</tag>
-        <tag>远程</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>敏捷开发实践</title>
-    <url>/2026/03/04/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5-32/</url>
-    <content><![CDATA[<p>Scrum是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍Scrum的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="Sprint"><a href="#Sprint" class="headerlink" title="Sprint"></a>Sprint</h2><p>Sprint是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用Sprint时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践Sprint，我们可以掌握Scrum的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="站立会议"><a href="#站立会议" class="headerlink" title="站立会议"></a>站立会议</h2><p>站立会议是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用站立会议时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践站立会议，我们可以掌握Scrum的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="回顾会议"><a href="#回顾会议" class="headerlink" title="回顾会议"></a>回顾会议</h2><p>回顾会议是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用回顾会议时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践回顾会议，我们可以掌握Scrum的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="用户故事"><a href="#用户故事" class="headerlink" title="用户故事"></a>用户故事</h2><p>用户故事是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用用户故事时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握用户故事和相关知识，将帮助我们构建更加完善的Scrum体系。</p>
-]]></content>
-      <categories>
-        <category>协作模式</category>
-      </categories>
-      <tags>
-        <tag>Scrum</tag>
       </tags>
   </entry>
   <entry>
@@ -4404,6 +4326,32 @@ https://web.com   #https协议<span aria-hidden="true" class="line-numbers-rows"
         <tag>AIO</tag>
         <tag>OpenWrt</tag>
         <tag>路由器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>容器网络原理</title>
+    <url>/2026/03/04/%E5%AE%B9%E5%99%A8%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86-17/</url>
+    <content><![CDATA[<p>Docker网络是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍Docker网络的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="Bridge模式"><a href="#Bridge模式" class="headerlink" title="Bridge模式"></a>Bridge模式</h2><p>Bridge模式是Docker网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用Bridge模式时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践Bridge模式，我们可以掌握Docker网络的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="Overlay网络"><a href="#Overlay网络" class="headerlink" title="Overlay网络"></a>Overlay网络</h2><p>Overlay网络是Docker网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用Overlay网络时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践Overlay网络，我们可以掌握Docker网络的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="网络隔离"><a href="#网络隔离" class="headerlink" title="网络隔离"></a>网络隔离</h2><p>网络隔离是Docker网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用网络隔离时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践网络隔离，我们可以掌握Docker网络的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="端口映射"><a href="#端口映射" class="headerlink" title="端口映射"></a>端口映射</h2><p>端口映射是Docker网络的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用端口映射时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握端口映射和相关知识，将帮助我们构建更加完善的Docker网络体系。</p>
+]]></content>
+      <categories>
+        <category>网络架构</category>
+      </categories>
+      <tags>
+        <tag>Docker网络</tag>
       </tags>
   </entry>
   <entry>
@@ -4650,6 +4598,32 @@ https://web.com   #https协议<span aria-hidden="true" class="line-numbers-rows"
   </entry>
   <entry>
     <title>敏捷开发实践</title>
+    <url>/2026/03/04/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5-32/</url>
+    <content><![CDATA[<p>Scrum是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍Scrum的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="Sprint"><a href="#Sprint" class="headerlink" title="Sprint"></a>Sprint</h2><p>Sprint是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用Sprint时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践Sprint，我们可以掌握Scrum的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="站立会议"><a href="#站立会议" class="headerlink" title="站立会议"></a>站立会议</h2><p>站立会议是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用站立会议时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践站立会议，我们可以掌握Scrum的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="回顾会议"><a href="#回顾会议" class="headerlink" title="回顾会议"></a>回顾会议</h2><p>回顾会议是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用回顾会议时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践回顾会议，我们可以掌握Scrum的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="用户故事"><a href="#用户故事" class="headerlink" title="用户故事"></a>用户故事</h2><p>用户故事是Scrum的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用用户故事时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握用户故事和相关知识，将帮助我们构建更加完善的Scrum体系。</p>
+]]></content>
+      <categories>
+        <category>协作模式</category>
+      </categories>
+      <tags>
+        <tag>Scrum</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>敏捷开发实践</title>
     <url>/2026/03/04/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5-33/</url>
     <content><![CDATA[<p>Scrum是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍Scrum的核心要点和实践经验。</p>
 <span id="more"></span>
@@ -4728,6 +4702,32 @@ https://web.com   #https协议<span aria-hidden="true" class="line-numbers-rows"
   </entry>
   <entry>
     <title>数据结构实战</title>
+    <url>/2026/03/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E6%88%98-26/</url>
+    <content><![CDATA[<p>结构应用是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍结构应用的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h2><p>哈希表是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用哈希表时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践哈希表，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><p>二叉树是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用二叉树时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践二叉树，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h2><p>图论是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用图论时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践图论，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>堆排序是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用堆排序时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握堆排序和相关知识，将帮助我们构建更加完善的结构应用体系。</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>结构应用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构实战</title>
     <url>/2026/03/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E6%88%98-27/</url>
     <content><![CDATA[<p>结构应用是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍结构应用的核心要点和实践经验。</p>
 <span id="more"></span>
@@ -4750,6 +4750,32 @@ https://web.com   #https协议<span aria-hidden="true" class="line-numbers-rows"
       </categories>
       <tags>
         <tag>结构应用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端性能优化</title>
+    <url>/2026/03/04/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-12/</url>
+    <content><![CDATA[<p>性能提升是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍性能提升的核心要点和实践经验。</p>
+<span id="more"></span>
+
+<h2 id="代码分割"><a href="#代码分割" class="headerlink" title="代码分割"></a>代码分割</h2><p>代码分割是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用代码分割时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践代码分割，我们可以掌握性能提升的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="懒加载"><a href="#懒加载" class="headerlink" title="懒加载"></a>懒加载</h2><p>懒加载是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用懒加载时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践懒加载，我们可以掌握性能提升的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="缓存策略"><a href="#缓存策略" class="headerlink" title="缓存策略"></a>缓存策略</h2><p>缓存策略是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用缓存策略时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践缓存策略，我们可以掌握性能提升的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="资源压缩"><a href="#资源压缩" class="headerlink" title="资源压缩"></a>资源压缩</h2><p>资源压缩是性能提升的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用资源压缩时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握资源压缩和相关知识，将帮助我们构建更加完善的性能提升体系。</p>
+]]></content>
+      <categories>
+        <category>Web开发</category>
+      </categories>
+      <tags>
+        <tag>性能提升</tag>
       </tags>
   </entry>
   <entry>
@@ -4776,32 +4802,6 @@ https://web.com   #https协议<span aria-hidden="true" class="line-numbers-rows"
       </categories>
       <tags>
         <tag>Service Mesh</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构实战</title>
-    <url>/2026/03/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AE%9E%E6%88%98-26/</url>
-    <content><![CDATA[<p>结构应用是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍结构应用的核心要点和实践经验。</p>
-<span id="more"></span>
-
-<h2 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h2><p>哈希表是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用哈希表时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践哈希表，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><p>二叉树是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用二叉树时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践二叉树，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h2><p>图论是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用图论时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践图论，我们可以掌握结构应用的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>堆排序是结构应用的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用堆排序时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握堆排序和相关知识，将帮助我们构建更加完善的结构应用体系。</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>结构应用</tag>
       </tags>
   </entry>
   <entry>
@@ -4936,7 +4936,7 @@ https://web.com   #https协议<span aria-hidden="true" class="line-numbers-rows"
   </entry>
   <entry>
     <title>知识管理体系</title>
-    <url>/2026/03/04/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E4%BD%93%E7%B3%BB-37/</url>
+    <url>/2026/03/04/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E4%BD%93%E7%B3%BB-36/</url>
     <content><![CDATA[<p>知识沉淀是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍知识沉淀的核心要点和实践经验。</p>
 <span id="more"></span>
 
@@ -4961,29 +4961,29 @@ https://web.com   #https协议<span aria-hidden="true" class="line-numbers-rows"
       </tags>
   </entry>
   <entry>
-    <title>算法思维训练</title>
-    <url>/2026/03/04/%E7%AE%97%E6%B3%95%E6%80%9D%E7%BB%B4%E8%AE%AD%E7%BB%83-25/</url>
-    <content><![CDATA[<p>问题求解是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍问题求解的核心要点和实践经验。</p>
+    <title>知识管理体系</title>
+    <url>/2026/03/04/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E4%BD%93%E7%B3%BB-37/</url>
+    <content><![CDATA[<p>知识沉淀是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍知识沉淀的核心要点和实践经验。</p>
 <span id="more"></span>
 
-<h2 id="分治法"><a href="#分治法" class="headerlink" title="分治法"></a>分治法</h2><p>分治法是问题求解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用分治法时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践分治法，我们可以掌握问题求解的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><p>动态规划是问题求解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用动态规划时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践动态规划，我们可以掌握问题求解的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h2><p>贪心算法是问题求解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用贪心算法时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践贪心算法，我们可以掌握问题求解的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="回溯法"><a href="#回溯法" class="headerlink" title="回溯法"></a>回溯法</h2><p>回溯法是问题求解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用回溯法时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握回溯法和相关知识，将帮助我们构建更加完善的问题求解体系。</p>
+<h2 id="文档化"><a href="#文档化" class="headerlink" title="文档化"></a>文档化</h2><p>文档化是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用文档化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践文档化，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="技术分享"><a href="#技术分享" class="headerlink" title="技术分享"></a>技术分享</h2><p>技术分享是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用技术分享时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践技术分享，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="经验复盘"><a href="#经验复盘" class="headerlink" title="经验复盘"></a>经验复盘</h2><p>经验复盘是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用经验复盘时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践经验复盘，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="新人培养"><a href="#新人培养" class="headerlink" title="新人培养"></a>新人培养</h2><p>新人培养是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用新人培养时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握新人培养和相关知识，将帮助我们构建更加完善的知识沉淀体系。</p>
 ]]></content>
       <categories>
-        <category>学习笔记</category>
+        <category>协作模式</category>
       </categories>
       <tags>
-        <tag>问题求解</tag>
+        <tag>知识沉淀</tag>
       </tags>
   </entry>
   <entry>
@@ -5013,29 +5013,29 @@ https://web.com   #https协议<span aria-hidden="true" class="line-numbers-rows"
       </tags>
   </entry>
   <entry>
-    <title>知识管理体系</title>
-    <url>/2026/03/04/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E4%BD%93%E7%B3%BB-36/</url>
-    <content><![CDATA[<p>知识沉淀是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍知识沉淀的核心要点和实践经验。</p>
+    <title>算法思维训练</title>
+    <url>/2026/03/04/%E7%AE%97%E6%B3%95%E6%80%9D%E7%BB%B4%E8%AE%AD%E7%BB%83-25/</url>
+    <content><![CDATA[<p>问题求解是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍问题求解的核心要点和实践经验。</p>
 <span id="more"></span>
 
-<h2 id="文档化"><a href="#文档化" class="headerlink" title="文档化"></a>文档化</h2><p>文档化是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用文档化时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践文档化，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="技术分享"><a href="#技术分享" class="headerlink" title="技术分享"></a>技术分享</h2><p>技术分享是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用技术分享时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践技术分享，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="经验复盘"><a href="#经验复盘" class="headerlink" title="经验复盘"></a>经验复盘</h2><p>经验复盘是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用经验复盘时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>通过学习和实践经验复盘，我们可以掌握知识沉淀的精髓，为后续的技术积累打下坚实基础。</p>
-<h2 id="新人培养"><a href="#新人培养" class="headerlink" title="新人培养"></a>新人培养</h2><p>新人培养是知识沉淀的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
-<p>例如，在使用新人培养时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
-<p>掌握新人培养和相关知识，将帮助我们构建更加完善的知识沉淀体系。</p>
+<h2 id="分治法"><a href="#分治法" class="headerlink" title="分治法"></a>分治法</h2><p>分治法是问题求解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用分治法时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践分治法，我们可以掌握问题求解的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><p>动态规划是问题求解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用动态规划时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践动态规划，我们可以掌握问题求解的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h2><p>贪心算法是问题求解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用贪心算法时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>通过学习和实践贪心算法，我们可以掌握问题求解的精髓，为后续的技术积累打下坚实基础。</p>
+<h2 id="回溯法"><a href="#回溯法" class="headerlink" title="回溯法"></a>回溯法</h2><p>回溯法是问题求解的核心组成部分之一。在实际应用中，我们需要深入理解其原理和最佳实践。</p>
+<p>例如，在使用回溯法时，要注意性能优化和错误处理。合理设计可以提升系统的稳定性和可维护性。</p>
+<p>掌握回溯法和相关知识，将帮助我们构建更加完善的问题求解体系。</p>
 ]]></content>
       <categories>
-        <category>协作模式</category>
+        <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>知识沉淀</tag>
+        <tag>问题求解</tag>
       </tags>
   </entry>
 </search>
