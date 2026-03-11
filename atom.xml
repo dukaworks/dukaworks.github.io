@@ -90,8 +90,8 @@
       <name>Duka</name>
     </author>
     <category term="Web开发" scheme="http://blog.dukaworks.io/categories/Web%E5%BC%80%E5%8F%91/"/>
-    <category term="Hexo" scheme="http://blog.dukaworks.io/tags/Hexo/"/>
     <category term="教程" scheme="http://blog.dukaworks.io/tags/%E6%95%99%E7%A8%8B/"/>
+    <category term="Hexo" scheme="http://blog.dukaworks.io/tags/Hexo/"/>
     <category term="博客" scheme="http://blog.dukaworks.io/tags/%E5%8D%9A%E5%AE%A2/"/>
     <category term="Next" scheme="http://blog.dukaworks.io/tags/Next/"/>
     <category term="静态网站" scheme="http://blog.dukaworks.io/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/"/>
