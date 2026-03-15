@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/avatar.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar.png">
+  <link rel="mask-icon" href="/images/avatar.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Consolas:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=monospace:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.dukaworks.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism-one-light","dark":"prism-one-dark"},"copy_button":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"giscus","storage":true,"lazyload":false,"nav":null,"activeClass":"giscus"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="当全世界还在讨论GPT-5什么时候来，一家中国公司已经悄悄把桌子掀了。   📅 先说说时间线：这瓜从年初就开始种DeepSeek V4的发布时间可以说是”一波三折”：  年初：业内猜测2月或3月初发布 现实：鸽了 😅 最新消息：2026年4月正式上线，据说还要和腾讯混元模型同期发布  这节奏，妥妥的科技圈”即将推出™”风格。但好饭不怕晚，从目前泄露的信息来看，这等待可能是值得的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DeepSeek4.0-硅谷该睡不着觉了">
+<meta property="og:url" content="http://blog.dukaworks.io/2026/03/15/deepseek4-0-%E7%A1%85%E8%B0%B7%E8%AF%A5%E7%9D%A1%E4%B8%8D%E7%9D%80%E8%A7%89%E4%BA%86/index.html">
+<meta property="og:site_name" content="Duka的技术博客">
+<meta property="og:description" content="当全世界还在讨论GPT-5什么时候来，一家中国公司已经悄悄把桌子掀了。   📅 先说说时间线：这瓜从年初就开始种DeepSeek V4的发布时间可以说是”一波三折”：  年初：业内猜测2月或3月初发布 现实：鸽了 😅 最新消息：2026年4月正式上线，据说还要和腾讯混元模型同期发布  这节奏，妥妥的科技圈”即将推出™”风格。但好饭不怕晚，从目前泄露的信息来看，这等待可能是值得的。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-03-15T05:46:06.000Z">
+<meta property="article:modified_time" content="2026-03-15T05:52:14.924Z">
+<meta property="article:author" content="Duka">
+<meta property="article:tag" content="deepseek">
+<meta property="article:tag" content="deepseek4.0">
+<meta property="article:tag" content="大模型">
+<meta property="article:tag" content="深度学习">
+<meta property="article:tag" content="硅谷">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://blog.dukaworks.io/2026/03/15/deepseek4-0-%E7%A1%85%E8%B0%B7%E8%AF%A5%E7%9D%A1%E4%B8%8D%E7%9D%80%E8%A7%89%E4%BA%86/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://blog.dukaworks.io/2026/03/15/deepseek4-0-%E7%A1%85%E8%B0%B7%E8%AF%A5%E7%9D%A1%E4%B8%8D%E7%9D%80%E8%A7%89%E4%BA%86/","path":"2026/03/15/deepseek4-0-硅谷该睡不着觉了/","title":"DeepSeek4.0-硅谷该睡不着觉了"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>DeepSeek4.0-硅谷该睡不着觉了 | Duka的技术博客</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HMHJDVVTR"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-2HMHJDVVTR","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js" defer></script>
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+  <script src="/js/third-party/fancybox.js" defer></script>
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<meta name="google-site-verification" content="a36kL8YMowS8mwypAfo6pJ3aW1gsriJw11qHLn2tsxo" />
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Duka的技术博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Duka的技术博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">AI 网络 技术 随笔 热点</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-ai智能体"><a href="/categories/AI%E6%99%BA%E8%83%BD%E4%BD%93/" rel="section"><i class="fa fa-robot fa-fw"></i>AI智能体</a></li><li class="menu-item menu-item-联创项目"><a href="/categories/%E8%81%94%E5%88%9B%E9%A1%B9%E7%9B%AE/" rel="section"><i class="fa fa-project-diagram fa-fw"></i>联创项目</a></li><li class="menu-item menu-item-学习探索"><a href="/categories/%E5%AD%A6%E4%B9%A0%E6%8E%A2%E7%B4%A2/" rel="section"><i class="fa fa-book fa-fw"></i>学习探索</a></li><li class="menu-item menu-item-web开发"><a href="/categories/Web%E5%BC%80%E5%8F%91/" rel="section"><i class="fa fa-code fa-fw"></i>Web开发</a></li><li class="menu-item menu-item-网络架构"><a href="/categories/%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84/" rel="section"><i class="fa fa-network-wired fa-fw"></i>网络架构</a></li><li class="menu-item menu-item-实用工具"><a href="/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/" rel="section"><i class="fa fa-tools fa-fw"></i>实用工具</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%85-%E5%85%88%E8%AF%B4%E8%AF%B4%E6%97%B6%E9%97%B4%E7%BA%BF%EF%BC%9A%E8%BF%99%E7%93%9C%E4%BB%8E%E5%B9%B4%E5%88%9D%E5%B0%B1%E5%BC%80%E5%A7%8B%E7%A7%8D"><span class="nav-number">1.</span> <span class="nav-text">📅 先说说时间线：这瓜从年初就开始种</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%A5-%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0%EF%BC%9A%E8%BF%99%E9%85%8D%E7%BD%AE%E7%9C%8B%E7%9D%80%E5%B0%B1%E7%A6%BB%E8%B0%B1"><span class="nav-number">2.</span> <span class="nav-text">🔥 技术参数：这配置看着就离谱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%87%A8%F0%9F%87%B3-%E5%9B%BD%E4%BA%A7%E5%8C%96%E8%BF%99%E4%B8%80%E6%AD%A5%EF%BC%8C%E8%B5%B0%E5%BE%97%E5%BE%88%E7%A1%AC"><span class="nav-number">3.</span> <span class="nav-text">🇨🇳 国产化这一步，走得很硬</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%92%AC-%E7%A4%BE%E5%8C%BA%E5%8F%8D%E5%BA%94%EF%BC%9A%E5%BC%80%E5%8F%91%E8%80%85%E4%BB%AC%E5%B7%B2%E7%BB%8F%E5%97%A8%E4%BA%86"><span class="nav-number">4.</span> <span class="nav-text">💬 社区反应：开发者们已经嗨了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%AF-%E5%88%9B%E5%A7%8B%E4%BA%BA%E6%A2%81%E6%96%87%E9%94%8B%EF%BC%9A%E6%88%91%E4%BB%AC%E8%A6%81%E5%81%9AAGI%EF%BC%8C%E4%B8%8D%E6%98%AF%E7%8E%A9%E5%85%B7"><span class="nav-number">5.</span> <span class="nav-text">🎯 创始人梁文锋：我们要做AGI，不是玩具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8F%86-%E6%A8%AA%E5%90%91%E5%AF%B9%E6%AF%94%EF%BC%9AV4-vs-GPT-4-vs-Claude"><span class="nav-number">6.</span> <span class="nav-text">🏆 横向对比：V4 vs GPT-4 vs Claude</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%AE-%E6%9C%AA%E6%9D%A5%E5%B1%95%E6%9C%9B%EF%BC%9A2026%E5%B9%B4AI%E6%A0%BC%E5%B1%80%E4%BC%9A%E6%80%8E%E4%B9%88%E5%8F%98%EF%BC%9F"><span class="nav-number">7.</span> <span class="nav-text">🔮 未来展望：2026年AI格局会怎么变？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%A4-%E7%BB%93%E8%AF%AD"><span class="nav-number">8.</span> <span class="nav-text">🎤 结语</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Duka"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Duka</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">120</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">208</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/dukaworks" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;dukaworks" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:dukaworks.zy@gmail.com" title="E-Mail → mailto:dukaworks.zy@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/dukatalk" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;dukatalk" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://youtube.com/dukatalk" title="YouTube → https:&#x2F;&#x2F;youtube.com&#x2F;dukatalk" rel="noopener me" target="_blank"><i class="fab fa-youtube fa-fw"></i>YouTube</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/subscribe/" title="RSS → &#x2F;subscribe&#x2F;" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://blog.dukaworks.io/2026/03/15/deepseek4-0-%E7%A1%85%E8%B0%B7%E8%AF%A5%E7%9D%A1%E4%B8%8D%E7%9D%80%E8%A7%89%E4%BA%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Duka">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Duka的技术博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="DeepSeek4.0-硅谷该睡不着觉了 | Duka的技术博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          DeepSeek4.0-硅谷该睡不着觉了
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-03-15 13:46:06 / 修改时间：13:52:14" itemprop="dateCreated datePublished" datetime="2026-03-15T13:46:06+08:00">2026-03-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B/" itemprop="url" rel="index"><span itemprop="name">大模型</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">深度学习</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/AI%E6%99%BA%E8%83%BD%E4%BD%93/" itemprop="url" rel="index"><span itemprop="name">AI智能体</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/AI%E6%99%BA%E8%83%BD%E4%BD%93/%E5%AD%A6%E4%B9%A0%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">学习探索</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><blockquote>
+<p>当全世界还在讨论GPT-5什么时候来，一家中国公司已经悄悄把桌子掀了。</p>
+</blockquote>
+<hr>
+<h2 id="📅-先说说时间线：这瓜从年初就开始种"><a href="#📅-先说说时间线：这瓜从年初就开始种" class="headerlink" title="📅 先说说时间线：这瓜从年初就开始种"></a>📅 先说说时间线：这瓜从年初就开始种</h2><p>DeepSeek V4的发布时间可以说是”一波三折”：</p>
+<ul>
+<li><strong>年初</strong>：业内猜测2月或3月初发布</li>
+<li><strong>现实</strong>：鸽了 😅</li>
+<li><strong>最新消息</strong>：<strong>2026年4月正式上线</strong>，据说还要和腾讯混元模型同期发布</li>
+</ul>
+<p>这节奏，妥妥的科技圈”即将推出™”风格。但好饭不怕晚，从目前泄露的信息来看，这等待可能是值得的。</p>
+<span id="more"></span>
+
+<hr>
+<h2 id="🔥-技术参数：这配置看着就离谱"><a href="#🔥-技术参数：这配置看着就离谱" class="headerlink" title="🔥 技术参数：这配置看着就离谱"></a>🔥 技术参数：这配置看着就离谱</h2><table>
+<thead>
+<tr>
+<th>指标</th>
+<th>DeepSeek V4</th>
+<th>对比对象</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>参数规模</strong></td>
+<td><strong>1万亿</strong></td>
+<td>GPT-4约1.8万亿，但V4效率更高</td>
+</tr>
+<tr>
+<td><strong>上下文窗口</strong></td>
+<td><strong>100万 token</strong></td>
+<td>Claude 3约20万，GPT-4约12.8万</td>
+</tr>
+<tr>
+<td><strong>HumanEval编码测试</strong></td>
+<td><strong>90%</strong></td>
+<td>Claude 88%，GPT-4 82%</td>
+</tr>
+<tr>
+<td><strong>MATH数学推理</strong></td>
+<td><strong>92%</strong></td>
+<td>GPT-5 90%，Claude Opus 89%</td>
+</tr>
+<tr>
+<td><strong>MMLU通用知识</strong></td>
+<td><strong>89%</strong></td>
+<td>GPT-4o 88.7%</td>
+</tr>
+</tbody></table>
+<p><strong>重点来了：</strong></p>
+<ol>
+<li><p><strong>Engram记忆架构</strong> —— 处理超过100万token时，检索准确率从84.2%提升到97%。简单说就是：你扔给它一本《战争与和平》，它真能记住前面说了啥。</p>
+</li>
+<li><p><strong>流形约束超连接(mHC)</strong> —— 新技术，据说能提高稳定性和效率。听着很玄，但效果就是：更快、更稳、更省电。</p>
+</li>
+<li><p><strong>原生多模态</strong> —— 图像、视频、文本生成一体化，不是那种”拼接”出来的多模态。</p>
+</li>
+</ol>
+<hr>
+<h2 id="🇨🇳-国产化这一步，走得很硬"><a href="#🇨🇳-国产化这一步，走得很硬" class="headerlink" title="🇨🇳 国产化这一步，走得很硬"></a>🇨🇳 国产化这一步，走得很硬</h2><p>DeepSeek V4有个特别有意思的操作：<strong>优先给华为、寒武纪等国产芯片厂商早期访问，而不是英伟达、AMD。</strong></p>
+<p>这在AI行业算是打破惯例了。通常新模型都是先适配英伟达GPU，毕竟CUDA生态太成熟。但DeepSeek这波操作：</p>
+<ul>
+<li>✅ 推动国内半导体需求</li>
+<li>✅ 加速AI模型向国产芯片的”推理”迁移</li>
+<li>✅ 减少对国外硬件的依赖</li>
+</ul>
+<p>当然，也有争议。有报道称训练可能使用了”特殊渠道”获得的Blackwell芯片集群… 这就留给各位看官自己判断了 🤫</p>
+<hr>
+<h2 id="💬-社区反应：开发者们已经嗨了"><a href="#💬-社区反应：开发者们已经嗨了" class="headerlink" title="💬 社区反应：开发者们已经嗨了"></a>💬 社区反应：开发者们已经嗨了</h2><p>从各大技术社区的反应来看，DeepSeek V4的期待值已经拉满：</p>
+<ul>
+<li><strong>“Engram记忆架构太强了，终于不用反复给AI交代背景”</strong></li>
+<li><strong>“如果成本真的这么低，本地部署岂不是香疯了”</strong></li>
+<li><strong>“Claude和GPT-4在编码领域的地位可能要动摇了”</strong></li>
+</ul>
+<p>还有个有趣的彩蛋：OpenRouter平台上最近出现了两个神秘模型 “Healer Alpha” 和 “Hunter Alpha”，社区猜测可能就是DeepSeek V4的早期测试版本。</p>
+<hr>
+<h2 id="🎯-创始人梁文锋：我们要做AGI，不是玩具"><a href="#🎯-创始人梁文锋：我们要做AGI，不是玩具" class="headerlink" title="🎯 创始人梁文锋：我们要做AGI，不是玩具"></a>🎯 创始人梁文锋：我们要做AGI，不是玩具</h2><p>DeepSeek创始人梁文锋在近期采访中放了不少狠话：</p>
+<blockquote>
+<p><strong>“生成式AI只是实现AGI的必要步骤，不是终极目标。”</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>“AGI将在我们有生之年实现。”</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>“中国必须从全球AI发展的’搭便车者’转变为’贡献者’。”</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>“真正的创新源于好奇心和创造欲望，而不仅仅是商业激励。”</strong></p>
+</blockquote>
+<p>这些话听着像是典型的”创始人鸡汤”，但结合DeepSeek的实际表现，似乎又不只是说说而已：</p>
+<ul>
+<li>V2发布引发中国大模型价格战，但梁文锋说降价不是为了抢用户，而是”基于成本核算和普惠理念”</li>
+<li>公司专注基础AGI研究，不急着商业化变现</li>
+<li>开源策略（部分模型），让技术民主化</li>
+</ul>
+<hr>
+<h2 id="🏆-横向对比：V4-vs-GPT-4-vs-Claude"><a href="#🏆-横向对比：V4-vs-GPT-4-vs-Claude" class="headerlink" title="🏆 横向对比：V4 vs GPT-4 vs Claude"></a>🏆 横向对比：V4 vs GPT-4 vs Claude</h2><table>
+<thead>
+<tr>
+<th>维度</th>
+<th>DeepSeek V4</th>
+<th>GPT-4&#x2F;GPT-4o</th>
+<th>Claude Opus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>编码能力</strong></td>
+<td>⭐⭐⭐⭐⭐ 90% HumanEval</td>
+<td>⭐⭐⭐⭐ 82%</td>
+<td>⭐⭐⭐⭐⭐ 88%</td>
+</tr>
+<tr>
+<td><strong>数学推理</strong></td>
+<td>⭐⭐⭐⭐⭐ 92% MATH</td>
+<td>⭐⭐⭐⭐⭐ 90%</td>
+<td>⭐⭐⭐⭐⭐ 89%</td>
+</tr>
+<tr>
+<td><strong>长上下文</strong></td>
+<td>⭐⭐⭐⭐⭐ 1M tokens</td>
+<td>⭐⭐⭐⭐ 1M (GPT-4.1)</td>
+<td>⭐⭐⭐⭐⭐ 1M (测试中)</td>
+</tr>
+<tr>
+<td><strong>创意写作</strong></td>
+<td>⭐⭐⭐⭐ 够用</td>
+<td>⭐⭐⭐⭐⭐ 很强</td>
+<td>⭐⭐⭐⭐⭐ 顶级</td>
+</tr>
+<tr>
+<td><strong>成本</strong></td>
+<td>⭐⭐⭐⭐⭐ 极低&#x2F;可本地部署</td>
+<td>⭐⭐⭐ 较贵</td>
+<td>⭐⭐⭐ 较贵</td>
+</tr>
+<tr>
+<td><strong>中文理解</strong></td>
+<td>⭐⭐⭐⭐⭐ 母语级</td>
+<td>⭐⭐⭐⭐ 不错</td>
+<td>⭐⭐⭐⭐ 不错</td>
+</tr>
+</tbody></table>
+<p><strong>一句话总结：</strong></p>
+<ul>
+<li>如果你是<strong>程序员</strong>，V4可能是你的新欢</li>
+<li>如果你是<strong>作家</strong>，Claude依然是白月光</li>
+<li>如果你是<strong>通用用户</strong>，GPT-4o还是很稳</li>
+</ul>
+<p>但V4最大的优势是：<strong>性价比</strong>。如果它真能以极低的成本提供接近顶尖模型的性能，那商业模式就要重新写了。</p>
+<hr>
+<h2 id="🔮-未来展望：2026年AI格局会怎么变？"><a href="#🔮-未来展望：2026年AI格局会怎么变？" class="headerlink" title="🔮 未来展望：2026年AI格局会怎么变？"></a>🔮 未来展望：2026年AI格局会怎么变？</h2><p>DeepSeek V4的发布，可能标志着几个趋势：</p>
+<ol>
+<li><strong>中国AI从”跟随者”变成”并行者”甚至”领跑者”</strong></li>
+</ol>
+<ul>
+<li>在某些细分领域（编码、数学推理），V4已经超越了西方顶级模型</li>
+</ul>
+<ol start="2">
+<li><strong>开源&#x2F;低成本模型冲击闭源商业模型</strong></li>
+</ol>
+<ul>
+<li>如果V4能以1&#x2F;10的成本达到90%的性能，谁还愿意付高价？</li>
+</ul>
+<ol start="3">
+<li><strong>国产AI芯片生态加速成熟</strong></li>
+</ol>
+<ul>
+<li>DeepSeek对华为、寒武纪的支持，可能带动整个国产算力产业链</li>
+</ul>
+<ol start="4">
+<li><strong>AGI竞赛进入白热化</strong></li>
+</ol>
+<ul>
+<li>梁文锋说AGI将在我们有生之年实现。如果V4只是中间站，那终点站会有多震撼？</li>
+</ul>
+<hr>
+<h2 id="🎤-结语"><a href="#🎤-结语" class="headerlink" title="🎤 结语"></a>🎤 结语</h2><p>DeepSeek V4还没有正式发布，但已经引发了足够多的讨论和期待。</p>
+<p>它是不是真有那么强？等4月发布后的独立评测吧。</p>
+<p>但有一点是确定的：<strong>中国AI公司正在用实力证明，这个赛道不是只有美国玩家能玩。</strong></p>
+<p>硅谷，该睡不着觉了。</p>
+<hr>
+<p><em>本文基于公开信息和行业分析整理，部分技术参数来源于泄露信息和社区讨论，最终以官方发布为准。</em></p>
+<p><em>喜欢这篇文章？欢迎转发、评论、点赞三连！</em> 👍</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/deepseek/" rel="tag"># deepseek</a>
+              <a href="/tags/deepseek4-0/" rel="tag"># deepseek4.0</a>
+              <a href="/tags/%E7%A1%85%E8%B0%B7/" rel="tag"># 硅谷</a>
+              <a href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/" rel="tag"># 大模型</a>
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag"># 深度学习</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/03/11/Frpc-GUI-%E9%80%9A%E8%BF%87SSH%E8%BF%9C%E7%A8%8B%E5%8F%AF%E8%A7%86%E5%8C%96%E7%AE%A1%E7%90%86frpc%EF%BC%88Desktop-Docker%EF%BC%89/" rel="prev" title="我做了一个 frpc 控制台：连接、改配置、看日志、重启，一条链路闭环">
+                  <i class="fa fa-angle-left"></i> 我做了一个 frpc 控制台：连接、改配置、看日志、重启，一条链路闭环
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments giscus-container">
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Duka</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">66k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">4:01</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="giscus" type="application/json">{"enable":true,"repo":"dukaworks/dukaworks.github.io","repo_id":"R_kgDORcsYzQ","category":"General","category_id":"DIC_kwDORcsYzc4C3pTx","mapping":"pathname","strict":0,"reactions_enabled":1,"emit_metadata":0,"theme":"preferred_color_scheme","lang":"zh-CN","crossorigin":"anonymous","input_position":"bottom","loading":"lazy"}</script>
+
+<script>
+document.addEventListener('page:loaded', () => {
+  if (!CONFIG.page.comments) return;
+
+  NexT.utils.loadComments('.giscus-container')
+    .then(() => NexT.utils.getScript('https://giscus.app/client.js', {
+      attributes: {
+        async                   : true,
+        crossOrigin             : 'anonymous',
+        'data-repo'             : CONFIG.giscus.repo,
+        'data-repo-id'          : CONFIG.giscus.repo_id,
+        'data-category'         : CONFIG.giscus.category,
+        'data-category-id'      : CONFIG.giscus.category_id,
+        'data-mapping'          : CONFIG.giscus.mapping,
+        'data-strict'           : CONFIG.giscus.strict,
+        'data-reactions-enabled': CONFIG.giscus.reactions_enabled,
+        'data-emit-metadata'    : CONFIG.giscus.emit_metadata,
+        'data-theme'            : CONFIG.giscus.theme,
+        'data-lang'             : CONFIG.giscus.lang,
+        'data-input-position'   : CONFIG.giscus.input_position,
+        'data-loading'          : CONFIG.giscus.loading
+      },
+      parentNode: document.querySelector('.giscus-container')
+    }));
+});
+</script>
+
+</body>
+</html>

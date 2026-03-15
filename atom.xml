@@ -11,7 +11,39 @@
   <rights>All rights reserved 2026, Duka</rights>
   <subtitle>AI 网络 技术 随笔 热点</subtitle>
   <title>Duka的技术博客</title>
-  <updated>2026-03-11T11:39:20.577Z</updated>
+  <updated>2026-03-15T05:52:14.924Z</updated>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="大模型" scheme="http://blog.dukaworks.io/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    <category term="深度学习" scheme="http://blog.dukaworks.io/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    <category term="AI智能体" scheme="http://blog.dukaworks.io/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/AI%E6%99%BA%E8%83%BD%E4%BD%93/"/>
+    <category term="学习探索" scheme="http://blog.dukaworks.io/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/AI%E6%99%BA%E8%83%BD%E4%BD%93/%E5%AD%A6%E4%B9%A0%E6%8E%A2%E7%B4%A2/"/>
+    <category term="deepseek" scheme="http://blog.dukaworks.io/tags/deepseek/"/>
+    <category term="deepseek4.0" scheme="http://blog.dukaworks.io/tags/deepseek4-0/"/>
+    <category term="硅谷" scheme="http://blog.dukaworks.io/tags/%E7%A1%85%E8%B0%B7/"/>
+    <category term="大模型" scheme="http://blog.dukaworks.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    <category term="深度学习" scheme="http://blog.dukaworks.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://blog.dukaworks.io/2026/03/15/deepseek4-0-%E7%A1%85%E8%B0%B7%E8%AF%A5%E7%9D%A1%E4%B8%8D%E7%9D%80%E8%A7%89%E4%BA%86/</id>
+    <link href="http://blog.dukaworks.io/2026/03/15/deepseek4-0-%E7%A1%85%E8%B0%B7%E8%AF%A5%E7%9D%A1%E4%B8%8D%E7%9D%80%E8%A7%89%E4%BA%86/"/>
+    <published>2026-03-15T05:46:06.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>当全世界还在讨论GPT-5什么时候来，一家中国公司已经悄悄把桌子掀了。</p>
+</blockquote>
+<hr>
+<h2 id="📅-先说说时间线：这瓜从年初就开始种"><a href="#📅-先说说时间线：这瓜从年初就开始种" class="headerlink" title="📅 先说说时间线：这瓜从年初就开始种"></a>📅 先说说时间线：这瓜从年初就开始种</h2><p>DeepSeek V4的发布时间可以说是”一波三折”：</p>
+<ul>
+<li><strong>年初</strong>：业内猜测2月或3月初发布</li>
+<li><strong>现实</strong>：鸽了 😅</li>
+<li><strong>最新消息</strong>：<strong>2026年4月正式上线</strong>，据说还要和腾讯混元模型同期发布</li>
+</ul>
+<p>这节奏，妥妥的科技圈”即将推出™”风格。但好饭不怕晚，从目前泄露的信息来看，这等待可能是值得的。</p>]]>
+    </summary>
+    <title>DeepSeek4.0-硅谷该睡不着觉了</title>
+    <updated>2026-03-15T05:52:14.924Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Duka</name>
@@ -370,20 +402,5 @@
     </summary>
     <title>代码规范制定</title>
     <updated>2026-03-03T20:08:33.587Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Duka</name>
-    </author>
-    <category term="网络架构" scheme="http://blog.dukaworks.io/categories/%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84/"/>
-    <category term="Service Mesh" scheme="http://blog.dukaworks.io/tags/Service-Mesh/"/>
-    <id>http://blog.dukaworks.io/2026/03/04/%E6%9C%8D%E5%8A%A1%E7%BD%91%E6%A0%BC%E6%8A%80%E6%9C%AF-19/</id>
-    <link href="http://blog.dukaworks.io/2026/03/04/%E6%9C%8D%E5%8A%A1%E7%BD%91%E6%A0%BC%E6%8A%80%E6%9C%AF-19/"/>
-    <published>2026-03-04T12:46:00.000Z</published>
-    <summary>
-      <![CDATA[<p>Service Mesh是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍Service Mesh的核心要点和实践经验。</p>]]>
-    </summary>
-    <title>服务网格技术</title>
-    <updated>2026-03-03T20:08:33.585Z</updated>
   </entry>
 </feed>
