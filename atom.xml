@@ -11,7 +11,23 @@
   <rights>All rights reserved 2026, Duka</rights>
   <subtitle>AI 网络 技术 随笔 热点</subtitle>
   <title>Duka的技术博客</title>
-  <updated>2026-03-15T05:52:14.924Z</updated>
+  <updated>2026-03-15T22:19:18.944Z</updated>
+  <entry>
+    <author>
+      <name>Duka</name>
+    </author>
+    <category term="学习探索" scheme="http://blog.dukaworks.io/categories/%E5%AD%A6%E4%B9%A0%E6%8E%A2%E7%B4%A2/"/>
+    <category term="PVE" scheme="http://blog.dukaworks.io/tags/PVE/"/>
+    <category term="虚拟机管理" scheme="http://blog.dukaworks.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%AE%A1%E7%90%86/"/>
+    <id>http://blog.dukaworks.io/2026/03/16/Qemu-Guest-Agent%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/</id>
+    <link href="http://blog.dukaworks.io/2026/03/16/Qemu-Guest-Agent%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/"/>
+    <published>2026-03-15T22:08:18.000Z</published>
+    <summary>
+      <![CDATA[<p>在 Proxmox Virtual Environment (PVE) 中运行虚拟机时，<code>qemu-guest-agent</code> 是一个非常推荐安装的辅助工具。它是一个运行在虚拟机内部的小程序，负责增强 Hypervisor（PVE 宿主机）与虚拟机 guest OS 之间的通信能力。正确安装和配置 <code>qemu-guest-agent</code> 可以极大地提升虚拟机的管理体验和可靠性。</p>]]>
+    </summary>
+    <title>Qemu Guest Agent安装指南: PVE 虚拟机管理的关键</title>
+    <updated>2026-03-15T22:19:18.944Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Duka</name>
@@ -387,20 +403,5 @@
     </summary>
     <title>深度学习基础</title>
     <updated>2026-03-03T20:08:33.582Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Duka</name>
-    </author>
-    <category term="协作模式" scheme="http://blog.dukaworks.io/categories/%E5%8D%8F%E4%BD%9C%E6%A8%A1%E5%BC%8F/"/>
-    <category term="规范统一" scheme="http://blog.dukaworks.io/tags/%E8%A7%84%E8%8C%83%E7%BB%9F%E4%B8%80/"/>
-    <id>http://blog.dukaworks.io/2026/03/04/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83%E5%88%B6%E5%AE%9A-34/</id>
-    <link href="http://blog.dukaworks.io/2026/03/04/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83%E5%88%B6%E5%AE%9A-34/"/>
-    <published>2026-03-04T13:13:00.000Z</published>
-    <summary>
-      <![CDATA[<p>规范统一是现代技术中的重要概念。掌握这些知识可以帮助我们更好地理解和应用相关技术。本文将详细介绍规范统一的核心要点和实践经验。</p>]]>
-    </summary>
-    <title>代码规范制定</title>
-    <updated>2026-03-03T20:08:33.587Z</updated>
   </entry>
 </feed>
